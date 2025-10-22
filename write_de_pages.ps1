@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $Base    = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $DocsDe  = Join-Path $Base 'docs\de'
 $Screens = Join-Path $DocsDe 'screens'
@@ -19,6 +19,7 @@ New-Item -ItemType Directory -Force -Path $Screens | Out-Null
 . (Join-Path $Base 'scripts\de-pages\write.de.permissions.ps1')
 . (Join-Path $Base 'scripts\de-pages\write.de.privacy.ps1')
 . (Join-Path $Base 'scripts\de-pages\write.de.changelog.ps1')
+. (Join-Path $Base 'scripts\de-pages\write.de.screens.cycle-planner.ps1')
 
 Write-De-Index
 Write-De-Quickstart
@@ -31,5 +32,6 @@ Write-De-FAQ
 Write-De-Permissions
 Write-De-Privacy
 Write-De-Changelog
+Write-De-Screen-CyclePlanner
 
 Write-Host "DE-Seiten neu erzeugt unter $DocsDe" -ForegroundColor Green

@@ -7,7 +7,7 @@ Willkommen zur **ToDay** Hilfe (Deutsch). Hier findest du praxisnahe Anleitungen
 
 - **Schnellstart:** [Schnellstart](quickstart.md)
 - **Hauptfunktionen:** [Funktionen](features.md)
-- **Screens:** [Home](screens/home.md) - [Einstellungen](screens/settings.md) - [Aufr&auml;umen](screens/cleanup.md) - [Sprach-Makros](screens/voice-macros.md)
+- **Screens:** [Home](screens/home.md) - [Einstellungen](screens/settings.md) - [Aufräumen](screens/cleanup.md) - [Zyklus planen](screens/cycle-planner.md) - [Sprach-Makros](screens/voice-macros.md)
 - **FAQ:** [H&auml;ufige Fragen](faq.md)
 - **Berechtigungen & Datenschutz:** [Berechtigungen](permissions.md) - [Datenschutz](privacy.md)
 

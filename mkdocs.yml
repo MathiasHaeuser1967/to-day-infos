@@ -23,17 +23,19 @@ plugins:
           name: English
 
 nav:
-  - index.md
-  - quickstart.md
-  - features.md
-  - screens/home.md
-  - screens/settings.md
-  - screens/cleanup.md
-  - screens/voice-macros.md
-  - faq.md
-  - permissions.md
-  - privacy.md
-  - changelog.md
+  - Start: index.md
+  - Schnellstart: quickstart.md
+  - Funktionen: features.md
+  - Screens:
+      - Home: screens/home.md
+      - Einstellungen: screens/settings.md
+      - Aufräumen: screens/cleanup.md
+      - Zyklus planen: screens/cycle-planner.md
+      - Sprach-Makros: screens/voice-macros.md
+  - Häufige Fragen: faq.md
+  - Berechtigungen: permissions.md
+  - Datenschutz: privacy.md
+  - Changelog: changelog.md
 
 markdown_extensions:
   - admonition
