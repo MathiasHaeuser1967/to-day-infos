@@ -1,7 +1,5 @@
 ﻿# Datenschutz
 
-- Alle Daten werden **lokal** auf deinem Ger&auml;t verarbeitet.  
-- Es findet **keine Cloud-Synchronisation** statt.  
-- Die vollst&auml;ndige Datenschutzerkl&auml;rung findest du auf der Play-Store-Seite.
-
-Bei Fragen wende dich an den Support in der App.
+- Alle Daten **lokal** auf deinem Ger&auml;t.
+- **Keine** Cloud-Synchronisation.
+- Vollst&auml;ndige Datenschutzerkl&auml;rung: Play-Store-Seite der App.
