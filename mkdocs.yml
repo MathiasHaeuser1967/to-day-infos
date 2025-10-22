@@ -1,0 +1,41 @@
+﻿site_name: ToDay – Hilfe
+site_url: https://MathiasHaeuser1967.github.io/to-day-infos
+
+docs_dir: docs/de
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.sections
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: de
+          name: Deutsch
+          default: true
+        - locale: en
+          name: English
+
+nav:
+  - index.md
+  - quickstart.md
+  - features.md
+  - screens/home.md
+  - screens/settings.md
+  - screens/cleanup.md
+  - screens/voice-macros.md
+  - faq.md
+  - permissions.md
+  - privacy.md
+  - changelog.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
