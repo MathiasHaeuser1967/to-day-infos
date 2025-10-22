@@ -1,3 +1,6 @@
+﻿function Write-De-Quickstart {
+  $p = Join-Path $DocsDe 'quickstart.md'
+  $c = @'
 # Schnellstart
 
 So bist du in wenigen Minuten betriebsbereit.
@@ -21,3 +24,6 @@ So bist du in wenigen Minuten betriebsbereit.
 !!! warning "Hintergrundbetrieb & Energiesparen"
     Manche Hersteller (z. B. Xiaomi, Huawei, Samsung) beschr&auml;nken Apps im Hintergrund.  
     **L&ouml;sung:** Akku-Optimierung f&uuml;r ToDay ausschalten, Benachrichtigungen erlauben und *Exakte Alarme* (falls verf&uuml;gbar) aktivieren.
+'@
+  Write-File $p $c
+}

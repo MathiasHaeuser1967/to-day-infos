@@ -1,3 +1,6 @@
+﻿function Write-De-FAQ {
+  $p = Join-Path $DocsDe 'faq.md'
+  $c = @'
 # H&auml;ufige Fragen (FAQ)
 
 ## Benachrichtigungen kommen nicht an
@@ -14,3 +17,6 @@
 
 ## App-Sprache passt nicht
 - In **Einstellungen &rarr; Sprache** wechseln (Deutsch/Englisch).
+'@
+  Write-File $p $c
+}

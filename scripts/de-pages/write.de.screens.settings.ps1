@@ -1,3 +1,6 @@
+﻿function Write-De-Screen-Settings {
+  $p = Join-Path $Screens 'settings.md'
+  $c = @'
 # Einstellungen
 
 Hier passt du Benachrichtigungen, Zeitansagen, Zyklen und allgemeines Verhalten an. Bezeichnungen k&ouml;nnen je nach Android-Version und Ger&auml;t leicht abweichen.
@@ -60,3 +63,6 @@ Hier passt du Benachrichtigungen, Zeitansagen, Zyklen und allgemeines Verhalten 
 
 ### Datenpflege
 - Verkn&uuml;pfungen zu **Aufr&auml;umen** und weiteren Wartungs-Funktionen.
+'@
+  Write-File $p $c
+}

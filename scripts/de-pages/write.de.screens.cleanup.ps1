@@ -1,3 +1,6 @@
+﻿function Write-De-Screen-Cleanup {
+  $p = Join-Path $Screens 'cleanup.md'
+  $c = @'
 # Aufr&auml;umen
 
 Mit **Aufr&auml;umen** entfernst du Aktivit&auml;ten eines Tages &ndash; optional inklusive der zugeh&ouml;rigen **Benachrichtigungen/Alarme**. Die Wirkung gilt immer f&uuml;r das **gew&auml;hlte Datum**.
@@ -33,3 +36,6 @@ Du w&auml;hlst **genau eine Quelle**. Nur Eintr&auml;ge, die an diesem Tag **aus
 1. Datum und **Quelle** w&auml;hlen.  
 2. **Optionen** pr&uuml;fen/setzen.  
 3. **L&ouml;schen** tippen &rarr; der Dialog schlie&szlig;t, und du kehrst zu **Home** zur&uuml;ck.
+'@
+  Write-File $p $c
+}

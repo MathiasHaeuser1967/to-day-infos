@@ -1,3 +1,6 @@
+﻿function Write-De-Screen-VoiceMacros {
+  $p = Join-Path $Screens 'voice-macros.md'
+  $c = @'
 # Sprach-Makros
 
 Mit Sprach-Makros l&ouml;st du h&auml;ufige Aktionen per Sprache aus.
@@ -13,3 +16,6 @@ Mit Sprach-Makros l&ouml;st du h&auml;ufige Aktionen per Sprache aus.
 ## Tipps
 - Verwende **eindeutige, kurze** Befehle.  
 - Pr&uuml;fe, ob **TTS** und **Spracherkennung** auf dem Ger&auml;t korrekt eingerichtet sind.
+'@
+  Write-File $p $c
+}

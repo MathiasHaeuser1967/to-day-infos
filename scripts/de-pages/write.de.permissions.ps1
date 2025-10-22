@@ -1,3 +1,6 @@
+﻿function Write-De-Permissions {
+  $p = Join-Path $DocsDe 'permissions.md'
+  $c = @'
 # Berechtigungen
 
 ToDay ben&ouml;tigt je nach Funktion folgende System-Berechtigungen:
@@ -7,3 +10,6 @@ ToDay ben&ouml;tigt je nach Funktion folgende System-Berechtigungen:
 - **Mikrofon** *(nur f&uuml;r Sprach-Makros)* &ndash; Erkennung deiner Sprachbefehle.
 
 ToDay verwendet **keine Standort-Daten** und synchronisiert **nicht** in die Cloud.
+'@
+  Write-File $p $c
+}

@@ -1,3 +1,6 @@
+﻿function Write-De-Screen-Home {
+  $p = Join-Path $Screens 'home.md'
+  $c = @'
 # Home
 
 Die **Home**-Seite ist deine Tageszentrale: Datum wählen, Fortschritt sehen, Listen filtern und neue Aktivitäten anlegen oder per Sprache steuern.
@@ -129,3 +132,6 @@ Von **links nach rechts**:
 - **Heute** zuerst abarbeiten: Nutze die Tabs **Überfällig** und **Offen** sowie den Fortschrittsbalken als Taktgeber.  
 - **Zyklen** sparen Klicks: Wiederkehrendes einmal definieren, dann täglich per **Zyklus ausführen** aktualisieren.  
 - **DWD-Tab** im Blick behalten, wenn du wetter- oder pollenabhängige Aufgaben hast.
+'@
+  Write-File $p $c
+}
