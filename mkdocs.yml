@@ -1,15 +1,21 @@
 ﻿site_name: ToDay – Hilfe
 site_url: https://MathiasHaeuser1967.github.io/to-day-infos
 
-docs_dir: docs/de
+# docs_dir: docs/de
 
 theme:
   name: material
   language: de
   features:
     - navigation.sections
-    - content.code.copy
+    - navigation.indexes
     - toc.follow
+    - content.code.copy
+  icon:
+    alternate: material/translate
+
+extra_css:
+  - assets/css/nav-sections.css
 
 plugins:
   - search
@@ -22,20 +28,34 @@ plugins:
         - locale: en
           name: English
 
+extra:
+  alternate:
+    - name: Deutsch
+      lang: de
+      link: /to-day-infos/
+    - name: English
+      lang: en
+      link: /to-day-infos/en/
+
 nav:
-  - Start: index.md
-  - Schnellstart: quickstart.md
-  - Funktionen: features.md
+  - Einführung:
+      - Start: index.md
+      - Schnellstart: quickstart.md
+      - Funktionen: features.md
   - Screens:
-      - Home: screens/home.md
-      - Einstellungen: screens/settings.md
+      - Übersicht: screens/index.md
+      - "Home ✅": screens/home.md
+      - "Einstellungen ✅": screens/settings.md
       - Aufräumen: screens/cleanup.md
       - Zyklus planen: screens/cycle-planner.md
       - Sprach-Makros: screens/voice-macros.md
-  - Häufige Fragen: faq.md
-  - Berechtigungen: permissions.md
-  - Datenschutz: privacy.md
-  - Changelog: changelog.md
+  - Hilfe:
+      - Häufige Fragen (FAQ): faq.md
+  - System:
+      - Berechtigungen: permissions.md
+      - Datenschutz: privacy.md
+  - Projekt:
+      - Changelog: changelog.md
 
 markdown_extensions:
   - admonition

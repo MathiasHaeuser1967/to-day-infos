@@ -1,0 +1,84 @@
+/* Farben pro Gruppe (hell) */
+:root{
+  --sec1:#1565c0; /* Einführung  - Blau   */
+  --sec2:#2e7d32; /* Screens     - Grün   */
+  --sec3:#ef6c00; /* Hilfe       - Orange */
+  --sec4:#8e24aa; /* System      - Lila   */
+  --sec5:#ad1457; /* Projekt     - Pink   */
+}
+/* Farben pro Gruppe (dunkel) */
+[data-md-color-scheme="slate"]{
+  --sec1:#90caf9;
+  --sec2:#a5d6a7;
+  --sec3:#ffcc80;
+  --sec4:#ce93d8;
+  --sec5:#f48fb1;
+}
+
+/* Grundstil der Gruppen-Überschriften */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__title{
+  font-weight:700;
+  border-left:.25rem solid transparent;
+  border-radius:.2rem;
+  padding-left:.6rem;
+}
+
+/* Helper: dezente Hintergrundtönung (fallback ohne color-mix) */
+.__bg { background: rgba(0,0,0,.04) !important; }
+@supports (background: color-mix(in srgb, #000 10%, transparent)){
+  .__bg { background: color-mix(in srgb, var(--_c) 12%, transparent) !important; }
+}
+
+/* --- 1. Gruppe: Einführung --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > .md-nav__title{
+  --_c:var(--sec1);
+  color:var(--sec1) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec1) !important;
+}
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > label.md-nav__link.__bg,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > .md-nav__title.__bg{}
+
+/* --- 2. Gruppe: Screens --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(2) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(2) > .md-nav__title{
+  --_c:var(--sec2);
+  color:var(--sec2) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec2) !important;
+}
+
+/* --- 3. Gruppe: Hilfe --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(3) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(3) > .md-nav__title{
+  --_c:var(--sec3);
+  color:var(--sec3) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec3) !important;
+}
+
+/* --- 4. Gruppe: System --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(4) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(4) > .md-nav__title{
+  --_c:var(--sec4);
+  color:var(--sec4) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec4) !important;
+}
+
+/* --- 5. Gruppe: Projekt --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(5) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(5) > .md-nav__title{
+  --_c:var(--sec5);
+  color:var(--sec5) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec5) !important;
+}
+
+/* Optionale Hover-Verstärkung */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link:hover,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__title:hover{
+  filter:saturate(1.15);
+}

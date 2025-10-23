@@ -3,66 +3,90 @@
   $c = @'
 # Einstellungen
 
-Hier passt du Benachrichtigungen, Zeitansagen, Zyklen und allgemeines Verhalten an. Bezeichnungen k&ouml;nnen je nach Android-Version und Ger&auml;t leicht abweichen.
+Die Optionen sind in Karten gegliedert. Viele Karten haben einen eigenen **Speichern**-Button – Änderungen gelten erst nach dem Speichern **dieser** Karte.
 
-## Benachrichtigungen
+---
 
-### Berechtigung
-- **Benachrichtigungen erlauben**: Systemberechtigung, ohne die **keine** Erinnerungen erscheinen. Bei erster Nutzung best&auml;tigen.
+## 1) Sprache
+- **Sprache**: Wechselt die App-Sprache (Deutsch/English).
+- Hinweis: Der Umschalter in der Online-Hilfe ändert nur die Doku, nicht die App-Sprache.
 
-### Kan&auml;le & Wichtigkeit
-- **Kanal/Wichtigkeit** (falls verf&uuml;gbar): steuert Sichtbarkeit, Ton, Vibration.
-  - *Stumm/Normal/Hoch/Dringend*: je h&ouml;her, desto auff&auml;lliger (Heads-Up, Ton).
-  - **Tipp:** F&uuml;r kritische Erinnerungen "hoch" oder "dringend" w&auml;hlen.
+---
 
-### Exakte Alarme
-- **Exakte Alarme erlauben** (falls verf&uuml;gbar): erm&ouml;glicht die p&uuml;nktliche Ausl&ouml;sung zum geplanten Zeitpunkt.
-  - Ohne diese Erlaubnis kann Android Erinnerungen zusammenlegen oder verz&ouml;gern.
+## 2) Design
+- **Darstellung der App**
+  - **Wie System**: folgt dem Systemthema (Hell/Dunkel).
+  - **Hell**: erzwingt helles Thema.
+  - **Dunkel**: erzwingt dunkles Thema.
+- **Dynamische Farben (Android 12+)**: übernimmt Akzentfarben vom System/Wallpaper (Material-You).
 
-### Akku-Optimierung
-- **Vom Energiesparen ausnehmen** (Systemeinstellung): verhindert, dass ToDay im Hintergrund "schlafen" gelegt wird und Benachrichtigungen zu sp&auml;t kommen.
+---
 
-### Benachrichtigungst&ouml;ne (wenn angeboten)
-- **Ton/Vibration**: akustisches bzw. haptisches Feedback je Erinnerung.
-- **Nicht st&ouml;ren**: beachtet die Systemregel; ggf. werden T&ouml;ne unterdr&uuml;ckt.
+## 3) Benachrichtigungen – Allgemein (DWD)
+Gilt für **Wetterwarnungen** und **Pollenflug**.
 
-## Zeitansagen (Text-to-Speech)
+- **Land**: Ländercode (z. B. DE).
+- **PLZ**: Postleitzahl des Ortes für DWD-Daten.
+- **Warnregion (optional)**: freier Text; hilfreich bei kreisweiten Warnungen.
+- **Warnungen aktiv**: globaler Schalter für DWD-Benachrichtigungen.
+- **Ruhe ab (Stunde) / Ruhe bis (Stunde)**: Zeitfenster, in dem **keine** DWD-Benachrichtigungen zugestellt werden.
+- **Speichern**: übernimmt die Werte dieser Karte.
 
-### Aktivieren/Deaktivieren
-- Schaltet alle **Zeitansagen** global **ein/aus**.
+---
 
-### Stimme & Sprache
-- Auswahl der **Sprache** und **Stimme** deiner TTS-Engine (z. B. Google TTS).
-- **Lautst&auml;rke**: verwendet die **Medien-Lautst&auml;rke** des Ger&auml;ts.
+## 4) Wetterwarnungen (DWD)
+Nutzt **PLZ** und **Ruhezeiten** aus *Benachrichtigungen – Allgemein*.
 
-### Zeitfenster & Rhythmus
-- **Zeitfenster**: Zeitraum, in dem Ansagen erlaubt sind (z. B. 08:00&ndash;20:00).
-- **Intervall**: H&auml;ufigkeit der Ansagen (z. B. st&uuml;ndlich, alle 30 Minuten).
+- **Gefahrentypen** (einzeln aktivierbar): Hagel, Gewitter, Sturm, Regen, Schnee, Wind, Frost, Nebel.
+- **Speichern**: merkt die Auswahl.
+- **Sofort prüfen**: führt sofort eine DWD-Abfrage aus und aktualisiert Status/Benachrichtigung.
 
-### Verhalten bei "Nicht st&ouml;ren"
-- Je nach Systemmodus werden Ansagen/Benachrichtigungen ggf. unterdr&uuml;ckt.
+---
 
-## Zyklen planen
+## 5) Pollenflug (DWD)
+Nutzt **PLZ** und **Ruhezeiten** aus *Benachrichtigungen – Allgemein*.
 
-### Wiederholungen
-- **T&auml;glich/W&ouml;chentlich/Benutzerdefiniert**: Intervall, in dem neue Aktivit&auml;ten automatisch erzeugt werden.
+- **Benachrichtigen ab Intensität**: Schwellenwert, ab dem für aktivierte Pollenarten benachrichtigt wird (z. B. „mittel“).
+- **Pollenarten** (einzeln aktivierbar): Gräser, Birke, Erle, Hasel, Esche, Beifuß, Ambrosia, Roggen.
+- **Speichern**: übernimmt Schwelle/Arten.
+- **Sofort prüfen**: holt sofort Pollenwerte und löst ggf. Benachrichtigungen aus.
 
-### Start/Ende
-- Aktiver Zeitraum des Zyklus. Au&szlig;erhalb werden keine neuen Eintr&auml;ge erzeugt.
+---
 
-### Kollisionen & Dubletten
-- Beim Erzeugen wird auf vorhandene Eintr&auml;ge gepr&uuml;ft, um Dubletten zu vermeiden.
+## 6) Stimme & Ausgabe (TTS)
+Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen.
 
-## Allgemein
+- **Stimme & Ausgabe verwenden**: TTS global ein/aus.
+- **Stimme**: Auswahl der verfügbaren TTS-Stimmen/Engines des Geräts.
+- **Sprechtempo**: Regler für Geschwindigkeit (Standard ~1.0).
+- **Tonhöhe**: Regler für Tonhöhe (Standard ~1.0).
+- **Speichern**: übernimmt TTS-Einstellungen.
+- **Sofort anhören**: spielt eine Probe mit den aktuellen Werten.
 
-### Design
-- **Hell/Dunkel/System**: Erscheinungsbild der App.
+---
 
-### Sprache
-- **Deutsch/Englisch**: App-Sprache unabh&auml;ngig von der Ger&auml;tesprache.
+## 7) Zeitansagen
+Erzeugt Zeitpunkte zwischen Start- und Endzeit und benachrichtigt im gewählten Takt.
 
-### Datenpflege
-- Verkn&uuml;pfungen zu **Aufr&auml;umen** und weiteren Wartungs-Funktionen.
+- **Zeitansagen aktivieren**: Hauptschalter.
+- **Startzeit (einschließlich)** / **Endzeit (einschließlich)**: Zeitfenster der Ansagen.
+- **Taktung**: Alle 10 / 15 / 20 / 30 Minuten oder stündlich.
+- **Uhrzeit als Morse statt TTS**: ersetzt Sprache durch Morse-Ton.
+- **Erzeugen**: plant die Ansagen für das gewählte Fenster/Takt (Ruhezeiten aus *Allgemein* werden respektiert).
+
+---
+
+## 8) Gefährlicher Bereich (Datenverwaltung)
+- **Debug-Infos unter Aktivitäten**: zeigt zusätzliche Diagnose-Infos in den Listen (nur für Fehlersuche).
+- **Benachrichtigungen neu aufbauen**: plant Benachrichtigungen für einen kurzen Zeitraum neu (nützlich nach System-Updates/Rechtewechsel).
+- **Alle Aktivitäten löschen**: entfernt **alle** Aktivitäten unwiderruflich (kein Rückgängig).
+
+---
+
+## 9) Hinweise & Tipps
+- **Berechtigungen**: Stelle sicher, dass **Benachrichtigungen** (und ggf. **Exakte Alarme**) erlaubt sind und Akku-Optimierung die App nicht drosselt – sonst kommen Erinnerungen verspätet.
+- **DWD offline**: Ohne Internet werden DWD-Daten erst bei Verbindung aktualisiert.
+- **Mehrere Speichern-Buttons**: Jede Karte speichert **ihren** Bereich separat.
 '@
   Write-File $p $c
 }
