@@ -44,10 +44,14 @@ nav:
       - Funktionen: features.md
   - Screens:
       - Übersicht: screens/index.md
+
       - "Home ✅": screens/home.md
+      - "Zyklus planen ✅": screens/cycle-planner.md
+      - "Spracheingabe (Tastatur) ✅": screens/voice-input-keyboard.md
+      - "Aufräumen ✅": screens/cleanup.md
+
       - "Einstellungen ✅": screens/settings.md
-      - Aufräumen: screens/cleanup.md
-      - Zyklus planen: screens/cycle-planner.md
+
       - Sprach-Makros: screens/voice-macros.md
   - Hilfe:
       - Häufige Fragen (FAQ): faq.md

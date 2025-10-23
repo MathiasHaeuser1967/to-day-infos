@@ -7,12 +7,12 @@ Mit **Zyklus planen** erzeugst du wiederkehrende Fokus-/Pausen-Blöcke (z. B. Po
 
 ---
 
-## Zweck
+## 1) Zweck
 Du definierst Startzeit, Vorlage (Fokus/ Pause) und wie oft sich der Block wiederholen soll. ToDay erzeugt daraus die einzelnen Aktivitäten in deinem Tagesplan – sauber getaktet, ohne Überschneidungen.
 
 ---
 
-## 1) Startzeit & Wiederholungen
+## 2) Startzeit & Wiederholungen
 
 - **Startzeit**  
   Erstes Start-Datum/-Uhrzeit der Serie. Tippe auf die Zeit, um den System-Zeitpicker zu öffnen.
@@ -29,7 +29,7 @@ Du definierst Startzeit, Vorlage (Fokus/ Pause) und wie oft sich der Block wiede
 
 ---
 
-## 2) Vorlage
+## 3) Vorlage
 
 Wähle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-Block und die zugehörige Pause (aufeinander folgend).
 
@@ -50,7 +50,7 @@ Wähle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-Blo
 
 ---
 
-## 3) Mit Fokus starten (Schalter)
+## 4) Mit Fokus starten (Schalter)
 
 - **Ein**: Der erste erzeugte Block ist **Fokus**, danach kommt die Pause, usw.  
 - **Aus**: Starte mit einer **Pause** und wechsle danach in den Fokus.
@@ -59,7 +59,7 @@ Das ist praktisch, wenn du z. B. bewusst mit einer kurzen Vorbereitungs-Pause be
 
 ---
 
-## 4) Erzeugen
+## 5) Erzeugen
 
 Tippe auf **Erzeugen**, um die Serie anzulegen:
 - Es werden Aktivitäten für das **aktuell gewählte Datum** (aus der Home-Ansicht) erzeugt.
@@ -70,7 +70,7 @@ Tippe auf **Erzeugen**, um die Serie anzulegen:
 
 ---
 
-## 5) Beispiele
+## 6) Beispiele
 
 - **Startzeit 10:00, Vorlage 25/5, Wiederholungen 4, „Mit Fokus starten: Ein“**  
   Es entstehen 4 Fokus-Blöcke (25 Min) jeweils gefolgt von 5 Min Pause:  
@@ -81,7 +81,7 @@ Tippe auf **Erzeugen**, um die Serie anzulegen:
 
 ---
 
-## 6) Tipps
+## 7) Tipps
 
 - **Früh starten**: Je später die Startzeit, desto weniger Wiederholungen passen in den Tag.  
 - **Puffer einplanen**: Wähle ggf. weniger Wiederholungen, wenn du zwischen Blöcken noch Weg-/Wechselzeiten brauchst.  
