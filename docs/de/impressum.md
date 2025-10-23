@@ -1,61 +1,59 @@
 ﻿# Impressum
 
-## 1) Diensteanbieter nach § 5 TMG
-**Name:** Mathias Häuser  
-**Anschrift:** Auenstrasse, 36 · 82515 Wolfratshausen · Deutschland
+# Impressum
+
+## 1) Diensteanbieter nach § 5 DDG
+**Name:** Mathias Haeuser  
+**Anschrift:** Auenstrasse,36 · 82515 Wolfratshausen · Deutschland
 
 **Kontakt:**  
-E-Mail: mathias.haeuser@gmx.net  
+E-Mail: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)  
 
-**Vertretungsberechtigt:** Mathias Häuser
+**Vertretungsberechtigt:** Mathias Haeuser
 
 ---
 
 ## 2) USt-ID / Wirtschafts-ID
-**Umsatzsteuer-Identifikationsnummer (§ 27a UStG):** nicht vorhanden  
-**Wirtschafts-Identifikationsnummer (§ 139c AO):** nicht vorhanden
+**USt-ID (§ 27a UStG):** „nicht vorhanden“  
+**Wirtschafts-Identifikationsnummer (§ 139c AO):** „nicht vorhanden“
 
 ---
 
-## 3) Aufsichtsbehörde / Reglementierte Berufe (falls zutreffend)
+## 3) Aufsichtsbehörde / reglementierte Berufe (falls zutreffend)
+Entfällt.
 
 ---
 
-## 4) Online-Streitbeilegung / Verbraucherstreitbeilegung
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:  
-<https://ec.europa.eu/consumers/odr/>
-
-Wir sind **nicht verpflichtet** und **nicht bereit**, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (VSBG).
+## 4) Verbraucher­streit­beilegung / ODR
+Wir sind **nicht verpflichtet** und **nicht bereit**, an Streitbeilegungsverfahren vor einer Verbraucher­schlichtungsstelle teilzunehmen (VSBG).  
+**Hinweis:** Die EU-ODR-Plattform wurde am **20.07.2025** eingestellt.
 
 ---
 
 ## 5) Haftung für Inhalte
-Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.  
-Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch **nicht verpflichtet**, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.  
-Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.  
-Bei Bekanntwerden entsprechender Rechtsverletzungen entfernen wir diese Inhalte umgehend.
+Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG/§ 8 DDG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.  
+Nach §§ 8–10 TMG/§§ 9–11 DDG sind wir jedoch **nicht verpflichtet**, übermittelte oder gespeicherte fremde Informationen zu überwachen. Verpflichtungen zur Entfernung/Sperrung bleiben unberührt. Eine Haftung ist erst ab Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entfernen wir Inhalte umgehend.
 
 ---
 
 ## 6) Haftung für Links
-Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte **keine Gewähr** übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.  
-Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links umgehend.
+Unser Angebot enthält Links zu externen Websites, auf deren Inhalte wir keinen Einfluss haben. Für diese Inhalte übernehmen wir **keine Gewähr**; verantwortlich ist stets der jeweilige Anbieter. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links umgehend.
 
 ---
 
 ## 7) Urheberrecht
-Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.  
-Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der **schriftlichen Zustimmung** des jeweiligen Autors bzw. Erstellers.  
-Downloads und Kopien dieser Seite sind nur für den **privaten, nicht kommerziellen** Gebrauch gestattet.
+Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der **schriftlichen Zustimmung** des jeweiligen Autors. Downloads/Kopien sind nur für den **privaten, nicht-kommerziellen** Gebrauch gestattet.
 
 ---
 
 ## 8) Bild- und Quellenhinweise
-- Wetterwarnungen/Pollen: Daten des **Deutschen Wetterdienstes (DWD)**; siehe App-Seiten.  
+- Wetter/Pollen: Daten des **Deutschen Wetterdienstes (DWD)**  
+- Sonstige Bilder/Icons: App-Assets / System-Assets (Material)  
+- Favicon/App-Icon: eigenes Asset
 
 ---
 
 ## 9) Kontakt für rechtliche Anfragen
-E-Mail: mathias.haeuser@gmx.net
+E-Mail: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)
 
-**Stand:** 2025-10-23
+**Stand:** 2025-10-23  
