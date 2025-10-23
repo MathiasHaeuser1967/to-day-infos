@@ -3,8 +3,6 @@
   $c = @'
 # Impressum
 
-# Impressum
-
 ## 1) Diensteanbieter nach § 5 DDG
 **Name:** Mathias Haeuser  
 **Anschrift:** Auenstrasse,36 · 82515 Wolfratshausen · Deutschland
