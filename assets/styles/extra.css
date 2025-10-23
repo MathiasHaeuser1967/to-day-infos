@@ -1,0 +1,17 @@
+/* Footer links hübsch in einer Zeile */
+.footer-links{
+  display:flex;
+  gap:.6rem;
+  align-items:center;
+  margin-left:auto;            /* schiebt die Links nach rechts */
+}
+.footer-links .sep{ opacity:.45; }
+
+/* etwas kompakterer Footer */
+.md-footer .md-footer-meta{ padding-block: .6rem; }
+
+/* Mobile: mittig untereinander, aber ohne störenden Punkt */
+@media (max-width: 960px){
+  .md-footer-meta__inner{ gap:.5rem; }
+  .footer-links{ margin-left:0; justify-content:flex-start; }
+}
