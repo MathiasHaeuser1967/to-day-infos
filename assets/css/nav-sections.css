@@ -5,6 +5,7 @@
   --sec3:#ef6c00; /* Hilfe       - Orange */
   --sec4:#8e24aa; /* System      - Lila   */
   --sec5:#ad1457; /* Projekt     - Pink   */
+  --sec6:#ef6c00; /* Rechtliches - Orange */
 }
 /* Farben pro Gruppe (dunkel) */
 [data-md-color-scheme="slate"]{
@@ -13,6 +14,7 @@
   --sec3:#ffcc80;
   --sec4:#ce93d8;
   --sec5:#f48fb1;
+  --sec6:#ffcc80;
 }
 
 /* Grundstil der Gruppen-Überschriften */
@@ -75,6 +77,15 @@
   color:var(--sec5) !important;
   opacity:1 !important;
   border-left-color:var(--sec5) !important;
+}
+
+/* --- 6. Gruppe: Rechtliches --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(6) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(6) > .md-nav__title{
+  --_c:var(--sec6);
+  color:var(--sec6) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec6) !important;
 }
 
 /* Optionale Hover-Verstärkung */
