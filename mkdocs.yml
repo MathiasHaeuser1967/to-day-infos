@@ -7,6 +7,7 @@ theme:
   name: material
   language: de
   custom_dir: overrides
+  favicon: assets/img/favicon.png
   features:
     - navigation.sections
     - navigation.indexes
