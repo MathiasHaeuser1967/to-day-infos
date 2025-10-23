@@ -4,25 +4,23 @@
 # Impressum
 
 ## 1) Diensteanbieter nach § 5 TMG
-**Name:** [[Vollständiger Name / Firma]]  
-**Anschrift:** [[Straße, Hausnummer]] · [[PLZ]] [[Ort]] · [[Land]]
+**Name:** Mathias Häuser  
+**Anschrift:** Auenstrasse, 36 · 82515 Wolfratshausen · Deutschland
 
 **Kontakt:**  
-E-Mail: [[E-Mail-Adresse]]  
-Telefon (optional): [[Telefonnummer]]
+E-Mail: mathias.haeuser@gmx.net  
 
-**Vertretungsberechtigt:** [[Name]] (bei Einzelperson identisch)
+**Vertretungsberechtigt:** Mathias Häuser
 
 ---
 
 ## 2) USt-ID / Wirtschafts-ID
-**Umsatzsteuer-Identifikationsnummer (§ 27a UStG):** [[falls vorhanden / nicht vorhanden]]  
-**Wirtschafts-Identifikationsnummer (§ 139c AO):** [[falls vorhanden / nicht vorhanden]]
+**Umsatzsteuer-Identifikationsnummer (§ 27a UStG):** nicht vorhanden  
+**Wirtschafts-Identifikationsnummer (§ 139c AO):** nicht vorhanden
 
 ---
 
 ## 3) Aufsichtsbehörde / Reglementierte Berufe (falls zutreffend)
-[[Nur falls erforderlich – sonst entfällt.]]
 
 ---
 
@@ -57,14 +55,13 @@ Downloads und Kopien dieser Seite sind nur für den **privaten, nicht kommerziel
 
 ## 8) Bild- und Quellenhinweise
 - Wetterwarnungen/Pollen: Daten des **Deutschen Wetterdienstes (DWD)**; siehe App-Seiten.  
-- Sonstige Bilder/Icons: [[Quelle/Lizenz]] bzw. System-/Theme-Assets.
 
 ---
 
 ## 9) Kontakt für rechtliche Anfragen
-E-Mail: [[E-Mail-Adresse]]
+E-Mail: mathias.haeuser@gmx.net
 
-**Stand:** [[YYYY-MM-DD]]
+**Stand:** 2025-10-23
 
 '@
   $enc = New-Object System.Text.UTF8Encoding($true)
