@@ -23,6 +23,7 @@ New-Item -ItemType Directory -Force -Path $Screens | Out-Null
 . (Join-Path $Base 'scripts\de-pages\write.de.screens.voice-input-keyboard.ps1')
 . (Join-Path $Base 'scripts\de-pages\write.de.screens.add-activity.ps1')
 . (Join-Path $Base 'scripts\de-pages\write.de.screens.info.ps1')
+. (Join-Path $Base 'scripts\de-pages\write.de.screens.impressum.ps1')
 
 Write-De-Index
 Write-De-Quickstart
@@ -39,5 +40,6 @@ Write-De-Screen-CyclePlanner
 Write-De-Screen-VoiceInputKeyboard
 Write-De-Screen-AddActivity
 Write-De-Screen-Info
+Write-De-Screen-Impressum
 
 Write-Host "DE-Seiten neu erzeugt unter $DocsDe" -ForegroundColor Green

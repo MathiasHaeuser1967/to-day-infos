@@ -1,0 +1,21 @@
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <span>© <span id="footer-year"></span> {{ config.site_name }}</span>
+      </div>
+
+      <nav class="footer-links">
+        <a href="{{ base_url }}/privacy/">Datenschutz</a>
+        <span class="sep">•</span>
+        <a href="{{ base_url }}/impressum/">Impressum</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script>
+  (function () {
+    var y = document.getElementById('footer-year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>

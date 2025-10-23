@@ -6,6 +6,7 @@ site_url: https://MathiasHaeuser1967.github.io/to-day-infos
 theme:
   name: material
   language: de
+  custom_dir: overrides
   features:
     - navigation.sections
     - navigation.indexes
@@ -16,6 +17,7 @@ theme:
 
 extra_css:
   - assets/css/nav-sections.css
+  - assets/styles/extra.css
 
 plugins:
   - search
@@ -42,9 +44,6 @@ nav:
       - Start: index.md
       - Schnellstart: quickstart.md
       - Funktionen: features.md
-
-
-
   - Screens:
       - Home:
           - Home: screens/home.md
@@ -55,9 +54,6 @@ nav:
       - Einstellungen: screens/settings.md
       - Sprach-Makros: screens/voice-macros.md
       - Info: screens/info.md
-
-
-
   - Hilfe:
       - Häufige Fragen (FAQ): faq.md
   - System:
@@ -65,6 +61,8 @@ nav:
       - Datenschutz: privacy.md
   - Projekt:
       - Changelog: changelog.md
+  - Rechtliches:
+      - Impressum: impressum.md
 
 markdown_extensions:
   - admonition
