@@ -61,27 +61,40 @@ Diese Seite beschreibt kurz und verständlich, wie **ToDay** mit Daten umgeht.
 
 ---
 
-## 7) Rechtsgrundlagen (DSGVO)
+### 7) Hosting dieser Website (GitHub Pages)
+Diese Hilfe-Website wird über **GitHub Pages** (GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA) ausgeliefert.
+
+**Mögliche Server-Logs:** IP-Adresse, Datum/Uhrzeit, angeforderte URL, Referrer, User-Agent, Statuscode.  
+**Zweck:** Betrieb, Sicherheit, Missbrauchs-/Fehleranalyse.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer, technisch notwendiger Auslieferung).  
+**Übermittlung in Drittländer:** USA. GitHub stützt sich u. a. auf Standardvertragsklauseln (SCC).  
+**Hinweise:**  
+- GitHub Privacy Statement: <https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>  
+- Wir setzen **keine** eigenen Cookies/Tracker; ein **Einwilligungsbanner** ist daher nicht erforderlich. Sollten künftig externe Dienste (z. B. Analytics/Fonts/Embeds) eingesetzt werden, erfolgt **vorher** eine Einwilligung nach § 25 TTDSG/Art. 6 Abs. 1 lit. a DSGVO.
+
+---
+
+## 8) Rechtsgrundlagen (DSGVO)
 - **Art. 6 Abs. 1 lit. b** – Vertrag/Leistungserfüllung (Kernfunktionen der App).  
 - **Art. 6 Abs. 1 lit. a** – Einwilligung (Mikrofonberechtigung für Diktat, jederzeit widerrufbar in Android).  
 - **Art. 6 Abs. 1 lit. f** – Berechtigtes Interesse (sichere Bereitstellung via HTTPS, technische Caches/Stabilität).
 
 ---
 
-## 8) Deine Rechte
+## 9) Deine Rechte
 Du hast u. a. **Auskunft**, **Berichtigung**, **Löschung**, **Einschränkung**, **Datenübertragbarkeit** und **Widerspruch** (Art. 15–21 DSGVO).  
 Da keine serverseitigen Konten geführt werden, kannst du deine Daten direkt **auf dem Gerät** löschen (siehe oben). Für Anliegen kontaktiere uns per E-Mail.
 
 ---
 
-## 9) Kontakt
+## 10) Kontakt
 **E-Mail:** mathias.haeuser@gmx.net
 
 ---
 
-## 10) Änderungen & Stand
+## 11) Änderungen & Stand
 Diese Hinweise können angepasst werden, wenn sich Funktionen oder rechtliche Vorgaben ändern.  
-**Stand:** 2025-10-22
+**Stand:** 2025-10-23
 '@
   Write-File $p $c
 }
