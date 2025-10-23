@@ -42,18 +42,22 @@ nav:
       - Start: index.md
       - Schnellstart: quickstart.md
       - Funktionen: features.md
+
+
+
   - Screens:
       - Home:
           - Home: screens/home.md
           - Zyklus planen: screens/cycle-planner.md
           - Spracheingabe (Tastatur): screens/voice-input-keyboard.md
           - Aufräumen: screens/cleanup.md
-
-
-
-
+          - Aktivität hinzufügen: screens/add-activity.md
       - Einstellungen: screens/settings.md
       - Sprach-Makros: screens/voice-macros.md
+      - Info: screens/info.md
+
+
+
   - Hilfe:
       - Häufige Fragen (FAQ): faq.md
   - System:
