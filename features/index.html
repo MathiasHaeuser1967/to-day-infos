@@ -45,6 +45,8 @@
       
     
     
+      <link rel="stylesheet" href="../assets/css/nav-sections.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -219,26 +221,68 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+  
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
-    Start
+    Einführung
     
   </span>
   
 
-      </a>
-    </li>
-  
-
-    
-      
-      
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Einführung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
   
   
   
@@ -258,9 +302,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -275,6 +320,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -286,6 +344,132 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-aktivitaten-erinnerungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Aktivitäten &amp; Erinnerungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-zyklen-planer" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Zyklen (Planer)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zeitansagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Zeitansagen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sprache-tts-stt-sprach-makros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Sprache: TTS, STT &amp; Sprach-Makros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-wetter-pollen-dwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Wetter &amp; Pollen (DWD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-benachrichtigungen-alarme" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Benachrichtigungen &amp; Alarme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-home-ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Home-Übersicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Einstellungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-daten-technik" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Daten &amp; Technik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-datenschutz-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Datenschutz &amp; Offline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-grenzen-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      11) Grenzen &amp; Hinweise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -299,6 +483,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -311,10 +505,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -327,10 +521,62 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Screens
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -347,52 +593,6 @@
   
   <span class="md-ellipsis">
     Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../screens/settings/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Einstellungen
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../screens/cleanup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Aufräumen
     
   </span>
   
@@ -433,12 +633,135 @@
   
   
     <li class="md-nav__item">
+      <a href="../screens/voice-input-keyboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spracheingabe (Tastatur)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufräumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/add-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aktivität hinzufügen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einstellungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../screens/voice-macros/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Sprach-Makros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Info
     
   </span>
   
@@ -462,13 +785,60 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hilfe
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hilfe
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Häufige Fragen
+    Häufige Fragen (FAQ)
     
   </span>
   
@@ -477,9 +847,66 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -499,9 +926,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -521,9 +949,64 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -540,6 +1023,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -564,6 +1055,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-aktivitaten-erinnerungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Aktivitäten &amp; Erinnerungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-zyklen-planer" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Zyklen (Planer)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zeitansagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Zeitansagen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sprache-tts-stt-sprach-makros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Sprache: TTS, STT &amp; Sprach-Makros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-wetter-pollen-dwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Wetter &amp; Pollen (DWD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-benachrichtigungen-alarme" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Benachrichtigungen &amp; Alarme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-home-ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Home-Übersicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Einstellungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-daten-technik" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Daten &amp; Technik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-datenschutz-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Datenschutz &amp; Offline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-grenzen-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      11) Grenzen &amp; Hinweise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -579,12 +1177,99 @@
 
 
 <h1 id="funktionen">Funktionen<a class="headerlink" href="#funktionen" title="Permanent link">&para;</a></h1>
+<p>Ein Überblick über das, was <strong>ToDay</strong> kann.</p>
+<hr />
+<h2 id="1-aktivitaten-erinnerungen">1) Aktivitäten &amp; Erinnerungen<a class="headerlink" href="#1-aktivitaten-erinnerungen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Home-&Uuml;bersicht:</strong> Tagesansicht mit offenen/erledigten Aktivit&auml;ten, Kennzahlen und Fortschritt.</li>
-<li><strong>Zeitansagen:</strong> Sprachhinweise (Text-to-Speech) zu definierten Zeiten oder Intervallen.</li>
-<li><strong>Aufr&auml;umen:</strong> Aktivit&auml;ten eines Tages l&ouml;schen &ndash; Quelle w&auml;hlbar, inkl. Stornierung der zugeh&ouml;rigen Benachrichtigungen/Alarme.</li>
-<li><strong>Zyklen planen:</strong> Wiederkehrende Aktivit&auml;ten automatisch erzeugen (z. B. t&auml;glich, w&ouml;chentlich).</li>
-<li><strong>Sprach-Makros:</strong> H&auml;ufige Aktionen per Sprachbefehl ausl&ouml;sen.</li>
+<li><strong>Aktivitäten/To-Dos</strong> mit: <strong>Titel</strong>, <strong>Beschreibung</strong>, <strong>Datum (Y-M-D)</strong>, <strong>Uhrzeit (HH:mm)</strong>, <strong>Priorität</strong>, <strong>Erinnerungen</strong> (mehrere Offsets), <strong>Wiederholung (RRULE)</strong>, <strong>Ausnahmen (exdates)</strong>, <strong>Quelle</strong> (z. B. <code>system:cycle</code>, <code>system:time_announce</code>), <strong>schedRev</strong>, <strong>batchId</strong>.</li>
+<li><strong>Mehrfach-Erinnerungen</strong>: vordefinierte Offsets (Start, 5/10/15/30 Min, 1/2 Std) – kombinierbar.</li>
+<li><strong>Wiederholungen</strong>: täglich / wöchentlich (Tage + Intervall) / monatlich (Tag im Monat oder Wochentag im Monat) / jährlich (Datum oder Wochentag in Monat).<br />
+  Ende: <strong>Endlos</strong>, <strong>Bis Datum</strong>, <strong>Nach Anzahl</strong>.</li>
+<li><strong>Überfällig-Darstellung</strong>: Segmentierung <strong>\&lt; 1 h</strong>, <strong>1–3 h</strong>, <strong>&gt; 3 h</strong> mit Schnellaktionen und Segmentlisten.</li>
+</ul>
+<hr />
+<h2 id="2-zyklen-planer">2) Zyklen (Planer)<a class="headerlink" href="#2-zyklen-planer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Erzeugt automatisch <strong>Serien von Aktivitäten</strong> ab Startzeit mit Anzahl-Begrenzung (z. B. „4 von 24 möglich“).</li>
+<li><strong>Vorlagen/Presets</strong> (Pomodoro &amp; Co.): <code>25/5</code> (Pomodoro), <code>50/10</code>, <code>52/17</code>, <code>45/15</code>, <code>30/10</code>, <code>60/15</code>, sowie <strong>ultradiane Zyklen</strong> <code>90/15</code>, <code>90/20</code>, <code>75/15</code>.</li>
+<li>Optionaler <strong>Fokus-Start</strong> (z. B. zur direkten Sitzung).</li>
+</ul>
+<hr />
+<h2 id="3-zeitansagen">3) Zeitansagen<a class="headerlink" href="#3-zeitansagen" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Erzeugt <strong>Zeitpunkte zwischen Start- und Endzeit</strong> im gewählten <strong>Takt</strong>: 10/15/20/30 Min oder <strong>stündlich</strong>.</li>
+<li>Ausgabe als <strong>Benachrichtigung</strong> – wahlweise <strong>TTS</strong> oder <strong>Morse-Ton</strong>.</li>
+<li>Zeitansagen werden als eigene <strong>Aktivitätsquelle</strong> (<code>system:time_announce</code>) geführt.</li>
+</ul>
+<hr />
+<h2 id="4-sprache-tts-stt-sprach-makros">4) Sprache: TTS, STT &amp; Sprach-Makros<a class="headerlink" href="#4-sprache-tts-stt-sprach-makros" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Text-to-Speech (TTS)</strong>: Engine/Stimme/Locale, <strong>Sprechtempo</strong> und <strong>Tonhöhe</strong>, Probe-Ausgabe.</li>
+<li><strong>Spracheingabe über Tastatur</strong>: Diktat mit Schlüsselwörtern <strong>„Titel …“, „Beschreibung …“, „Datum …“, „Uhrzeit …“</strong> → Parser füllt Felder.</li>
+<li><strong>Sprach-Makros</strong>: <strong>Trigger → Expansion → Parsing</strong><br />
+  CRUD (anlegen/bearbeiten/löschen), Aktiv/Filter, Vorschau-Parsing, Duplikat-Prüfung.</li>
+</ul>
+<hr />
+<h2 id="5-wetter-pollen-dwd">5) Wetter &amp; Pollen (DWD)<a class="headerlink" href="#5-wetter-pollen-dwd" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>PLZ</strong> + optionale <strong>Warnregion</strong>, <strong>Ruhezeiten</strong> (DND für DWD).</li>
+<li><strong>Wetterwarnungen</strong> (z. B. Hagel, Gewitter, Sturm, Regen, Schnee, Wind, Frost, Nebel) – pro Typ aktivierbar.</li>
+<li><strong>Pollenflug</strong> mit <strong>Schwellwert</strong> („ab Intensität …“) und <strong>Pollenarten</strong> (Gräser, Birke, Erle, Hasel, Esche, Beifuß, Ambrosia, Roggen).</li>
+<li><strong>Sofort prüfen</strong> startet direkt eine DWD-Abfrage.<br />
+  Integration auf Home (Indikatoren, Infozeilen).</li>
+</ul>
+<hr />
+<h2 id="6-benachrichtigungen-alarme">6) Benachrichtigungen &amp; Alarme<a class="headerlink" href="#6-benachrichtigungen-alarme" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Robuste <strong>Planung/Stornierung</strong> je Aktivität/Datum (inkl. Batch/Offsets).</li>
+<li><strong>Exakte Alarme</strong> (falls vom System erlaubt) für pünktliche Auslösung.</li>
+<li><strong>Cancel-Logik</strong> für zugeordnete Benachrichtigungen beim Löschen/Aufräumen.</li>
+</ul>
+<blockquote>
+<p>Wichtig: Für zuverlässige Zustellung sind <strong>Benachrichtigungen erlauben</strong>, <strong>Exakte Alarme</strong> (falls vorhanden) und <strong>Akku-Optimierung ignorieren</strong> erforderlich.</p>
+</blockquote>
+<hr />
+<h2 id="7-home-ubersicht">7) Home-Übersicht<a class="headerlink" href="#7-home-ubersicht" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Datumsnavigation</strong> (Gestern/Heute/Morgen/Arrows), <strong>Fortschrittsbalken</strong> (Erledigt / Gesamt), <strong>Kennzahlen</strong> (Gesamt, Erledigt, Hohe Priorität).</li>
+<li><strong>Infozeile</strong>: Wetterwarnungen &amp; Pollenstatus (DWD).</li>
+<li><strong>Tabs</strong>: Offen · Überfällig · Erledigt · DWD.</li>
+<li><strong>Schnellaktionen</strong> &amp; <strong>Segmentlisten</strong> für Überfälliges.</li>
+<li><strong>FABs</strong>: Aktivität hinzufügen, Spracheingabe, Zyklus-Generator.<br />
+  Extras: <strong>Heatbar/Stats</strong> und <strong>Konfetti</strong> bei Erfolgen (geräte-/versionabhängig).</li>
+</ul>
+<hr />
+<h2 id="8-einstellungen">8) Einstellungen<a class="headerlink" href="#8-einstellungen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Sprache</strong> (DE/EN).</li>
+<li><strong>Aussehen</strong>: Hell/Dunkel/System, <strong>dynamische Farben</strong> (Android 12+).</li>
+<li><strong>Benachrichtigungen – Allgemein</strong>: Land, <strong>PLZ</strong>, <strong>Warnregion</strong>, <strong>Ruhezeiten</strong>, globaler Schalter.</li>
+<li><strong>Wetterwarnungen (DWD)</strong> und <strong>Pollen (DWD)</strong>: fein konfigurierbar, <strong>Sofort prüfen</strong>.</li>
+<li><strong>TTS-Einstellungen</strong>: Stimme, Tempo, Tonhöhe.</li>
+<li><strong>Zeitansagen</strong>: Fenster, Taktung, Morse statt TTS, <strong>Erzeugen</strong>.</li>
+<li><strong>Gefährlicher Bereich</strong>: Debug-Infos unter Aktivitäten, <strong>Benachrichtigungen neu aufbauen</strong>, <strong>Alle Aktivitäten löschen</strong>.</li>
+</ul>
+<hr />
+<h2 id="9-daten-technik">9) Daten &amp; Technik<a class="headerlink" href="#9-daten-technik" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>SQLite</strong> (lokal), Repositories für Aktivitäten &amp; Settings.</li>
+<li><strong>Scheduling-Service</strong> mit <strong>RRULE-Evaluator</strong> und <strong>Cycle-Generator</strong>.</li>
+<li><strong>Notification-Facade</strong> kapselt Planung, IDs und Cancel-Pfad.</li>
+<li><strong>Info-Dialog</strong> zeigt Version/Kanal, Android-Build, Package-ID, DB-Pfad/Datei/Tabellen/Einträge und Rechte-Status (Benachrichtigungen, Exakte Alarme, Akku-Optimierung).</li>
+</ul>
+<hr />
+<h2 id="10-datenschutz-offline">10) Datenschutz &amp; Offline<a class="headerlink" href="#10-datenschutz-offline" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Aktivitäten liegen <strong>lokal</strong> (keine Cloud-Pflicht).  </li>
+<li>DWD-Daten benötigen Internet; bei Offline-Betrieb Aktualisierung beim nächsten Sync.</li>
+<li>Spracheingabe erfolgt über die <strong>Tastatur-App</strong> (deren Datenschutzbestimmungen gelten).</li>
+</ul>
+<hr />
+<h2 id="11-grenzen-hinweise">11) Grenzen &amp; Hinweise<a class="headerlink" href="#11-grenzen-hinweise" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ruhezeiten</strong> wirken nur für DWD-Warnungen – nicht für Aufgaben-Alarme.</li>
+<li>Ohne Systemrechte (<strong>Exakte Alarme</strong>/Benachrichtigungen/ Akku-Optimierung) können Erinnerungen verspätet sein.</li>
+<li>Kalender-/Zeitzonen-Besonderheiten bei RRULEs werden berücksichtigt, dennoch nach Importen prüfen.</li>
 </ul>
 
 
@@ -634,7 +1319,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

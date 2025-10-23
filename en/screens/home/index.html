@@ -14,7 +14,7 @@
         <link rel="prev" href="../../features/">
       
       
-        <link rel="next" href="../settings/">
+        <link rel="next" href="../cycle-planner/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -44,6 +44,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/css/nav-sections.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -221,24 +223,64 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
-    Start
+    Einführung
     
   </span>
   
 
-      </a>
-    </li>
-  
-
-    
-      
-      
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Einführung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
   
   
   
@@ -258,9 +300,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -280,6 +323,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -290,6 +341,16 @@
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -303,10 +364,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -319,10 +380,64 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Screens
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -342,19 +457,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -366,157 +468,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-kopfzeile" class="md-nav__link">
-    <span class="md-ellipsis">
-      1) Kopfzeile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-datumsbereich-navigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2) Datumsbereich &amp; Navigation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-kennzahlen-karten" class="md-nav__link">
-    <span class="md-ellipsis">
-      3) Kennzahlen-Karten
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-infozeile-wetter-dwd" class="md-nav__link">
-    <span class="md-ellipsis">
-      4) Infozeile / Wetter &amp; DWD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-tabs-listenfilter" class="md-nav__link">
-    <span class="md-ellipsis">
-      5) Tabs (Listenfilter)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-aktivitatenliste-interaktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      6) Aktivitätenliste (Interaktionen)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-schnelltasten-unten-floating-action-row" class="md-nav__link">
-    <span class="md-ellipsis">
-      7) Schnelltasten unten (Floating Action Row)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-typische-ablaufe" class="md-nav__link">
-    <span class="md-ellipsis">
-      8) Typische Abläufe
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8) Typische Abläufe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tageswechsel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tageswechsel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tagesplan-erzeugenaktualisieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tagesplan erzeugen/aktualisieren
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schnell-eintrage-abhaken" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schnell Einträge abhaken
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aufraumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aufräumen
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-was-du-einstellen-kannst-relevant-fur-home" class="md-nav__link">
-    <span class="md-ellipsis">
-      9) Was du einstellen kannst (relevant für Home)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-tipps" class="md-nav__link">
-    <span class="md-ellipsis">
-      10) Tipps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -530,12 +481,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/" class="md-nav__link">
+      <a href="../cycle-planner/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Einstellungen
+    Zyklus planen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voice-input-keyboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spracheingabe (Tastatur)
     
   </span>
   
@@ -576,12 +550,43 @@
   
   
     <li class="md-nav__item">
-      <a href="../cycle-planner/" class="md-nav__link">
+      <a href="../add-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Zyklus planen
+    Aktivität hinzufügen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einstellungen
     
   </span>
   
@@ -615,6 +620,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -628,13 +656,60 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hilfe
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hilfe
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Häufige Fragen
+    Häufige Fragen (FAQ)
     
   </span>
   
@@ -643,9 +718,66 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -665,9 +797,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -687,9 +820,64 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -706,6 +894,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -730,146 +926,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-kopfzeile" class="md-nav__link">
-    <span class="md-ellipsis">
-      1) Kopfzeile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-datumsbereich-navigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2) Datumsbereich &amp; Navigation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-kennzahlen-karten" class="md-nav__link">
-    <span class="md-ellipsis">
-      3) Kennzahlen-Karten
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-infozeile-wetter-dwd" class="md-nav__link">
-    <span class="md-ellipsis">
-      4) Infozeile / Wetter &amp; DWD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-tabs-listenfilter" class="md-nav__link">
-    <span class="md-ellipsis">
-      5) Tabs (Listenfilter)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-aktivitatenliste-interaktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      6) Aktivitätenliste (Interaktionen)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-schnelltasten-unten-floating-action-row" class="md-nav__link">
-    <span class="md-ellipsis">
-      7) Schnelltasten unten (Floating Action Row)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-typische-ablaufe" class="md-nav__link">
-    <span class="md-ellipsis">
-      8) Typische Abläufe
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8) Typische Abläufe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tageswechsel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tageswechsel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tagesplan-erzeugenaktualisieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tagesplan erzeugen/aktualisieren
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schnell-eintrage-abhaken" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schnell Einträge abhaken
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aufraumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aufräumen
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-was-du-einstellen-kannst-relevant-fur-home" class="md-nav__link">
-    <span class="md-ellipsis">
-      9) Was du einstellen kannst (relevant für Home)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-tipps" class="md-nav__link">
-    <span class="md-ellipsis">
-      10) Tipps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -885,129 +941,7 @@
 
 
 <h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h1>
-<p>Die <strong>Home</strong>-Seite ist deine Tageszentrale: Datum wählen, Fortschritt sehen, Listen filtern und neue Aktivitäten anlegen oder per Sprache steuern.</p>
-<hr />
-<h2 id="1-kopfzeile">1) Kopfzeile<a class="headerlink" href="#1-kopfzeile" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Titel:</strong> <em>ToDay</em>  </li>
-<li><strong>Menü (&#8942;):</strong> Öffnet die Seitennavigation, z. B. <strong>Einstellungen</strong>, <strong>Aufräumen</strong>, <strong>Hilfe</strong>.</li>
-</ul>
-<hr />
-<h2 id="2-datumsbereich-navigation">2) Datumsbereich &amp; Navigation<a class="headerlink" href="#2-datumsbereich-navigation" title="Permanent link">&para;</a></h2>
-<p>Oben siehst du das <strong>gewählte Datum</strong> in zwei Formen:</p>
-<ul>
-<li><strong>Datumschip links</strong> (z. B. <strong>22. Okt. 2025</strong>) &rarr; Tippen, um einen Datumspicker zu öffnen (schnell zu jedem beliebigen Tag springen).</li>
-<li><strong>Langform rechts</strong> (z. B. <strong>Mittwoch, 22. Oktober 2025</strong>) nur zur besseren Lesbarkeit.</li>
-</ul>
-<p>Darunter findest du die <strong>Navigation</strong>:</p>
-<ul>
-<li><strong>Pfeile</strong> &#8249; / &#8250; &rarr; Einen Tag zurück/vor springen.</li>
-<li><strong>Chips</strong> <strong>Gestern</strong>, <strong>Heute</strong>, <strong>Morgen</strong> &rarr; Sprung direkt auf diese drei Fixpunkte.</li>
-</ul>
-<p><strong>Fortschrittsbalken:</strong><br />
-Zwischen Navigation und Kennzahlen zeigt ein Balken deinen Tagesfortschritt in % (z. B. <strong>62.3 %</strong>). Er berechnet sich aus <strong>Erledigt / Gesamt</strong> der Aktivitäten am gewählten Tag.</p>
-<hr />
-<h2 id="3-kennzahlen-karten">3) Kennzahlen-Karten<a class="headerlink" href="#3-kennzahlen-karten" title="Permanent link">&para;</a></h2>
-<p>Es gibt drei kompakte Kacheln:</p>
-<ol>
-<li>
-<p><strong>Gesamt</strong><br />
-   Anzahl <strong>aller</strong> Aktivitäten am gewählten Tag (offen + erledigt).</p>
-</li>
-<li>
-<p><strong>Erledigt</strong><br />
-   Kreisdiagramm + Zähler <code>x / y</code>. Zeigt, wie viele Einträge bereits abgeschlossen sind.</p>
-</li>
-<li>
-<p><strong>Hohe Priorität</strong><br />
-   Anzahl der als <strong>wichtig</strong> markierten Aktivitäten.</p>
-</li>
-</ol>
-<p><strong>Tipp:</strong> Tippen auf eine Karte kann (je nach Version/Einstellung) die Liste <strong>vorfiltern</strong>.</p>
-<hr />
-<h2 id="4-infozeile-wetter-dwd">4) Infozeile / Wetter &amp; DWD<a class="headerlink" href="#4-infozeile-wetter-dwd" title="Permanent link">&para;</a></h2>
-<p>Unter den Kennzahlen wird ein <strong>Info-Block</strong> angezeigt:
-- <strong>Wetterwarnungen DWD</strong> – Statuspunkt (grün/gelb/rot) und Kurztext.<br />
-- <strong>Pollenflug DWD</strong> – Statuspunkt und Kurztext.<br />
-- <strong>Aktuelles Wetter</strong> – z. B. <strong>13&deg;C, 83 % rF, Sonne, wolkenlos</strong>.</p>
-<p>Die Detailansicht erreichst du über den <strong>Tab „DWD“</strong> (siehe unten). Ein-/Ausblendung und Einheiten stellst du in <strong>Einstellungen</strong> ein.</p>
-<hr />
-<h2 id="5-tabs-listenfilter">5) Tabs (Listenfilter)<a class="headerlink" href="#5-tabs-listenfilter" title="Permanent link">&para;</a></h2>
-<p>Direkt über der Liste stehen Tabs. Sie filtern die Tagesansicht:</p>
-<ul>
-<li><strong>Offen</strong> – alle <strong>nicht erledigten</strong> Aktivitäten am gewählten Datum.  </li>
-<li><strong>Überfällig</strong> – Einträge, deren Termin <strong>in der Vergangenheit</strong> liegt und die noch <strong>offen</strong> sind.  </li>
-<li><strong>Erledigt</strong> – bereits <strong>abgehakte</strong> Einträge des Tages.  </li>
-<li><strong>DWD</strong> – Wetterwarnungen/Pollenflug-Details für deinen Ort (Daten: Deutscher Wetterdienst).</li>
-</ul>
-<p><strong>Hinweis:</strong> Der kleine Zähler in eckigen Klammern zeigt, wie viele Einträge der jeweilige Tab aktuell enthält (z. B. <code>Offen [0]</code>).</p>
-<hr />
-<h2 id="6-aktivitatenliste-interaktionen">6) Aktivitätenliste (Interaktionen)<a class="headerlink" href="#6-aktivitatenliste-interaktionen" title="Permanent link">&para;</a></h2>
-<p>In den Tabs <strong>Offen / Überfällig / Erledigt</strong>:</p>
-<ul>
-<li><strong>Öffnen/Bearbeiten:</strong> Eintrag antippen.  </li>
-<li><strong>Als erledigt markieren:</strong> Häkchen/Checkbox tippen.  </li>
-<li><strong>Lange tippen:</strong> Kontextaktionen (z. B. verschieben, duplizieren, löschen; je nach Version).  </li>
-<li><strong>Sortierung:</strong> Standard ist <strong>nach Uhrzeit</strong>; vordatiert/ohne Zeit werden gruppiert angezeigt.</li>
-</ul>
-<hr />
-<h2 id="7-schnelltasten-unten-floating-action-row">7) Schnelltasten unten (Floating Action Row)<a class="headerlink" href="#7-schnelltasten-unten-floating-action-row" title="Permanent link">&para;</a></h2>
-<p>Von <strong>links nach rechts</strong>:</p>
-<ol>
-<li>
-<p><strong>Zyklus ausführen</strong> (zwei kreisförmige Pfeile)<br />
-   Erzeugt für das <strong>gewählte Datum</strong> die fälligen Einträge aus deinen <strong>Zyklen</strong> (Wiederholungen).</p>
-</li>
-<li>
-<p><strong>Sprachbefehl</strong> (Mikrofon)<br />
-   Startet <strong>Sprach-Makros</strong> bzw. die <strong>Spracheingabe</strong>.</p>
-</li>
-<li>
-<p><strong>Schnellaktion</strong> (Minus-Symbol)<br />
-   Kontextsensitive Kurzfunktion – z. B. <strong>Aufräumen</strong> öffnen, <strong>Snooze/Zurückstellen</strong> oder eine definierte <strong>Kurzaktion</strong>.</p>
-</li>
-<li>
-<p><strong>Neu anlegen</strong> (Plus)<br />
-   Öffnet den Dialog, um <strong>eine neue Aktivität</strong> für das gewählte Datum zu erstellen (Titel, Uhrzeit, Wiederholung, Priorität etc.).</p>
-</li>
-</ol>
-<hr />
-<h2 id="8-typische-ablaufe">8) Typische Abläufe<a class="headerlink" href="#8-typische-ablaufe" title="Permanent link">&para;</a></h2>
-<h3 id="tageswechsel">Tageswechsel<a class="headerlink" href="#tageswechsel" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Mit Pfeilen/Chips zu <strong>Gestern/Heute/Morgen</strong> springen oder auf den <strong>Datumschip</strong> tippen und ein beliebiges Datum wählen.</li>
-</ul>
-<h3 id="tagesplan-erzeugenaktualisieren">Tagesplan erzeugen/aktualisieren<a class="headerlink" href="#tagesplan-erzeugenaktualisieren" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Zyklus ausführen</strong> antippen &rarr; wiederkehrende Einträge für <strong>dieses Datum</strong> werden angelegt.</li>
-</ul>
-<h3 id="schnell-eintrage-abhaken">Schnell Einträge abhaken<a class="headerlink" href="#schnell-eintrage-abhaken" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Im Tab <strong>Offen/Überfällig</strong> die <strong>Checkbox</strong> tippen &rarr; Eintrag wandert nach <strong>Erledigt</strong>; Fortschritt steigt.</li>
-</ul>
-<h3 id="aufraumen">Aufräumen<a class="headerlink" href="#aufraumen" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Über das <strong>Menü (&#8942;)</strong> oder die <strong>Schnellaktion (−)</strong> den <strong>Aufräumen-Dialog</strong> öffnen, Quelle wählen (Zyklus / Zeitansagen / User), Optionen setzen (z. B. „Nur offene“, „Benachrichtigungen stornieren“) und <strong>Löschen</strong> tippen.</li>
-</ul>
-<hr />
-<h2 id="9-was-du-einstellen-kannst-relevant-fur-home">9) Was du einstellen kannst (relevant für Home)<a class="headerlink" href="#9-was-du-einstellen-kannst-relevant-fur-home" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Benachrichtigungen &amp; Alarme</strong>: Berechtigungen, Wichtigkeit, Töne, „Exakte Alarme“, Energiesparen.  </li>
-<li><strong>Zeitansagen</strong>: Ein/Aus, Sprache/Stimme, Zeitfenster, Intervall.  </li>
-<li><strong>Zyklen</strong>: Wiederhol-Rhythmus, Start/Ende, Konfliktbehandlung.  </li>
-<li><strong>DWD-Infos</strong>: Ein-/Ausblendung, Ort/Quelle (sofern konfigurierbar).  </li>
-<li><strong>Darstellung</strong>: Hell/Dunkel/Automatisch, App-Sprache (Deutsch/Englisch).</li>
-</ul>
-<blockquote>
-<p>Die genannten Optionen findest du in <strong>Einstellungen</strong>. Einige Verhaltensweisen (z. B. Karten-Tap &rarr; Filter) können je nach Version variieren.</p>
-</blockquote>
-<hr />
-<h2 id="10-tipps">10) Tipps<a class="headerlink" href="#10-tipps" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Heute</strong> zuerst abarbeiten: Nutze die Tabs <strong>Überfällig</strong> und <strong>Offen</strong> sowie den Fortschrittsbalken als Taktgeber.  </li>
-<li><strong>Zyklen</strong> sparen Klicks: Wiederkehrendes einmal definieren, dann täglich per <strong>Zyklus ausführen</strong> aktualisieren.  </li>
-<li><strong>DWD-Tab</strong> im Blick behalten, wenn du wetter- oder pollenabhängige Aufgaben hast.</li>
-</ul>
+<p>Help for the home screen.</p>
 
 
 
@@ -1056,7 +990,7 @@ Zwischen Navigation und Kennzahlen zeigt ein Balken deinen Tagesfortschritt in %
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>

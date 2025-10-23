@@ -45,6 +45,8 @@
       
     
     
+      <link rel="stylesheet" href="../assets/css/nav-sections.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -221,24 +223,64 @@
   
   
   
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
-    Start
+    Einführung
     
   </span>
   
 
-      </a>
-    </li>
-  
-
-    
-      
-      
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Einführung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
   
   
   
@@ -258,9 +300,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -280,6 +323,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -288,6 +339,16 @@
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -301,10 +362,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -317,10 +378,62 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Screens
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -337,52 +450,6 @@
   
   <span class="md-ellipsis">
     Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../screens/settings/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Einstellungen
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../screens/cleanup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Aufräumen
     
   </span>
   
@@ -423,12 +490,135 @@
   
   
     <li class="md-nav__item">
+      <a href="../screens/voice-input-keyboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spracheingabe (Tastatur)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufräumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/add-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aktivität hinzufügen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einstellungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../screens/voice-macros/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Sprach-Makros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screens/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Info
     
   </span>
   
@@ -452,13 +642,60 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hilfe
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hilfe
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Häufige Fragen
+    Häufige Fragen (FAQ)
     
   </span>
   
@@ -467,9 +704,68 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -489,9 +785,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -506,6 +803,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Datenschutz
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -518,12 +828,176 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-grundsatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Grundsätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verantwortlicher" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Verantwortlicher
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-welche-daten-verarbeitet-die-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Welche Daten verarbeitet die App?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-berechtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Berechtigungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-speicherdauer-loschung" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Speicherdauer &amp; Löschung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-weitergabe-drittanbieter" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Weitergabe &amp; Drittanbieter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-rechtsgrundlagen-dsgvo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Rechtsgrundlagen (DSGVO)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-deine-rechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Deine Rechte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-kontakt" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Kontakt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-anderungen-stand" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Änderungen &amp; Stand
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -540,6 +1014,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -564,6 +1046,104 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-grundsatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Grundsätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verantwortlicher" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Verantwortlicher
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-welche-daten-verarbeitet-die-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Welche Daten verarbeitet die App?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-berechtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Berechtigungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-speicherdauer-loschung" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Speicherdauer &amp; Löschung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-weitergabe-drittanbieter" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Weitergabe &amp; Drittanbieter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-rechtsgrundlagen-dsgvo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Rechtsgrundlagen (DSGVO)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-deine-rechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Deine Rechte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-kontakt" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Kontakt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-anderungen-stand" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Änderungen &amp; Stand
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -579,12 +1159,79 @@
 
 
 <h1 id="datenschutz">Datenschutz<a class="headerlink" href="#datenschutz" title="Permanent link">&para;</a></h1>
+<p>Diese Seite beschreibt kurz und verständlich, wie <strong>ToDay</strong> mit Daten umgeht.</p>
+<hr />
+<h2 id="1-grundsatze">1) Grundsätze<a class="headerlink" href="#1-grundsatze" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Alle Daten werden <strong>lokal</strong> auf deinem Ger&auml;t verarbeitet.  </li>
-<li>Es findet <strong>keine Cloud-Synchronisation</strong> statt.  </li>
-<li>Die vollst&auml;ndige Datenschutzerkl&auml;rung findest du auf der Play-Store-Seite.</li>
+<li><strong>Keine Konten. Keine Cloud. Keine Werbung. Kein Tracking.</strong></li>
+<li>Aufgaben und Einstellungen werden <strong>nur lokal</strong> auf deinem Gerät gespeichert.</li>
+<li>Spracheingaben für das Diktat werden <strong>flüchtig</strong> verarbeitet und <strong>nicht gespeichert</strong>.</li>
 </ul>
-<p>Bei Fragen wende dich an den Support in der App.</p>
+<hr />
+<h2 id="2-verantwortlicher">2) Verantwortlicher<a class="headerlink" href="#2-verantwortlicher" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>App:</strong> ToDay (Android)  </li>
+<li><strong>Entwickler:</strong> Mathias Haeuser  </li>
+<li><strong>Kontakt:</strong> mathias.haeuser@gmx.net<br />
+<em>(Kein/e Datenschutzbeauftragte/r erforderlich – es werden keine serverseitigen personenbezogenen Daten verarbeitet.)</em></li>
+</ul>
+<hr />
+<h2 id="3-welche-daten-verarbeitet-die-app">3) Welche Daten verarbeitet die App?<a class="headerlink" href="#3-welche-daten-verarbeitet-die-app" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Aufgaben &amp; Einstellungen</strong><br />
+  Titel, Beschreibung, Datum/Uhrzeit, Priorität, Wiederholungen, Erinnerungen u. a.<br />
+  → Speicherung <strong>lokal</strong> in der App-Datenbank (SQLite). Keine Übertragung an Dritte.</li>
+<li><strong>Audio (Mikrofon) für Diktat</strong><br />
+  Gesprochene Eingaben werden nur zur Erkennung verwendet und <strong>sofort verworfen</strong> (keine Speicherung).</li>
+<li><strong>Netzwerkabrufe (DWD)</strong><br />
+  Wetter-/Pollenwarnungen werden per <strong>HTTPS</strong> abgerufen. Keine Personalisierung, keine Profilbildung.</li>
+<li><strong>Benachrichtigungen/Alarme</strong><br />
+  Planung und Zustellung erfolgen <strong>lokal</strong> über Android.</li>
+<li><strong>Analytics/Tracking/Ads</strong><br />
+<strong>Nicht verwendet.</strong></li>
+</ul>
+<hr />
+<h2 id="4-berechtigungen">4) Berechtigungen<a class="headerlink" href="#4-berechtigungen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Mikrofon (RECORD_AUDIO):</strong> nur für Diktat (optional, Laufzeitberechtigung).  </li>
+<li><strong>Benachrichtigungen (POST_NOTIFICATIONS, Android 13+):</strong> für Erinnerungen/Warnungen.  </li>
+<li><strong>Exakte Alarme (SCHEDULE_EXACT_ALARM, falls verfügbar):</strong> pünktliche Auslösung von Erinnerungen.  </li>
+<li><strong>Internet (INTERNET/ACCESS_NETWORK_STATE):</strong> für DWD-Abrufe.</li>
+</ul>
+<hr />
+<h2 id="5-speicherdauer-loschung">5) Speicherdauer &amp; Löschung<a class="headerlink" href="#5-speicherdauer-loschung" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Aufgaben/Einstellungen:</strong> bleiben lokal, bis du sie löscht.  </li>
+<li><strong>Audio (Diktat):</strong> wird nur zur Erkennung genutzt und anschließend verworfen.  </li>
+<li><strong>So löscht du Daten:</strong>  </li>
+<li>In der App: <em>Einstellungen</em> → <em>Gefährlicher Bereich</em> → <strong>Alle Aktivitäten löschen</strong> (bzw. Wartungsfunktionen).  </li>
+<li>Android: <em>Einstellungen</em> → <em>Apps</em> → <em>ToDay</em> → <em>Speicher &amp; Cache</em> → <strong>Speicher löschen</strong>.</li>
+</ul>
+<hr />
+<h2 id="6-weitergabe-drittanbieter">6) Weitergabe &amp; Drittanbieter<a class="headerlink" href="#6-weitergabe-drittanbieter" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Es findet <strong>keine Weitergabe</strong> deiner Daten durch uns an Dritte statt.  </li>
+<li><strong>Spracherkennung:</strong> Das Diktat nutzt den <strong>Sprachdienst deiner Tastatur/deines Geräts</strong> (z. B. Google). Dessen Verarbeitung/Datenschutz richten sich nach den Einstellungen/Policies des jeweiligen Anbieters. Wir betreiben <strong>keine eigenen Server</strong> für Audio.  </li>
+<li><strong>DWD:</strong> Abrufe erfolgen ohne Nutzerkonto; PLZ/Warnregion dienen nur zur regionalen Zuordnung.</li>
+</ul>
+<hr />
+<h2 id="7-rechtsgrundlagen-dsgvo">7) Rechtsgrundlagen (DSGVO)<a class="headerlink" href="#7-rechtsgrundlagen-dsgvo" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Art. 6 Abs. 1 lit. b</strong> – Vertrag/Leistungserfüllung (Kernfunktionen der App).  </li>
+<li><strong>Art. 6 Abs. 1 lit. a</strong> – Einwilligung (Mikrofonberechtigung für Diktat, jederzeit widerrufbar in Android).  </li>
+<li><strong>Art. 6 Abs. 1 lit. f</strong> – Berechtigtes Interesse (sichere Bereitstellung via HTTPS, technische Caches/Stabilität).</li>
+</ul>
+<hr />
+<h2 id="8-deine-rechte">8) Deine Rechte<a class="headerlink" href="#8-deine-rechte" title="Permanent link">&para;</a></h2>
+<p>Du hast u. a. <strong>Auskunft</strong>, <strong>Berichtigung</strong>, <strong>Löschung</strong>, <strong>Einschränkung</strong>, <strong>Datenübertragbarkeit</strong> und <strong>Widerspruch</strong> (Art. 15–21 DSGVO).<br />
+Da keine serverseitigen Konten geführt werden, kannst du deine Daten direkt <strong>auf dem Gerät</strong> löschen (siehe oben). Für Anliegen kontaktiere uns per E-Mail.</p>
+<hr />
+<h2 id="9-kontakt">9) Kontakt<a class="headerlink" href="#9-kontakt" title="Permanent link">&para;</a></h2>
+<p><strong>E-Mail:</strong> mathias.haeuser@gmx.net</p>
+<hr />
+<h2 id="10-anderungen-stand">10) Änderungen &amp; Stand<a class="headerlink" href="#10-anderungen-stand" title="Permanent link">&para;</a></h2>
+<p>Diese Hinweise können angepasst werden, wenn sich Funktionen oder rechtliche Vorgaben ändern.<br />
+<strong>Stand:</strong> 2025-10-22</p>
 
 
 
@@ -633,7 +1280,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
