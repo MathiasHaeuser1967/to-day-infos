@@ -75,32 +75,29 @@ erDiagram
 |--------------|---------|:------:|--------------------|-----------|
 | `id`         | TEXT PK | ✅     | `3f1a…-uuid`       | Eindeutige ID der Aktivität. |
 | `title`      | TEXT    | ✅     | „Arzttermin“       | Kurztitel / Name. |
-| `description`| TEXT    | –      | „Unterlagen…“      | Details/Notizen. |
+| `description`| TEXT    | –      | „Überweisung…“     | Details/Notizen. |
 | `date`       | TEXT    | ✅     | `20251012`         | Datum im Format **YYYYMMDD**. |
 | `time`       | TEXT    | ✅     | `0930`             | Uhrzeit im Format **HHmm**. |
 | `priority`   | TEXT    | ✅     | `low/medium/high`  | Priorität (Default: `medium`). |
 | `completed`  | INTEGER | ✅     | `0` / `1`          | Ob erledigt (`1`) oder offen (`0`). |
 | `created_at` | TEXT    | ✅     | `2025-10-12T08:40:21Z` | Erstellt-Zeitpunkt (ISO-8601). |
 | `updated_at` | TEXT    | ✅     | `2025-10-12T08:45:07Z` | Letzte Änderung (ISO-8601). |
-| `reminders`  | TEXT    | –      | `[0,5,15,60]`      | JSON-Liste von **Offset-Minuten** vor Start (0 = beim Start, 5/10/15/30/60/120). |
-| `rrule`      | TEXT    | –      | `FREQ=DAILY;COUNT=10` | **RFC RRULE** für Wiederholungen (z. B. täglich, wöchentlich). |
+| `reminders`  | TEXT    | –      | `[0,15,60]`        | JSON-Liste von **Offset-Minuten** vor Start. |
+| `rrule`      | TEXT    | –      | `FREQ=DAILY;COUNT=10` | **RFC RRULE** für Wiederholungen. |
 | `exdates`    | TEXT    | –      | `["20251015"]`     | JSON-Liste **ausgeklammerter** Vorkommen (YYYYMMDD). |
 | `done_dates` | TEXT    | –      | `["20251012"]`     | JSON-Liste **erledigter** Vorkommen (bei Serien). |
-| `source`     | TEXT    | ✅     | `user` / `system:cycle` / `system:time_announce` | Herkunft: manuell oder System-Features (Zyklus/ Zeitansage). |
-| `sched_rev`  | INTEGER | ✅     | `1`                | **Planungs-Revision** zur Steuerung von Neuplanung/Abgleich. |
-| `batch_id`   | TEXT    | –      | `time:20251012`    | **Batch-Kennung** zum Gruppieren (z. B. vom Zyklusplaner/Zeitansagen). |
+| `source`     | TEXT    | ✅     | `user` / `system:cycle` / `system:time_announce` | Herkunft: manuell oder System-Features. |
+| `sched_rev`  | INTEGER | ✅     | `1`                | **Planungs-Revision** zur Neuplanung/Abgleich. |
+| `batch_id`   | TEXT    | –      | `time:20251012`    | **Batch-Kennung** zum Gruppieren. |
 
 **Hinweise & Formate**
 - **Datum/Uhrzeit** als kompakte Strings → schnelle Vergleiche & Indizes.
 - **Erinnerungen (`reminders`)**: unterstützte Offsets: `0, 5, 10, 15, 30, 60, 120`.
 - **Wiederholungen (`rrule`)**: Standard-RRULE (z. B. `FREQ=WEEKLY;BYDAY=MO,WE;COUNT=8`).  
-  Ausnahmen in `exdates`, bereits erledigte Serien-Vorkommen in `done_dates`.
-- **Quellen (`source`)**:  
-  - `user` – vom Nutzer angelegt  
-  - `system:cycle` – vom **Zyklus-Planer** automatisch erzeugt  
-  - `system:time_announce` – von der **Zeitansage** erzeugt
-- **Revision (`sched_rev`)**: erhöht sich bei Neuaufbau von Planungen → App erkennt veraltete Erinnerungen.
-- **Batch (`batch_id`)**: gruppiert zusammengehörige Items (z. B. eine Serie aus dem Zyklus-Planer).
+  Ausnahmen in `exdates`, erledigte Serien-Vorkommen in `done_dates`.
+- **Quellen (`source`)**: `user`, `system:cycle`, `system:time_announce`.
+- **Revision (`sched_rev`)**: erhöht sich bei Neuaufbau von Planungen.
+- **Batch (`batch_id`)**: gruppiert zusammengehörige Items.
 
 #### `settings` – App-Einstellungen
 
@@ -154,6 +151,7 @@ flowchart LR
 
 - **Warum sind Datum/Uhrzeit als Text gespeichert?**  
   Für schnelle Indizes/Sortierung und robuste Vergleiche (z. B. `WHERE date='20251203'`).
+
 - **Kann ich die DB außerhalb der App öffnen?**  
   Ja, mit einem SQLite-Viewer. Der Pfad ist i. d. R. nur per ADB/Root erreichbar. Der **Kopieren**-Button im Info-Dialog genügt in der Regel für Support.
 
@@ -179,6 +177,65 @@ flowchart LR
 - Auch geplante **Benachrichtigungen/Alarme** der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.  
 - Es bleiben **keine Reste** der App-Datenbank im System zurück – das Gerät ist diesbezüglich **sauber**.
 
+### 4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)
+
+> Zusätzlich zur SQLite-Datenbank speichert ToDay einige Parameter **geräteintern** (Sandbox). Alles liegt im App-Bereich und wird bei **Deinstallation automatisch entfernt**.
+
+#### 4.8.1 Shared Preferences (Key/Value, Klartext)
+- **Ort**: App-Sandbox (`/data/data/<package>/shared_prefs/...`) – intern, ohne Root/ADB nicht direkt zugänglich.  
+- **Typ**: Kleine Einstellungen/Flags als **Key/Value** (String, Bool, Int).  
+- **Beispiele (können je nach Version variieren):**
+
+| Key                                  | Typ    | Beispiel         | Beschreibung |
+|--------------------------------------|--------|------------------|--------------|
+| `ui.theme`                           | String | `system`         | Erscheinungsbild: `light`/`dark`/`system`. |
+| `locale.override`                    | String | `de`             | App-Sprache erzwingen (sonst System). |
+| `home.last_open_date`                | String | `20251203`       | Letztverwendetes Datum im Hauptbildschirm. |
+| `cleanup.only_open.default`          | Bool   | `true`           | Vorauswahl im Aufräumen-Dialog. |
+| `cleanup.cancel_schedules.default`   | Bool   | `true`           | Vorauswahl für „Alarme stornieren“. |
+| `tts.rate`                           | Int    | `12`             | Sprechgeschwindigkeit (z. B. Wörter/Min oder %-Skala). |
+| `tts.pitch`                          | Int    | `0`              | Tonhöhe-Offset. |
+| `time_announce.enabled`              | Bool   | `true`           | Zeitansagen an/aus. |
+| `weather.units.temp`                 | String | `C`              | Temperatureinheit (z. B. `C`). |
+| `weather.units.humidity`             | String | `%`              | Anzeigeeinheit rel. Feuchte. |
+
+> **Hinweis:** Diese Werte sind **keine sensiblen Geheimnisse**; sie dienen der schnellen Initialisierung des UI und Nutzerkomfort.
+
+#### 4.8.2 Secure Storage (verschlüsselt)
+- **Ort**: App-Sandbox, über Android Keystore abgesichert (Plugin `flutter_secure_storage`).  
+- **Typ**: **Sensible** Schlüssel/Werte, verschlüsselt gespeichert.  
+- **Beispiele:**
+
+| Key                    | Typ    | Beispiel              | Beschreibung |
+|------------------------|--------|-----------------------|--------------|
+| `auth.token`           | String | `…`                   | Zugangstoken (falls ein externer Dienst genutzt wird). |
+| `privacy.consent`      | Bool   | `true`                | Merker für Einwilligungen (z. B. TTS/Netzfunktionen). |
+| `tts.voice.id`         | String | `de-DE-Standard-A`    | Gewählte Stimme, falls geschützt abgelegt. |
+
+> **Hinweis:** Nicht jede Installation nutzt alle Schlüssel; Einträge werden **bedarfsgesteuert** angelegt.
+
+#### 4.8.3 Plugin-/Systemspeicher
+Einige Bibliotheken verwalten eigene, app-interne Daten:
+- **Awesome Notifications**: persistiert geplante & aktive Benachrichtigungen (inkl. Payload) im App-Bereich.  
+  - Wird im **Aufräumen**/„Neu aufbauen“ konsistent bereinigt/neu befüllt.  
+- **Image-/Netz-Cache** (z. B. `extended_image` / HTTP-Cache): Zwischenspeicher im **Cache-Verzeichnis** der App.  
+  - Kann vom System oder über App-Wartung geleert werden.  
+- **Temporary Files**: Kurzlebige Dateien (z. B. Exporte während des Speicherns), liegen im **Temp-/Cache-Pfad**.
+
+#### 4.8.4 Exporte/Backups (optional)
+- Wenn du Daten **exportierst**, speichert ToDay die exportierten Dateien im **vom Nutzer gewählten Ordner** (z. B. „Downloads“).  
+- Diese Dateien liegen **außerhalb** der App-Sandbox und bleiben auch nach Deinstallation erhalten, bis du sie selbst löschst.
+
+#### 4.8.5 Lösch- & Backup-Verhalten
+- **App-Daten löschen** (Systemeinstellung) entfernt: Datenbank, Shared Preferences, Secure Storage, Plugin-Daten, Cache.  
+- **Deinstallation** entspricht effektiv „Alles löschen“.  
+- **System-Backups** (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. **nicht** zwischen Geräten migriert.
+
+#### 4.8.6 Datenschutz
+- Keine Telemetrie standardmäßig.  
+- Alle Daten verbleiben **lokal** auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.
+
+---
 
 ## 5) Benachrichtigungen
 Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
