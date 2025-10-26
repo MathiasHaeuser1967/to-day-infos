@@ -1804,16 +1804,80 @@
 - Android löscht den kompletten <strong>App-Sandbox-Bereich</strong> automatisch, inklusive der Datenbank unter <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>.<br />
 - Auch geplante <strong>Benachrichtigungen/Alarme</strong> der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.<br />
 - Es bleiben <strong>keine Reste</strong> der App-Datenbank im System zurück – das Gerät ist diesbezüglich <strong>sauber</strong>.</p>
+<p>Sorry, mein Fehler. Hier ist <strong>nur Kapitel 4.8</strong> als reiner Markdown-Block zum direkten Kopieren:</p>
+<hr />
 <h3 id="48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank">4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)<a class="headerlink" href="#48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Zusätzlich zur SQLite-Datenbank speichert ToDay einige Parameter <strong>geräteintern</strong> (Sandbox). Alles liegt im App-Bereich und wird bei <strong>Deinstallation automatisch entfernt</strong>.</p>
 </blockquote>
 <h4 id="481-shared-preferences-keyvalue-klartext">4.8.1 Shared Preferences (Key/Value, Klartext)<a class="headerlink" href="#481-shared-preferences-keyvalue-klartext" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Ort</strong>: App-Sandbox (<code>/data/data/&lt;package&gt;/shared_prefs/...</code>) – intern, ohne Root/ADB nicht direkt zugänglich.  </li>
-<li><strong>Typ</strong>: Kleine Einstellungen/Flags als <strong>Key/Value</strong> (String, Bool, Int).  </li>
-<li><strong>Beispiele (können je nach Version variieren):</strong></li>
+<li><strong>Ort</strong>: App-Sandbox (<code>/data/data/&lt;package&gt;/shared_prefs/...</code>) – intern, ohne Root/ADB nicht direkt zugänglich.</li>
+<li><strong>Typ</strong>: Kleine Einstellungen/Flags als <strong>Key/Value</strong> (String, Bool, Double, Int).</li>
 </ul>
+<p><strong>TTS (neues, strikt vereinheitlichtes Schema):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Typ</th>
+<th>Beispiel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tts.enabled</code></td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>TTS global an/aus.</td>
+</tr>
+<tr>
+<td><code>tts.engine</code></td>
+<td>String</td>
+<td><code>com.google.android.tts</code></td>
+<td>Vom System gemeldete Engine; Anzeige in der App.</td>
+</tr>
+<tr>
+<td><code>tts.locale</code></td>
+<td>String</td>
+<td><code>de-DE</code></td>
+<td>Sprache im Format <code>ll-CC</code> (Bindestrich, keine Unterstriche).</td>
+</tr>
+<tr>
+<td><code>tts.voiceName</code></td>
+<td>String</td>
+<td><code>German Germany</code></td>
+<td>Exakter Anzeigename aus <code>getVoices</code>.</td>
+</tr>
+<tr>
+<td><code>tts.rate</code></td>
+<td>Double</td>
+<td><code>1.0</code></td>
+<td>Sprechtempo <code>0.20–1.00</code>.</td>
+</tr>
+<tr>
+<td><code>tts.pitch</code></td>
+<td>Double</td>
+<td><code>1.0</code></td>
+<td>Tonhöhe <code>0.50–1.50</code>.</td>
+</tr>
+<tr>
+<td><code>tts.volume</code></td>
+<td>Double</td>
+<td><code>1.0</code></td>
+<td>Lautstärke <code>0.00–1.00</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweise TTS:</strong></p>
+<ul>
+<li>Es existieren ausschließlich diese <strong>neuen</strong> TTS-Keys. <strong>Keine Legacy-Keys</strong> (<code>tts_voice_*</code>, <code>tts.language</code>, <code>tts.voiceId</code>, <code>tts.voiceKey</code>, <code>tts_rate</code>, <code>tts_pitch</code>, <code>tts_volume</code>, …).</li>
+<li>Nach Neustart werden <strong>exakt</strong> die gespeicherten Werte verwendet.</li>
+<li>Falls die gespeicherte Stimme nicht verfügbar ist, greift das Fallback: <strong>exakte Locale</strong> → <strong>Sprachpräfix (<code>ll-</code>)</strong> → <strong>erste verfügbare Stimme</strong>.</li>
+<li>Locale wird stets normiert gespeichert (<code>ll-CC</code>, z. B. <code>de-DE</code>).</li>
+</ul>
+<p><strong>Weitere Beispiele (nicht TTS):</strong></p>
 <table>
 <thead>
 <tr>
@@ -1855,18 +1919,6 @@
 <td>Vorauswahl für „Alarme stornieren“.</td>
 </tr>
 <tr>
-<td><code>tts.rate</code></td>
-<td>Int</td>
-<td><code>12</code></td>
-<td>Sprechgeschwindigkeit (z. B. Wörter/Min oder %-Skala).</td>
-</tr>
-<tr>
-<td><code>tts.pitch</code></td>
-<td>Int</td>
-<td><code>0</code></td>
-<td>Tonhöhe-Offset.</td>
-</tr>
-<tr>
 <td><code>time_announce.enabled</code></td>
 <td>Bool</td>
 <td><code>true</code></td>
@@ -1876,25 +1928,16 @@
 <td><code>weather.units.temp</code></td>
 <td>String</td>
 <td><code>C</code></td>
-<td>Temperatureinheit (z. B. <code>C</code>).</td>
-</tr>
-<tr>
-<td><code>weather.units.humidity</code></td>
-<td>String</td>
-<td><code>%</code></td>
-<td>Anzeigeeinheit rel. Feuchte.</td>
+<td>Temperatureinheit.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Hinweis:</strong> Diese Werte sind <strong>keine sensiblen Geheimnisse</strong>; sie dienen der schnellen Initialisierung des UI und Nutzerkomfort.</p>
-</blockquote>
 <h4 id="482-secure-storage-verschlusselt">4.8.2 Secure Storage (verschlüsselt)<a class="headerlink" href="#482-secure-storage-verschlusselt" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Ort</strong>: App-Sandbox, über Android Keystore abgesichert (Plugin <code>flutter_secure_storage</code>).  </li>
-<li><strong>Typ</strong>: <strong>Sensible</strong> Schlüssel/Werte, verschlüsselt gespeichert.  </li>
-<li><strong>Beispiele:</strong></li>
+<li><strong>Ort</strong>: App-Sandbox, über Android Keystore abgesichert (Plugin <code>flutter_secure_storage</code>).</li>
+<li><strong>Typ</strong>: <strong>Sensible</strong> Schlüssel/Werte, verschlüsselt gespeichert.</li>
 </ul>
+<p><strong>Beispiele:</strong></p>
 <table>
 <thead>
 <tr>
@@ -1909,46 +1952,40 @@
 <td><code>auth.token</code></td>
 <td>String</td>
 <td><code>…</code></td>
-<td>Zugangstoken (falls ein externer Dienst genutzt wird).</td>
+<td>Zugangstoken (falls genutzt).</td>
 </tr>
 <tr>
 <td><code>privacy.consent</code></td>
 <td>Bool</td>
 <td><code>true</code></td>
-<td>Merker für Einwilligungen (z. B. TTS/Netzfunktionen).</td>
-</tr>
-<tr>
-<td><code>tts.voice.id</code></td>
-<td>String</td>
-<td><code>de-DE-Standard-A</code></td>
-<td>Gewählte Stimme, falls geschützt abgelegt.</td>
+<td>Merker für Einwilligungen.</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Hinweis:</strong> Nicht jede Installation nutzt alle Schlüssel; Einträge werden <strong>bedarfsgesteuert</strong> angelegt.</p>
+<p><strong>Hinweis:</strong> <strong>TTS-Einstellungen werden nicht im Secure Storage</strong> abgelegt, sondern ausschließlich in Shared Preferences gemäß obiger Tabelle.</p>
 </blockquote>
 <h4 id="483-plugin-systemspeicher">4.8.3 Plugin-/Systemspeicher<a class="headerlink" href="#483-plugin-systemspeicher" title="Permanent link">&para;</a></h4>
-<p>Einige Bibliotheken verwalten eigene, app-interne Daten:
-- <strong>Awesome Notifications</strong>: persistiert geplante &amp; aktive Benachrichtigungen (inkl. Payload) im App-Bereich.<br />
-  - Wird im <strong>Aufräumen</strong>/„Neu aufbauen“ konsistent bereinigt/neu befüllt.<br />
-- <strong>Image-/Netz-Cache</strong> (z. B. <code>extended_image</code> / HTTP-Cache): Zwischenspeicher im <strong>Cache-Verzeichnis</strong> der App.<br />
-  - Kann vom System oder über App-Wartung geleert werden.<br />
-- <strong>Temporary Files</strong>: Kurzlebige Dateien (z. B. Exporte während des Speicherns), liegen im <strong>Temp-/Cache-Pfad</strong>.</p>
+<p>Einige Bibliotheken verwalten eigene, app-interne Daten:</p>
+<ul>
+<li><strong>Awesome Notifications</strong>: persistiert geplante &amp; aktive Benachrichtigungen (inkl. Payload) im App-Bereich. Wird im <strong>Aufräumen</strong>/„Neu aufbauen“ konsistent bereinigt/neu befüllt.</li>
+<li><strong>Image-/Netz-Cache</strong> (z. B. HTTP-/Bild-Caches): Zwischenspeicher im <strong>Cache-Verzeichnis</strong> der App.</li>
+<li><strong>Temporary Files</strong>: Kurzlebige Dateien (z. B. Exporte während des Speicherns), im <strong>Temp-/Cache-Pfad</strong>.</li>
+</ul>
 <h4 id="484-exportebackups-optional">4.8.4 Exporte/Backups (optional)<a class="headerlink" href="#484-exportebackups-optional" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Wenn du Daten <strong>exportierst</strong>, speichert ToDay die exportierten Dateien im <strong>vom Nutzer gewählten Ordner</strong> (z. B. „Downloads“).  </li>
-<li>Diese Dateien liegen <strong>außerhalb</strong> der App-Sandbox und bleiben auch nach Deinstallation erhalten, bis du sie selbst löschst.</li>
+<li>Exportierte Dateien liegen im <strong>vom Nutzer gewählten Ordner</strong> (z. B. „Downloads“) und damit <strong>außerhalb</strong> der App-Sandbox.</li>
+<li>Diese Dateien bleiben auch nach Deinstallation erhalten, bis sie manuell gelöscht werden.</li>
 </ul>
 <h4 id="485-losch-backup-verhalten">4.8.5 Lösch- &amp; Backup-Verhalten<a class="headerlink" href="#485-losch-backup-verhalten" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>App-Daten löschen</strong> (Systemeinstellung) entfernt: Datenbank, Shared Preferences, Secure Storage, Plugin-Daten, Cache.  </li>
-<li><strong>Deinstallation</strong> entspricht effektiv „Alles löschen“.  </li>
-<li><strong>System-Backups</strong> (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. <strong>nicht</strong> zwischen Geräten migriert.</li>
+<li><strong>App-Daten löschen</strong> entfernt Datenbank, Shared Preferences, Secure Storage, Plugin-Daten und Cache.</li>
+<li><strong>Deinstallation</strong> entspricht effektiv „Alles löschen“.</li>
+<li><strong>System-Backups</strong> (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. <strong>nicht</strong> zwischen Geräten migriert.</li>
 </ul>
 <h4 id="486-datenschutz">4.8.6 Datenschutz<a class="headerlink" href="#486-datenschutz" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Keine Telemetrie standardmäßig.  </li>
+<li>Keine Telemetrie standardmäßig.</li>
 <li>Alle Daten verbleiben <strong>lokal</strong> auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.</li>
 </ul>
 <hr />
