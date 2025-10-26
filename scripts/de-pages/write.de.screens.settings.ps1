@@ -57,7 +57,7 @@ Nutzt **PLZ** und **Ruhezeiten** aus *Benachrichtigungen – Allgemein*.
 Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen.
 
 - **Stimme & Ausgabe verwenden**: TTS global ein/aus.
-- **Stimme**: Auswahl der verfügbaren TTS-Stimmen/Engines des Geräts.
+- **Stimme**: Auswahl der verfügbaren TTS-Stimmen/Engines des Geräts. Achtung: Die Änderung wird erst nach Neustart der App wirksam.
 - **Sprechtempo**: Regler für Geschwindigkeit (Standard ~1.0).
 - **Tonhöhe**: Regler für Tonhöhe (Standard ~1.0).
 - **Speichern**: übernimmt TTS-Einstellungen.
