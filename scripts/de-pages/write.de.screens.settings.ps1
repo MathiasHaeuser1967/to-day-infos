@@ -54,14 +54,17 @@ Nutzt **PLZ** und **Ruhezeiten** aus *Benachrichtigungen – Allgemein*.
 ---
 
 ## 6) Stimme & Ausgabe (TTS)
-Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen.
+Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen. Android im Fokus; Desktop/Web ohne Funktion.
 
 - **Stimme & Ausgabe verwenden**: TTS global ein/aus.
-- **Stimme**: Auswahl der verfügbaren TTS-Stimmen/Engines des Geräts. Achtung: Die Änderung wird erst nach Neustart der App wirksam.
-- **Sprechtempo**: Regler für Geschwindigkeit (Standard ~1.0).
-- **Tonhöhe**: Regler für Tonhöhe (Standard ~1.0).
-- **Speichern**: übernimmt TTS-Einstellungen.
-- **Sofort anhören**: spielt eine Probe mit den aktuellen Werten.
+- **Aktuelle Engine**: Anzeige der vom System verwendeten Engine (z. B. `com.google.android.tts`). Die Auswahl erfolgt systemseitig, nicht in der App.
+- **Sprache (Locale)**: Auswahl im Format `ll-CC` (z. B. `de-DE`, `en-US`). Wird exakt so gespeichert.
+- **Stimme**: exakter Anzeigename der Engine (**Liste ist nach gewählter Sprache gefiltert**).
+- **Sprechtempo**: Regler 0,20–1,00 (Standard 1,00).
+- **Tonhöhe**: Regler 0,50–1,50 (Standard 1,00).
+- **Lautstärke**: Regler 0,00–1,00 (Standard 1,00).
+- **Vorschau (Sofort anhören)**: spielt eine Probe mit den aktuell gespeicherten Werten ohne App-Neustart.
+- Hinweis: Nach vollständig beendetem und neu gestarteten App-Prozess werden genau die gespeicherten Stimme/Tempo/Tonhöhe/Lautstärke verwendet. Ist die gewählte Stimme nicht mehr verfügbar, erfolgt ein Fallback innerhalb der Sprache (exakte Locale → Sprachpräfix → erste verfügbare Stimme).
 
 ---
 
