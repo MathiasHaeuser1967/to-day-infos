@@ -790,6 +790,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-shared-preferences-keyvalue-klartext" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.1 Shared Preferences (Key/Value, Klartext)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-secure-storage-verschlusselt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.2 Secure Storage (verschlüsselt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#483-plugin-systemspeicher" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.3 Plugin-/Systemspeicher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#484-exportebackups-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.4 Exporte/Backups (optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#485-losch-backup-verhalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.5 Lösch- &amp; Backup-Verhalten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#486-datenschutz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.6 Datenschutz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1321,6 +1390,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-shared-preferences-keyvalue-klartext" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.1 Shared Preferences (Key/Value, Klartext)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-secure-storage-verschlusselt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.2 Secure Storage (verschlüsselt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#483-plugin-systemspeicher" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.3 Plugin-/Systemspeicher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#484-exportebackups-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.4 Exporte/Backups (optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#485-losch-backup-verhalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.5 Lösch- &amp; Backup-Verhalten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#486-datenschutz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.6 Datenschutz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1463,7 +1601,7 @@
 <td><code>description</code></td>
 <td>TEXT</td>
 <td style="text-align: center;">–</td>
-<td>„Unterlagen…“</td>
+<td>„Überweisung…“</td>
 <td>Details/Notizen.</td>
 </tr>
 <tr>
@@ -1512,15 +1650,15 @@
 <td><code>reminders</code></td>
 <td>TEXT</td>
 <td style="text-align: center;">–</td>
-<td><code>[0,5,15,60]</code></td>
-<td>JSON-Liste von <strong>Offset-Minuten</strong> vor Start (0 = beim Start, 5/10/15/30/60/120).</td>
+<td><code>[0,15,60]</code></td>
+<td>JSON-Liste von <strong>Offset-Minuten</strong> vor Start.</td>
 </tr>
 <tr>
 <td><code>rrule</code></td>
 <td>TEXT</td>
 <td style="text-align: center;">–</td>
 <td><code>FREQ=DAILY;COUNT=10</code></td>
-<td><strong>RFC RRULE</strong> für Wiederholungen (z. B. täglich, wöchentlich).</td>
+<td><strong>RFC RRULE</strong> für Wiederholungen.</td>
 </tr>
 <tr>
 <td><code>exdates</code></td>
@@ -1541,21 +1679,21 @@
 <td>TEXT</td>
 <td style="text-align: center;">✅</td>
 <td><code>user</code> / <code>system:cycle</code> / <code>system:time_announce</code></td>
-<td>Herkunft: manuell oder System-Features (Zyklus/ Zeitansage).</td>
+<td>Herkunft: manuell oder System-Features.</td>
 </tr>
 <tr>
 <td><code>sched_rev</code></td>
 <td>INTEGER</td>
 <td style="text-align: center;">✅</td>
 <td><code>1</code></td>
-<td><strong>Planungs-Revision</strong> zur Steuerung von Neuplanung/Abgleich.</td>
+<td><strong>Planungs-Revision</strong> zur Neuplanung/Abgleich.</td>
 </tr>
 <tr>
 <td><code>batch_id</code></td>
 <td>TEXT</td>
 <td style="text-align: center;">–</td>
 <td><code>time:20251012</code></td>
-<td><strong>Batch-Kennung</strong> zum Gruppieren (z. B. vom Zyklusplaner/Zeitansagen).</td>
+<td><strong>Batch-Kennung</strong> zum Gruppieren.</td>
 </tr>
 </tbody>
 </table>
@@ -1563,13 +1701,10 @@
 - <strong>Datum/Uhrzeit</strong> als kompakte Strings → schnelle Vergleiche &amp; Indizes.
 - <strong>Erinnerungen (<code>reminders</code>)</strong>: unterstützte Offsets: <code>0, 5, 10, 15, 30, 60, 120</code>.
 - <strong>Wiederholungen (<code>rrule</code>)</strong>: Standard-RRULE (z. B. <code>FREQ=WEEKLY;BYDAY=MO,WE;COUNT=8</code>).<br />
-  Ausnahmen in <code>exdates</code>, bereits erledigte Serien-Vorkommen in <code>done_dates</code>.
-- <strong>Quellen (<code>source</code>)</strong>:<br />
-  - <code>user</code> – vom Nutzer angelegt<br />
-  - <code>system:cycle</code> – vom <strong>Zyklus-Planer</strong> automatisch erzeugt<br />
-  - <code>system:time_announce</code> – von der <strong>Zeitansage</strong> erzeugt
-- <strong>Revision (<code>sched_rev</code>)</strong>: erhöht sich bei Neuaufbau von Planungen → App erkennt veraltete Erinnerungen.
-- <strong>Batch (<code>batch_id</code>)</strong>: gruppiert zusammengehörige Items (z. B. eine Serie aus dem Zyklus-Planer).</p>
+  Ausnahmen in <code>exdates</code>, erledigte Serien-Vorkommen in <code>done_dates</code>.
+- <strong>Quellen (<code>source</code>)</strong>: <code>user</code>, <code>system:cycle</code>, <code>system:time_announce</code>.
+- <strong>Revision (<code>sched_rev</code>)</strong>: erhöht sich bei Neuaufbau von Planungen.
+- <strong>Batch (<code>batch_id</code>)</strong>: gruppiert zusammengehörige Items.</p>
 <h4 id="settings-app-einstellungen"><code>settings</code> – App-Einstellungen<a class="headerlink" href="#settings-app-einstellungen" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1641,10 +1776,14 @@
 </code></pre>
 <h3 id="45-haufige-fragen">4.5 Häufige Fragen<a class="headerlink" href="#45-haufige-fragen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Warum sind Datum/Uhrzeit als Text gespeichert?</strong><br />
-  Für schnelle Indizes/Sortierung und robuste Vergleiche (z. B. <code>WHERE date='20251203'</code>).</li>
-<li><strong>Kann ich die DB außerhalb der App öffnen?</strong><br />
-  Ja, mit einem SQLite-Viewer. Der Pfad ist i. d. R. nur per ADB/Root erreichbar. Der <strong>Kopieren</strong>-Button im Info-Dialog genügt in der Regel für Support.</li>
+<li>
+<p><strong>Warum sind Datum/Uhrzeit als Text gespeichert?</strong><br />
+  Für schnelle Indizes/Sortierung und robuste Vergleiche (z. B. <code>WHERE date='20251203'</code>).</p>
+</li>
+<li>
+<p><strong>Kann ich die DB außerhalb der App öffnen?</strong><br />
+  Ja, mit einem SQLite-Viewer. Der Pfad ist i. d. R. nur per ADB/Root erreichbar. Der <strong>Kopieren</strong>-Button im Info-Dialog genügt in der Regel für Support.</p>
+</li>
 </ul>
 <h3 id="46-fur-technik-fans-wie-wird-geplant">4.6 Für Technik-Fans (wie wird geplant?)<a class="headerlink" href="#46-fur-technik-fans-wie-wird-geplant" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1665,6 +1804,154 @@
 - Android löscht den kompletten <strong>App-Sandbox-Bereich</strong> automatisch, inklusive der Datenbank unter <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>.<br />
 - Auch geplante <strong>Benachrichtigungen/Alarme</strong> der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.<br />
 - Es bleiben <strong>keine Reste</strong> der App-Datenbank im System zurück – das Gerät ist diesbezüglich <strong>sauber</strong>.</p>
+<h3 id="48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank">4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)<a class="headerlink" href="#48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Zusätzlich zur SQLite-Datenbank speichert ToDay einige Parameter <strong>geräteintern</strong> (Sandbox). Alles liegt im App-Bereich und wird bei <strong>Deinstallation automatisch entfernt</strong>.</p>
+</blockquote>
+<h4 id="481-shared-preferences-keyvalue-klartext">4.8.1 Shared Preferences (Key/Value, Klartext)<a class="headerlink" href="#481-shared-preferences-keyvalue-klartext" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Ort</strong>: App-Sandbox (<code>/data/data/&lt;package&gt;/shared_prefs/...</code>) – intern, ohne Root/ADB nicht direkt zugänglich.  </li>
+<li><strong>Typ</strong>: Kleine Einstellungen/Flags als <strong>Key/Value</strong> (String, Bool, Int).  </li>
+<li><strong>Beispiele (können je nach Version variieren):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Typ</th>
+<th>Beispiel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ui.theme</code></td>
+<td>String</td>
+<td><code>system</code></td>
+<td>Erscheinungsbild: <code>light</code>/<code>dark</code>/<code>system</code>.</td>
+</tr>
+<tr>
+<td><code>locale.override</code></td>
+<td>String</td>
+<td><code>de</code></td>
+<td>App-Sprache erzwingen (sonst System).</td>
+</tr>
+<tr>
+<td><code>home.last_open_date</code></td>
+<td>String</td>
+<td><code>20251203</code></td>
+<td>Letztverwendetes Datum im Hauptbildschirm.</td>
+</tr>
+<tr>
+<td><code>cleanup.only_open.default</code></td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Vorauswahl im Aufräumen-Dialog.</td>
+</tr>
+<tr>
+<td><code>cleanup.cancel_schedules.default</code></td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Vorauswahl für „Alarme stornieren“.</td>
+</tr>
+<tr>
+<td><code>tts.rate</code></td>
+<td>Int</td>
+<td><code>12</code></td>
+<td>Sprechgeschwindigkeit (z. B. Wörter/Min oder %-Skala).</td>
+</tr>
+<tr>
+<td><code>tts.pitch</code></td>
+<td>Int</td>
+<td><code>0</code></td>
+<td>Tonhöhe-Offset.</td>
+</tr>
+<tr>
+<td><code>time_announce.enabled</code></td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Zeitansagen an/aus.</td>
+</tr>
+<tr>
+<td><code>weather.units.temp</code></td>
+<td>String</td>
+<td><code>C</code></td>
+<td>Temperatureinheit (z. B. <code>C</code>).</td>
+</tr>
+<tr>
+<td><code>weather.units.humidity</code></td>
+<td>String</td>
+<td><code>%</code></td>
+<td>Anzeigeeinheit rel. Feuchte.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hinweis:</strong> Diese Werte sind <strong>keine sensiblen Geheimnisse</strong>; sie dienen der schnellen Initialisierung des UI und Nutzerkomfort.</p>
+</blockquote>
+<h4 id="482-secure-storage-verschlusselt">4.8.2 Secure Storage (verschlüsselt)<a class="headerlink" href="#482-secure-storage-verschlusselt" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Ort</strong>: App-Sandbox, über Android Keystore abgesichert (Plugin <code>flutter_secure_storage</code>).  </li>
+<li><strong>Typ</strong>: <strong>Sensible</strong> Schlüssel/Werte, verschlüsselt gespeichert.  </li>
+<li><strong>Beispiele:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Typ</th>
+<th>Beispiel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auth.token</code></td>
+<td>String</td>
+<td><code>…</code></td>
+<td>Zugangstoken (falls ein externer Dienst genutzt wird).</td>
+</tr>
+<tr>
+<td><code>privacy.consent</code></td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Merker für Einwilligungen (z. B. TTS/Netzfunktionen).</td>
+</tr>
+<tr>
+<td><code>tts.voice.id</code></td>
+<td>String</td>
+<td><code>de-DE-Standard-A</code></td>
+<td>Gewählte Stimme, falls geschützt abgelegt.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hinweis:</strong> Nicht jede Installation nutzt alle Schlüssel; Einträge werden <strong>bedarfsgesteuert</strong> angelegt.</p>
+</blockquote>
+<h4 id="483-plugin-systemspeicher">4.8.3 Plugin-/Systemspeicher<a class="headerlink" href="#483-plugin-systemspeicher" title="Permanent link">&para;</a></h4>
+<p>Einige Bibliotheken verwalten eigene, app-interne Daten:
+- <strong>Awesome Notifications</strong>: persistiert geplante &amp; aktive Benachrichtigungen (inkl. Payload) im App-Bereich.<br />
+  - Wird im <strong>Aufräumen</strong>/„Neu aufbauen“ konsistent bereinigt/neu befüllt.<br />
+- <strong>Image-/Netz-Cache</strong> (z. B. <code>extended_image</code> / HTTP-Cache): Zwischenspeicher im <strong>Cache-Verzeichnis</strong> der App.<br />
+  - Kann vom System oder über App-Wartung geleert werden.<br />
+- <strong>Temporary Files</strong>: Kurzlebige Dateien (z. B. Exporte während des Speicherns), liegen im <strong>Temp-/Cache-Pfad</strong>.</p>
+<h4 id="484-exportebackups-optional">4.8.4 Exporte/Backups (optional)<a class="headerlink" href="#484-exportebackups-optional" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Wenn du Daten <strong>exportierst</strong>, speichert ToDay die exportierten Dateien im <strong>vom Nutzer gewählten Ordner</strong> (z. B. „Downloads“).  </li>
+<li>Diese Dateien liegen <strong>außerhalb</strong> der App-Sandbox und bleiben auch nach Deinstallation erhalten, bis du sie selbst löschst.</li>
+</ul>
+<h4 id="485-losch-backup-verhalten">4.8.5 Lösch- &amp; Backup-Verhalten<a class="headerlink" href="#485-losch-backup-verhalten" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>App-Daten löschen</strong> (Systemeinstellung) entfernt: Datenbank, Shared Preferences, Secure Storage, Plugin-Daten, Cache.  </li>
+<li><strong>Deinstallation</strong> entspricht effektiv „Alles löschen“.  </li>
+<li><strong>System-Backups</strong> (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. <strong>nicht</strong> zwischen Geräten migriert.</li>
+</ul>
+<h4 id="486-datenschutz">4.8.6 Datenschutz<a class="headerlink" href="#486-datenschutz" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Keine Telemetrie standardmäßig.  </li>
+<li>Alle Daten verbleiben <strong>lokal</strong> auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.</li>
+</ul>
+<hr />
 <h2 id="5-benachrichtigungen">5) Benachrichtigungen<a class="headerlink" href="#5-benachrichtigungen" title="Permanent link">&para;</a></h2>
 <p>Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
 - <strong>Erlaubt</strong> – Systemberechtigung für Benachrichtigungen ist erteilt.
