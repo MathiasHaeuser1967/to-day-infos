@@ -4,7 +4,7 @@ So bist du in wenigen Minuten betriebsbereit.
 
 ## 1) Erste Einrichtung
 1. **App starten** &rarr; du landest auf **Home**.
-2. **Benachrichtigungen erlauben** (Android-Abfrage best&auml;tigen), damit Erinnerungen zugestellt werden k&ouml;nnen.
+2. **Benachrichtigungen erlauben** (siehe Dokumentation System >> Berechtigungen), damit Erinnerungen zugestellt werden k&ouml;nnen.
 3. Optional: In **Einstellungen &rarr; Zeitansagen** die Sprachansagen aktivieren (Text-to-Speech).
 
 ## 2) Erste Aktivit&auml;t anlegen
