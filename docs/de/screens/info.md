@@ -174,63 +174,87 @@ flowchart LR
 - Auch geplante **Benachrichtigungen/Alarme** der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.  
 - Es bleiben **keine Reste** der App-Datenbank im System zurück – das Gerät ist diesbezüglich **sauber**.
 
+Sorry, mein Fehler. Hier ist **nur Kapitel 4.8** als reiner Markdown-Block zum direkten Kopieren:
+
+---
+
 ### 4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)
 
 > Zusätzlich zur SQLite-Datenbank speichert ToDay einige Parameter **geräteintern** (Sandbox). Alles liegt im App-Bereich und wird bei **Deinstallation automatisch entfernt**.
 
 #### 4.8.1 Shared Preferences (Key/Value, Klartext)
-- **Ort**: App-Sandbox (`/data/data/<package>/shared_prefs/...`) – intern, ohne Root/ADB nicht direkt zugänglich.  
-- **Typ**: Kleine Einstellungen/Flags als **Key/Value** (String, Bool, Int).  
-- **Beispiele (können je nach Version variieren):**
 
-| Key                                  | Typ    | Beispiel         | Beschreibung |
-|--------------------------------------|--------|------------------|--------------|
-| `ui.theme`                           | String | `system`         | Erscheinungsbild: `light`/`dark`/`system`. |
-| `locale.override`                    | String | `de`             | App-Sprache erzwingen (sonst System). |
-| `home.last_open_date`                | String | `20251203`       | Letztverwendetes Datum im Hauptbildschirm. |
-| `cleanup.only_open.default`          | Bool   | `true`           | Vorauswahl im Aufräumen-Dialog. |
-| `cleanup.cancel_schedules.default`   | Bool   | `true`           | Vorauswahl für „Alarme stornieren“. |
-| `tts.rate`                           | Int    | `12`             | Sprechgeschwindigkeit (z. B. Wörter/Min oder %-Skala). |
-| `tts.pitch`                          | Int    | `0`              | Tonhöhe-Offset. |
-| `time_announce.enabled`              | Bool   | `true`           | Zeitansagen an/aus. |
-| `weather.units.temp`                 | String | `C`              | Temperatureinheit (z. B. `C`). |
-| `weather.units.humidity`             | String | `%`              | Anzeigeeinheit rel. Feuchte. |
+* **Ort**: App-Sandbox (`/data/data/<package>/shared_prefs/...`) – intern, ohne Root/ADB nicht direkt zugänglich.
+* **Typ**: Kleine Einstellungen/Flags als **Key/Value** (String, Bool, Double, Int).
 
-> **Hinweis:** Diese Werte sind **keine sensiblen Geheimnisse**; sie dienen der schnellen Initialisierung des UI und Nutzerkomfort.
+**TTS (neues, strikt vereinheitlichtes Schema):**
+
+| Key             | Typ    | Beispiel                 | Beschreibung                                                 |
+| --------------- | ------ | ------------------------ | ------------------------------------------------------------ |
+| `tts.enabled`   | Bool   | `true`                   | TTS global an/aus.                                           |
+| `tts.engine`    | String | `com.google.android.tts` | Vom System gemeldete Engine; Anzeige in der App.             |
+| `tts.locale`    | String | `de-DE`                  | Sprache im Format `ll-CC` (Bindestrich, keine Unterstriche). |
+| `tts.voiceName` | String | `German Germany`         | Exakter Anzeigename aus `getVoices`.                         |
+| `tts.rate`      | Double | `1.0`                    | Sprechtempo `0.20–1.00`.                                     |
+| `tts.pitch`     | Double | `1.0`                    | Tonhöhe `0.50–1.50`.                                         |
+| `tts.volume`    | Double | `1.0`                    | Lautstärke `0.00–1.00`.                                      |
+
+**Hinweise TTS:**
+
+* Es existieren ausschließlich diese **neuen** TTS-Keys. **Keine Legacy-Keys** (`tts_voice_*`, `tts.language`, `tts.voiceId`, `tts.voiceKey`, `tts_rate`, `tts_pitch`, `tts_volume`, …).
+* Nach Neustart werden **exakt** die gespeicherten Werte verwendet.
+* Falls die gespeicherte Stimme nicht verfügbar ist, greift das Fallback: **exakte Locale** → **Sprachpräfix (`ll-`)** → **erste verfügbare Stimme**.
+* Locale wird stets normiert gespeichert (`ll-CC`, z. B. `de-DE`).
+
+**Weitere Beispiele (nicht TTS):**
+
+| Key                                | Typ    | Beispiel   | Beschreibung                               |
+| ---------------------------------- | ------ | ---------- | ------------------------------------------ |
+| `ui.theme`                         | String | `system`   | Erscheinungsbild: `light`/`dark`/`system`. |
+| `locale.override`                  | String | `de`       | App-Sprache erzwingen (sonst System).      |
+| `home.last_open_date`              | String | `20251203` | Letztverwendetes Datum im Hauptbildschirm. |
+| `cleanup.only_open.default`        | Bool   | `true`     | Vorauswahl im Aufräumen-Dialog.            |
+| `cleanup.cancel_schedules.default` | Bool   | `true`     | Vorauswahl für „Alarme stornieren“.        |
+| `time_announce.enabled`            | Bool   | `true`     | Zeitansagen an/aus.                        |
+| `weather.units.temp`               | String | `C`        | Temperatureinheit.                         |
 
 #### 4.8.2 Secure Storage (verschlüsselt)
-- **Ort**: App-Sandbox, über Android Keystore abgesichert (Plugin `flutter_secure_storage`).  
-- **Typ**: **Sensible** Schlüssel/Werte, verschlüsselt gespeichert.  
-- **Beispiele:**
 
-| Key                    | Typ    | Beispiel              | Beschreibung |
-|------------------------|--------|-----------------------|--------------|
-| `auth.token`           | String | `…`                   | Zugangstoken (falls ein externer Dienst genutzt wird). |
-| `privacy.consent`      | Bool   | `true`                | Merker für Einwilligungen (z. B. TTS/Netzfunktionen). |
-| `tts.voice.id`         | String | `de-DE-Standard-A`    | Gewählte Stimme, falls geschützt abgelegt. |
+* **Ort**: App-Sandbox, über Android Keystore abgesichert (Plugin `flutter_secure_storage`).
+* **Typ**: **Sensible** Schlüssel/Werte, verschlüsselt gespeichert.
 
-> **Hinweis:** Nicht jede Installation nutzt alle Schlüssel; Einträge werden **bedarfsgesteuert** angelegt.
+**Beispiele:**
+
+| Key               | Typ    | Beispiel | Beschreibung                  |
+| ----------------- | ------ | -------- | ----------------------------- |
+| `auth.token`      | String | `…`      | Zugangstoken (falls genutzt). |
+| `privacy.consent` | Bool   | `true`   | Merker für Einwilligungen.    |
+
+> **Hinweis:** **TTS-Einstellungen werden nicht im Secure Storage** abgelegt, sondern ausschließlich in Shared Preferences gemäß obiger Tabelle.
 
 #### 4.8.3 Plugin-/Systemspeicher
+
 Einige Bibliotheken verwalten eigene, app-interne Daten:
-- **Awesome Notifications**: persistiert geplante & aktive Benachrichtigungen (inkl. Payload) im App-Bereich.  
-  - Wird im **Aufräumen**/„Neu aufbauen“ konsistent bereinigt/neu befüllt.  
-- **Image-/Netz-Cache** (z. B. `extended_image` / HTTP-Cache): Zwischenspeicher im **Cache-Verzeichnis** der App.  
-  - Kann vom System oder über App-Wartung geleert werden.  
-- **Temporary Files**: Kurzlebige Dateien (z. B. Exporte während des Speicherns), liegen im **Temp-/Cache-Pfad**.
+
+* **Awesome Notifications**: persistiert geplante & aktive Benachrichtigungen (inkl. Payload) im App-Bereich. Wird im **Aufräumen**/„Neu aufbauen“ konsistent bereinigt/neu befüllt.
+* **Image-/Netz-Cache** (z. B. HTTP-/Bild-Caches): Zwischenspeicher im **Cache-Verzeichnis** der App.
+* **Temporary Files**: Kurzlebige Dateien (z. B. Exporte während des Speicherns), im **Temp-/Cache-Pfad**.
 
 #### 4.8.4 Exporte/Backups (optional)
-- Wenn du Daten **exportierst**, speichert ToDay die exportierten Dateien im **vom Nutzer gewählten Ordner** (z. B. „Downloads“).  
-- Diese Dateien liegen **außerhalb** der App-Sandbox und bleiben auch nach Deinstallation erhalten, bis du sie selbst löschst.
+
+* Exportierte Dateien liegen im **vom Nutzer gewählten Ordner** (z. B. „Downloads“) und damit **außerhalb** der App-Sandbox.
+* Diese Dateien bleiben auch nach Deinstallation erhalten, bis sie manuell gelöscht werden.
 
 #### 4.8.5 Lösch- & Backup-Verhalten
-- **App-Daten löschen** (Systemeinstellung) entfernt: Datenbank, Shared Preferences, Secure Storage, Plugin-Daten, Cache.  
-- **Deinstallation** entspricht effektiv „Alles löschen“.  
-- **System-Backups** (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. **nicht** zwischen Geräten migriert.
+
+* **App-Daten löschen** entfernt Datenbank, Shared Preferences, Secure Storage, Plugin-Daten und Cache.
+* **Deinstallation** entspricht effektiv „Alles löschen“.
+* **System-Backups** (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. **nicht** zwischen Geräten migriert.
 
 #### 4.8.6 Datenschutz
-- Keine Telemetrie standardmäßig.  
-- Alle Daten verbleiben **lokal** auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.
+
+* Keine Telemetrie standardmäßig.
+* Alle Daten verbleiben **lokal** auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.
 
 ---
 
