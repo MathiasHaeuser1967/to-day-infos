@@ -1266,14 +1266,17 @@
 </ul>
 <hr />
 <h2 id="6-stimme-ausgabe-tts">6) Stimme &amp; Ausgabe (TTS)<a class="headerlink" href="#6-stimme-ausgabe-tts" title="Permanent link">&para;</a></h2>
-<p>Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen.</p>
+<p>Steuert Text-to-Speech für gesprochene Ausgaben/Zeitansagen. Android im Fokus; Desktop/Web ohne Funktion.</p>
 <ul>
 <li><strong>Stimme &amp; Ausgabe verwenden</strong>: TTS global ein/aus.</li>
-<li><strong>Stimme</strong>: Auswahl der verfügbaren TTS-Stimmen/Engines des Geräts.</li>
-<li><strong>Sprechtempo</strong>: Regler für Geschwindigkeit (Standard ~1.0).</li>
-<li><strong>Tonhöhe</strong>: Regler für Tonhöhe (Standard ~1.0).</li>
-<li><strong>Speichern</strong>: übernimmt TTS-Einstellungen.</li>
-<li><strong>Sofort anhören</strong>: spielt eine Probe mit den aktuellen Werten.</li>
+<li><strong>Aktuelle Engine</strong>: Anzeige der vom System verwendeten Engine (z. B. <code>com.google.android.tts</code>). Die Auswahl erfolgt systemseitig, nicht in der App.</li>
+<li><strong>Sprache (Locale)</strong>: Auswahl im Format <code>ll-CC</code> (z. B. <code>de-DE</code>, <code>en-US</code>). Wird exakt so gespeichert.</li>
+<li><strong>Stimme</strong>: exakter Anzeigename der Engine (<strong>Liste ist nach gewählter Sprache gefiltert</strong>).</li>
+<li><strong>Sprechtempo</strong>: Regler 0,20–1,00 (Standard 1,00).</li>
+<li><strong>Tonhöhe</strong>: Regler 0,50–1,50 (Standard 1,00).</li>
+<li><strong>Lautstärke</strong>: Regler 0,00–1,00 (Standard 1,00).</li>
+<li><strong>Vorschau (Sofort anhören)</strong>: spielt eine Probe mit den aktuell gespeicherten Werten ohne App-Neustart.</li>
+<li>Hinweis: Nach vollständig beendetem und neu gestarteten App-Prozess werden genau die gespeicherten Stimme/Tempo/Tonhöhe/Lautstärke verwendet. Ist die gewählte Stimme nicht mehr verfügbar, erfolgt ein Fallback innerhalb der Sprache (exakte Locale → Sprachpräfix → erste verfügbare Stimme).</li>
 </ul>
 <hr />
 <h2 id="7-zeitansagen">7) Zeitansagen<a class="headerlink" href="#7-zeitansagen" title="Permanent link">&para;</a></h2>
