@@ -76,14 +76,47 @@ Erzeugt Zeitpunkte zwischen Start- und Endzeit und benachrichtigt im gewählten 
 
 ---
 
-## 8) Gefährlicher Bereich (Datenverwaltung)
+## 8) Hintergrund-Animation
+Steuert eine Lottie-Animation im Hintergrund des Tabs **„Offen“**.
+
+- **Standard-Animation**: Voreinstellung für alle Monate, die keinen eigenen Eintrag haben. Standard ist `Cat playing animation.json`.
+- **Monatsweise Zuweisung**: Für **Januar–Dezember** kann jeweils eine Datei gewählt werden. Auswahl aus allen Dateien unter `assets/lottie`.  
+  - **Kein Bild**: Option, um für einen Monat bewusst **keine** Animation anzuzeigen.
+  - **Vererben**: Lässt die Monatsauswahl leer → es gilt die **Standard-Animation**.
+- **Dateinamen in der Liste**: Zur besseren Lesbarkeit wird der Präfix `assets/lottie/` in der UI ausgeblendet; intern werden die **vollständigen Pfade** gespeichert.
+- **Vorschau**: Auswahl eines Monats zeigt die Animation darunter zentriert in einer Vorschau.
+- **Speichern**: übernimmt die Zuordnungen.
+
+**Ablage (Shared Preferences)**
+- `lottie.default` → String, z. B. `assets/lottie/Cat playing animation.json`
+- `lottie.month.01` … `lottie.month.12` → String (voller Pfad) oder `"<none>"` für „Kein Bild“; fehlender Key = Vererbung vom Standard.
+
+---
+
+## 9) Gamification: Gesprochene Sätze
+Zufällige, kurze Lob-Sätze beim Wechsel einer Aktivität von **Überfällig** → **Erledigt**. Gesprochen wird nur, wenn **TTS aktiviert** ist (*Stimme & Ausgabe*).
+
+- **Bis zu 5 Sätze**: Eingabefelder für kurze Motivations-Sätze. Leere Felder werden ignoriert.
+- **Sprache**: Die Eingaben gelten **pro App-Sprache**. Bei leerer Liste nutzt die App die Vorschläge aus der Übersetzung:
+  - Deutsch: „Du räumst auf wie ein Boss.“ / „Starker Move – weiter so.“ / „Deadline gezähmt. Nice.“ / „Ein Punkt weniger auf der Liste.“ / „Das rollt! Noch eine?“
+  - Englisch: „You're cleaning up like a boss.“ / „Strong move—keep going.“ / „Deadline tamed. Nice.“ / „One less on the list.“ / „You're on a roll! One more?“
+- **Vorschau**: Spielt einen zufällig ausgewählten Satz direkt ab.
+- **Speichern**: übernimmt die Eingaben.
+
+**Ablage (Shared Preferences)**
+- `tts.enabled` → Bool; nur wenn `true` wird gesprochen.  
+- `tts.gamify.sentences.de` bzw. `tts.gamify.sentences.en` → JSON-Liste der Sätze für die jeweilige Sprache.
+
+---
+
+## 10) Gefährlicher Bereich (Datenverwaltung)
 - **Debug-Infos unter Aktivitäten**: zeigt zusätzliche Diagnose-Infos in den Listen (nur für Fehlersuche).
 - **Benachrichtigungen neu aufbauen**: plant Benachrichtigungen für einen kurzen Zeitraum neu (nützlich nach System-Updates/Rechtewechsel).
 - **Alle Aktivitäten löschen**: entfernt **alle** Aktivitäten unwiderruflich (kein Rückgängig).
 
 ---
 
-## 9) Hinweise & Tipps
+## 11) Hinweise & Tipps
 - **Berechtigungen**: Stelle sicher, dass **Benachrichtigungen** (und ggf. **Exakte Alarme**) erlaubt sind und Akku-Optimierung die App nicht drosselt – sonst kommen Erinnerungen verspätet.
 - **DWD offline**: Ohne Internet werden DWD-Daten erst bei Verbindung aktualisiert.
 - **Mehrere Speichern-Buttons**: Jede Karte speichert **ihren** Bereich separat.
