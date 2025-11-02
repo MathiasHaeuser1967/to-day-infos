@@ -713,6 +713,48 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#42-tabellen-im-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Tabellen im Detail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Tabellen im Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activities-deine-aufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      activities – deine Aufgaben
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-app-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      settings – App-Einstellungen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-indizes-fur-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Indizes (für Tempo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#44-beispiel-datensatz-activities" class="md-nav__link">
     <span class="md-ellipsis">
       4.4 Beispiel-Datensatz (activities)
@@ -1271,6 +1313,48 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#42-tabellen-im-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Tabellen im Detail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Tabellen im Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activities-deine-aufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      activities – deine Aufgaben
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-app-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      settings – App-Einstellungen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-indizes-fur-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Indizes (für Tempo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#44-beispiel-datensatz-activities" class="md-nav__link">
     <span class="md-ellipsis">
       4.4 Beispiel-Datensatz (activities)
@@ -1456,7 +1540,7 @@
 <p>Hinweis: Der Pfad ist aus Sicherheitsgründen i. d. R. nicht direkt zugänglich (ohne Root/adb). Für Analysen genügt der <strong>Kopieren</strong>-Button.</p>
 </blockquote>
 <h3 id="41-aufbau-uberblick">4.1 Aufbau (Überblick)<a class="headerlink" href="#41-aufbau-uberblick" title="Permanent link">&para;</a></h3>
-<pre><code class="language-mermaid">erDiagram
+<pre><code class="language-json">erDiagram
   ACTIVITIES {
     TEXT id PK &quot;z. B. UUID&quot;
     TEXT title &quot;Titel der Aktivität&quot;
@@ -1481,59 +1565,185 @@
     TEXT value
     INTEGER updated_at &quot;Epoch ms&quot;
   }
-````
-
-* **`activities`** hält alle Aufgaben/Termine inkl. Erinnerungen, Wiederholungen und Metadaten.
-* **`settings`** ist eine schlanke Key/Value-Tabelle für App-Einstellungen (z. B. Flags und Zeitstempel).
-
-### 4.2 Tabellen im Detail
-
-#### `activities` – deine Aufgaben
-
-| Feld          | Typ     | Pflicht | Beispiel                                         | Wofür gut                                            |
-| ------------- | ------- | :-----: | ------------------------------------------------ | ---------------------------------------------------- |
-| `id`          | TEXT PK |    ✅    | `3f1a…-uuid`                                     | Eindeutige ID der Aktivität.                         |
-| `title`       | TEXT    |    ✅    | „Arzttermin“                                     | Kurztitel / Name.                                    |
-| `description` | TEXT    |    –    | „Überweisung…“                                   | Details/Notizen.                                     |
-| `date`        | TEXT    |    ✅    | `20251012`                                       | Datum im Format **YYYYMMDD**.                        |
-| `time`        | TEXT    |    ✅    | `0930`                                           | Uhrzeit im Format **HHmm**.                          |
-| `priority`    | TEXT    |    ✅    | `low/medium/high`                                | Priorität (Default: `medium`).                       |
-| `completed`   | INTEGER |    ✅    | `0` / `1`                                        | Ob erledigt (`1`) oder offen (`0`).                  |
-| `created_at`  | TEXT    |    ✅    | `2025-10-12T08:40:21Z`                           | Erstellt-Zeitpunkt (ISO-8601).                       |
-| `updated_at`  | TEXT    |    ✅    | `2025-10-12T08:45:07Z`                           | Letzte Änderung (ISO-8601).                          |
-| `reminders`   | TEXT    |    –    | `[0,15,60]`                                      | JSON-Liste von **Offset-Minuten** vor Start.         |
-| `rrule`       | TEXT    |    –    | `FREQ=DAILY;COUNT=10`                            | **RFC RRULE** für Wiederholungen.                    |
-| `exdates`     | TEXT    |    –    | `[&quot;20251015&quot;]`                                   | JSON-Liste **ausgeklammerter** Vorkommen (YYYYMMDD). |
-| `done_dates`  | TEXT    |    –    | `[&quot;20251012&quot;]`                                   | JSON-Liste **erledigter** Vorkommen (bei Serien).    |
-| `source`      | TEXT    |    ✅    | `user` / `system:cycle` / `system:time_announce` | Herkunft: manuell oder System-Features.              |
-| `sched_rev`   | INTEGER |    ✅    | `1`                                              | **Planungs-Revision** zur Neuplanung/Abgleich.       |
-| `batch_id`    | TEXT    |    –    | `time:20251012`                                  | **Batch-Kennung** zum Gruppieren.                    |
-
-**Hinweise &amp; Formate**
-
-* **Datum/Uhrzeit** als kompakte Strings → schnelle Vergleiche &amp; Indizes.
-* **Erinnerungen (`reminders`)**: unterstützte Offsets: `0, 5, 10, 15, 30, 60, 120`.
-* **Wiederholungen (`rrule`)**: Standard-RRULE (z. B. `FREQ=WEEKLY;BYDAY=MO,WE;COUNT=8`).
-  Ausnahmen in `exdates`, erledigte Serien-Vorkommen in `done_dates`.
-* **Quellen (`source`)**: `user`, `system:cycle`, `system:time_announce`.
-* **Revision (`sched_rev`)**: erhöht sich bei Neuaufbau von Planungen.
-* **Batch (`batch_id`)**: gruppiert zusammengehörige Items.
-
-#### `settings` – App-Einstellungen
-
-| Feld         | Typ     | Pflicht | Beispiel                | Wofür gut                        |
-| ------------ | ------- | :-----: | ----------------------- | -------------------------------- |
-| `key`        | TEXT PK |    ✅    | `time_announce.enabled` | Einstellungs-Schlüssel           |
-| `value`      | TEXT    |    –    | `true` / `{&quot;wpm&quot;:12}`   | Wert als Text/JSON               |
-| `updated_at` | INTEGER |    –    | `1734012345678`         | Unix-Millis der letzten Änderung |
-
-**Beispiele für Keys**
-`time_announce.enabled`, `time_announce.cadence`, `tts.voice`, `weather.alerts.enabled`, `pollen.alerts.enabled`, `locale`, `theme.mode`, …
-
-### 4.3 Indizes (für Tempo)
-
-```mermaid
-flowchart LR
+</code></pre>
+<ul>
+<li><strong><code>activities</code></strong> hält alle Aufgaben/Termine inkl. Erinnerungen, Wiederholungen und Metadaten.</li>
+<li><strong><code>settings</code></strong> ist eine schlanke Key/Value-Tabelle für App-Einstellungen (z. B. Flags und Zeitstempel).</li>
+</ul>
+<h3 id="42-tabellen-im-detail">4.2 Tabellen im Detail<a class="headerlink" href="#42-tabellen-im-detail" title="Permanent link">&para;</a></h3>
+<h4 id="activities-deine-aufgaben"><code>activities</code> – deine Aufgaben<a class="headerlink" href="#activities-deine-aufgaben" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th style="text-align: center;">Pflicht</th>
+<th>Beispiel</th>
+<th>Wofür gut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>TEXT PK</td>
+<td style="text-align: center;">✅</td>
+<td><code>3f1a…-uuid</code></td>
+<td>Eindeutige ID der Aktivität.</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td>„Arzttermin“</td>
+<td>Kurztitel / Name.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td>„Überweisung…“</td>
+<td>Details/Notizen.</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>20251012</code></td>
+<td>Datum im Format <strong>YYYYMMDD</strong>.</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>0930</code></td>
+<td>Uhrzeit im Format <strong>HHmm</strong>.</td>
+</tr>
+<tr>
+<td><code>priority</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>low/medium/high</code></td>
+<td>Priorität (Default: <code>medium</code>).</td>
+</tr>
+<tr>
+<td><code>completed</code></td>
+<td>INTEGER</td>
+<td style="text-align: center;">✅</td>
+<td><code>0</code> / <code>1</code></td>
+<td>Ob erledigt (<code>1</code>) oder offen (<code>0</code>).</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>2025-10-12T08:40:21Z</code></td>
+<td>Erstellt-Zeitpunkt (ISO-8601).</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>2025-10-12T08:45:07Z</code></td>
+<td>Letzte Änderung (ISO-8601).</td>
+</tr>
+<tr>
+<td><code>reminders</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>[0,15,60]</code></td>
+<td>JSON-Liste von <strong>Offset-Minuten</strong> vor Start.</td>
+</tr>
+<tr>
+<td><code>rrule</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>FREQ=DAILY;COUNT=10</code></td>
+<td><strong>RFC RRULE</strong> für Wiederholungen.</td>
+</tr>
+<tr>
+<td><code>exdates</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>["20251015"]</code></td>
+<td>JSON-Liste <strong>ausgeklammerter</strong> Vorkommen (YYYYMMDD).</td>
+</tr>
+<tr>
+<td><code>done_dates</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>["20251012"]</code></td>
+<td>JSON-Liste <strong>erledigter</strong> Vorkommen (bei Serien).</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">✅</td>
+<td><code>user</code> / <code>system:cycle</code> / <code>system:time_announce</code></td>
+<td>Herkunft: manuell oder System-Features.</td>
+</tr>
+<tr>
+<td><code>sched_rev</code></td>
+<td>INTEGER</td>
+<td style="text-align: center;">✅</td>
+<td><code>1</code></td>
+<td><strong>Planungs-Revision</strong> zur Neuplanung/Abgleich.</td>
+</tr>
+<tr>
+<td><code>batch_id</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>time:20251012</code></td>
+<td><strong>Batch-Kennung</strong> zum Gruppieren.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweise &amp; Formate</strong>
+- <strong>Datum/Uhrzeit</strong> als kompakte Strings → schnelle Vergleiche &amp; Indizes.
+- <strong>Erinnerungen (<code>reminders</code>)</strong>: unterstützte Offsets: <code>0, 5, 10, 15, 30, 60, 120</code>.
+- <strong>Wiederholungen (<code>rrule</code>)</strong>: Standard-RRULE (z. B. <code>FREQ=WEEKLY;BYDAY=MO,WE;COUNT=8</code>).<br />
+  Ausnahmen in <code>exdates</code>, erledigte Serien-Vorkommen in <code>done_dates</code>.
+- <strong>Quellen (<code>source</code>)</strong>: <code>user</code>, <code>system:cycle</code>, <code>system:time_announce</code>.
+- <strong>Revision (<code>sched_rev</code>)</strong>: erhöht sich bei Neuaufbau von Planungen.
+- <strong>Batch (<code>batch_id</code>)</strong>: gruppiert zusammengehörige Items.</p>
+<h4 id="settings-app-einstellungen"><code>settings</code> – App-Einstellungen<a class="headerlink" href="#settings-app-einstellungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th style="text-align: center;">Pflicht</th>
+<th>Beispiel</th>
+<th>Wofür gut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td>TEXT PK</td>
+<td style="text-align: center;">✅</td>
+<td><code>time_announce.enabled</code></td>
+<td>Einstellungs-Schlüssel</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">–</td>
+<td><code>true</code> / <code>{"wpm":12}</code></td>
+<td>Wert als Text/JSON</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td>INTEGER</td>
+<td style="text-align: center;">–</td>
+<td><code>1734012345678</code></td>
+<td>Unix-Millis der letzten Änderung</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele für Keys</strong><br />
+<code>time_announce.enabled</code>, <code>time_announce.cadence</code>, <code>tts.voice</code>, <code>weather.alerts.enabled</code>, <code>pollen.alerts.enabled</code>, <code>locale</code>, <code>theme.mode</code>, …</p>
+<h3 id="43-indizes-fur-tempo">4.3 Indizes (für Tempo)<a class="headerlink" href="#43-indizes-fur-tempo" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">flowchart LR
   A[idx_activities_date] --&gt;|&quot;activities(date)&quot;| DB
   B[idx_activities_priority] --&gt;|&quot;activities(priority)&quot;| DB
   C[idx_activities_completed] --&gt;|&quot;activities(completed)&quot;| DB
@@ -1567,39 +1777,33 @@ flowchart LR
 <h3 id="45-haufige-fragen">4.5 Häufige Fragen<a class="headerlink" href="#45-haufige-fragen" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><strong>Warum sind Datum/Uhrzeit als Text gespeichert?</strong>
+<p><strong>Warum sind Datum/Uhrzeit als Text gespeichert?</strong><br />
   Für schnelle Indizes/Sortierung und robuste Vergleiche (z. B. <code>WHERE date='20251203'</code>).</p>
 </li>
 <li>
-<p><strong>Kann ich die DB außerhalb der App öffnen?</strong>
+<p><strong>Kann ich die DB außerhalb der App öffnen?</strong><br />
   Ja, mit einem SQLite-Viewer. Der Pfad ist i. d. R. nur per ADB/Root erreichbar. Der <strong>Kopieren</strong>-Button im Info-Dialog genügt in der Regel für Support.</p>
 </li>
 </ul>
 <h3 id="46-fur-technik-fans-wie-wird-geplant">4.6 Für Technik-Fans (wie wird geplant?)<a class="headerlink" href="#46-fur-technik-fans-wie-wird-geplant" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Benachrichtigungen werden mit einer <strong>deterministischen ID</strong> aus <code>id + date + offsetMin</code> geplant.</li>
-<li>Jede geplante Erinnerung trägt eine <strong>Payload</strong> (u. a. <code>activity_id</code>, <code>ymd</code>, <code>source</code>, <code>sched_rev</code>).</li>
+<li>Benachrichtigungen werden mit einer <strong>deterministischen ID</strong> aus <code>id + date + offsetMin</code> geplant.  </li>
+<li>Jede geplante Erinnerung trägt eine <strong>Payload</strong> (u. a. <code>activity_id</code>, <code>ymd</code>, <code>source</code>, <code>sched_rev</code>).  </li>
 <li>Beim Aufräumen kann die App so <strong>zielsicher</strong> alle zugehörigen Alarme finden und <strong>abbrechen/neu planen</strong> – auch bei Serien, Zeitansagen und Zyklus-Sets.</li>
 </ul>
 <h3 id="47-installation-deinstallation-android">4.7 Installation &amp; Deinstallation (Android)<a class="headerlink" href="#47-installation-deinstallation-android" title="Permanent link">&para;</a></h3>
-<p><strong>Wie wird die Datenbank angelegt?</strong></p>
-<ul>
-<li>Beim <strong>ersten Start</strong> (bzw. beim ersten Zugriff auf die Datenbank) öffnet die App die SQLite-Datei über den <code>DatabaseHelper</code>.</li>
-<li>Existiert die Datei noch nicht, wird sie <strong>automatisch erstellt</strong> (üblich: <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>).</li>
-<li>Im Zuge dessen werden die <strong>Tabellen</strong> (<code>activities</code>, <code>settings</code>) und benötigte <strong>Spalten</strong>/Indizes angelegt. Spätere App-Versionen führen <strong>Migrationen</strong> aus (fehlende Spalten werden ergänzt), ohne bestehende Daten zu verlieren.</li>
-</ul>
-<p><strong>Welche Voraussetzungen braucht Android?</strong></p>
-<ul>
-<li><strong>Keine zusätzlichen Berechtigungen nötig.</strong> Die Daten liegen im <strong>app-internen Speicher</strong> (keine „Dateizugriff“-Runtime-Permission erforderlich).</li>
-<li>Android bringt <strong>SQLite</strong> systemseitig mit; Pfade liefert Flutter über <code>path_provider</code>.</li>
-<li>Es muss <strong>ausreichend freier Speicherplatz</strong> vorhanden sein.</li>
-</ul>
-<p><strong>Was passiert bei der Deinstallation?</strong></p>
-<ul>
-<li>Android löscht den kompletten <strong>App-Sandbox-Bereich</strong> automatisch, inklusive der Datenbank unter <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>.</li>
-<li>Auch geplante <strong>Benachrichtigungen/Alarme</strong> der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.</li>
-<li>Es bleiben <strong>keine Reste</strong> der App-Datenbank im System zurück – das Gerät ist diesbezüglich <strong>sauber</strong>.</li>
-</ul>
+<p><strong>Wie wird die Datenbank angelegt?</strong><br />
+- Beim <strong>ersten Start</strong> (bzw. beim ersten Zugriff auf die Datenbank) öffnet die App die SQLite-Datei über den <code>DatabaseHelper</code>.<br />
+- Existiert die Datei noch nicht, wird sie <strong>automatisch erstellt</strong> (üblich: <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>).<br />
+- Im Zuge dessen werden die <strong>Tabellen</strong> (<code>activities</code>, <code>settings</code>) und benötigte <strong>Spalten</strong>/Indizes angelegt. Spätere App-Versionen führen <strong>Migrationen</strong> aus (fehlende Spalten werden ergänzt), ohne bestehende Daten zu verlieren.</p>
+<p><strong>Welche Voraussetzungen braucht Android?</strong><br />
+- <strong>Keine zusätzlichen Berechtigungen nötig.</strong> Die Daten liegen im <strong>app-internen Speicher</strong> (keine „Dateizugriff“-Runtime-Permission erforderlich).<br />
+- Android bringt <strong>SQLite</strong> systemseitig mit; Pfade liefert Flutter über <code>path_provider</code>.<br />
+- Es muss <strong>ausreichend freier Speicherplatz</strong> vorhanden sein.</p>
+<p><strong>Was passiert bei der Deinstallation?</strong><br />
+- Android löscht den kompletten <strong>App-Sandbox-Bereich</strong> automatisch, inklusive der Datenbank unter <code>.../data/data/&lt;package&gt;/databases/to_day.db</code>.<br />
+- Auch geplante <strong>Benachrichtigungen/Alarme</strong> der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.<br />
+- Es bleiben <strong>keine Reste</strong> der App-Datenbank im System zurück – das Gerät ist diesbezüglich <strong>sauber</strong>.</p>
 <hr />
 <h3 id="48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank">4.8 Weitere gespeicherte App-Parameter (außerhalb der Datenbank)<a class="headerlink" href="#48-weitere-gespeicherte-app-parameter-auerhalb-der-datenbank" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1607,7 +1811,7 @@ flowchart LR
 </blockquote>
 <h4 id="481-shared-preferences-keyvalue-klartext">4.8.1 Shared Preferences (Key/Value, Klartext)<a class="headerlink" href="#481-shared-preferences-keyvalue-klartext" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Ort</strong>: App-Sandbox (<code>/data/data/&lt;package&gt;/shared_prefs/...</code>) – intern, ohne Root/ADB nicht direkt zugänglich.</li>
+<li><strong>Ort</strong>: App-Sandbox (<code>/data/data/&lt;package&gt;/shared_prefs/...</code>) – intern, ohne Root/ADB nicht direkt zugänglich.  </li>
 <li><strong>Typ</strong>: Kleine Einstellungen/Flags als <strong>Key/Value</strong> (String, Bool, Double, Int).</li>
 </ul>
 <p><strong>TTS (vereinheitlichtes Schema)</strong></p>
@@ -1728,9 +1932,9 @@ flowchart LR
 </tbody>
 </table>
 <blockquote>
-<p>UI-Hinweis: In der Auswahl kann der sichtbare Text den Pfadteil <code>assets/lottie/</code> ausblenden. Gespeichert wird stets der <strong>vollständige</strong> Asset-Pfad.</p>
+<p><strong>UI-Hinweis:</strong> In der Auswahl kann der sichtbare Text den Pfadteil <code>assets/lottie/</code> ausblenden. Gespeichert wird stets der <strong>vollständige</strong> Asset-Pfad.</p>
 </blockquote>
-<p><strong>Weitere Beispiele</strong></p>
+<p><strong>Weitere Beispiele (nicht TTS/Lottie/Gamification):</strong></p>
 <table>
 <thead>
 <tr>
@@ -1787,7 +1991,7 @@ flowchart LR
 </table>
 <h4 id="482-secure-storage-verschlusselt">4.8.2 Secure Storage (verschlüsselt)<a class="headerlink" href="#482-secure-storage-verschlusselt" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Ort</strong>: App-Sandbox, über Android Keystore abgesichert (Plugin <code>flutter_secure_storage</code>).</li>
+<li><strong>Ort</strong>: App-Sandbox, über Android Keystore abgesichert (Plugin <code>flutter_secure_storage</code>).  </li>
 <li><strong>Typ</strong>: <strong>Sensible</strong> Schlüssel/Werte, verschlüsselt gespeichert.</li>
 </ul>
 <table>
@@ -1819,34 +2023,32 @@ flowchart LR
 </blockquote>
 <h4 id="483-plugin-systemspeicher">4.8.3 Plugin-/Systemspeicher<a class="headerlink" href="#483-plugin-systemspeicher" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Awesome Notifications</strong>: persistiert geplante &amp; aktive Benachrichtigungen (inkl. Payload) im App-Bereich; wird im <strong>Aufräumen</strong>/„Neu aufbauen“ konsistent bereinigt/neu befüllt.</li>
-<li><strong>Image-/Netz-Cache</strong>: Zwischenspeicher im <strong>Cache-Verzeichnis</strong> der App.</li>
+<li><strong>Awesome Notifications</strong>: persistiert geplante &amp; aktive Benachrichtigungen (inkl. Payload) im App-Bereich; wird im <strong>Aufräumen</strong>/„Neu aufbauen“ konsistent bereinigt/neu befüllt.  </li>
+<li><strong>Image-/Netz-Cache</strong>: Zwischenspeicher im <strong>Cache-Verzeichnis</strong> der App.  </li>
 <li><strong>Temporary Files</strong>: Kurzlebige Dateien (z. B. Exporte) im <strong>Temp-/Cache-Pfad</strong>.</li>
 </ul>
 <h4 id="484-exportebackups-optional">4.8.4 Exporte/Backups (optional)<a class="headerlink" href="#484-exportebackups-optional" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Exportierte Dateien liegen im <strong>vom Nutzer gewählten Ordner</strong> (z. B. „Downloads“) und damit <strong>außerhalb</strong> der App-Sandbox.</li>
+<li>Exportierte Dateien liegen im <strong>vom Nutzer gewählten Ordner</strong> (z. B. „Downloads“) und damit <strong>außerhalb</strong> der App-Sandbox.  </li>
 <li>Diese Dateien bleiben auch nach Deinstallation erhalten, bis sie manuell gelöscht werden.</li>
 </ul>
 <h4 id="485-losch-backup-verhalten">4.8.5 Lösch- &amp; Backup-Verhalten<a class="headerlink" href="#485-losch-backup-verhalten" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>App-Daten löschen</strong> entfernt Datenbank, Shared Preferences, Secure Storage, Plugin-Daten und Cache.</li>
-<li><strong>Deinstallation</strong> entspricht effektiv „Alles löschen“.</li>
+<li><strong>App-Daten löschen</strong> entfernt Datenbank, Shared Preferences, Secure Storage, Plugin-Daten und Cache.  </li>
+<li><strong>Deinstallation</strong> entspricht effektiv „Alles löschen“.  </li>
 <li><strong>System-Backups</strong> (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. <strong>nicht</strong> zwischen Geräten migriert.</li>
 </ul>
 <h4 id="486-datenschutz">4.8.6 Datenschutz<a class="headerlink" href="#486-datenschutz" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Keine Telemetrie standardmäßig.</li>
+<li>Keine Telemetrie standardmäßig.  </li>
 <li>Alle Daten verbleiben <strong>lokal</strong> auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.</li>
 </ul>
 <hr />
 <h2 id="5-benachrichtigungen">5) Benachrichtigungen<a class="headerlink" href="#5-benachrichtigungen" title="Permanent link">&para;</a></h2>
-<p>Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:</p>
-<ul>
-<li><strong>Erlaubt</strong> – Systemberechtigung für Benachrichtigungen ist erteilt.</li>
-<li><strong>Exakte Alarme</strong> – erlaubt, damit Erinnerungen <strong>pünktlich</strong> auslösen dürfen.</li>
-<li><strong>Akku-Optimierung ignoriert</strong> – verhindert Drosselung im Hintergrund.</li>
-</ul>
+<p>Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
+- <strong>Erlaubt</strong> – Systemberechtigung für Benachrichtigungen ist erteilt.
+- <strong>Exakte Alarme</strong> – erlaubt, damit Erinnerungen <strong>pünktlich</strong> auslösen dürfen.
+- <strong>Akku-Optimierung ignoriert</strong> – verhindert Drosselung im Hintergrund.</p>
 <blockquote>
 <p>Wenn einer der Schalter <strong>aus</strong> ist, können Erinnerungen <strong>zu spät</strong> oder <strong>gar nicht</strong> kommen. Öffne die entsprechenden System-Einstellungen und erlaube die Option.</p>
 </blockquote>
