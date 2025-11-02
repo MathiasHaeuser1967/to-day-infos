@@ -684,18 +684,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-gefahrlicher-bereich-datenverwaltung" class="md-nav__link">
+  <a href="#8-hintergrund-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Gefährlicher Bereich (Datenverwaltung)
+      8) Hintergrund-Animation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-hinweise-tipps" class="md-nav__link">
+  <a href="#9-gamification-gesprochene-satze" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Hinweise &amp; Tipps
+      9) Gamification: Gesprochene Sätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-gefahrlicher-bereich-datenverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Gefährlicher Bereich (Datenverwaltung)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-hinweise-tipps" class="md-nav__link">
+    <span class="md-ellipsis">
+      11) Hinweise &amp; Tipps
     </span>
   </a>
   
@@ -1186,18 +1204,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-gefahrlicher-bereich-datenverwaltung" class="md-nav__link">
+  <a href="#8-hintergrund-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Gefährlicher Bereich (Datenverwaltung)
+      8) Hintergrund-Animation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-hinweise-tipps" class="md-nav__link">
+  <a href="#9-gamification-gesprochene-satze" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Hinweise &amp; Tipps
+      9) Gamification: Gesprochene Sätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-gefahrlicher-bereich-datenverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Gefährlicher Bereich (Datenverwaltung)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-hinweise-tipps" class="md-nav__link">
+    <span class="md-ellipsis">
+      11) Hinweise &amp; Tipps
     </span>
   </a>
   
@@ -1289,14 +1325,43 @@
 <li><strong>Erzeugen</strong>: plant die Ansagen für das gewählte Fenster/Takt (Ruhezeiten aus <em>Allgemein</em> werden respektiert).</li>
 </ul>
 <hr />
-<h2 id="8-gefahrlicher-bereich-datenverwaltung">8) Gefährlicher Bereich (Datenverwaltung)<a class="headerlink" href="#8-gefahrlicher-bereich-datenverwaltung" title="Permanent link">&para;</a></h2>
+<h2 id="8-hintergrund-animation">8) Hintergrund-Animation<a class="headerlink" href="#8-hintergrund-animation" title="Permanent link">&para;</a></h2>
+<p>Steuert eine Lottie-Animation im Hintergrund des Tabs <strong>„Offen“</strong>.</p>
+<ul>
+<li><strong>Standard-Animation</strong>: Voreinstellung für alle Monate, die keinen eigenen Eintrag haben. Standard ist <code>Cat playing animation.json</code>.</li>
+<li><strong>Monatsweise Zuweisung</strong>: Für <strong>Januar–Dezember</strong> kann jeweils eine Datei gewählt werden. Auswahl aus allen Dateien unter <code>assets/lottie</code>.  </li>
+<li><strong>Kein Bild</strong>: Option, um für einen Monat bewusst <strong>keine</strong> Animation anzuzeigen.</li>
+<li><strong>Vererben</strong>: Lässt die Monatsauswahl leer → es gilt die <strong>Standard-Animation</strong>.</li>
+<li><strong>Dateinamen in der Liste</strong>: Zur besseren Lesbarkeit wird der Präfix <code>assets/lottie/</code> in der UI ausgeblendet; intern werden die <strong>vollständigen Pfade</strong> gespeichert.</li>
+<li><strong>Vorschau</strong>: Auswahl eines Monats zeigt die Animation darunter zentriert in einer Vorschau.</li>
+<li><strong>Speichern</strong>: übernimmt die Zuordnungen.</li>
+</ul>
+<p><strong>Ablage (Shared Preferences)</strong>
+- <code>lottie.default</code> → String, z. B. <code>assets/lottie/Cat playing animation.json</code>
+- <code>lottie.month.01</code> … <code>lottie.month.12</code> → String (voller Pfad) oder <code>"&lt;none&gt;"</code> für „Kein Bild“; fehlender Key = Vererbung vom Standard.</p>
+<hr />
+<h2 id="9-gamification-gesprochene-satze">9) Gamification: Gesprochene Sätze<a class="headerlink" href="#9-gamification-gesprochene-satze" title="Permanent link">&para;</a></h2>
+<p>Zufällige, kurze Lob-Sätze beim Wechsel einer Aktivität von <strong>Überfällig</strong> → <strong>Erledigt</strong>. Gesprochen wird nur, wenn <strong>TTS aktiviert</strong> ist (<em>Stimme &amp; Ausgabe</em>).</p>
+<ul>
+<li><strong>Bis zu 5 Sätze</strong>: Eingabefelder für kurze Motivations-Sätze. Leere Felder werden ignoriert.</li>
+<li><strong>Sprache</strong>: Die Eingaben gelten <strong>pro App-Sprache</strong>. Bei leerer Liste nutzt die App die Vorschläge aus der Übersetzung:</li>
+<li>Deutsch: „Du räumst auf wie ein Boss.“ / „Starker Move – weiter so.“ / „Deadline gezähmt. Nice.“ / „Ein Punkt weniger auf der Liste.“ / „Das rollt! Noch eine?“</li>
+<li>Englisch: „You're cleaning up like a boss.“ / „Strong move—keep going.“ / „Deadline tamed. Nice.“ / „One less on the list.“ / „You're on a roll! One more?“</li>
+<li><strong>Vorschau</strong>: Spielt einen zufällig ausgewählten Satz direkt ab.</li>
+<li><strong>Speichern</strong>: übernimmt die Eingaben.</li>
+</ul>
+<p><strong>Ablage (Shared Preferences)</strong>
+- <code>tts.enabled</code> → Bool; nur wenn <code>true</code> wird gesprochen.<br />
+- <code>tts.gamify.sentences.de</code> bzw. <code>tts.gamify.sentences.en</code> → JSON-Liste der Sätze für die jeweilige Sprache.</p>
+<hr />
+<h2 id="10-gefahrlicher-bereich-datenverwaltung">10) Gefährlicher Bereich (Datenverwaltung)<a class="headerlink" href="#10-gefahrlicher-bereich-datenverwaltung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Debug-Infos unter Aktivitäten</strong>: zeigt zusätzliche Diagnose-Infos in den Listen (nur für Fehlersuche).</li>
 <li><strong>Benachrichtigungen neu aufbauen</strong>: plant Benachrichtigungen für einen kurzen Zeitraum neu (nützlich nach System-Updates/Rechtewechsel).</li>
 <li><strong>Alle Aktivitäten löschen</strong>: entfernt <strong>alle</strong> Aktivitäten unwiderruflich (kein Rückgängig).</li>
 </ul>
 <hr />
-<h2 id="9-hinweise-tipps">9) Hinweise &amp; Tipps<a class="headerlink" href="#9-hinweise-tipps" title="Permanent link">&para;</a></h2>
+<h2 id="11-hinweise-tipps">11) Hinweise &amp; Tipps<a class="headerlink" href="#11-hinweise-tipps" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Berechtigungen</strong>: Stelle sicher, dass <strong>Benachrichtigungen</strong> (und ggf. <strong>Exakte Alarme</strong>) erlaubt sind und Akku-Optimierung die App nicht drosselt – sonst kommen Erinnerungen verspätet.</li>
 <li><strong>DWD offline</strong>: Ohne Internet werden DWD-Daten erst bei Verbindung aktualisiert.</li>
