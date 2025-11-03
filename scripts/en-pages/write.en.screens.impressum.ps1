@@ -1,5 +1,5 @@
 function Write-En-Screen-Impressum {
-  $p = Join-Path $Screens 'impressum.md'
+  $p = Join-Path $DocsEn 'impressum.md'
   $c = @'
 # Imprint (Legal Notice)
 
