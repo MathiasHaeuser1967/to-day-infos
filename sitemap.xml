@@ -224,10 +224,4 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/screens/voice-macros/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://MathiasHaeuser1967.github.io/to-day-infos/screens/voice-macros/"/>
     </url>
-    <url>
-        <loc>https://MathiasHaeuser1967.github.io/to-day-infos/en/screens/impressum/</loc>
-        <lastmod>2025-11-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/screens/impressum/"/>
-    </url>
 </urlset>
