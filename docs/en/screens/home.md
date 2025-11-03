@@ -1,0 +1,16 @@
+# Home
+
+The **Home** screen shows your activities. Tap an item to open details; use the checkbox to mark **Done**.
+
+**Top actions**
+- **+**: add a new activity
+- **Search**: filter the list
+- **Menu**: Settings, Cleanup, Info
+
+**List**
+- Shows title, date/time, repeat and reminder badges.
+- Overdue items appear at the top.
+- Swipe actions (if supported by your device) for quick complete/snooze.
+
+**Notifications & speech**
+- Depending on settings youâ€™ll receive notifications/alarms and optional spoken time announcements (TTS).

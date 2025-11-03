@@ -1,0 +1,23 @@
+# Imprint (Legal Notice)
+
+> The legally binding version is the German imprint. This is a convenience translation.
+
+## Service provider / Operator
+See the German imprint for the binding details.
+
+## Consumer dispute resolution / ODR
+We are **not obliged** and **not willing** to participate in dispute resolution proceedings before a consumer arbitration board (VSBG).  
+**Note:** The EU ODR platform was discontinued on **2025â€‘07â€‘20**.
+
+## Liability for content
+As a service provider we are responsible for our own content according to Â§ 7 para. 1 TMG/Â§ 8 DDG under general laws.  
+Under Â§Â§ 8â€“10 TMG/Â§Â§ 9â€“11 DDG, we are **not obliged** to monitor transmitted or stored thirdâ€‘party information or to investigate circumstances indicating unlawful activity. Obligations to remove or block the use of information under general law remain unaffected. Upon becoming aware of violations, we remove such content immediately.
+
+## Liability for links
+Our offer contains links to external thirdâ€‘party websites on whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator is always responsible for the content of the linked pages. Illegal contents were not recognizable at the time of linking. Permanent content control of the linked pages is not reasonable without specific indications of a violation of law. Upon becoming aware of violations, we remove such links immediately.
+
+## Copyright
+The content and works created by the site operator are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author/creator. Downloads and copies of this site are permitted for **private, nonâ€‘commercial** use only.
+
+## Image and source credits
+- Weather/Pollen: Deutscher Wetterdienst (DWD) via HTTPS
