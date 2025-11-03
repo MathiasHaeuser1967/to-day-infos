@@ -2,30 +2,57 @@ function Write-En-Index {
   $p = Join-Path $DocsEn 'index.md'
   $c = @'
 # Home
-Welcome to **ToDay Help** (English).
 
-ToDay helps you plan and remember activities — with clear lists, reminders/alarms, optional spoken time announcements (TTS), and recurring cycles. Everything runs **locally on your device**. No tracking, no ads, no online account.
-
----
-
-## Quick start
-- Install the app and open it once.
-- Allow **notifications** and set **Battery optimization → No restrictions** so reminders are not delayed.
-- Tap **+** on **Home** to add your first activity. Set title, date/time, reminders, and optionally a repetition.
-- Mark activities as **Done** when finished.
-
-See also: [Quick start](quickstart.md), [Permissions](permissions.md), [FAQ](faq.md), [Privacy](privacy.md), [Changelog](changelog.md), [Imprint](impressum.md).
+Welcome to the **ToDay** Help (English). Here you will find practical guides, explanations for all switches, and solutions to common problems.
 
 ---
 
-## Screens
-- **Home:** your list of activities → [Home](screens/home.md)
-- **Cycle planner:** schedule recurring activities → [Cycle planner](screens/cycle-planner.md)
-- **Voice input (keyboard):** dictate text via the keyboard’s mic → [Voice input](screens/voice-input-keyboard.md)
-- **Cleanup:** archive or delete old entries → [Cleanup](screens/cleanup.md)
-- **Settings:** tune notifications, speech and more → [Settings](screens/settings.md)
-- **Voice macros:** create fast voice templates → [Voice macros](screens/voice-macros.md)
-- **Info:** app details & credits → [Info](screens/info.md)
+## App overview: dialogs & menus
+
+The following overview shows the most important **screens**, **dialogs/sheets**, and **menu items** of the app — as well as **who calls whom**.
+
+#### ASCII fallback (call graph)
+
+```
+Home:
+  - ＋ New / Edit        -> (Activity dialog)
+  - ⋮ Menu > Cleanup    -> (Cleanup sheet)
+  - ⋮ Menu > Cycle      -> (Cycle planner sheet)
+  - Voice button        -> (Voice capture sheet)
+  - Microphone          -> (Dictation sheet)
+  - Privacy notice      -> (Privacy notice)
+
+Menu (from Home):
+  - Settings     -> [Settings]
+  - Info         -> [Info]
+  - Voice macros -> [Voice macros]
+
+Settings:
+  - Section -> [Time announcements]
+  - Section -> [Weather & pollen]
+  - Section -> [Language]
+  - Section -> [TTS]
+  - Danger zone -> (Rebuild notifications)
+
+Voice macros:
+  - Click entry               -> (Edit macro – dialog)
+  - Long press / context      -> (Edit macro – sheet)
+```
+
+### Menu structure (excerpt)
+
+**App menu (from the Home screen):**
+- **Settings** – App configuration (language, time announcements, weather/pollen, TTS, danger zone)
+- **Info** – System & app information (copyable for support)
+- **Voice macros** – Manage voice shortcuts (create, edit, delete)
+
+**Settings – sections:**
+- **Time announcements** – Interval, time window, optional Morse, test
+- **Weather & pollen** – Enable alerts, sources
+- **Language** – German/English
+- **TTS** – Voice, speech rate, reading options
+- **Danger zone** – *Rebuild notifications* (re-schedule after system changes)
+
 '@
   Write-File $p $c
 }
