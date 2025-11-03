@@ -3,50 +3,51 @@ function Write-En-FAQ {
   $c = @'
 # Frequently Asked Questions (FAQ)
 
-> **TL;DR:** Android can delay or block notifications and TTS in the background on some devices. Make sure notifications are allowed, battery optimization is disabled for ToDay, and (if available) enable *Exact alarms*. Below you'll find detailed causes, solutions and diagnostics.
+> **TL;DR:** On some devices Android delays or blocks notifications and TTS in the background. Make sure notifications are allowed, battery optimization is disabled for ToDay (**No restrictions**), and enable *Exact alarms* if supported. Below you’ll find detailed causes, solutions and diagnostics.
 
 ---
 
-## 1) Sometimes I don't hear speech output (TTS)
+## 1) Sometimes I don’t hear speech output (TTS)
 
 **Symptoms**
-- Time announcements are silent / start late.
+- Time announcements are silent or start late.
 - Output stops after 1–2 words or only works with the screen unlocked.
 - Output goes to the wrong device (e.g., Bluetooth instead of speaker).
 
 **Causes & solutions**
 - **Battery optimization**: set ToDay to **No restrictions**.
 - **Do Not Disturb**: allow alarms/notifications.
-- **Bluetooth routing**: disable/adjust BT if output is routed incorrectly.
-- **TTS engine**: choose a reliable engine in system settings; download voice data for offline use.
+- **Bluetooth routing**: adjust/disable if output is routed incorrectly.
+- **TTS engine**: choose a reliable engine and download voice data for offline use.
 
 **Diagnostics**
 - Test speech output in **Settings → Speech/TTS**.
-- Check whether system logs show blocked background execution (manufacturer ROMs).
+- Check OEM power management (some ROMs kill background tasks).
 
 ---
 
-## 2) Notifications don't arrive (or arrive late)
+## 2) Notifications don’t arrive (or arrive late)
 
 - Allow notifications for ToDay.
 - Disable battery optimization for ToDay (**No restrictions**).
 - If supported: enable **Exact alarms** for on-time delivery.
-- Ensure the device is not in power-save or extreme power-save mode.
+- Ensure the device isn’t in extreme power save mode.
 
 ---
 
-## 3) What do voice macros do?
+## 3) What are voice macros?
 
-Voice macros let you enter activities faster by saying a short **trigger** that expands into a longer **template** which the app then **parses**.
+Voice macros let you enter activities faster: a short **trigger** expands to a longer **template** which the app then **parses**.
 
 - **Trigger → Expansion → Parsing**  
   1) You say the *trigger*.  
   2) The app replaces it with the saved *expansion* text.  
   3) The parser reads title/description/date/time from the text.
-- Example:  
-  Trigger: `macro one` → Expansion: `Title Shopping Description Milk and bread Date tomorrow Time 6 pm`.
+- **Example**:  
+  Trigger: `macro one` → Expansion:  
+  `Title Shopping Description Milk and bread Date tomorrow Time 6 pm`.
 
-**List view**
+**Overview (list)**
 - **Search** filters by name/trigger.
 - **Filter chips**: *All* · *Active* · *Inactive*.
 - **New macro**: **+**
@@ -55,7 +56,7 @@ Voice macros let you enter activities faster by saying a short **trigger** that 
 
 ## 4) Exact alarms?
 
-If your device supports *exact alarms*, the app can schedule some reminders to fire at the exact time. On devices/versions without this permission, the system may group or delay alarms slightly to save power.
+If your device supports *Exact alarms*, some reminders can fire at the exact time. Without this permission, the system may group or delay alarms to save power.
 '@
   Write-File $p $c
 }

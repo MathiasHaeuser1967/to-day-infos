@@ -7,11 +7,11 @@ function Write-En-Privacy {
 
 ---
 
-## 1) Who is responsible?
-The app is provided by the developer named in the [Imprint](impressum.md).
+## 1) Controller
+See the operator given in the [Imprint](impressum.md).
 
 ## 2) Where is data processed?
-Exclusively **on your device**. There is **no** account, no cloud backend. (Weather/pollen alerts are queried from DWD via HTTPS; see below.)
+Exclusively **on your device**. There is **no** account, no cloud backend. (Weather/pollen alerts are queried from the German Weather Service (DWD) via HTTPS — see below.)
 
 ## 3) What data does the app process?
 - **Tasks & settings**  
@@ -25,20 +25,20 @@ Exclusively **on your device**. There is **no** account, no cloud backend. (Weat
 - **Analytics/tracking/ads**  
   **Not used.**
 
-## 4) Which permissions are used and why?
+## 4) Permissions (purpose)
 - **Notifications** – to show reminders/alarms.
-- **Exact alarms** (if available) – for on-time alarms.
+- **Exact alarms** (if supported) – to fire at the exact time.
 - **Microphone** – only when you actively use voice input via the keyboard mic.
-- **Network** – to fetch weather/pollen alerts (DWD) via HTTPS.
+- **Network** – to fetch weather/pollen alerts (DWD).
 
 ## 5) Data sharing
 No personal data is transmitted to the developer or third parties.
 
 ## 6) Contact
-See [Imprint](impressum.md) for the operator’s contact details.
+See [Imprint](impressum.md).
 
-## 7) Changes to this notice
-This notice may be updated with app releases. The current version is bundled with the app/site.
+## 7) Changes
+This notice may be updated with app releases; the current version is bundled with the app/site.
 '@
   Write-File $p $c
 }

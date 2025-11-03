@@ -13,10 +13,10 @@ The **Home** screen shows your activities. Tap an item to open details; use the 
 **List**
 - Shows title, date/time, repeat and reminder badges.
 - Overdue items appear at the top.
-- Swipe actions (if enabled by your launcher/ROM) for quick complete/snooze.
+- Swipe actions (if supported by your device) for quick complete/snooze.
 
 **Notifications & speech**
-- Depending on settings you'll receive notifications/alarms and optional spoken time announcements (TTS).
+- Depending on settings you’ll receive notifications/alarms and optional spoken time announcements (TTS).
 '@
   Write-File $p $c
 }

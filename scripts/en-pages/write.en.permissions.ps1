@@ -2,6 +2,7 @@ function Write-En-Permissions {
   $p = Join-Path $DocsEn 'permissions.md'
   $c = @'
 # Permissions
+
 Explanation of app permissions and required system settings.
 
 ---

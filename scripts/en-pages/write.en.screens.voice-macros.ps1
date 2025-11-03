@@ -3,7 +3,7 @@ function Write-En-Screen-VoiceMacros {
   $c = @'
 # Voice macros
 
-Speed up input with short voice **triggers** that expand into longer templates.
+Speed up input with short voice **triggers** that expand into longer templates which the parser turns into an activity.
 
 ## How it works
 1) You speak the **trigger**.  
