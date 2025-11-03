@@ -1,0 +1,64 @@
+site_name: ToDay – Help
+site_url: https://MathiasHaeuser1967.github.io/to-day-infos
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  favicon: assets/img/favicon.png
+  features:
+  - navigation.sections
+  - navigation.indexes
+  - toc.follow
+  - content.code.copy
+  icon:
+    alternate: material/translate
+extra_css:
+- assets/css/nav-sections.css
+- assets/styles/extra.css
+plugins:
+- search
+- i18n:
+    docs_structure: folder
+    languages:
+    - locale: de
+      name: Deutsch
+      default: true
+    - locale: en
+      name: English
+extra:
+  alternate:
+  - name: Deutsch
+    lang: de
+    link: /to-day-infos/
+  - name: English
+    lang: en
+    link: /to-day-infos/en/
+nav:
+- Introduction:
+  - Home: index.md
+  - Quick start: quickstart.md
+  - Features: features.md
+- Screens:
+  - Home:
+    - Home: screens/home.md
+    - Cycle planner: screens/cycle-planner.md
+    - Voice input (keyboard): screens/voice-input-keyboard.md
+    - Cleanup: screens/cleanup.md
+    - Add activity: screens/add-activity.md
+  - Settings: screens/settings.md
+  - Voice macros: screens/voice-macros.md
+  - Info: screens/info.md
+- Help:
+  - FAQ: faq.md
+- System:
+  - Permissions: permissions.md
+  - Privacy: privacy.md
+- Project:
+  - Changelog: changelog.md
+- Legal:
+  - Imprint: impressum.md
+markdown_extensions:
+- admonition
+- toc:
+    permalink: true
+docs_dir: docs/en

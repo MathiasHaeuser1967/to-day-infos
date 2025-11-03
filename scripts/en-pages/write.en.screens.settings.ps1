@@ -1,3 +1,6 @@
+function Write-En-Screen-Settings {
+  $p = Join-Path $Screens 'settings.md'
+  $c = @'
 # Settings
 
 Configure how ToDay behaves.
@@ -22,3 +25,6 @@ Configure how ToDay behaves.
 
 ## Data
 - **Backup/restore** (device-dependent)
+'@
+  Write-File $p $c
+}

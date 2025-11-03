@@ -1,3 +1,6 @@
+function Write-En-Screen-VoiceMacros {
+  $p = Join-Path $Screens 'voice-macros.md'
+  $c = @'
 # Voice macros
 
 Speed up input with short voice **triggers** that expand into longer templates.
@@ -8,9 +11,12 @@ Speed up input with short voice **triggers** that expand into longer templates.
 3) The **parser** extracts title/description/date/time.
 
 **Example**  
-Trigger: `macro one` â†’ Expansion: `Title Shopping Description Milk and bread Date tomorrow Time 6 pm`.
+Trigger: `macro one` → Expansion: `Title Shopping Description Milk and bread Date tomorrow Time 6 pm`.
 
 ## List overview
 - **Search** by name/trigger
-- **Filter**: All Â· Active Â· Inactive
+- **Filter**: All · Active · Inactive
 - **New macro**: **+**
+'@
+  Write-File $p $c
+}

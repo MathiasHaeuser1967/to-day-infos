@@ -1,3 +1,6 @@
+function Write-En-Features {
+  $p = Join-Path $DocsEn 'features.md'
+  $c = @'
 # Features
 
 - **Activities & reminders**: plan tasks with date/time, repeat and multiple reminders.
@@ -10,3 +13,6 @@
 - **Privacy-friendly**: no analytics, no tracking, no ads.
 - **Weather/pollen alerts (DWD)**: fetched securely via HTTPS; no profiling.
 - **Material design** with dark/light theme.
+'@
+  Write-File $p $c
+}

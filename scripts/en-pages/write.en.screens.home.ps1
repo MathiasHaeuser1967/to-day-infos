@@ -1,3 +1,6 @@
+function Write-En-Screen-Home {
+  $p = Join-Path $Screens 'home.md'
+  $c = @'
 # Home
 
 The **Home** screen shows your activities. Tap an item to open details; use the checkbox to mark **Done**.
@@ -14,3 +17,6 @@ The **Home** screen shows your activities. Tap an item to open details; use the 
 
 **Notifications & speech**
 - Depending on settings you'll receive notifications/alarms and optional spoken time announcements (TTS).
+'@
+  Write-File $p $c
+}
