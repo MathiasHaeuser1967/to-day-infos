@@ -3,7 +3,7 @@ function Write-En-Changelog {
   $c = @'
 # Changelog
 
-- **1.0.5.1** – Initial release.
+- **1.0.6.4** &ndash; Initial release.
 '@
   Write-File $p $c
 }
