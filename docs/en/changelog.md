@@ -1,3 +1,3 @@
 # Changelog
 
-- **1.0.5.1** â€“ Initial release.
+- **1.0.6.4** &ndash; Initial release.

@@ -71,7 +71,6 @@ Erzeugt Zeitpunkte zwischen Start- und Endzeit und benachrichtigt im gewählten 
 - **Zeitansagen aktivieren**: Hauptschalter.
 - **Startzeit (einschließlich)** / **Endzeit (einschließlich)**: Zeitfenster der Ansagen.
 - **Taktung**: Alle 10 / 15 / 20 / 30 Minuten oder stündlich.
-- **Uhrzeit als Morse statt TTS**: ersetzt Sprache durch Morse-Ton.
 - **Erzeugen**: plant die Ansagen für das gewählte Fenster/Takt (Ruhezeiten aus *Allgemein* werden respektiert).
 
 ---
