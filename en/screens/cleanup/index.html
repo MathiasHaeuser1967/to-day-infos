@@ -528,6 +528,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Aufräumen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -539,6 +552,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-choose-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Choose date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-choose-what-to-delete-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Choose what to delete (source)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-open-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Only open activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-notificationsalarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancel notifications/alarms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-execute-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Execute delete
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1005,6 +1097,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-choose-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Choose date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-choose-what-to-delete-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Choose what to delete (source)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-open-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Only open activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-notificationsalarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancel notifications/alarms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-execute-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Execute delete
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1020,13 +1180,43 @@
 
 
 <h1 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">&para;</a></h1>
-<p>Remove or archive old activities.</p>
+<p>With <strong>Cleanup</strong> you remove activities of a day &ndash; optionally including the associated <strong>notifications/alarms</strong>. The action always applies to the <strong>selected date</strong>.</p>
+<h2 id="1-choose-date">1) Choose date<a class="headerlink" href="#1-choose-date" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Choose a <strong>time range</strong> (e.g., older than 30/90 days).</li>
-<li>Select <strong>Archive</strong> or <strong>Delete</strong>.</li>
-<li>Confirm to apply.</li>
+<li><strong>Yesterday / Today / Tomorrow</strong>: quick selection.</li>
+<li><strong>Date display</strong>: shows the target date to which the cleanup applies.</li>
 </ul>
-<p>Tip: Consider archiving before deleting to keep a history.</p>
+<h2 id="2-choose-what-to-delete-source">2) Choose what to delete (source)<a class="headerlink" href="#2-choose-what-to-delete-source" title="Permanent link">&para;</a></h2>
+<p>You choose <strong>exactly one source</strong>. Only entries that <strong>come from this source</strong> on that day will be deleted:</p>
+<ul>
+<li><strong>Cycle planner</strong> &ndash; activities automatically generated from recurring cycles.  </li>
+<li><strong>Time announcements</strong> &ndash; activities that were created by time announcements.  </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Safety</p>
+<p>Other sources remain untouched. You do not accidentally change content outside the selected source.</p>
+</div>
+<h2 id="3-options">3) Options<a class="headerlink" href="#3-options" title="Permanent link">&para;</a></h2>
+<h3 id="only-open-activities">Only open activities<a class="headerlink" href="#only-open-activities" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>On</strong>: deletes <strong>only</strong> entries that are <strong>not</strong> marked <em>Done</em>.  </li>
+<li><strong>Off</strong>: deletes <strong>all</strong> matching entries &ndash; open <strong>and</strong> done.</li>
+</ul>
+<h3 id="cancel-notificationsalarms">Cancel notifications/alarms<a class="headerlink" href="#cancel-notificationsalarms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>On</strong>: ToDay additionally removes <strong>all</strong> notifications belonging to the deleted activities &ndash; both <strong>scheduled</strong> and already <strong>shown</strong>.</li>
+<li><strong>Off</strong>: Only activities are deleted; existing notifications initially remain visible.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Enable this if you want to fully clean up "leftover" reminders.</p>
+</div>
+<h2 id="4-execute-delete">4) Execute delete<a class="headerlink" href="#4-execute-delete" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Select date and <strong>source</strong>.  </li>
+<li><strong>Check/set</strong> options.  </li>
+<li>Tap <strong>Delete</strong> &rarr; the dialog closes and you return to <strong>Home</strong>.</li>
+</ol>
 
 
 

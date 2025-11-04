@@ -744,36 +744,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-sometimes-i-donatmt-hear-speech-output-tts" class="md-nav__link">
+  <a href="#1-sometimes-i-do-not-hear-speech-output-tts" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Sometimes I donâ€™t hear speech output (TTS)
+      1) Sometimes I do not hear speech output (TTS)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-notifications-donatmt-arrive-or-arrive-late" class="md-nav__link">
+  <a href="#2-notifications-still-fire-even-though-i-deleted-activities" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Notifications donâ€™t arrive (or arrive late)
+      2) Notifications still fire even though I deleted activities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-what-are-voice-macros" class="md-nav__link">
+  <a href="#3-reminders-do-not-fire-exactly-at-the-desired-time" class="md-nav__link">
     <span class="md-ellipsis">
-      3) What are voice macros?
+      3) Reminders do not fire exactly at the desired time
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-exact-alarms" class="md-nav__link">
+  <a href="#4-diagnostic-checklist-quick" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Exact alarms?
+      4) Diagnostic checklist (quick)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-does-rebuild-notifications-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Why does "Rebuild notifications" help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-oem-specifics-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) OEM specifics (selection)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-when-is-it-not-an-app-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) When is it not an app bug?
     </span>
   </a>
   
@@ -1078,36 +1105,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-sometimes-i-donatmt-hear-speech-output-tts" class="md-nav__link">
+  <a href="#1-sometimes-i-do-not-hear-speech-output-tts" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Sometimes I donâ€™t hear speech output (TTS)
+      1) Sometimes I do not hear speech output (TTS)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-notifications-donatmt-arrive-or-arrive-late" class="md-nav__link">
+  <a href="#2-notifications-still-fire-even-though-i-deleted-activities" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Notifications donâ€™t arrive (or arrive late)
+      2) Notifications still fire even though I deleted activities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-what-are-voice-macros" class="md-nav__link">
+  <a href="#3-reminders-do-not-fire-exactly-at-the-desired-time" class="md-nav__link">
     <span class="md-ellipsis">
-      3) What are voice macros?
+      3) Reminders do not fire exactly at the desired time
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-exact-alarms" class="md-nav__link">
+  <a href="#4-diagnostic-checklist-quick" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Exact alarms?
+      4) Diagnostic checklist (quick)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-does-rebuild-notifications-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Why does "Rebuild notifications" help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-oem-specifics-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) OEM specifics (selection)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-when-is-it-not-an-app-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) When is it not an app bug?
     </span>
   </a>
   
@@ -1131,49 +1185,120 @@
 
 <h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>TL;DR:</strong> On some devices Android delays or blocks notifications and TTS in the background. Make sure notifications are allowed, battery optimization is disabled for ToDay (<strong>No restrictions</strong>), and enable <em>Exact alarms</em> if supported. Below youâ€™ll find detailed causes, solutions and diagnostics.</p>
+<p><strong>TL;DR:</strong> Android can throttle notifications and TTS in the background (Doze/app standby, battery optimization, "Do Not Disturb", missing special permission for <strong>exact alarms</strong>). In addition, <strong>legacy schedules</strong> can exist (e.g., after app updates) which you can clean up with <strong>"Rebuild notifications"</strong>. Below you will find detailed causes, solutions, and diagnostics.</p>
 </blockquote>
 <hr />
-<h2 id="1-sometimes-i-donatmt-hear-speech-output-tts">1) Sometimes I donâ€™t hear speech output (TTS)<a class="headerlink" href="#1-sometimes-i-donatmt-hear-speech-output-tts" title="Permanent link">&para;</a></h2>
+<h2 id="1-sometimes-i-do-not-hear-speech-output-tts">1) Sometimes I do not hear speech output (TTS)<a class="headerlink" href="#1-sometimes-i-do-not-hear-speech-output-tts" title="Permanent link">&para;</a></h2>
 <p><strong>Symptoms</strong>
-- Time announcements are silent or start late.
-- Output stops after 1â€“2 words or only works with the screen unlocked.
-- Output goes to the wrong device (e.g., Bluetooth instead of speaker).</p>
-<p><strong>Causes &amp; solutions</strong>
-- <strong>Battery optimization</strong>: set ToDay to <strong>No restrictions</strong>.
-- <strong>Do Not Disturb</strong>: allow alarms/notifications.
-- <strong>Bluetooth routing</strong>: adjust/disable if output is routed incorrectly.
-- <strong>TTS engine</strong>: choose a reliable engine and download voice data for offline use.</p>
-<p><strong>Diagnostics</strong>
-- Test speech output in <strong>Settings â†’ Speech/TTS</strong>.
-- Check OEM power management (some ROMs kill background tasks).</p>
+- Time announcements remain silent / start late.
+- Output stops after 1-2 words or is only audible with the screen unlocked.
+- Output goes to the wrong device (Bluetooth instead of speaker, etc.).</p>
+<p><strong>Likely causes (Android/OS)</strong>
+1) <strong>Doze / app standby / battery optimization</strong>: background audio/jobs are throttled.<br />
+2) <strong>"Do Not Disturb" (DND)</strong>: media output or notifications suppressed.<br />
+3) <strong>Audio focus / route conflict</strong>: other apps (music/call/maps) hold focus.<br />
+4) <strong>TTS engine</strong>: voice package missing/corrupt; engine is terminated by the OS.<br />
+5) <strong>Bluetooth/route</strong>: output moves to HFP/A2DP devices or smart speakers.<br />
+6) <strong>Media volume</strong>: (not ringer!) too low/muted.<br />
+7) <strong>OEM rules</strong>: MIUI/EMUI/ColorOS aggressively kill apps in the background.</p>
+<p><strong>What can I do (user)</strong>
+- <strong>Disable battery optimization for ToDay</strong> (System -&gt; Battery -&gt; Do not optimize).<br />
+- Allow <strong>exact alarms</strong> (Android 13+: <em>Alarms &amp; Reminders</em> -&gt; ToDay -&gt; allowed).<br />
+- Check <strong>Do Not Disturb</strong>; set exceptions for alarms/reminders if needed.<br />
+- Increase <strong>media volume</strong>; check/disconnect the Bluetooth route.<br />
+- Install/check <strong>TTS engine &amp; voice</strong> (system TTS settings).<br />
+- Open ToDay and run <strong>"Rebuild notifications"</strong>.</p>
+<p><strong>Technical background</strong>
+- TTS only starts after engine init + audio focus. In Doze, Android shifts jobs into <strong>maintenance windows</strong>. Without <code>SCHEDULE_EXACT_ALARM</code>, alarms become <strong>inexact</strong> (+/- minutes).<br />
+- Audio routes (A2DP/HFP) can be briefly <strong>silent</strong> during handover until focus/route returns.</p>
+<p><strong>TTS pipeline (ASCII)</strong></p>
+<pre><code>[Trigger] -&gt; [Permissions?] -&gt; [Doze?] -&gt; [TTS init + audio focus] -&gt; [Audio route] -&gt; [Output]
+             no -&gt; (silent)     yes -&gt; (delayed)
+</code></pre>
 <hr />
-<h2 id="2-notifications-donatmt-arrive-or-arrive-late">2) Notifications donâ€™t arrive (or arrive late)<a class="headerlink" href="#2-notifications-donatmt-arrive-or-arrive-late" title="Permanent link">&para;</a></h2>
+<h2 id="2-notifications-still-fire-even-though-i-deleted-activities">2) Notifications still fire even though I deleted activities<a class="headerlink" href="#2-notifications-still-fire-even-though-i-deleted-activities" title="Permanent link">&para;</a></h2>
+<p><strong>Symptoms</strong>
+- A reminder appears even though the activity in ToDay was deleted/checked off.<br />
+- Many old "Time announcement"/"Cycle" reminders remain active.</p>
+<p><strong>Likely causes</strong>
+1) <strong>Legacy schedules</strong> (earlier app versions) -&gt; different ID/payload schema, so cancel does not hit them.<br />
+2) <strong>OS queue</strong>: scheduled alarms remain if not <strong>explicitly</strong> canceled (e.g., after crash/update/force-close).<br />
+3) <strong>Boot/update</strong>: reschedule/cancel has not run yet.<br />
+4) <strong>Exact alarms denied</strong>: cancel routines only see "scheduled", not "delivered".</p>
+<p><strong>What can I do (user)</strong>
+- In <strong>Cleanup</strong>: enable <strong>"Cancel notifications/alarms"</strong> and execute it.<br />
+- In <strong>Danger zone</strong>: use <strong>"Rebuild notifications"</strong>.</p>
+<p><strong>Technical background</strong>
+- Reminders are scheduled with deterministic <strong>ID</strong> + <strong>payload</strong>. After schema changes the cancel logic does not recognize older entries -&gt; a <strong>one-time</strong> rebuild clears the legacy queue.<br />
+- Android continues to fire scheduled alarms even if the DB record has already been removed, as long as the alarm was not <strong>explicitly</strong> canceled.</p>
+<p><strong>Sequence (ASCII)</strong></p>
+<pre><code>App:  Schedule(id, payload) -&gt; [OS queue]
+App:  Cancel(filter)        -&gt; (schema matches?)
+                               yes -&gt; deleted
+                               no  -&gt; remains (orphan alarm)
+Solution: &quot;Rebuild notifications&quot;
+</code></pre>
+<hr />
+<h2 id="3-reminders-do-not-fire-exactly-at-the-desired-time">3) Reminders do not fire <strong>exactly</strong> at the desired time<a class="headerlink" href="#3-reminders-do-not-fire-exactly-at-the-desired-time" title="Permanent link">&para;</a></h2>
+<p><strong>Symptoms</strong>
+- Triggered late (minutes) / not at all, especially with the screen locked / at night.</p>
+<p><strong>Likely causes</strong>
+1) <strong>No permission for exact alarms</strong> (Android 13+) -&gt; OS batches/shifts.<br />
+2) <strong>Doze / app standby / battery protection</strong> -&gt; only maintenance windows.<br />
+3) <strong>DND / quiet time / Digital Wellbeing</strong> -&gt; notifications suppressed.<br />
+4) <strong>Time zone/daylight saving time (DST)</strong> -&gt; instants exist twice/not at all.<br />
+5) <strong>OEM rules</strong> -&gt; app restricted in background.</p>
+<p><strong>What can I do (user)</strong>
+- <strong>Allow exact alarms</strong> (Android 13+).<br />
+- <strong>Disable battery optimization</strong>, allow auto start/background execution.<br />
+- Check <strong>Do Not Disturb</strong>/quiet times.<br />
+- Do not use <strong>ultra power saving</strong> modes.</p>
+<p><strong>Flow (ASCII)</strong></p>
+<pre><code>[t] -&gt; (exact allowed?) no  -&gt; (inexact +/- min)
+      yes -&gt; (Doze?)   yes -&gt; (maintenance window)
+                         no -&gt; (exact at t)
+</code></pre>
+<hr />
+<h2 id="4-diagnostic-checklist-quick">4) Diagnostic checklist (quick)<a class="headerlink" href="#4-diagnostic-checklist-quick" title="Permanent link">&para;</a></h2>
+<p>1) <strong>Permissions</strong>
+- Notifications <strong>allowed</strong><br />
+- Android 13+: <strong>Alarms &amp; Reminders -&gt; exact allowed</strong><br />
+- Microphone (dictation) ok, media audio available</p>
+<p>2) <strong>Power &amp; background</strong>
+- Battery optimization for ToDay <strong>disabled</strong><br />
+- OEM special: <strong>Allow auto start/background execution</strong></p>
+<p>3) <strong>Audio</strong>
+- Media volume != 0<br />
+- No competing player/call holds audio focus</p>
+<p>4) <strong>System state</strong>
+- "Do Not Disturb" off / exceptions set<br />
+- After reboot/update <strong>open the app once</strong> (boot reschedule)</p>
+<p>5) <strong>App maintenance</strong>
+- <strong>Cleanup</strong> -&gt; with "Cancel notifications"<br />
+- <strong>Danger zone</strong> -&gt; "Rebuild notifications"</p>
+<hr />
+<h2 id="5-why-does-rebuild-notifications-help">5) Why does "Rebuild notifications" help?<a class="headerlink" href="#5-why-does-rebuild-notifications-help" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Allow notifications for ToDay.</li>
-<li>Disable battery optimization for ToDay (<strong>No restrictions</strong>).</li>
-<li>If supported: enable <strong>Exact alarms</strong> for on-time delivery.</li>
-<li>Ensure the device isnâ€™t in extreme power save mode.</li>
+<li>Deletes <strong>all</strong> known scheduled entries (incl. legacy schema) from the system queue.  </li>
+<li>Re-schedules everything <strong>consistently</strong> with the current schema (ID/payload).  </li>
+<li>Fixes "orphan alarms" after updates/schema changes/crash scenarios.</li>
 </ul>
 <hr />
-<h2 id="3-what-are-voice-macros">3) What are voice macros?<a class="headerlink" href="#3-what-are-voice-macros" title="Permanent link">&para;</a></h2>
-<p>Voice macros let you enter activities faster: a short <strong>trigger</strong> expands to a longer <strong>template</strong> which the app then <strong>parses</strong>.</p>
+<h2 id="6-oem-specifics-selection">6) OEM specifics (selection)<a class="headerlink" href="#6-oem-specifics-selection" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Trigger â†’ Expansion â†’ Parsing</strong><br />
-  1) You say the <em>trigger</em>.<br />
-  2) The app replaces it with the saved <em>expansion</em> text.<br />
-  3) The parser reads title/description/date/time from the text.</li>
-<li><strong>Example</strong>:<br />
-  Trigger: <code>macro one</code> â†’ Expansion:<br />
-<code>Title Shopping Description Milk and bread Date tomorrow Time 6 pm</code>.</li>
+<li><strong>Xiaomi/MIUI</strong>: "Allow autostart", battery protection -&gt; "No restrictions".  </li>
+<li><strong>Huawei/EMUI</strong>: "Manage app start" -&gt; "Automatically manage OFF", allow everything.  </li>
+<li><strong>Samsung</strong>: "Adaptive battery"/"App in standby" -&gt; <strong>exclude</strong> ToDay.  </li>
+<li><strong>OnePlus/OPPO/realme</strong>: "App battery management" -&gt; No limitation.  </li>
+<li><strong>Vivo</strong>: "I-Manager" -&gt; disable energy optimization for ToDay.</li>
 </ul>
-<p><strong>Overview (list)</strong>
-- <strong>Search</strong> filters by name/trigger.
-- <strong>Filter chips</strong>: <em>All</em> Â· <em>Active</em> Â· <em>Inactive</em>.
-- <strong>New macro</strong>: <strong>+</strong></p>
 <hr />
-<h2 id="4-exact-alarms">4) Exact alarms?<a class="headerlink" href="#4-exact-alarms" title="Permanent link">&para;</a></h2>
-<p>If your device supports <em>Exact alarms</em>, some reminders can fire at the exact time. Without this permission, the system may group or delay alarms to save power.</p>
+<h2 id="7-when-is-it-not-an-app-bug">7) When is it <strong>not</strong> an app bug?<a class="headerlink" href="#7-when-is-it-not-an-app-bug" title="Permanent link">&para;</a></h2>
+<ul>
+<li>DND/Doze/optimization active -&gt; the <strong>system</strong> delays/suppresses.  </li>
+<li>Daylight saving time (<strong>DST</strong>) -&gt; OS <strong>normalizes</strong> times.  </li>
+<li>Alarms from an <strong>old version</strong> -&gt; one-time "Rebuild" needed.</li>
+</ul>
 
 
 
