@@ -2,7 +2,7 @@
 
 ## 1) Service provider under Sec. 5 DDG
 **Name:** Mathias Haeuser  
-**Address:** Auenstrasse,36 Â· 82515 Wolfratshausen Â· Germany
+**Address:** Auenstrasse,36 &middot; 82515 Wolfratshausen &middot; Germany
 
 **Contact:**  
 Email: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)  

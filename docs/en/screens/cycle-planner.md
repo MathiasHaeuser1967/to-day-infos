@@ -5,7 +5,7 @@ With **Cycle planner** you automatically create recurring focus/break blocks (e.
 ---
 
 ## 1) Purpose
-You define start time, template (focus/break), and how often the block should repeat. ToDay creates the individual activities in your daily plan â€” neatly paced, without overlaps.
+You define start time, template (focus/break), and how often the block should repeat. ToDay creates the individual activities in your daily plan &mdash; neatly paced, without overlaps.
 
 ---
 
@@ -31,17 +31,17 @@ You define start time, template (focus/break), and how often the block should re
 Choose a **focus/break** combination. ToDay creates one focus block and the associated break for each cycle (back-to-back).
 
 **Classic templates**
-- **25/5** â€“ Pomodoro 25 min focus, 5 min break  
-- **50/10** â€“ 50 min focus, 10 min break  
-- **52/17** â€“ 52 min focus, 17 min break  
-- **45/15** â€“ 45 min focus, 15 min break  
-- **30/10** â€“ 30 min focus, 10 min break  
-- **60/15** â€“ 60 min focus, 15 min break
+- **25/5** &ndash; Pomodoro 25 min focus, 5 min break  
+- **50/10** &ndash; 50 min focus, 10 min break  
+- **52/17** &ndash; 52 min focus, 17 min break  
+- **45/15** &ndash; 45 min focus, 15 min break  
+- **30/10** &ndash; 30 min focus, 10 min break  
+- **60/15** &ndash; 60 min focus, 15 min break
 
 **Ultradian cycles**
-- **90/15** â€“ 90 min focus, 15 min break  
-- **90/20** â€“ 90 min focus, 20 min break  
-- **75/15** â€“ 75 min focus, 15 min break
+- **90/15** &ndash; 90 min focus, 15 min break  
+- **90/20** &ndash; 90 min focus, 20 min break  
+- **75/15** &ndash; 75 min focus, 15 min break
 
 > Note: The selected template determines the cycle duration and thus the maximum possible repetitions for your day.
 

@@ -5,7 +5,7 @@ function Write-En-Impressum {
 
 ## 1) Service provider under Sec. 5 DDG
 **Name:** Mathias Haeuser  
-**Address:** Auenstrasse,36 · 82515 Wolfratshausen · Germany
+**Address:** Auenstrasse,36 &middot; 82515 Wolfratshausen &middot; Germany
 
 **Contact:**  
 Email: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)  
