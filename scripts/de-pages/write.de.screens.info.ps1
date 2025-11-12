@@ -285,6 +285,281 @@ Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
 - Prüfe zusätzlich Ruhezeiten, „Nicht stören“ und Internet-Verbindung (für DWD/Pollen).
 - Bei Support-Anfragen den kopierten **Info-Block** mit senden.
 
+---
+
+## 8) Android Debug Version erstellen
+
+### 8.1 Voraussetzungen
+- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- USB Debugging am Gerät
+
+### 8.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 8.3 Projekt vorbereiten
+```
+cd X:\apps\to-day
+flutter clean
+flutter pub get
+flutter gen-l10n
+```
+
+### 8.4 Debug starten
+```
+flutter run
+```
+
+---
+
+## 9) Android Release Version erstellen
+
+### 9.1 Voraussetzungen
+- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- USB am Gerät
+
+### 9.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 9.3 Projekt vorbereiten
+```
+cd X:\apps\to-day
+flutter clean
+flutter pub get
+flutter gen-l10n
+```
+
+### 9.4 Release starten
+```
+flutter run --release
+```
+
+---
+
+## 10) Android AppBundle für Google Play Console erstellen
+
+### 10.1 Voraussetzungen
+- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- X:\apps\to-day\android\key.properties  
+- X:\apps\to-day\android\app\upload-keystore.jks  
+
+### 10.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 10.3 Projekt vorbereiten
+```
+cd X:\apps\to-day
+flutter clean
+flutter pub get
+flutter gen-l10n
+flutter build appbundle --release
+```
+
+---
+
+## 11) Windows Debug Version erstellen
+
+### 11.1 Voraussetzungen
+- Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+
+### 11.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 11.3 Projekt vorbereiten
+```
+cd X:\apps\to-day
+
+$nuDir = "$env:USERPROFILE\nuget"
+New-Item -ItemType Directory -Force $nuDir | Out-Null
+Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile "$nuDir\nuget.exe"
+$env:NUGET_EXE = "$nuDir\nuget.exe"
+Test-Path $env:NUGET_EXE
+flutter clean
+Remove-Item -Recurse -Force .\windows\flutter\ephemeral -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\build\windows -ErrorAction SilentlyContinue
+flutter pub get
+flutter gen-l10n
+```
+bzw.
+
+```
+cd X:\apps\to-day
+
+$nuDir = "$env:USERPROFILE\nuget"
+$env:Path = "$nuDir;$env:Path"
+Set-Location X:\apps\to-day
+
+flutter doctor -v
+flutter clean
+Remove-Item -Recurse -Force .\windows\flutter\ephemeral -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\build\windows -ErrorAction SilentlyContinue
+flutter pub get
+flutter gen-l10n
+```
+
+### 11.4 Debug starten
+```
+flutter run -d windows
+```
+
+---
+
+## 12) Windows Release Version erstellen
+
+### 12.1 Voraussetzungen
+- Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+
+### 12.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 12.3 Projekt vorbereiten
+```
+cd X:\apps\to-day
+
+$nuDir = "$env:USERPROFILE\nuget"
+New-Item -ItemType Directory -Force $nuDir | Out-Null
+Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile "$nuDir\nuget.exe"
+$env:NUGET_EXE = "$nuDir\nuget.exe"
+Test-Path $env:NUGET_EXE
+flutter clean
+Remove-Item -Recurse -Force .\windows\flutter\ephemeral -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\build\windows -ErrorAction SilentlyContinue
+flutter pub get
+flutter gen-l10n
+```
+bzw.
+
+```
+cd X:\apps\to-day
+
+$nuDir = "$env:USERPROFILE\nuget"
+$env:Path = "$nuDir;$env:Path"
+Set-Location X:\apps\to-day
+
+flutter doctor -v
+flutter clean
+Remove-Item -Recurse -Force .\windows\flutter\ephemeral -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\build\windows -ErrorAction SilentlyContinue
+flutter pub get
+flutter gen-l10n
+```
+
+### 12.4 Release starten
+```
+flutter run -d windows --release
+```
+
+---
+
+## 13) Android Emulator Debug Version erstellen
+
+### 13.1 Voraussetzungen
+- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+
+### 13.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 13.3 Projekt vorbereiten
+```
+flutter emulators
+flutter emulators --launch Medium_Phone_API_36.0
+flutter devices
+
+cd X:\apps\to-day
+flutter clean
+flutter pub get
+flutter gen-l10n
+```
+
+### 13.4 Debug starten
+```
+flutter run -d emulator-5554
+```
+
+---
+
+## 14) Android Emulator Release Version erstellen
+
+### 14.1 Voraussetzungen
+- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+
+### 14.2 Prüfen
+```
+flutter --version
+dart --version
+flutter doctor -v
+```
+
+### 14.3 Projekt vorbereiten
+```
+flutter emulators
+flutter emulators --launch Medium_Phone_API_36.0
+flutter devices
+
+cd X:\apps\to-day
+flutter clean
+flutter pub get
+flutter gen-l10n
+```
+
+### 14.4 Release starten
+```
+flutter run --release -d emulator-5554
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 '@
   Write-File $p $c
 }
