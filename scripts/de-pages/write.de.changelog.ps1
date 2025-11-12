@@ -5,6 +5,7 @@
 
 | Version  | Typ       | Beschreibung |
 |----------|-----------|--------------|
+| 1.0.6.6  | Enhancement | Das voreingestellte Sprechtempo bei Erstinstallation wurde von 1.0 auf 0.5 reduziert – für eine angenehmere Sprachausgabe. |
 | 1.0.6.5  | Feature   | Aktivit&auml;ten mit Datum/Uhrzeit in der Vergangenheit k&ouml;nnen jetzt angelegt und bearbeitet werden. Beim Speichern erscheint ein Hinweis – keine harte Sperre mehr. |
 | 1.0.6.4  | Release   | Erste Ver&ouml;ffentlichung |
 
