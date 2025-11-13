@@ -290,7 +290,7 @@ Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
 ## 8) Android Debug Version erstellen
 
 ### 8.1 Voraussetzungen
-- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 - USB Debugging am Gerät
 
 ### 8.2 Prüfen
@@ -318,7 +318,7 @@ flutter run
 ## 9) Android Release Version erstellen
 
 ### 9.1 Voraussetzungen
-- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 - USB am Gerät
 
 ### 9.2 Prüfen
@@ -346,7 +346,7 @@ flutter run --release
 ## 10) Android AppBundle für Google Play Console erstellen
 
 ### 10.1 Voraussetzungen
-- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 - X:\apps\to-day\android\key.properties  
 - X:\apps\to-day\android\app\upload-keystore.jks  
 
@@ -371,7 +371,7 @@ flutter build appbundle --release
 ## 11) Windows Debug Version erstellen
 
 ### 11.1 Voraussetzungen
-- Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 
 ### 11.2 Prüfen
 ```
@@ -422,7 +422,7 @@ flutter run -d windows
 ## 12) Windows Release Version erstellen
 
 ### 12.1 Voraussetzungen
-- Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 
 ### 12.2 Prüfen
 ```
@@ -473,7 +473,7 @@ flutter run -d windows --release
 ## 13) Android Emulator Debug Version erstellen
 
 ### 13.1 Voraussetzungen
-- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 
 ### 13.2 Prüfen
 ```
@@ -504,7 +504,7 @@ flutter run -d emulator-5554
 ## 14) Android Emulator Release Version erstellen
 
 ### 14.1 Voraussetzungen
-- Android Studio mit SDK und Platform Tools [flutter --version # Flutter 3.32.8, dart --version # Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
 
 ### 14.2 Prüfen
 ```
