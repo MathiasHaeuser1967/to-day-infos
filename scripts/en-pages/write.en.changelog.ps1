@@ -5,7 +5,7 @@ function Write-En-Changelog {
 
 | Version | Type | Description |
 |---|---|---|
-| 1.0.7.0 | Enhancement | Appearance improved. When Dynamic Colors are off, the app now uses a strong orange base with matching accents. Shad UI uses orange. System behavior stays the same. |
+| 1.0.7.0 | Feature | Appearance improved. When Dynamic Colors are off, the app now uses a strong orange base with matching accents. Shad UI uses orange. System behavior stays the same. |
 | | Feature | Splash screen with loading indicator and a support box to copy and restart. |
 | | Enhancement | More stable app start with a short splash and a watchdog notice if startup is delayed. |
 | | Bugfix | Fixed "ShadTheme.of()". ShadApp is now the root wrapper. |
