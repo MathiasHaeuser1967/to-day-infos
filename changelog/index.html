@@ -1102,6 +1102,41 @@
 </tr>
 <tr>
 <td></td>
+<td>Enhancement</td>
+<td>Kaltstart beschleunigt. Schwere Initialisierung hinter den ersten Frame verlegt über AppBootstrap. UI rendert schneller.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>StartupMetrics protokolliert First Frame Zeit und Frame Timings für Diagnose.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>DataWarmup nutzt compute und Isolate für JSON Parsing und Vorarbeit.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>AssetWarmup lädt Bilder erst nach dem ersten Frame in den Cache.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>BatteryHelper nur auf Wunsch aus den Einstellungen. Texte kommen aus l10n Deutsch und Englisch.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Notifications in _initNotifications gebündelt. Foreground Chime Port wird sauber registriert.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>onCreate entlastet. runApp kommt früher. Splash navigiert erst wenn Bootstrap fertig.</td>
+</tr>
+<tr>
+<td></td>
 <td>Bugfix</td>
 <td>Fehler &bdquo;ShadTheme.of()&ldquo; behoben. ShadApp ist jetzt der Root Wrapper.</td>
 </tr>
@@ -1114,6 +1149,11 @@
 <td></td>
 <td>Bugfix</td>
 <td>Der manuell eingetragene awesome_notifications BootReceiver wurde entfernt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Bugfix</td>
+<td>ForegroundChime init ohne await. Stabilerer Notification Start.</td>
 </tr>
 <tr>
 <td>1.0.6.6</td>
