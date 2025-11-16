@@ -1239,6 +1239,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#15-app-log-aufnehmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15) App Log aufnehmen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15) App Log aufnehmen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-handlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 Handlungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-befehle-zum-aufzeichnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 Befehle zum Aufzeichnen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2187,6 +2220,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#15-app-log-aufnehmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15) App Log aufnehmen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15) App Log aufnehmen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-handlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 Handlungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-befehle-zum-aufzeichnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 Befehle zum Aufzeichnen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2954,6 +3020,23 @@ flutter gen-l10n
 </code></pre>
 <h3 id="144-release-starten">14.4 Release starten<a class="headerlink" href="#144-release-starten" title="Permanent link">&para;</a></h3>
 <pre><code>flutter run --release -d emulator-5554
+</code></pre>
+<hr />
+<h2 id="15-app-log-aufnehmen">15) App Log aufnehmen<a class="headerlink" href="#15-app-log-aufnehmen" title="Permanent link">&para;</a></h2>
+<h3 id="151-handlungen">15.1 Handlungen<a class="headerlink" href="#151-handlungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Gerät neu starten.  </li>
+<li>Sauberes App Log aufnehmen, damit wir echte App Fehler sehen.</li>
+</ul>
+<h3 id="152-befehle-zum-aufzeichnen">15.2 Befehle zum Aufzeichnen<a class="headerlink" href="#152-befehle-zum-aufzeichnen" title="Permanent link">&para;</a></h3>
+<pre><code>adb logcat -c
+adb logcat -v time -b all &gt; log.txt
+</code></pre>
+<ul>
+<li>Dann Problem auslösen. Danach Datei prüfen.</li>
+<li>Nur deine App filtern</li>
+</ul>
+<pre><code>adb logcat -v time | Select-String -Pattern &quot;FATAL EXCEPTION|de.mathiashaeuser.today&quot;
 </code></pre>
 
 
