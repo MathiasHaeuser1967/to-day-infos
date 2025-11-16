@@ -530,32 +530,26 @@ flutter gen-l10n
 flutter run --release -d emulator-5554
 ```
 
+---
 
+## 15) App Log aufnehmen 
 
+### 15.1 Handlungen
+- Gerät neu starten.  
+- Sauberes App Log aufnehmen, damit wir echte App Fehler sehen.
 
+### 15.2 Befehle zum Aufzeichnen
 
+```
+adb logcat -c
+adb logcat -v time -b all > log.txt
+```
+- Dann Problem auslösen. Danach Datei prüfen.
+- Nur deine App filtern
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+adb logcat -v time | Select-String -Pattern "FATAL EXCEPTION|de.mathiashaeuser.today"
+```
 
 
 
