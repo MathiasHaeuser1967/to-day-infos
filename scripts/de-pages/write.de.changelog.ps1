@@ -5,7 +5,7 @@
 
 | Version  | Typ       | Beschreibung |
 |----------|-----------|--------------|
-| 1.0.7.1| Feature | Erscheinungsbild verbessert. Wenn Dynamische Farben aus sind, nutzt die App jetzt ein kräftiges Orange als Basis mit passenden Akzentfarben. Shad UI verwendet orange. System bleibt unverändert. |
+| 1.0.7.10| Feature | Erscheinungsbild verbessert. Wenn Dynamische Farben aus sind, nutzt die App jetzt ein kräftiges Orange als Basis mit passenden Akzentfarben. Shad UI verwendet orange. System bleibt unverändert. |
 || Feature     | Splash Screen mit Ladeanzeige und Support Box zum Kopieren und Neustarten. |
 || Enhancement | Stabilerer App Start durch kurzen Splash und Watchdog Hinweis bei Verz&ouml;gerung. |
 || Enhancement | Kaltstart beschleunigt. Schwere Initialisierung hinter den ersten Frame verlegt über AppBootstrap. UI rendert schneller. |

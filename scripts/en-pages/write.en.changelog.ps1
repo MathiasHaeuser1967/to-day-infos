@@ -5,7 +5,7 @@ function Write-En-Changelog {
 
 | Version  | Type       | Description |
 |----------|------------|-------------|
-| 1.0.7.1 | Feature | Appearance improved. If Dynamic Color is off the app now uses a vivid orange base with matching accent colors. Shad UI uses orange. System theme stays unchanged. |
+| 1.0.7.10 | Feature | Appearance improved. If Dynamic Color is off the app now uses a vivid orange base with matching accent colors. Shad UI uses orange. System theme stays unchanged. |
 |  | Feature | Splash screen with loader and a support box to copy info and restart. |
 |  | Enhancement | More stable app start with a short splash and a watchdog hint on delay. |
 |  | Enhancement | Faster cold start. Heavy init moved after the first frame via AppBootstrap. UI renders faster. |
