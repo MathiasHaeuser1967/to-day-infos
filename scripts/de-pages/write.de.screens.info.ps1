@@ -359,6 +359,14 @@ flutter doctor -v
 
 ### 10.3 Projekt vorbereiten
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+taskkill /F /IM gradle* /T
+
+# Projektbezogene Gradle Caches und Builds löschen
+Remove-Item -Recurse -Force ".gradle" -ErrorAction Ignore
+Remove-Item -Recurse -Force "app\build" -ErrorAction Ignore
+
 cd X:\apps\to-day
 flutter clean
 flutter pub get
