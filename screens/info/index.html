@@ -2883,7 +2883,15 @@ dart --version
 flutter doctor -v
 </code></pre>
 <h3 id="103-projekt-vorbereiten">10.3 Projekt vorbereiten<a class="headerlink" href="#103-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+taskkill /F /IM gradle* /T
+
+# Projektbezogene Gradle Caches und Builds löschen
+Remove-Item -Recurse -Force &quot;.gradle&quot; -ErrorAction Ignore
+Remove-Item -Recurse -Force &quot;app\build&quot; -ErrorAction Ignore
+
+cd X:\apps\to-day
 flutter clean
 flutter pub get
 flutter gen-l10n
