@@ -9,7 +9,7 @@ Die **Home**-Seite ist deine Tageszentrale: Datum w&auml;hlen, Fortschritt sehen
 
 ## 1) Kopfzeile
 - **Titel:** *ToDay*  
-- **Men&uuml; (&#8942;):** &Ouml;ffnet die Seitennavigation, z. B. **Einstellungen**, **Aufr&auml;umen**, **Hilfe**.
+- **Men&uuml; (&#8942;):** &Ouml;ffnet die Seitennavigation.
 
 ---
 
@@ -52,9 +52,9 @@ Es gibt drei kompakte Kacheln:
 Unter den Kennzahlen wird ein **Info-Block** angezeigt:
 - **Wetterwarnungen DWD** - Statuspunkt (gr&uuml;n/gelb/rot) und Kurztext.  
 - **Pollenflug DWD** - Statuspunkt und Kurztext.  
-- **Aktuelles Wetter** - z. B. **13&deg;C, 83 % rF, Sonne, wolkenlos**.
+- **Aktuelles Wetter** - z. B. **13&deg;C, 83 % rF.
 
-Die Detailansicht erreichst du &uuml;ber den **Tab „DWD“** (siehe unten). Ein-/Ausblendung und Einheiten stellst du in **Einstellungen** ein.
+Die Detailansicht erreichst du &uuml;ber den **Tab DWD** (siehe unten). Ein-/Ausblendung und Einheiten stellst du in **Einstellungen** ein.
 
 ---
 
