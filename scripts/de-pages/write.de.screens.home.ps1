@@ -109,7 +109,7 @@ Von **links nach rechts**:
    Startet **Sprach-Makros** bzw. die **Spracheingabe**.
 
 3. **Schnellaktion** (Minus-Symbol)  
-   Kontextsensitive Kurzfunktion - z. B. **Aufr&auml;umen** &ouml;ffnen, **Snooze/Zurückstellen** oder eine definierte **Kurzaktion**.
+   Kontextsensitive Kurzfunktion - z. B. **Aufr&auml;umen** &ouml;ffnen, **Snooze** oder eine definierte **Kurzaktion**.
 
 4. **Neu anlegen** (Plus)  
    &Ouml;ffnet den Dialog, um **eine neue Aktivit&auml;t** f&uuml;r das gew&auml;hlte Datum zu erstellen (Titel, Uhrzeit, Wiederholung, Priorit&auml;t etc.).
@@ -128,7 +128,7 @@ Von **links nach rechts**:
 - Im Tab **Offen/&Uuml;berf&auml;llig** die **Checkbox** tippen &rarr; Eintrag wandert nach **Erledigt**; Fortschritt steigt.
 
 ### Aufr&auml;umen
-- &Uuml;ber das **Men&uuml; (&#8942;)** oder die **Schnellaktion (−)** den **Aufr&auml;umen-Dialog** &ouml;ffnen, Quelle w&auml;hlen (Zyklus / Zeitansagen / User), Optionen setzen (z. B. "Nur offene", "Benachrichtigungen stornieren") und **L&ouml;schen** tippen.
+- &Uuml;ber das **Men&uuml; (&#8942;)** oder die **Schnellaktion (-)** den **Aufr&auml;umen-Dialog** &ouml;ffnen, Quelle w&auml;hlen (Zyklus / Zeitansagen / User), Optionen setzen (z. B. "Nur offene", "Benachrichtigungen stornieren") und **L&ouml;schen** tippen.
 
 ---
 
