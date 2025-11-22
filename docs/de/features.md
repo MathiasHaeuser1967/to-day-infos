@@ -22,7 +22,7 @@ Ein Überblick über das, was **ToDay** kann.
 
 ## 3) Zeitansagen
 - Erzeugt **Zeitpunkte zwischen Start- und Endzeit** im gewählten **Takt**: 10/15/20/30 Min oder **stündlich**.
-- Ausgabe als **Benachrichtigung** – wahlweise **TTS** oder **Morse-Ton**.
+- Ausgabe als **Benachrichtigung** – **TTS**.
 - Zeitansagen werden als eigene **Aktivitätsquelle** (`system:time_announce`) geführt.
 
 ---
@@ -69,7 +69,7 @@ Ein Überblick über das, was **ToDay** kann.
 - **Benachrichtigungen – Allgemein**: Land, **PLZ**, **Warnregion**, **Ruhezeiten**, globaler Schalter.
 - **Wetterwarnungen (DWD)** und **Pollen (DWD)**: fein konfigurierbar, **Sofort prüfen**.
 - **TTS-Einstellungen**: Stimme, Tempo, Tonhöhe.
-- **Zeitansagen**: Fenster, Taktung, Morse statt TTS, **Erzeugen**.
+- **Zeitansagen**: Fenster, Taktung, TTS, **Erzeugen**.
 - **Gefährlicher Bereich**: Debug-Infos unter Aktivitäten, **Benachrichtigungen neu aufbauen**, **Alle Aktivitäten löschen**.
 
 ---

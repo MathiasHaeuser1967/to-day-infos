@@ -22,7 +22,7 @@ An overview of what **ToDay** can do.
 
 ## 3) Time announcements
 - Generates **time points between start and end time** at the selected **interval**: 10/15/20/30 min or **hourly**.
-- Output as **notification** &ndash; optionally **TTS** or **Morse tone**.
+- Output as **notification** &ndash; **TTS**.
 - Time announcements are tracked as their own **activity source** (`system:time_announce`).
 
 ---
@@ -69,7 +69,7 @@ An overview of what **ToDay** can do.
 - **Notifications &ndash; general**: country, **ZIP**, **alert region**, **quiet times**, global switch.
 - **Weather alerts (DWD)** and **pollen (DWD)**: finely configurable, **check now**.
 - **TTS settings**: voice, rate, pitch.
-- **Time announcements**: window, interval, Morse instead of TTS, **generate**.
+- **Time announcements**: window, interval, TTS, **generate**.
 - **Dangerous area**: debug info under activities, **rebuild notifications**, **delete all activities**.
 
 ---
