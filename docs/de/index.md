@@ -44,7 +44,7 @@ Sprach‑Makros:
 - **Sprach‑Makros** – Verwalten von Sprachkürzeln (Erstellen, Bearbeiten, Löschen)
 
 **Einstellungen – Abschnitte:**
-- **Zeitansagen** – Intervall, Zeitfenster, optional Morse, Test
+- **Zeitansagen** – Intervall, Zeitfenster, Test
 - **Wetter & Pollen** – Warnungen aktivieren, Quellen
 - **Sprache** – Deutsch/Englisch
 - **TTS** – Stimme, Sprechtempo, Vorlese‑Optionen
