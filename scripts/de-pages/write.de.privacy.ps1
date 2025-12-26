@@ -17,7 +17,7 @@ Diese Seite beschreibt kurz und verständlich, wie **ToDay** mit Daten umgeht.
 ## 2) Verantwortlicher
 - **App:** ToDay (Android)  
 - **Entwickler:** Mathias Haeuser  
-- **Kontakt:** mathias.haeuser@gmx.net  
+- **Kontakt:** app-today@gmx.de  
 *(Kein/e Datenschutzbeauftragte/r erforderlich – es werden keine serverseitigen personenbezogenen Daten verarbeitet.)*
 
 ---
@@ -88,7 +88,7 @@ Da keine serverseitigen Konten geführt werden, kannst du deine Daten direkt **a
 ---
 
 ## 10) Kontakt
-**E-Mail:** mathias.haeuser@gmx.net
+**E-Mail:** app-today@gmx.de
 
 ---
 

@@ -8,7 +8,7 @@ function Write-En-Impressum {
 **Address:** Auenstrasse,36 &middot; 82515 Wolfratshausen &middot; Germany
 
 **Contact:**  
-Email: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)  
+Email: [app-today@gmx.de](mailto:app-today@gmx.de)  
 
 **Authorized representative:** Mathias Haeuser
 
@@ -55,7 +55,7 @@ The content and works created by the site operators are subject to German copyri
 ---
 
 ## 9) Contact for legal inquiries
-Email: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)
+Email: [app-today@gmx.de](mailto:app-today@gmx.de)
 
 **Last updated:** 2025-10-23
 '@

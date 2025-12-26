@@ -8,7 +8,7 @@
 **Anschrift:** Auenstrasse,36 · 82515 Wolfratshausen · Deutschland
 
 **Kontakt:**  
-E-Mail: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)  
+E-Mail: [app-today@gmx.de](mailto:app-today@gmx.de)  
 
 **Vertretungsberechtigt:** Mathias Haeuser
 
@@ -55,7 +55,7 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deuts
 ---
 
 ## 9) Kontakt für rechtliche Anfragen
-E-Mail: [mathias.haeuser@gmx.net](mailto:mathias.haeuser@gmx.net)
+E-Mail: [app-today@gmx.de](mailto:app-today@gmx.de)
 
 **Stand:** 2025-10-23  
 

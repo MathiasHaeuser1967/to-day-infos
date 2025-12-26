@@ -17,7 +17,7 @@ This page briefly and clearly describes how **ToDay** handles data.
 ## 2) Controller
 - **App:** ToDay (Android)  
 - **Developer:** Mathias Haeuser  
-- **Contact:** mathias.haeuser@gmx.net  
+- **Contact:** app-today@gmx.de  
 *(No data protection officer required - no server-side personal data is processed.)*
 
 ---
@@ -88,7 +88,7 @@ As no server-side accounts are maintained, you can delete your data directly **o
 ---
 
 ## 10) Contact
-**Email:** mathias.haeuser@gmx.net
+**Email:** app-today@gmx.de
 
 ---
 
