@@ -291,7 +291,7 @@ Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
 
 ### 8.1 Voraussetzungen
 - Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
-- USB Debugging am Gerät
+- USB Debugging am Gerät [Entwickleroptionen aktivieren: Einstellungen → Über das Telefon → Detaillierte Infos und Spezifikationen → auf OS Version oder MIUI Version 7 bis 10 mal tippen, bis die Meldung kommt, dass du Entwickler bist. USB Debugging einschalten: Einstellungen → Zusätzliche Einstellungen → Entwickleroptionen → USB Debugging aktivieren.]
 
 ### 8.2 Prüfen
 ```
