@@ -19,27 +19,91 @@ This dialog creates a new activity. You set title, time, reminders and (optional
 
 ---
 
+## 2a) TD triggers in the title (Power feature)
+
+You can trigger system actions via the activity title. For this, the title must start exactly with `TD:`.
+
+Important
+- A trigger is only detected if the title starts directly with `TD:`. No leading space.
+- Format: `TD:<group>:<level>`
+- Case insensitive: `td:BRIEF:HIGH` is valid.
+- Anything after the third segment is ignored and only acts as an optional label.
+  Examples: `TD:brief:high:morning` or `TD:brief:high My label`
+
+Display rules
+- The stored title remains unchanged.
+- In the activity list, a friendly label is shown instead of the raw token.
+- If your device language is English, the English label is shown.
+
+### TD briefing triggers v1.0
+
+| Trigger token in title | Display German | Display English | Speaks tasks with priority |
+| --- | --- | --- | --- |
+| `TD:brief:high` | Tagesbriefing Hoch | Daily Briefing High | High only |
+| `TD:brief:mid` | Tagesbriefing Mittel | Daily Briefing Mid | Medium only |
+| `TD:brief:low` | Tagesbriefing Niedrig | Daily Briefing Low | Low only |
+
+### Input examples
+
+- Without label  
+  Title: `TD:brief:high`
+
+- With label  
+  Title: `TD:brief:mid:team`  
+  The label is only text. Behavior stays `TD:brief:mid`.
+
+### What happens when a briefing is due
+
+When a briefing trigger activity becomes due, the title is not spoken. Instead, the app speaks a generated daily briefing.
+
+Briefing scope
+- Applies to the day of the trigger activity.
+
+Filter rules
+- The trigger activity itself is never spoken.
+- Activities whose titles start with `TD:` are never spoken.
+- Only normal tasks are spoken, matching the selected level high mid low.
+
+Sorting
+- First tasks with a time, sorted ascending by time.
+- Then tasks without a time.
+
+Limits
+- Max 5 timed tasks.
+- Max 3 untimed tasks.
+- If there are more, the briefing ends with a short: "and more tasks".
+
+Language
+- Two texts are prepared: German and English.
+- On display, the device locale decides which text is used.
+- If no matching text is present, the app uses the existing fallback behavior.
+
+Reminder note
+- Briefing triggers should not fire twice at the start time. Therefore a "Start" reminder for TD briefing triggers is internally suppressed.
+
+---
+
 ## 3) Priority
-- **Low / Medium / High**  
+- **Low / Medium / High**
   Affects the **"High priority"** metric on Home and helps you focus.
 
 ---
 
 ## 4) Date
-- Calendar selection for the day of the activity.  
+- Calendar selection for the day of the activity.
   Tip: Shortcuts like Today/Tomorrow are available; otherwise choose a date.
 
 ---
 
 ## 5) Time
-- Exact start time (24-hour).  
+- Exact start time (24-hour).
   Used for the position within the day and for reminders.
 
 ---
 
 ## 6) Remind
 - Opens the selection **Start &middot; 5 min &middot; 10 min &middot; 15 min &middot; 30 min &middot; 1 h &middot; 2 h**.
-- Multiple selection possible (e.g., *10 min* **and** *Start*).  
+- Multiple selection possible (e.g., *10 min* **and** *Start*).
 - Quick actions: **All** / **None**.
 - **Apply** confirms the selection.
 
@@ -51,20 +115,20 @@ This dialog creates a new activity. You set title, time, reminders and (optional
 Defines whether and how the activity repeats automatically.
 
 - **None**: one-off.
-- **Daily**  
+- **Daily**
   - Interval: "Every *n* days" (- / +).
   - **Ends**: *Endless* &middot; *Until date* &middot; *After count*.
-- **Weekly**  
-  - Interval: "Every *n* weeks" (- / +).  
+- **Weekly**
+  - Interval: "Every *n* weeks" (- / +).
   - Select weekdays (Mon...Sun) or shortcuts **Weekdays** / **Weekend**.
   - **Ends**: *Endless* &middot; *Until date* &middot; *After count*.
-- **Monthly**  
-  - Interval: "Every *n* months".  
-  - Mode: **Day of month** (e.g., *23rd*) **or** **Weekday in month** (e.g., *every 2nd Tuesday*).  
+- **Monthly**
+  - Interval: "Every *n* months".
+  - Mode: **Day of month** (e.g., *23rd*) **or** **Weekday in month** (e.g., *every 2nd Tuesday*).
   - **Ends**: *Endless* &middot; *Until date* &middot; *After count*.
-- **Yearly**  
-  - Interval: "Every *n* years".  
-  - Mode: **On date** (month + day) **or** **Weekday in month**.  
+- **Yearly**
+  - Interval: "Every *n* years".
+  - Mode: **On date** (month + day) **or** **Weekday in month**.
   - **Ends**: *Endless* &middot; *Until date* &middot; *After count*.
 
 > Tip: For "Birthday", "Rent", "Report week" choose a suitable repeat and set **End** consciously.
@@ -78,8 +142,8 @@ Defines whether and how the activity repeats automatically.
 ---
 
 ## 9) Examples
-- "**Doctor's appointment**", date *23 Oct*, time *08:15*, Remind *10 min + Start*.  
-- "**Workout**", time *18:00*, **Weekly**: *Thu*, Ends *Endless*.  
+- "**Doctor's appointment**", date *23 Oct*, time *08:15*, Remind *10 min + Start*.
+- "**Workout**", time *18:00*, **Weekly**: *Thu*, Ends *Endless*.
 - "**Report**", **Monthly**: *Weekday in month &rarr; last business day*, Remind *1 h*.
 
 ---
