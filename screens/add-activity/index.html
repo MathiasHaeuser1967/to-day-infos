@@ -610,6 +610,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2a-td-trigger-im-titel-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      2a) TD Trigger im Titel (Power Feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2a) TD Trigger im Titel (Power Feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-briefing-trigger-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Briefing Trigger v1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eingabe-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eingabe Beispiele
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#was-passiert-wenn-ein-briefing-fallig-wird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was passiert, wenn ein Briefing fällig wird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-prioritat" class="md-nav__link">
     <span class="md-ellipsis">
       3) Priorität
@@ -1152,6 +1194,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2a-td-trigger-im-titel-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      2a) TD Trigger im Titel (Power Feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2a) TD Trigger im Titel (Power Feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-briefing-trigger-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Briefing Trigger v1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eingabe-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eingabe Beispiele
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#was-passiert-wenn-ein-briefing-fallig-wird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was passiert, wenn ein Briefing fällig wird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-prioritat" class="md-nav__link">
     <span class="md-ellipsis">
       3) Priorität
@@ -1254,57 +1338,134 @@
 <li><strong>Beschreibung</strong> <em>(optional)</em>: Details/Notizen.</li>
 </ul>
 <hr />
+<h2 id="2a-td-trigger-im-titel-power-feature">2a) TD Trigger im Titel (Power Feature)<a class="headerlink" href="#2a-td-trigger-im-titel-power-feature" title="Permanent link">&para;</a></h2>
+<p>Du kannst bestimmte System Aktionen über den Aktivitätstitel auslösen. Dafür beginnt der Titel exakt mit <code>TD:</code>.</p>
+<p>Wichtig
+- Trigger wird nur erkannt, wenn der Titel direkt mit <code>TD:</code> startet. Kein Leerzeichen davor.
+- Format: <code>TD:&lt;gruppe&gt;:&lt;stufe&gt;</code>
+- Case insensitive: <code>td:BRIEF:HIGH</code> ist gültig.
+- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.
+  Beispiele: <code>TD:brief:high:morning</code> oder <code>TD:brief:high Mein Label</code></p>
+<p>Anzeige Regeln
+- Der gespeicherte Titel bleibt unverändert.
+- In der Aktivitätsliste wird statt des Tokens eine freundliche Anzeige gezeigt.
+- Bei Gerätesprache Englisch wird die englische Anzeige gezeigt.</p>
+<h3 id="td-briefing-trigger-v10">TD Briefing Trigger v1.0<a class="headerlink" href="#td-briefing-trigger-v10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger Token im Titel</th>
+<th>Anzeige Deutsch</th>
+<th>Anzeige Englisch</th>
+<th>Spricht Aufgaben mit Priorität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TD:brief:high</code></td>
+<td>Tagesbriefing Hoch</td>
+<td>Daily Briefing High</td>
+<td>nur Hoch</td>
+</tr>
+<tr>
+<td><code>TD:brief:mid</code></td>
+<td>Tagesbriefing Mittel</td>
+<td>Daily Briefing Mid</td>
+<td>nur Mittel</td>
+</tr>
+<tr>
+<td><code>TD:brief:low</code></td>
+<td>Tagesbriefing Niedrig</td>
+<td>Daily Briefing Low</td>
+<td>nur Niedrig</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eingabe-beispiele">Eingabe Beispiele<a class="headerlink" href="#eingabe-beispiele" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Ohne Label<br />
+  Titel: <code>TD:brief:high</code></p>
+</li>
+<li>
+<p>Mit Label<br />
+  Titel: <code>TD:brief:mid:team</code><br />
+  Das Label ist nur Text. Verhalten bleibt <code>TD:brief:mid</code>.</p>
+</li>
+</ul>
+<h3 id="was-passiert-wenn-ein-briefing-fallig-wird">Was passiert, wenn ein Briefing fällig wird<a class="headerlink" href="#was-passiert-wenn-ein-briefing-fallig-wird" title="Permanent link">&para;</a></h3>
+<p>Wenn eine Briefing Trigger Aktivität fällig wird, wird nicht der Titel vorgelesen. Stattdessen wird ein Tagesbriefing gesprochen.</p>
+<p>Briefing Scope
+- Gilt für den Tag der Trigger Aktivität.</p>
+<p>Filter Regeln
+- Die Trigger Aktivität selbst wird nie vorgelesen.
+- Aktivitäten deren Titel mit <code>TD:</code> beginnt werden nie vorgelesen.
+- Es werden nur normale Aufgaben vorgelesen, passend zur Stufe high mid low.</p>
+<p>Sortierung
+- Zuerst Aufgaben mit Uhrzeit, aufsteigend nach Uhrzeit.
+- Danach Aufgaben ohne Uhrzeit.</p>
+<p>Mengenbegrenzung
+- Maximal 5 Aufgaben mit Uhrzeit.
+- Maximal 3 Aufgaben ohne Uhrzeit.
+- Wenn es mehr gibt, kommt am Ende kurz: „und weitere Aufgaben“.</p>
+<p>Sprache
+- Es werden zwei Texte vorbereitet: Deutsch und Englisch.
+- Beim Anzeigen wird anhand der Geräte Locale gewählt.
+- Wenn kein passender Text vorhanden ist, nutzt die App den bisherigen Fallback.</p>
+<p>Hinweis zu Erinnerungen
+- Für Briefing Trigger soll es keine doppelte Benachrichtigung zum Startzeitpunkt geben. Deshalb wird eine Erinnerung „Start“ für TD Briefing Trigger intern unterdrückt.</p>
+<hr />
 <h2 id="3-prioritat">3) Priorität<a class="headerlink" href="#3-prioritat" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Niedrig / Mittel / Hoch</strong><br />
+<li><strong>Niedrig / Mittel / Hoch</strong>
   Beeinflusst die Kennzahl <strong>„Hohe Priorität“</strong> auf Home und hilft dir beim Fokussieren.</li>
 </ul>
 <hr />
 <h2 id="4-datum">4) Datum<a class="headerlink" href="#4-datum" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Kalenderauswahl für den Tag der Aktivität.<br />
+<li>Kalenderauswahl für den Tag der Aktivität.
   Tipp: Heute/Morgen häufig verfügbar, sonst Datum wählen.</li>
 </ul>
 <hr />
 <h2 id="5-uhrzeit">5) Uhrzeit<a class="headerlink" href="#5-uhrzeit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Genaue Startzeit (24-h).<br />
+<li>Genaue Startzeit (24-h).
   Wird für die Position im Tag und für Erinnerungen verwendet.</li>
 </ul>
 <hr />
 <h2 id="6-erinnern">6) Erinnern<a class="headerlink" href="#6-erinnern" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Öffnet die Auswahl <strong>Start · 5 Min · 10 Min · 15 Min · 30 Min · 1 Std · 2 Std</strong>.</li>
-<li>Mehrfachauswahl möglich (z. B. <em>10 Min</em> <strong>und</strong> <em>Start</em>).  </li>
+<li>Mehrfachauswahl möglich (z. B. <em>10 Min</em> <strong>und</strong> <em>Start</em>).</li>
 <li>Schnellaktionen: <strong>Alle</strong> / <strong>Keine</strong>.</li>
 <li><strong>Übernehmen</strong> bestätigt die Auswahl.</li>
 </ul>
 <blockquote>
-<p>Hinweis: Erinnerungen werden zum gewählten Zeitpunkt als Benachrichtigung/Alarm geplant (Systemrechte erforderlich).</p>
+<p>Hinweis: Erinnerungen werden zum gewählten Zeitpunkt als Benachrichtigung oder Alarm geplant (Systemrechte erforderlich).</p>
 </blockquote>
 <hr />
 <h2 id="7-wiederholung">7) Wiederholung<a class="headerlink" href="#7-wiederholung" title="Permanent link">&para;</a></h2>
 <p>Legt fest, ob und wie die Aktivität automatisch wiederkommt.</p>
 <ul>
 <li><strong>Keine</strong>: einmalig.</li>
-<li><strong>Täglich</strong>  </li>
+<li><strong>Täglich</strong></li>
 <li>Intervall: „Alle <em>n</em> Tage“ (− / +).</li>
 <li><strong>Endet</strong>: <em>Endlos</em> · <em>Bis Datum</em> · <em>Nach Anzahl</em>.</li>
-<li><strong>Wöchentlich</strong>  </li>
-<li>Intervall: „Alle <em>n</em> Wochen“ (− / +).  </li>
+<li><strong>Wöchentlich</strong></li>
+<li>Intervall: „Alle <em>n</em> Wochen“ (− / +).</li>
 <li>Wochentage wählen (Mo…So) oder Shortcuts <strong>Werktage</strong> / <strong>Wochenende</strong>.</li>
 <li><strong>Endet</strong>: <em>Endlos</em> · <em>Bis Datum</em> · <em>Nach Anzahl</em>.</li>
-<li><strong>Monatlich</strong>  </li>
-<li>Intervall: „Alle <em>n</em> Monate“.  </li>
-<li>Modus: <strong>Tag des Monats</strong> (z. B. <em>23.</em>) <strong>oder</strong> <strong>Wochentag im Monat</strong> (z. B. <em>jeder 2. Dienstag</em>).  </li>
+<li><strong>Monatlich</strong></li>
+<li>Intervall: „Alle <em>n</em> Monate“.</li>
+<li>Modus: <strong>Tag des Monats</strong> (z. B. <em>23.</em>) <strong>oder</strong> <strong>Wochentag im Monat</strong> (z. B. <em>jeder 2. Dienstag</em>).</li>
 <li><strong>Endet</strong>: <em>Endlos</em> · <em>Bis Datum</em> · <em>Nach Anzahl</em>.</li>
-<li><strong>Jährlich</strong>  </li>
-<li>Intervall: „Alle <em>n</em> Jahre“.  </li>
-<li>Modus: <strong>Am Datum</strong> (Monat + Tag) <strong>oder</strong> <strong>Wochentag in Monat</strong>.  </li>
+<li><strong>Jährlich</strong></li>
+<li>Intervall: „Alle <em>n</em> Jahre“.</li>
+<li>Modus: <strong>Am Datum</strong> (Monat + Tag) <strong>oder</strong> <strong>Wochentag in Monat</strong>.</li>
 <li><strong>Endet</strong>: <em>Endlos</em> · <em>Bis Datum</em> · <em>Nach Anzahl</em>.</li>
 </ul>
 <blockquote>
-<p>Tipp: Für „Geburtstag“, „Miete“, „Berichtswoche“ o. ä. passende Wiederholung wählen und <strong>Ende</strong> bewusst setzen.</p>
+<p>Tipp: Für „Geburtstag“, „Miete“, „Berichtswoche“ passende Wiederholung wählen und <strong>Ende</strong> bewusst setzen.</p>
 </blockquote>
 <hr />
 <h2 id="8-aktionen">8) Aktionen<a class="headerlink" href="#8-aktionen" title="Permanent link">&para;</a></h2>
@@ -1315,15 +1476,15 @@
 <hr />
 <h2 id="9-beispiele">9) Beispiele<a class="headerlink" href="#9-beispiele" title="Permanent link">&para;</a></h2>
 <ul>
-<li>„<strong>Arzttermin</strong>“, Datum <em>23.10.</em>, Uhrzeit <em>08:15</em>, Erinnern <em>10 Min + Start</em>.  </li>
-<li>„<strong>Training</strong>“, Uhrzeit <em>18:00</em>, <strong>Wöchentlich</strong>: <em>Do</em>, Endet <em>Endlos</em>.  </li>
+<li>„<strong>Arzttermin</strong>“, Datum <em>23.10.</em>, Uhrzeit <em>08:15</em>, Erinnern <em>10 Min + Start</em>.</li>
+<li>„<strong>Training</strong>“, Uhrzeit <em>18:00</em>, <strong>Wöchentlich</strong>: <em>Do</em>, Endet <em>Endlos</em>.</li>
 <li>„<strong>Bericht</strong>“, <strong>Monatlich</strong>: <em>Wochentag im Monat → letzter Werktag</em>, Erinnern <em>1 Std</em>.</li>
 </ul>
 <hr />
 <h2 id="10-hinweise">10) Hinweise<a class="headerlink" href="#10-hinweise" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Berechtigungen</strong>: Erlaube Benachrichtigungen (und ggf. <strong>Exakte Alarme</strong>), sonst kommen Erinnerungen verspätet.</li>
-<li><strong>Änderbar</strong>: Alles lässt sich später bearbeiten; Wiederholungen wirken nur für zukünftige Termine.</li>
+<li><strong>Änderbar</strong>: Alles lässt sich später bearbeiten, Wiederholungen wirken nur für zukünftige Termine.</li>
 </ul>
 
 
