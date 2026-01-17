@@ -5,6 +5,10 @@
 | 1.0.7.11| Feature | Daily Briefing Button in Home hinzugef&uuml;gt. Sprachausgabe listet offene Aktivit&auml;ten f&uuml;r heute nach Priorit&auml;t auf. |
 || Feature | Multi-Tap am Daily Briefing Button: 1x hohe Priorit&auml;t, 2x mittlere Priorit&auml;t, 3x niedrige Priorit&auml;t. Zeitfenster f&uuml;r Mehrfachklick intern definiert. |
 || Feature | Sprachausgabe f&uuml;r Daily Briefing in Deutsch und Englisch, abh&auml;ngig von der aktuellen App-Sprache. |
+|| Feature | TD Trigger im Titel: `TD:brief:high`, `TD:brief:mid`, `TD:brief:low`. Wenn eine solche Aktivit&auml;t f&auml;llig wird, wird statt des Titels ein generiertes Tagesbriefing per Sprachausgabe ausgegeben. |
+|| Feature | TD Briefing Filter nach Priorit&auml;t: `TD:brief:high` spricht nur **Hoch**, `TD:brief:mid` spricht nur **Mittel**, `TD:brief:low` spricht nur **Niedrig**. Andere Priorit&auml;ten werden nicht vorgelesen. |
+|| Feature | TD Briefing Scope und Regeln: gilt f&uuml;r den Tag der Trigger Aktivit&auml;t, sortiert erst Aufgaben mit Uhrzeit aufsteigend, dann ohne Uhrzeit, begrenzt auf max 5 mit Uhrzeit und max 3 ohne Uhrzeit, Zusatz &bdquo;und weitere Aufgaben&ldquo; bei mehr. TD Trigger Aktivit&auml;t selbst und alle Titel mit `TD:` werden nicht vorgelesen. |
+|| Feature | Freundliche Anzeige f&uuml;r TD Trigger in der Aktivit&auml;tenliste statt Roh Token. Deutsch: Tagesbriefing Hoch, Mittel, Niedrig. Englisch: Daily Briefing High, Mid, Low. Gespeicherter Titel bleibt unver&auml;ndert. |
 || Enhancement | Untere Action-Buttons in Home jetzt zweireihig, Originalgr&ouml;&szlig;e wiederhergestellt f&uuml;r besseres Tippen. |
 || Bugfix | Build-Fehler im Multi-Tap Daily Briefing behoben (Timer-Konstante und Clamp-Int Konvertierung). |
 || Bugfix | Timer wird beim Schlie&szlig;en von Home korrekt beendet, um Nebenwirkungen zu reduzieren. |
