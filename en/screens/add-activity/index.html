@@ -610,6 +610,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2a-td-triggers-in-the-title-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      2a) TD triggers in the title (Power feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2a) TD triggers in the title (Power feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-briefing-triggers-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD briefing triggers v1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-a-briefing-is-due" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens when a briefing is due
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-priority" class="md-nav__link">
     <span class="md-ellipsis">
       3) Priority
@@ -1152,6 +1194,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2a-td-triggers-in-the-title-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      2a) TD triggers in the title (Power feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2a) TD triggers in the title (Power feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-briefing-triggers-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD briefing triggers v1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-a-briefing-is-due" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens when a briefing is due
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-priority" class="md-nav__link">
     <span class="md-ellipsis">
       3) Priority
@@ -1254,28 +1338,105 @@
 <li><strong>Description</strong> <em>(optional)</em>: details/notes.</li>
 </ul>
 <hr />
+<h2 id="2a-td-triggers-in-the-title-power-feature">2a) TD triggers in the title (Power feature)<a class="headerlink" href="#2a-td-triggers-in-the-title-power-feature" title="Permanent link">&para;</a></h2>
+<p>You can trigger system actions via the activity title. For this, the title must start exactly with <code>TD:</code>.</p>
+<p>Important
+- A trigger is only detected if the title starts directly with <code>TD:</code>. No leading space.
+- Format: <code>TD:&lt;group&gt;:&lt;level&gt;</code>
+- Case insensitive: <code>td:BRIEF:HIGH</code> is valid.
+- Anything after the third segment is ignored and only acts as an optional label.
+  Examples: <code>TD:brief:high:morning</code> or <code>TD:brief:high My label</code></p>
+<p>Display rules
+- The stored title remains unchanged.
+- In the activity list, a friendly label is shown instead of the raw token.
+- If your device language is English, the English label is shown.</p>
+<h3 id="td-briefing-triggers-v10">TD briefing triggers v1.0<a class="headerlink" href="#td-briefing-triggers-v10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger token in title</th>
+<th>Display German</th>
+<th>Display English</th>
+<th>Speaks tasks with priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TD:brief:high</code></td>
+<td>Tagesbriefing Hoch</td>
+<td>Daily Briefing High</td>
+<td>High only</td>
+</tr>
+<tr>
+<td><code>TD:brief:mid</code></td>
+<td>Tagesbriefing Mittel</td>
+<td>Daily Briefing Mid</td>
+<td>Medium only</td>
+</tr>
+<tr>
+<td><code>TD:brief:low</code></td>
+<td>Tagesbriefing Niedrig</td>
+<td>Daily Briefing Low</td>
+<td>Low only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-examples">Input examples<a class="headerlink" href="#input-examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Without label<br />
+  Title: <code>TD:brief:high</code></p>
+</li>
+<li>
+<p>With label<br />
+  Title: <code>TD:brief:mid:team</code><br />
+  The label is only text. Behavior stays <code>TD:brief:mid</code>.</p>
+</li>
+</ul>
+<h3 id="what-happens-when-a-briefing-is-due">What happens when a briefing is due<a class="headerlink" href="#what-happens-when-a-briefing-is-due" title="Permanent link">&para;</a></h3>
+<p>When a briefing trigger activity becomes due, the title is not spoken. Instead, the app speaks a generated daily briefing.</p>
+<p>Briefing scope
+- Applies to the day of the trigger activity.</p>
+<p>Filter rules
+- The trigger activity itself is never spoken.
+- Activities whose titles start with <code>TD:</code> are never spoken.
+- Only normal tasks are spoken, matching the selected level high mid low.</p>
+<p>Sorting
+- First tasks with a time, sorted ascending by time.
+- Then tasks without a time.</p>
+<p>Limits
+- Max 5 timed tasks.
+- Max 3 untimed tasks.
+- If there are more, the briefing ends with a short: "and more tasks".</p>
+<p>Language
+- Two texts are prepared: German and English.
+- On display, the device locale decides which text is used.
+- If no matching text is present, the app uses the existing fallback behavior.</p>
+<p>Reminder note
+- Briefing triggers should not fire twice at the start time. Therefore a "Start" reminder for TD briefing triggers is internally suppressed.</p>
+<hr />
 <h2 id="3-priority">3) Priority<a class="headerlink" href="#3-priority" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Low / Medium / High</strong><br />
+<li><strong>Low / Medium / High</strong>
   Affects the <strong>"High priority"</strong> metric on Home and helps you focus.</li>
 </ul>
 <hr />
 <h2 id="4-date">4) Date<a class="headerlink" href="#4-date" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Calendar selection for the day of the activity.<br />
+<li>Calendar selection for the day of the activity.
   Tip: Shortcuts like Today/Tomorrow are available; otherwise choose a date.</li>
 </ul>
 <hr />
 <h2 id="5-time">5) Time<a class="headerlink" href="#5-time" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Exact start time (24-hour).<br />
+<li>Exact start time (24-hour).
   Used for the position within the day and for reminders.</li>
 </ul>
 <hr />
 <h2 id="6-remind">6) Remind<a class="headerlink" href="#6-remind" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Opens the selection <strong>Start &middot; 5 min &middot; 10 min &middot; 15 min &middot; 30 min &middot; 1 h &middot; 2 h</strong>.</li>
-<li>Multiple selection possible (e.g., <em>10 min</em> <strong>and</strong> <em>Start</em>).  </li>
+<li>Multiple selection possible (e.g., <em>10 min</em> <strong>and</strong> <em>Start</em>).</li>
 <li>Quick actions: <strong>All</strong> / <strong>None</strong>.</li>
 <li><strong>Apply</strong> confirms the selection.</li>
 </ul>
@@ -1287,20 +1448,20 @@
 <p>Defines whether and how the activity repeats automatically.</p>
 <ul>
 <li><strong>None</strong>: one-off.</li>
-<li><strong>Daily</strong>  </li>
+<li><strong>Daily</strong></li>
 <li>Interval: "Every <em>n</em> days" (- / +).</li>
 <li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Weekly</strong>  </li>
-<li>Interval: "Every <em>n</em> weeks" (- / +).  </li>
+<li><strong>Weekly</strong></li>
+<li>Interval: "Every <em>n</em> weeks" (- / +).</li>
 <li>Select weekdays (Mon...Sun) or shortcuts <strong>Weekdays</strong> / <strong>Weekend</strong>.</li>
 <li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Monthly</strong>  </li>
-<li>Interval: "Every <em>n</em> months".  </li>
-<li>Mode: <strong>Day of month</strong> (e.g., <em>23rd</em>) <strong>or</strong> <strong>Weekday in month</strong> (e.g., <em>every 2nd Tuesday</em>).  </li>
+<li><strong>Monthly</strong></li>
+<li>Interval: "Every <em>n</em> months".</li>
+<li>Mode: <strong>Day of month</strong> (e.g., <em>23rd</em>) <strong>or</strong> <strong>Weekday in month</strong> (e.g., <em>every 2nd Tuesday</em>).</li>
 <li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Yearly</strong>  </li>
-<li>Interval: "Every <em>n</em> years".  </li>
-<li>Mode: <strong>On date</strong> (month + day) <strong>or</strong> <strong>Weekday in month</strong>.  </li>
+<li><strong>Yearly</strong></li>
+<li>Interval: "Every <em>n</em> years".</li>
+<li>Mode: <strong>On date</strong> (month + day) <strong>or</strong> <strong>Weekday in month</strong>.</li>
 <li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
 </ul>
 <blockquote>
@@ -1315,8 +1476,8 @@
 <hr />
 <h2 id="9-examples">9) Examples<a class="headerlink" href="#9-examples" title="Permanent link">&para;</a></h2>
 <ul>
-<li>"<strong>Doctor's appointment</strong>", date <em>23 Oct</em>, time <em>08:15</em>, Remind <em>10 min + Start</em>.  </li>
-<li>"<strong>Workout</strong>", time <em>18:00</em>, <strong>Weekly</strong>: <em>Thu</em>, Ends <em>Endless</em>.  </li>
+<li>"<strong>Doctor's appointment</strong>", date <em>23 Oct</em>, time <em>08:15</em>, Remind <em>10 min + Start</em>.</li>
+<li>"<strong>Workout</strong>", time <em>18:00</em>, <strong>Weekly</strong>: <em>Thu</em>, Ends <em>Endless</em>.</li>
 <li>"<strong>Report</strong>", <strong>Monthly</strong>: <em>Weekday in month &rarr; last business day</em>, Remind <em>1 h</em>.</li>
 </ul>
 <hr />
