@@ -1102,6 +1102,26 @@
 </tr>
 <tr>
 <td></td>
+<td>Feature</td>
+<td>TD title triggers: <code>TD:brief:high</code>, <code>TD:brief:mid</code>, <code>TD:brief:low</code>. When such an activity becomes due, the app speaks a generated daily briefing instead of reading the title.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD briefing priority filter: <code>TD:brief:high</code> speaks <strong>High only</strong>, <code>TD:brief:mid</code> speaks <strong>Medium only</strong>, <code>TD:brief:low</code> speaks <strong>Low only</strong>. Other priorities are not spoken.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD briefing scope and rules: applies to the day of the trigger activity, sorts timed tasks first (ascending time), then untimed tasks, limits to max 5 timed and max 3 untimed, adds &quot;and more tasks&quot; if there are more. The trigger activity itself and any title starting with <code>TD:</code> are not spoken.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>Friendly display labels for TD triggers in the activity list instead of the raw token. German: Tagesbriefing High Mid Low. English: Daily Briefing High Mid Low. Stored title stays unchanged.</td>
+</tr>
+<tr>
+<td></td>
 <td>Enhancement</td>
 <td>Home action buttons are now arranged in two rows. Original button size restored for easier tapping.</td>
 </tr>
@@ -1168,12 +1188,12 @@
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Fixed "ShadTheme.of()" error. ShadApp is now the root wrapper.</td>
+<td>Fixed &quot;ShadTheme.of()&quot; error. ShadApp is now the root wrapper.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Fixed "darkData" build error. Switched to new ShadTheme API with theme and darkTheme fields.</td>
+<td>Fixed &quot;darkData&quot; build error. Switched to new ShadTheme API with theme and darkTheme fields.</td>
 </tr>
 <tr>
 <td></td>
