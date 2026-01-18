@@ -646,6 +646,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-finance-trigger-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Finance Trigger v1.0
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1230,6 +1239,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-finance-trigger-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Finance Trigger v1.0
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1414,6 +1432,67 @@
 - Wenn kein passender Text vorhanden ist, nutzt die App den bisherigen Fallback.</p>
 <p>Hinweis zu Erinnerungen
 - Für Briefing Trigger soll es keine doppelte Benachrichtigung zum Startzeitpunkt geben. Deshalb wird eine Erinnerung „Start“ für TD Briefing Trigger intern unterdrückt.</p>
+<hr />
+<h3 id="td-finance-trigger-v10">TD Finance Trigger v1.0<a class="headerlink" href="#td-finance-trigger-v10" title="Permanent link">&para;</a></h3>
+<p>Finance Trigger sind System Trigger für Preis Ansagen. Wenn so eine Aktivität fällig wird, liest die App nicht den Titel vor, sondern eine generierte Preis Ansage.</p>
+<table>
+<thead>
+<tr>
+<th>Trigger Token im Titel</th>
+<th>Anzeige Deutsch</th>
+<th>Anzeige Englisch</th>
+<th>Was wird gesprochen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TD:finance:gold</code></td>
+<td>Goldpreis Ansage</td>
+<td>Gold price announcement</td>
+<td>Goldpreis in USD, Stand Zeit</td>
+</tr>
+<tr>
+<td><code>TD:finance:silver</code></td>
+<td>Silberpreis Ansage</td>
+<td>Silver price announcement</td>
+<td>Silberpreis in USD, Stand Zeit</td>
+</tr>
+</tbody>
+</table>
+<p>Eingabe Beispiele
+- Ohne Label<br />
+  Titel: <code>TD:finance:gold</code></p>
+<ul>
+<li>Mit Label<br />
+  Titel: <code>TD:finance:silver:spot</code><br />
+  Das Label ist nur Text. Verhalten bleibt <code>TD:finance:silver</code>.</li>
+</ul>
+<p>Wichtig
+- Trigger wird nur erkannt, wenn der Titel direkt mit <code>TD:</code> startet. Kein Leerzeichen davor.
+- Case insensitive: <code>TD:FINANCE:GOLD</code> ist gültig.
+- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.</p>
+<p>Was passiert, wenn ein Finance Trigger fällig wird
+- Es wird nicht der Titel vorgelesen.
+- Stattdessen wird beim Planen der Benachrichtigung eine Preis Ansage vorbereitet.
+- Es gibt keine Netzwerk Abfragen im Benachrichtigungs Callback. Der Callback nutzt nur payload.</p>
+<p>Datenquelle und Preis Mapping
+- Basis Endpoint: <code>https://data-asg.goldprice.org/dbXRates/USD</code>
+- Gold nimmt <code>xauClose</code> als Preis in USD.
+- Silber nimmt <code>xagClose</code> als Preis in USD.</p>
+<p>Cache Verhalten
+- Die App cached die Preise pro Metall für ca. 10 bis 15 Minuten oder bis App Neustart.
+- Dadurch werden beim Rescheduling nicht dauernd neue Preise geholt.</p>
+<p>Offline und Fehlerfall
+- Wenn kein Netz verfügbar ist oder ein Fehler passiert, wird trotzdem gescheduled.
+- Die App spricht dann eine klare Fallback Meldung, zum Beispiel „Goldpreis derzeit nicht verfügbar“.</p>
+<p>Sprache
+- Es werden zwei Texte vorbereitet: Deutsch und Englisch.
+- Beim Abspielen wird anhand der Geräte Locale gewählt.
+- payload keys: <code>speak_de</code> und <code>speak_en</code> (optional zusaetzlich Finance Felder wie Symbol, Waehrung, Preis, Zeitstempel).</p>
+<p>Benachrichtigungs Regeln
+- Finance Trigger nutzen standardmaessig den lauten Kanal mit Sound.
+- allowWhileIdle ist aktiv.
+- Damit es nicht doppelt feuert, wird eine Erinnerung „Start“ für Finance Trigger intern unterdrückt.</p>
 <hr />
 <h2 id="3-prioritat">3) Priorität<a class="headerlink" href="#3-prioritat" title="Permanent link">&para;</a></h2>
 <ul>
