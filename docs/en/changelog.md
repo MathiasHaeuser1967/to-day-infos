@@ -9,6 +9,13 @@
 |  | Feature | TD briefing priority filter: `TD:brief:high` speaks **High only**, `TD:brief:mid` speaks **Medium only**, `TD:brief:low` speaks **Low only**. Other priorities are not spoken. |
 |  | Feature | TD briefing scope and rules: applies to the day of the trigger activity, sorts timed tasks first (ascending time), then untimed tasks, limits to max 5 timed and max 3 untimed, adds &quot;and more tasks&quot; if there are more. The trigger activity itself and any title starting with `TD:` are not spoken. |
 |  | Feature | Friendly display labels for TD triggers in the activity list instead of the raw token. German: Tagesbriefing High Mid Low. English: Daily Briefing High Mid Low. Stored title stays unchanged. |
+|  | Feature | New TD finance title triggers: `TD:finance:gold`, `TD:finance:silver`. When such an activity becomes due, the app speaks a generated price announcement instead of reading the title. |
+|  | Feature | TD finance data source and mapping: endpoint `https://data-asg.goldprice.org/dbXRates/USD`. Gold uses `xauClose` and silver uses `xagClose` as the USD price. |
+|  | Feature | TD finance cache layer: prices are cached per metal for about 10 to 15 minutes or until app restart to avoid repeated fetches during scheduling. |
+|  | Feature | TD finance offline and error handling: no network calls inside the notification callback. On network errors scheduling continues and a clear fallback announcement is generated. No crash and no blocking of the notification system. |
+|  | Feature | TD finance notification rules: default loud channel with sound, allowWhileIdle enabled. No duplicate start time notification for trigger activities. |
+|  | Feature | Friendly display labels for TD finance triggers in the activity list instead of the raw token. German: Goldpreis Ansage, Silberpreis Ansage. English: Gold price announcement, Silver price announcement. |
+|  | Bugfix | Daily Briefing speech now consistently skips all activities whose titles start with `TD:` so trigger activities are not read as normal tasks. |
 |  | Enhancement | Home action buttons are now arranged in two rows. Original button size restored for easier tapping. |
 |  | Bugfix | Fixed a release build error in the multi-tap Daily Briefing implementation (timer constant and clamp int conversion). |
 |  | Bugfix | Timer is cancelled when Home is disposed to reduce side effects. |

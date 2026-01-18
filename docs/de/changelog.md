@@ -9,6 +9,13 @@
 || Feature | TD Briefing Filter nach Priorit&auml;t: `TD:brief:high` spricht nur **Hoch**, `TD:brief:mid` spricht nur **Mittel**, `TD:brief:low` spricht nur **Niedrig**. Andere Priorit&auml;ten werden nicht vorgelesen. |
 || Feature | TD Briefing Scope und Regeln: gilt f&uuml;r den Tag der Trigger Aktivit&auml;t, sortiert erst Aufgaben mit Uhrzeit aufsteigend, dann ohne Uhrzeit, begrenzt auf max 5 mit Uhrzeit und max 3 ohne Uhrzeit, Zusatz &bdquo;und weitere Aufgaben&ldquo; bei mehr. TD Trigger Aktivit&auml;t selbst und alle Titel mit `TD:` werden nicht vorgelesen. |
 || Feature | Freundliche Anzeige f&uuml;r TD Trigger in der Aktivit&auml;tenliste statt Roh Token. Deutsch: Tagesbriefing Hoch, Mittel, Niedrig. Englisch: Daily Briefing High, Mid, Low. Gespeicherter Titel bleibt unver&auml;ndert. |
+|| Feature | Neuer TD Finance Trigger im Titel: `TD:finance:gold`, `TD:finance:silver`. Wenn eine solche Aktivit&auml;t f&auml;llig wird, wird statt des Titels eine generierte Preisansage per Sprachausgabe ausgegeben. |
+|| Feature | TD Finance Datenquelle und Mapping: Endpoint `https://data-asg.goldprice.org/dbXRates/USD`. Gold nimmt `xauClose`, Silber nimmt `xagClose` als Preis in USD. |
+|| Feature | TD Finance Cache Layer: Preise werden pro Metall ca. 10 bis 15 Minuten gecached oder bis App Neustart, um Mehrfach Fetches beim Scheduling zu vermeiden. |
+|| Feature | TD Finance Offline und Fehlerfall: Keine Netzwerk Calls im Notification Callback. Bei Netzwerkfehler wird trotzdem gescheduled und eine klare Fallback Ansage erzeugt. Kein Crash, keine Blockade des Notification Systems. |
+|| Feature | TD Finance Notification Regeln: Standard laut mit Sound, allowWhileIdle aktiv. Keine doppelte Notification zum Startzeitpunkt fuer Trigger Aktivit&auml;ten. |
+|| Feature | Freundliche Anzeige fuer TD Finance Trigger in der Aktivit&auml;tenliste statt Roh Token. Deutsch: Goldpreis Ansage, Silberpreis Ansage. Englisch: Gold price announcement, Silver price announcement. |
+|| Bugfix | Daily Briefing Aufsage filtert jetzt konsequent alle Aktivit&auml;ten, deren Titel mit `TD:` beginnt, damit Trigger Aktivit&auml;ten nicht als normale Aufgaben vorgelesen werden. |
 || Enhancement | Untere Action-Buttons in Home jetzt zweireihig, Originalgr&ouml;&szlig;e wiederhergestellt f&uuml;r besseres Tippen. |
 || Bugfix | Build-Fehler im Multi-Tap Daily Briefing behoben (Timer-Konstante und Clamp-Int Konvertierung). |
 || Bugfix | Timer wird beim Schlie&szlig;en von Home korrekt beendet, um Nebenwirkungen zu reduzieren. |
