@@ -1122,6 +1122,41 @@
 </tr>
 <tr>
 <td></td>
+<td>Feature</td>
+<td>New TD finance title triggers: <code>TD:finance:gold</code>, <code>TD:finance:silver</code>. When such an activity becomes due, the app speaks a generated price announcement instead of reading the title.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD finance data source and mapping: endpoint <code>https://data-asg.goldprice.org/dbXRates/USD</code>. Gold uses <code>xauClose</code> and silver uses <code>xagClose</code> as the USD price.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD finance cache layer: prices are cached per metal for about 10 to 15 minutes or until app restart to avoid repeated fetches during scheduling.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD finance offline and error handling: no network calls inside the notification callback. On network errors scheduling continues and a clear fallback announcement is generated. No crash and no blocking of the notification system.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD finance notification rules: default loud channel with sound, allowWhileIdle enabled. No duplicate start time notification for trigger activities.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>Friendly display labels for TD finance triggers in the activity list instead of the raw token. German: Goldpreis Ansage, Silberpreis Ansage. English: Gold price announcement, Silver price announcement.</td>
+</tr>
+<tr>
+<td></td>
+<td>Bugfix</td>
+<td>Daily Briefing speech now consistently skips all activities whose titles start with <code>TD:</code> so trigger activities are not read as normal tasks.</td>
+</tr>
+<tr>
+<td></td>
 <td>Enhancement</td>
 <td>Home action buttons are now arranged in two rows. Original button size restored for easier tapping.</td>
 </tr>

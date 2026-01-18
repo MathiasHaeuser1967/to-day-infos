@@ -1122,6 +1122,41 @@
 </tr>
 <tr>
 <td></td>
+<td>Feature</td>
+<td>Neuer TD Finance Trigger im Titel: <code>TD:finance:gold</code>, <code>TD:finance:silver</code>. Wenn eine solche Aktivit&auml;t f&auml;llig wird, wird statt des Titels eine generierte Preisansage per Sprachausgabe ausgegeben.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Finance Datenquelle und Mapping: Endpoint <code>https://data-asg.goldprice.org/dbXRates/USD</code>. Gold nimmt <code>xauClose</code>, Silber nimmt <code>xagClose</code> als Preis in USD.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Finance Cache Layer: Preise werden pro Metall ca. 10 bis 15 Minuten gecached oder bis App Neustart, um Mehrfach Fetches beim Scheduling zu vermeiden.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Finance Offline und Fehlerfall: Keine Netzwerk Calls im Notification Callback. Bei Netzwerkfehler wird trotzdem gescheduled und eine klare Fallback Ansage erzeugt. Kein Crash, keine Blockade des Notification Systems.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Finance Notification Regeln: Standard laut mit Sound, allowWhileIdle aktiv. Keine doppelte Notification zum Startzeitpunkt fuer Trigger Aktivit&auml;ten.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>Freundliche Anzeige fuer TD Finance Trigger in der Aktivit&auml;tenliste statt Roh Token. Deutsch: Goldpreis Ansage, Silberpreis Ansage. Englisch: Gold price announcement, Silver price announcement.</td>
+</tr>
+<tr>
+<td></td>
+<td>Bugfix</td>
+<td>Daily Briefing Aufsage filtert jetzt konsequent alle Aktivit&auml;ten, deren Titel mit <code>TD:</code> beginnt, damit Trigger Aktivit&auml;ten nicht als normale Aufgaben vorgelesen werden.</td>
+</tr>
+<tr>
+<td></td>
 <td>Enhancement</td>
 <td>Untere Action-Buttons in Home jetzt zweireihig, Originalgr&ouml;&szlig;e wiederhergestellt f&uuml;r besseres Tippen.</td>
 </tr>

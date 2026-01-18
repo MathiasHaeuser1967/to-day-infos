@@ -646,6 +646,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-finance-triggers-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD finance triggers v1.0
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1230,6 +1239,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-finance-triggers-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD finance triggers v1.0
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1327,29 +1345,25 @@
 <p>This dialog creates a new activity. You set title, time, reminders and (optionally) a repetition.</p>
 <hr />
 <h2 id="1-open">1) Open<a class="headerlink" href="#1-open" title="Permanent link">&para;</a></h2>
-<ul>
-<li>On <strong>Home</strong>, tap the <strong>+</strong> button.</li>
-<li>Fill the fields and save with <strong>Add</strong>.</li>
-</ul>
+<p>â€¢ On <strong>Home</strong>, tap the <strong>+</strong> button.<br />
+â€¢ Fill the fields and save with <strong>Add</strong>.</p>
 <hr />
 <h2 id="2-title-description">2) Title &amp; description<a class="headerlink" href="#2-title-description" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Title</strong>: required. Short and concise (e.g., "Doctor's appointment", "Send report").</li>
-<li><strong>Description</strong> <em>(optional)</em>: details/notes.</li>
-</ul>
+<p>â€¢ <strong>Title</strong>: required. Short and concise (e.g., "Doctor's appointment", "Send report").<br />
+â€¢ <strong>Description</strong> (optional): details/notes.</p>
 <hr />
 <h2 id="2a-td-triggers-in-the-title-power-feature">2a) TD triggers in the title (Power feature)<a class="headerlink" href="#2a-td-triggers-in-the-title-power-feature" title="Permanent link">&para;</a></h2>
 <p>You can trigger system actions via the activity title. For this, the title must start exactly with <code>TD:</code>.</p>
 <p>Important
-- A trigger is only detected if the title starts directly with <code>TD:</code>. No leading space.
-- Format: <code>TD:&lt;group&gt;:&lt;level&gt;</code>
-- Case insensitive: <code>td:BRIEF:HIGH</code> is valid.
-- Anything after the third segment is ignored and only acts as an optional label.
+â€¢ A trigger is only detected if the title starts directly with <code>TD:</code>. No leading space.<br />
+â€¢ Format: <code>TD:&lt;group&gt;:&lt;level&gt;</code><br />
+â€¢ Case insensitive: <code>td:BRIEF:HIGH</code> is valid.<br />
+â€¢ Anything after the third segment is ignored and only acts as an optional label.<br />
   Examples: <code>TD:brief:high:morning</code> or <code>TD:brief:high My label</code></p>
 <p>Display rules
-- The stored title remains unchanged.
-- In the activity list, a friendly label is shown instead of the raw token.
-- If your device language is English, the English label is shown.</p>
+â€¢ The stored title remains unchanged.<br />
+â€¢ In the activity list, a friendly label is shown instead of the raw token.<br />
+â€¢ If your device language is English, the English label is shown.</p>
 <h3 id="td-briefing-triggers-v10">TD briefing triggers v1.0<a class="headerlink" href="#td-briefing-triggers-v10" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1382,110 +1396,145 @@
 </tbody>
 </table>
 <h3 id="input-examples">Input examples<a class="headerlink" href="#input-examples" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Without label<br />
+<p>â€¢ Without label<br />
   Title: <code>TD:brief:high</code></p>
-</li>
-<li>
-<p>With label<br />
+<p>â€¢ With label<br />
   Title: <code>TD:brief:mid:team</code><br />
   The label is only text. Behavior stays <code>TD:brief:mid</code>.</p>
-</li>
-</ul>
 <h3 id="what-happens-when-a-briefing-is-due">What happens when a briefing is due<a class="headerlink" href="#what-happens-when-a-briefing-is-due" title="Permanent link">&para;</a></h3>
 <p>When a briefing trigger activity becomes due, the title is not spoken. Instead, the app speaks a generated daily briefing.</p>
 <p>Briefing scope
-- Applies to the day of the trigger activity.</p>
+â€¢ Applies to the day of the trigger activity.</p>
 <p>Filter rules
-- The trigger activity itself is never spoken.
-- Activities whose titles start with <code>TD:</code> are never spoken.
-- Only normal tasks are spoken, matching the selected level high mid low.</p>
+â€¢ The trigger activity itself is never spoken.<br />
+â€¢ Activities whose titles start with <code>TD:</code> are never spoken.<br />
+â€¢ Only normal tasks are spoken, matching the selected level high mid low.</p>
 <p>Sorting
-- First tasks with a time, sorted ascending by time.
-- Then tasks without a time.</p>
+â€¢ First tasks with a time, sorted ascending by time.<br />
+â€¢ Then tasks without a time.</p>
 <p>Limits
-- Max 5 timed tasks.
-- Max 3 untimed tasks.
-- If there are more, the briefing ends with a short: "and more tasks".</p>
+â€¢ Max 5 timed tasks.<br />
+â€¢ Max 3 untimed tasks.<br />
+â€¢ If there are more, the briefing ends with a short: "and more tasks".</p>
 <p>Language
-- Two texts are prepared: German and English.
-- On display, the device locale decides which text is used.
-- If no matching text is present, the app uses the existing fallback behavior.</p>
+â€¢ Two texts are prepared: German and English.<br />
+â€¢ On playback, the device locale decides which text is used.<br />
+â€¢ If no matching text is present, the app uses the existing fallback behavior.</p>
 <p>Reminder note
-- Briefing triggers should not fire twice at the start time. Therefore a "Start" reminder for TD briefing triggers is internally suppressed.</p>
+â€¢ Briefing triggers should not fire twice at the start time. Therefore a "Start" reminder for TD briefing triggers is internally suppressed.</p>
+<hr />
+<h3 id="td-finance-triggers-v10">TD finance triggers v1.0<a class="headerlink" href="#td-finance-triggers-v10" title="Permanent link">&para;</a></h3>
+<p>Finance triggers are system triggers for price announcements. When such an activity becomes due, the app does not speak the title. Instead it speaks a generated price announcement.</p>
+<table>
+<thead>
+<tr>
+<th>Trigger token in title</th>
+<th>Display German</th>
+<th>Display English</th>
+<th>What is spoken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TD:finance:gold</code></td>
+<td>Goldpreis Ansage</td>
+<td>Gold price announcement</td>
+<td>Gold price in USD plus timestamp</td>
+</tr>
+<tr>
+<td><code>TD:finance:silver</code></td>
+<td>Silberpreis Ansage</td>
+<td>Silver price announcement</td>
+<td>Silver price in USD plus timestamp</td>
+</tr>
+</tbody>
+</table>
+<p>Input examples
+â€¢ Without label<br />
+  Title: <code>TD:finance:gold</code></p>
+<p>â€¢ With label<br />
+  Title: <code>TD:finance:silver:spot</code><br />
+  The label is only text. Behavior stays <code>TD:finance:silver</code>.</p>
+<p>Important
+â€¢ A trigger is only detected if the title starts directly with <code>TD:</code>. No leading space.<br />
+â€¢ Case insensitive: <code>TD:FINANCE:GOLD</code> is valid.<br />
+â€¢ Anything after the third segment is ignored and only acts as an optional label.</p>
+<p>What happens when a finance trigger is due
+â€¢ The title is not spoken.<br />
+â€¢ The price announcement is prepared when scheduling the notification.<br />
+â€¢ There are no network requests inside the notification callback. The callback reads payload only.</p>
+<p>Data source and mapping
+â€¢ Base endpoint: <code>https://data-asg.goldprice.org/dbXRates/USD</code><br />
+â€¢ Gold uses <code>xauClose</code> as the price in USD.<br />
+â€¢ Silver uses <code>xagClose</code> as the price in USD.</p>
+<p>Cache behavior
+â€¢ Prices are cached per metal for about 10 to 15 minutes or until app restart.<br />
+â€¢ This avoids repeated fetches during rescheduling.</p>
+<p>Offline and error case
+â€¢ If there is no network or a request fails, scheduling still continues.<br />
+â€¢ The app speaks a clear fallback message, for example "Gold price currently not available".</p>
+<p>Language
+â€¢ Two texts are prepared: German and English.<br />
+â€¢ On playback, the device locale decides which text is used.<br />
+â€¢ Payload keys: <code>speak_de</code> and <code>speak_en</code> (optionally also finance fields like symbol, currency, price, timestamp).</p>
+<p>Reminder note
+â€¢ Finance triggers should not fire twice at the start time. Therefore a "Start" reminder for TD finance triggers is internally suppressed.</p>
 <hr />
 <h2 id="3-priority">3) Priority<a class="headerlink" href="#3-priority" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Low / Medium / High</strong>
-  Affects the <strong>"High priority"</strong> metric on Home and helps you focus.</li>
-</ul>
+<p>â€¢ <strong>Low / Medium / High</strong><br />
+  Affects the <strong>"High priority"</strong> metric on Home and helps you focus.</p>
 <hr />
 <h2 id="4-date">4) Date<a class="headerlink" href="#4-date" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Calendar selection for the day of the activity.
-  Tip: Shortcuts like Today/Tomorrow are available; otherwise choose a date.</li>
-</ul>
+<p>â€¢ Calendar selection for the day of the activity.<br />
+  Tip: Shortcuts like Today or Tomorrow are available; otherwise choose a date.</p>
 <hr />
 <h2 id="5-time">5) Time<a class="headerlink" href="#5-time" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Exact start time (24-hour).
-  Used for the position within the day and for reminders.</li>
-</ul>
+<p>â€¢ Exact start time (24-hour).<br />
+  Used for the position within the day and for reminders.</p>
 <hr />
 <h2 id="6-remind">6) Remind<a class="headerlink" href="#6-remind" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Opens the selection <strong>Start &middot; 5 min &middot; 10 min &middot; 15 min &middot; 30 min &middot; 1 h &middot; 2 h</strong>.</li>
-<li>Multiple selection possible (e.g., <em>10 min</em> <strong>and</strong> <em>Start</em>).</li>
-<li>Quick actions: <strong>All</strong> / <strong>None</strong>.</li>
-<li><strong>Apply</strong> confirms the selection.</li>
-</ul>
+<p>â€¢ Opens the selection <strong>Start &middot; 5 min &middot; 10 min &middot; 15 min &middot; 30 min &middot; 1 h &middot; 2 h</strong>.<br />
+â€¢ Multiple selection possible (e.g., <em>10 min</em> and <em>Start</em>).<br />
+â€¢ Quick actions: <strong>All</strong> / <strong>None</strong>.<br />
+â€¢ <strong>Apply</strong> confirms the selection.</p>
 <blockquote>
-<p>Note: Reminders are scheduled as notification/alarm at the chosen time (system permissions required).</p>
+<p>Note: Reminders are scheduled as notification or alarm at the chosen time (system permissions required).</p>
 </blockquote>
 <hr />
 <h2 id="7-repeat">7) Repeat<a class="headerlink" href="#7-repeat" title="Permanent link">&para;</a></h2>
 <p>Defines whether and how the activity repeats automatically.</p>
-<ul>
-<li><strong>None</strong>: one-off.</li>
-<li><strong>Daily</strong></li>
-<li>Interval: "Every <em>n</em> days" (- / +).</li>
-<li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Weekly</strong></li>
-<li>Interval: "Every <em>n</em> weeks" (- / +).</li>
-<li>Select weekdays (Mon...Sun) or shortcuts <strong>Weekdays</strong> / <strong>Weekend</strong>.</li>
-<li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Monthly</strong></li>
-<li>Interval: "Every <em>n</em> months".</li>
-<li>Mode: <strong>Day of month</strong> (e.g., <em>23rd</em>) <strong>or</strong> <strong>Weekday in month</strong> (e.g., <em>every 2nd Tuesday</em>).</li>
-<li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-<li><strong>Yearly</strong></li>
-<li>Interval: "Every <em>n</em> years".</li>
-<li>Mode: <strong>On date</strong> (month + day) <strong>or</strong> <strong>Weekday in month</strong>.</li>
-<li><strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</li>
-</ul>
+<p>â€¢ <strong>None</strong>: one-off.<br />
+â€¢ <strong>Daily</strong><br />
+  â€¢ Interval: "Every <em>n</em> days" (+ / +).<br />
+  â€¢ <strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.<br />
+â€¢ <strong>Weekly</strong><br />
+  â€¢ Interval: "Every <em>n</em> weeks" (+ / +).<br />
+  â€¢ Select weekdays (Mon...Sun) or shortcuts <strong>Weekdays</strong> or <strong>Weekend</strong>.<br />
+  â€¢ <strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.<br />
+â€¢ <strong>Monthly</strong><br />
+  â€¢ Interval: "Every <em>n</em> months".<br />
+  â€¢ Mode: <strong>Day of month</strong> (e.g., <em>23rd</em>) or <strong>Weekday in month</strong> (e.g., <em>every 2nd Tuesday</em>).<br />
+  â€¢ <strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.<br />
+â€¢ <strong>Yearly</strong><br />
+  â€¢ Interval: "Every <em>n</em> years".<br />
+  â€¢ Mode: <strong>On date</strong> (month + day) or <strong>Weekday in month</strong>.<br />
+  â€¢ <strong>Ends</strong>: <em>Endless</em> &middot; <em>Until date</em> &middot; <em>After count</em>.</p>
 <blockquote>
 <p>Tip: For "Birthday", "Rent", "Report week" choose a suitable repeat and set <strong>End</strong> consciously.</p>
 </blockquote>
 <hr />
 <h2 id="8-actions">8) Actions<a class="headerlink" href="#8-actions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Cancel</strong>: closes the dialog without saving.</li>
-<li><strong>Add</strong>: creates the activity and returns to the overview.</li>
-</ul>
+<p>â€¢ <strong>Cancel</strong>: closes the dialog without saving.<br />
+â€¢ <strong>Add</strong>: creates the activity and returns to the overview.</p>
 <hr />
 <h2 id="9-examples">9) Examples<a class="headerlink" href="#9-examples" title="Permanent link">&para;</a></h2>
-<ul>
-<li>"<strong>Doctor's appointment</strong>", date <em>23 Oct</em>, time <em>08:15</em>, Remind <em>10 min + Start</em>.</li>
-<li>"<strong>Workout</strong>", time <em>18:00</em>, <strong>Weekly</strong>: <em>Thu</em>, Ends <em>Endless</em>.</li>
-<li>"<strong>Report</strong>", <strong>Monthly</strong>: <em>Weekday in month &rarr; last business day</em>, Remind <em>1 h</em>.</li>
-</ul>
+<p>â€¢ "<strong>Doctor's appointment</strong>", date <em>23 Oct</em>, time <em>08:15</em>, Remind <em>10 min + Start</em>.<br />
+â€¢ "<strong>Workout</strong>", time <em>18:00</em>, <strong>Weekly</strong>: <em>Thu</em>, Ends <em>Endless</em>.<br />
+â€¢ "<strong>Report</strong>", <strong>Monthly</strong>: <em>Weekday in month &rarr; last business day</em>, Remind <em>1 h</em>.</p>
 <hr />
 <h2 id="10-notes">10) Notes<a class="headerlink" href="#10-notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Permissions</strong>: Allow notifications (and, if available, <strong>Exact alarms</strong>), otherwise reminders may be delayed.</li>
-<li><strong>Editable</strong>: Everything can be changed later; repeats affect future instances only.</li>
-</ul>
+<p>â€¢ <strong>Permissions</strong>: Allow notifications (and, if available, <strong>Exact alarms</strong>), otherwise reminders may be delayed.<br />
+â€¢ <strong>Editable</strong>: Everything can be changed later; repeats affect future instances only.</p>
 
 
 
