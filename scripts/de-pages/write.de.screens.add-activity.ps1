@@ -83,6 +83,58 @@ Hinweis zu Erinnerungen
 
 ---
 
+### TD Finance Trigger v1.0
+
+Finance Trigger sind System Trigger für Preis Ansagen. Wenn so eine Aktivität fällig wird, liest die App nicht den Titel vor, sondern eine generierte Preis Ansage.
+
+| Trigger Token im Titel | Anzeige Deutsch | Anzeige Englisch | Was wird gesprochen |
+| --- | --- | --- | --- |
+| `TD:finance:gold` | Goldpreis Ansage | Gold price announcement | Goldpreis in USD, Stand Zeit |
+| `TD:finance:silver` | Silberpreis Ansage | Silver price announcement | Silberpreis in USD, Stand Zeit |
+
+Eingabe Beispiele
+- Ohne Label  
+  Titel: `TD:finance:gold`
+
+- Mit Label  
+  Titel: `TD:finance:silver:spot`  
+  Das Label ist nur Text. Verhalten bleibt `TD:finance:silver`.
+
+Wichtig
+- Trigger wird nur erkannt, wenn der Titel direkt mit `TD:` startet. Kein Leerzeichen davor.
+- Case insensitive: `TD:FINANCE:GOLD` ist gültig.
+- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.
+
+Was passiert, wenn ein Finance Trigger fällig wird
+- Es wird nicht der Titel vorgelesen.
+- Stattdessen wird beim Planen der Benachrichtigung eine Preis Ansage vorbereitet.
+- Es gibt keine Netzwerk Abfragen im Benachrichtigungs Callback. Der Callback nutzt nur payload.
+
+Datenquelle und Preis Mapping
+- Basis Endpoint: `https://data-asg.goldprice.org/dbXRates/USD`
+- Gold nimmt `xauClose` als Preis in USD.
+- Silber nimmt `xagClose` als Preis in USD.
+
+Cache Verhalten
+- Die App cached die Preise pro Metall für ca. 10 bis 15 Minuten oder bis App Neustart.
+- Dadurch werden beim Rescheduling nicht dauernd neue Preise geholt.
+
+Offline und Fehlerfall
+- Wenn kein Netz verfügbar ist oder ein Fehler passiert, wird trotzdem gescheduled.
+- Die App spricht dann eine klare Fallback Meldung, zum Beispiel „Goldpreis derzeit nicht verfügbar“.
+
+Sprache
+- Es werden zwei Texte vorbereitet: Deutsch und Englisch.
+- Beim Abspielen wird anhand der Geräte Locale gewählt.
+- payload keys: `speak_de` und `speak_en` (optional zusaetzlich Finance Felder wie Symbol, Waehrung, Preis, Zeitstempel).
+
+Benachrichtigungs Regeln
+- Finance Trigger nutzen standardmaessig den lauten Kanal mit Sound.
+- allowWhileIdle ist aktiv.
+- Damit es nicht doppelt feuert, wird eine Erinnerung „Start“ für Finance Trigger intern unterdrückt.
+
+---
+
 ## 3) Priorität
 - **Niedrig / Mittel / Hoch**
   Beeinflusst die Kennzahl **„Hohe Priorität“** auf Home und hilft dir beim Fokussieren.
