@@ -35,21 +35,26 @@ Anzeige Regeln
 - In der Aktivitätsliste wird statt des Tokens eine freundliche Anzeige gezeigt.
 - Bei Gerätesprache Englisch wird die englische Anzeige gezeigt.
 
-### TD Briefing Trigger v1.0
+### TD Briefing Trigger
 
-| Trigger Token im Titel | Anzeige Deutsch | Anzeige Englisch | Spricht Aufgaben mit Priorität |
-| --- | --- | --- | --- |
-| `TD:brief:high` | Tagesbriefing Hoch | Daily Briefing High | nur Hoch |
-| `TD:brief:mid` | Tagesbriefing Mittel | Daily Briefing Mid | nur Mittel |
-| `TD:brief:low` | Tagesbriefing Niedrig | Daily Briefing Low | nur Niedrig |
+Trigger Token im Titel: `TD:brief:<stufe>`
+- `TD:brief:high`
+  Anzeige Deutsch: Tagesbriefing Hoch
+  Anzeige Englisch: Daily Briefing High
+- `TD:brief:mid`
+  Anzeige Deutsch: Tagesbriefing Mittel
+  Anzeige Englisch: Daily Briefing Mid
+- `TD:brief:low`
+  Anzeige Deutsch: Tagesbriefing Niedrig
+  Anzeige Englisch: Daily Briefing Low
 
 ### Eingabe Beispiele
 
-- Ohne Label  
+- Ohne Label
   Titel: `TD:brief:high`
 
-- Mit Label  
-  Titel: `TD:brief:mid:team`  
+- Mit Label
+  Titel: `TD:brief:mid:team`
   Das Label ist nur Text. Verhalten bleibt `TD:brief:mid`.
 
 ### Was passiert, wenn ein Briefing fällig wird
@@ -83,21 +88,24 @@ Hinweis zu Erinnerungen
 
 ---
 
-### TD Finance Trigger v1.0
+### TD Finance Trigger
 
 Finance Trigger sind System Trigger für Preis Ansagen. Wenn so eine Aktivität fällig wird, liest die App nicht den Titel vor, sondern eine generierte Preis Ansage.
 
-| Trigger Token im Titel | Anzeige Deutsch | Anzeige Englisch | Was wird gesprochen |
-| --- | --- | --- | --- |
-| `TD:finance:gold` | Goldpreis Ansage | Gold price announcement | Goldpreis in USD, Stand Zeit |
-| `TD:finance:silver` | Silberpreis Ansage | Silver price announcement | Silberpreis in USD, Stand Zeit |
+Trigger Token im Titel: `TD:finance:<metall>`
+- `TD:finance:gold`
+  Anzeige Deutsch: Goldpreis Ansage
+  Anzeige Englisch: Gold price announcement
+- `TD:finance:silver`
+  Anzeige Deutsch: Silberpreis Ansage
+  Anzeige Englisch: Silver price announcement
 
 Eingabe Beispiele
-- Ohne Label  
+- Ohne Label
   Titel: `TD:finance:gold`
 
-- Mit Label  
-  Titel: `TD:finance:silver:spot`  
+- Mit Label
+  Titel: `TD:finance:silver:spot`
   Das Label ist nur Text. Verhalten bleibt `TD:finance:silver`.
 
 Wichtig
@@ -126,12 +134,39 @@ Offline und Fehlerfall
 Sprache
 - Es werden zwei Texte vorbereitet: Deutsch und Englisch.
 - Beim Abspielen wird anhand der Geräte Locale gewählt.
-- payload keys: `speak_de` und `speak_en` (optional zusaetzlich Finance Felder wie Symbol, Waehrung, Preis, Zeitstempel).
+- payload keys: `speak_de` und `speak_en`
 
-Benachrichtigungs Regeln
-- Finance Trigger nutzen standardmaessig den lauten Kanal mit Sound.
-- allowWhileIdle ist aktiv.
-- Damit es nicht doppelt feuert, wird eine Erinnerung „Start“ für Finance Trigger intern unterdrückt.
+---
+
+### TD Wave Trigger
+
+Wave Trigger spielen einen Sound über einen eigenen Android Channel Sound. Der Titel wird dabei nicht vorgelesen.
+
+Trigger Token im Titel
+- `TD:wave:<key>`
+Optional auch gültig
+- `TD:wav:<key>`
+
+Beispiele
+- `TD:wave:ddr`
+  Anzeige Deutsch: Sound Ansage ddr
+  Anzeige Englisch: Sound announcement ddr
+- `TD:wave:udssr`
+  Anzeige Deutsch: Sound Ansage udssr
+  Anzeige Englisch: Sound announcement udssr
+- `TD:wave:russland`
+  Anzeige Deutsch: Sound Ansage russland
+  Anzeige Englisch: Sound announcement russland
+
+Wave Datei Regeln
+- Android raw resource unter `android/app/src/main/res/raw`
+- Dateiname `<key>.wav`
+- Name klein, nur buchstaben zahlen underscore
+
+Fehlerfall
+- Wenn key unbekannt ist oder Ressource fehlt, kein Crash.
+- Scheduling läuft weiter.
+- Es wird eine klare Fallback Ansage gesprochen, Deutsch und Englisch.
 
 ---
 
