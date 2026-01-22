@@ -135,38 +135,6 @@ Sprache
 
 ---
 
-### TD Wave Trigger
-
-Wave Trigger spielen einen Sound über einen eigenen Android Channel Sound. Der Titel wird dabei nicht vorgelesen.
-
-Trigger Token im Titel
-- `TD:wave:<key>`
-Optional auch gültig
-- `TD:wav:<key>`
-
-Beispiele
-- `TD:wave:ddr`
-  Anzeige Deutsch: Sound Ansage ddr
-  Anzeige Englisch: Sound announcement ddr
-- `TD:wave:udssr`
-  Anzeige Deutsch: Sound Ansage udssr
-  Anzeige Englisch: Sound announcement udssr
-- `TD:wave:russland`
-  Anzeige Deutsch: Sound Ansage russland
-  Anzeige Englisch: Sound announcement russland
-
-Wave Datei Regeln
-- Android raw resource unter `android/app/src/main/res/raw`
-- Dateiname `<key>.wav`
-- Name klein, nur buchstaben zahlen underscore
-
-Fehlerfall
-- Wenn key unbekannt ist oder Ressource fehlt, kein Crash.
-- Scheduling läuft weiter.
-- Es wird eine klare Fallback Ansage gesprochen, Deutsch und Englisch.
-
----
-
 ## 3) Priorität
 - **Niedrig / Mittel / Hoch**
   Beeinflusst die Kennzahl **„Hohe Priorität“** auf Home und hilft dir beim Fokussieren.

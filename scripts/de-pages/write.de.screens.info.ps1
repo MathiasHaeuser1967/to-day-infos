@@ -302,6 +302,9 @@ flutter doctor -v
 
 ### 8.3 Projekt vorbereiten
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -330,6 +333,9 @@ flutter doctor -v
 
 ### 9.3 Projekt vorbereiten
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -361,12 +367,18 @@ flutter doctor -v
 ```
 cd X:\apps\to-day\android
 .\gradlew --stop
+cd ..
+cd X:\apps\to-day
+.\gradlew --stop
 taskkill /F /IM gradle* /T
 
 # Projektbezogene Gradle Caches und Builds löschen
 Remove-Item -Recurse -Force ".gradle" -ErrorAction Ignore
 Remove-Item -Recurse -Force "app\build" -ErrorAction Ignore
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -390,6 +402,9 @@ flutter doctor -v
 
 ### 11.3 Projekt vorbereiten
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 
 $nuDir = "$env:USERPROFILE\nuget"
@@ -441,6 +456,9 @@ flutter doctor -v
 
 ### 12.3 Projekt vorbereiten
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 
 $nuDir = "$env:USERPROFILE\nuget"
@@ -457,6 +475,9 @@ flutter gen-l10n
 bzw.
 
 ```
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 
 $nuDir = "$env:USERPROFILE\nuget"
@@ -496,6 +517,9 @@ flutter emulators
 flutter emulators --launch Medium_Phone_API_36.0
 flutter devices
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -527,6 +551,9 @@ flutter emulators
 flutter emulators --launch Medium_Phone_API_36.0
 flutter devices
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
