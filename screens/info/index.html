@@ -2840,7 +2840,10 @@ dart --version
 flutter doctor -v
 </code></pre>
 <h3 id="83-projekt-vorbereiten">8.3 Projekt vorbereiten<a class="headerlink" href="#83-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
+cd X:\apps\to-day
 flutter clean
 flutter pub get
 flutter gen-l10n
@@ -2861,7 +2864,10 @@ dart --version
 flutter doctor -v
 </code></pre>
 <h3 id="93-projekt-vorbereiten">9.3 Projekt vorbereiten<a class="headerlink" href="#93-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
+cd X:\apps\to-day
 flutter clean
 flutter pub get
 flutter gen-l10n
@@ -2885,12 +2891,18 @@ flutter doctor -v
 <h3 id="103-projekt-vorbereiten">10.3 Projekt vorbereiten<a class="headerlink" href="#103-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
 <pre><code>cd X:\apps\to-day\android
 .\gradlew --stop
+cd ..
+cd X:\apps\to-day
+.\gradlew --stop
 taskkill /F /IM gradle* /T
 
 # Projektbezogene Gradle Caches und Builds löschen
 Remove-Item -Recurse -Force &quot;.gradle&quot; -ErrorAction Ignore
 Remove-Item -Recurse -Force &quot;app\build&quot; -ErrorAction Ignore
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -2909,7 +2921,10 @@ dart --version
 flutter doctor -v
 </code></pre>
 <h3 id="113-projekt-vorbereiten">11.3 Projekt vorbereiten<a class="headerlink" href="#113-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
+cd X:\apps\to-day
 
 $nuDir = &quot;$env:USERPROFILE\nuget&quot;
 New-Item -ItemType Directory -Force $nuDir | Out-Null
@@ -2951,7 +2966,10 @@ dart --version
 flutter doctor -v
 </code></pre>
 <h3 id="123-projekt-vorbereiten">12.3 Projekt vorbereiten<a class="headerlink" href="#123-projekt-vorbereiten" title="Permanent link">&para;</a></h3>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
+cd X:\apps\to-day
 
 $nuDir = &quot;$env:USERPROFILE\nuget&quot;
 New-Item -ItemType Directory -Force $nuDir | Out-Null
@@ -2965,7 +2983,10 @@ flutter pub get
 flutter gen-l10n
 </code></pre>
 <p>bzw.</p>
-<pre><code>cd X:\apps\to-day
+<pre><code>cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
+cd X:\apps\to-day
 
 $nuDir = &quot;$env:USERPROFILE\nuget&quot;
 $env:Path = &quot;$nuDir;$env:Path&quot;
@@ -2997,6 +3018,9 @@ flutter doctor -v
 flutter emulators --launch Medium_Phone_API_36.0
 flutter devices
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get
@@ -3021,6 +3045,9 @@ flutter doctor -v
 flutter emulators --launch Medium_Phone_API_36.0
 flutter devices
 
+cd X:\apps\to-day\android
+.\gradlew --stop
+cd ..
 cd X:\apps\to-day
 flutter clean
 flutter pub get

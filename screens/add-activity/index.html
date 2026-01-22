@@ -620,9 +620,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#td-briefing-trigger-v10" class="md-nav__link">
+  <a href="#td-briefing-trigger" class="md-nav__link">
     <span class="md-ellipsis">
-      TD Briefing Trigger v1.0
+      TD Briefing Trigger
     </span>
   </a>
   
@@ -647,9 +647,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#td-finance-trigger-v10" class="md-nav__link">
+  <a href="#td-finance-trigger" class="md-nav__link">
     <span class="md-ellipsis">
-      TD Finance Trigger v1.0
+      TD Finance Trigger
     </span>
   </a>
   
@@ -1213,9 +1213,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#td-briefing-trigger-v10" class="md-nav__link">
+  <a href="#td-briefing-trigger" class="md-nav__link">
     <span class="md-ellipsis">
-      TD Briefing Trigger v1.0
+      TD Briefing Trigger
     </span>
   </a>
   
@@ -1240,9 +1240,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#td-finance-trigger-v10" class="md-nav__link">
+  <a href="#td-finance-trigger" class="md-nav__link">
     <span class="md-ellipsis">
-      TD Finance Trigger v1.0
+      TD Finance Trigger
     </span>
   </a>
   
@@ -1368,46 +1368,26 @@
 - Der gespeicherte Titel bleibt unverändert.
 - In der Aktivitätsliste wird statt des Tokens eine freundliche Anzeige gezeigt.
 - Bei Gerätesprache Englisch wird die englische Anzeige gezeigt.</p>
-<h3 id="td-briefing-trigger-v10">TD Briefing Trigger v1.0<a class="headerlink" href="#td-briefing-trigger-v10" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Trigger Token im Titel</th>
-<th>Anzeige Deutsch</th>
-<th>Anzeige Englisch</th>
-<th>Spricht Aufgaben mit Priorität</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>TD:brief:high</code></td>
-<td>Tagesbriefing Hoch</td>
-<td>Daily Briefing High</td>
-<td>nur Hoch</td>
-</tr>
-<tr>
-<td><code>TD:brief:mid</code></td>
-<td>Tagesbriefing Mittel</td>
-<td>Daily Briefing Mid</td>
-<td>nur Mittel</td>
-</tr>
-<tr>
-<td><code>TD:brief:low</code></td>
-<td>Tagesbriefing Niedrig</td>
-<td>Daily Briefing Low</td>
-<td>nur Niedrig</td>
-</tr>
-</tbody>
-</table>
+<h3 id="td-briefing-trigger">TD Briefing Trigger<a class="headerlink" href="#td-briefing-trigger" title="Permanent link">&para;</a></h3>
+<p>Trigger Token im Titel: <code>TD:brief:&lt;stufe&gt;</code>
+- <code>TD:brief:high</code>
+  Anzeige Deutsch: Tagesbriefing Hoch
+  Anzeige Englisch: Daily Briefing High
+- <code>TD:brief:mid</code>
+  Anzeige Deutsch: Tagesbriefing Mittel
+  Anzeige Englisch: Daily Briefing Mid
+- <code>TD:brief:low</code>
+  Anzeige Deutsch: Tagesbriefing Niedrig
+  Anzeige Englisch: Daily Briefing Low</p>
 <h3 id="eingabe-beispiele">Eingabe Beispiele<a class="headerlink" href="#eingabe-beispiele" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Ohne Label<br />
+<p>Ohne Label
   Titel: <code>TD:brief:high</code></p>
 </li>
 <li>
-<p>Mit Label<br />
-  Titel: <code>TD:brief:mid:team</code><br />
+<p>Mit Label
+  Titel: <code>TD:brief:mid:team</code>
   Das Label ist nur Text. Verhalten bleibt <code>TD:brief:mid</code>.</p>
 </li>
 </ul>
@@ -1433,38 +1413,21 @@
 <p>Hinweis zu Erinnerungen
 - Für Briefing Trigger soll es keine doppelte Benachrichtigung zum Startzeitpunkt geben. Deshalb wird eine Erinnerung „Start“ für TD Briefing Trigger intern unterdrückt.</p>
 <hr />
-<h3 id="td-finance-trigger-v10">TD Finance Trigger v1.0<a class="headerlink" href="#td-finance-trigger-v10" title="Permanent link">&para;</a></h3>
+<h3 id="td-finance-trigger">TD Finance Trigger<a class="headerlink" href="#td-finance-trigger" title="Permanent link">&para;</a></h3>
 <p>Finance Trigger sind System Trigger für Preis Ansagen. Wenn so eine Aktivität fällig wird, liest die App nicht den Titel vor, sondern eine generierte Preis Ansage.</p>
-<table>
-<thead>
-<tr>
-<th>Trigger Token im Titel</th>
-<th>Anzeige Deutsch</th>
-<th>Anzeige Englisch</th>
-<th>Was wird gesprochen</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>TD:finance:gold</code></td>
-<td>Goldpreis Ansage</td>
-<td>Gold price announcement</td>
-<td>Goldpreis in USD, Stand Zeit</td>
-</tr>
-<tr>
-<td><code>TD:finance:silver</code></td>
-<td>Silberpreis Ansage</td>
-<td>Silver price announcement</td>
-<td>Silberpreis in USD, Stand Zeit</td>
-</tr>
-</tbody>
-</table>
+<p>Trigger Token im Titel: <code>TD:finance:&lt;metall&gt;</code>
+- <code>TD:finance:gold</code>
+  Anzeige Deutsch: Goldpreis Ansage
+  Anzeige Englisch: Gold price announcement
+- <code>TD:finance:silver</code>
+  Anzeige Deutsch: Silberpreis Ansage
+  Anzeige Englisch: Silver price announcement</p>
 <p>Eingabe Beispiele
-- Ohne Label<br />
+- Ohne Label
   Titel: <code>TD:finance:gold</code></p>
 <ul>
-<li>Mit Label<br />
-  Titel: <code>TD:finance:silver:spot</code><br />
+<li>Mit Label
+  Titel: <code>TD:finance:silver:spot</code>
   Das Label ist nur Text. Verhalten bleibt <code>TD:finance:silver</code>.</li>
 </ul>
 <p>Wichtig
@@ -1488,11 +1451,7 @@
 <p>Sprache
 - Es werden zwei Texte vorbereitet: Deutsch und Englisch.
 - Beim Abspielen wird anhand der Geräte Locale gewählt.
-- payload keys: <code>speak_de</code> und <code>speak_en</code> (optional zusaetzlich Finance Felder wie Symbol, Waehrung, Preis, Zeitstempel).</p>
-<p>Benachrichtigungs Regeln
-- Finance Trigger nutzen standardmaessig den lauten Kanal mit Sound.
-- allowWhileIdle ist aktiv.
-- Damit es nicht doppelt feuert, wird eine Erinnerung „Start“ für Finance Trigger intern unterdrückt.</p>
+- payload keys: <code>speak_de</code> und <code>speak_en</code></p>
 <hr />
 <h2 id="3-prioritat">3) Priorität<a class="headerlink" href="#3-prioritat" title="Permanent link">&para;</a></h2>
 <ul>
