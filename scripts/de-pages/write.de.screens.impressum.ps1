@@ -57,7 +57,7 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deuts
 ## 9) Kontakt für rechtliche Anfragen
 E-Mail: [app-today@gmx.de](mailto:app-today@gmx.de)
 
-**Stand:** 2025-10-23  
+**Stand:** 22.01.2026  
 
 '@
   $enc = New-Object System.Text.UTF8Encoding($true)

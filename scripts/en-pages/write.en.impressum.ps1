@@ -57,7 +57,7 @@ The content and works created by the site operators are subject to German copyri
 ## 9) Contact for legal inquiries
 Email: [app-today@gmx.de](mailto:app-today@gmx.de)
 
-**Last updated:** 2025-10-23
+**Last updated:** 2026-01-22
 '@
   $enc = New-Object System.Text.UTF8Encoding($true)
   [System.IO.File]::WriteAllText($p, $c, $enc)
