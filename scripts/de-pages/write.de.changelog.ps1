@@ -5,6 +5,11 @@
 
 | Version  | Typ       | Beschreibung |
 |----------|-----------|--------------|
+| 1.0.7.12| Feature | Neues App-Branding: Pony-Icon (Weihnachtsglocke) als neues App-Logo hinzugef&uuml;gt und als PNG Asset im Projekt integriert. |
+|| Feature | AppBar-Men&uuml;button ersetzt: die drei Punkte wurden durch das Pony-Icon ersetzt. Tippen &ouml;ffnet weiterhin das Men&uuml;. |
+|| Enhancement | Kopfbereich unter dem Titel (ShadCard) optisch an Activity-Cards angepasst: Breite reduziert durch zentrales horizontales Padding, so dass Kopfbereich und Activity-Fl&auml;chen in Flucht stehen. |
+|| Enhancement | Ecken des Kopfbereichs jetzt vollst&auml;ndig abgerundet: oben und unten gleicher Radius f&uuml;r ein ruhigeres Gesamtbild. |
+|| Enhancement | TabBar-Bereich auf die gleiche Fluchtbreite wie Kopfbereich umgestellt, damit alle oberen Elemente konsistent ausgerichtet sind. |
 | 1.0.7.11| Feature | Daily Briefing Button in Home hinzugef&uuml;gt. Sprachausgabe listet offene Aktivit&auml;ten f&uuml;r heute nach Priorit&auml;t auf. |
 || Feature | Multi-Tap am Daily Briefing Button: 1x hohe Priorit&auml;t, 2x mittlere Priorit&auml;t, 3x niedrige Priorit&auml;t. Zeitfenster f&uuml;r Mehrfachklick intern definiert. |
 || Feature | Sprachausgabe f&uuml;r Daily Briefing in Deutsch und Englisch, abh&auml;ngig von der aktuellen App-Sprache. |

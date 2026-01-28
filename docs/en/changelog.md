@@ -2,6 +2,11 @@
 
 | Version  | Type       | Description |
 |----------|------------|-------------|
+| 1.0.7.12| Feature | New app branding: Pony icon (Christmas bell) added as the new app logo and integrated as a PNG asset in the project. |
+|| Feature | AppBar menu button replaced: the three-dots icon was replaced with the Pony icon. Tapping still opens the menu. |
+|| Enhancement | Header block below the title (ShadCard) aligned to the activity cards: width reduced via a shared horizontal padding so the header and activity surfaces are flush. |
+|| Enhancement | Header block corners are now fully rounded: same radius on top and bottom for a cleaner look. |
+|| Enhancement | TabBar area moved to the same flush width as the header so the top layout stays consistent. |
 | 1.0.7.11 | Feature | Added a Daily Briefing button on Home. Voice output reads today&#39;s open activities by priority. |
 |  | Feature | Multi-tap on the Daily Briefing button: 1x high priority, 2x medium priority, 3x low priority. Uses an internal time window to detect tap count. |
 |  | Feature | Daily Briefing voice output supports German and English, based on the current app language. |
