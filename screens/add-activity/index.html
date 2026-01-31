@@ -655,6 +655,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-schritte-heute-trigger-android-step_counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Schritte Heute Trigger (Android STEP_COUNTER)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1248,6 +1257,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#td-schritte-heute-trigger-android-step_counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Schritte Heute Trigger (Android STEP_COUNTER)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1453,6 +1471,38 @@
 - Beim Abspielen wird anhand der Geräte Locale gewählt.
 - payload keys: <code>speak_de</code> und <code>speak_en</code></p>
 <hr />
+<h3 id="td-schritte-heute-trigger-android-step_counter">TD Schritte Heute Trigger (Android STEP_COUNTER)<a class="headerlink" href="#td-schritte-heute-trigger-android-step_counter" title="Permanent link">&para;</a></h3>
+<p>Dieser Trigger liest den Android Sensor <strong>STEP_COUNTER</strong> aus und sagt die <strong>heutigen Schritte</strong> an.</p>
+<p>Trigger Token im Titel: <code>TD:steps:today</code>
+- Anzeige Deutsch: Schritte Heute
+- Anzeige Englisch: Steps today</p>
+<p>Wichtig zum Sensor
+- STEP_COUNTER ist ein Gesamtzähler seit dem letzten Geräte Neustart.
+- „Heute“ wird als Differenz berechnet: aktueller Zähler minus Tages Startwert.</p>
+<p>Baseline Logik<br />
+- Beim ersten Trigger am Tag merkt sich die App den aktuellen STEP_COUNTER als Startwert für das heutige Datum.
+- Beim zweiten und jedem weiteren Trigger am selben Tag wird „heute“ als Differenz angesagt.
+- Dadurch werden keine falschen Mitternacht Werte erfunden, wenn die App nachts nicht aktiv war.</p>
+<p>Reset und Sonderfälle
+- Geräte Neustart oder Sensor Reset:
+  Wenn der aktuelle STEP_COUNTER kleiner ist als der gespeicherte Startwert, setzt die App den Startwert neu.
+  Die Ansage startet dann wieder bei 0 für „ab jetzt“.
+- Erster Trigger des Tages:
+  Es wird ein Startwert gesetzt und „0 ab jetzt“ angesagt.
+  Erst ab dem nächsten Trigger am selben Tag kommt eine echte Differenz.</p>
+<p>Korrekte Einstellung in Android
+- App Berechtigung:
+  Erlaube <strong>Körperliche Aktivität</strong> (ACTIVITY_RECOGNITION), sonst kann der Schrittzähler nicht gelesen werden.
+  Pfad ist je nach Gerät z. B. Einstellungen → Apps → ToDay → Berechtigungen → Körperliche Aktivität → Zulassen.
+- Akku Einschränkungen:
+  Setze Akku auf „Keine Einschränkungen“, damit Sensor Events zuverlässig kommen.
+  Bei Xiaomi zusätzlich Autostart erlauben, falls vorhanden.</p>
+<p>Hinweise zur Genauigkeit beim Tragen des Handys
+- Am zuverlässigsten ist vordere Hosentasche oder eng anliegende Tasche am Körper.
+- Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.
+- Im Rucksack kann es Schritte unterschätzen, weil die Bewegung gedämpft wird.
+- Für konsistente Werte immer möglichst die gleiche Trageposition nutzen.</p>
+<hr />
 <h2 id="3-prioritat">3) Priorität<a class="headerlink" href="#3-prioritat" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Niedrig / Mittel / Hoch</strong>
@@ -1522,6 +1572,7 @@
 <h2 id="10-hinweise">10) Hinweise<a class="headerlink" href="#10-hinweise" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Berechtigungen</strong>: Erlaube Benachrichtigungen (und ggf. <strong>Exakte Alarme</strong>), sonst kommen Erinnerungen verspätet.</li>
+<li><strong>Schritte</strong>: Für <code>TD:steps:today</code> muss <strong>Körperliche Aktivität</strong> erlaubt sein, sonst ist der Schrittzähler nicht verfügbar.</li>
 <li><strong>Änderbar</strong>: Alles lässt sich später bearbeiten, Wiederholungen wirken nur für zukünftige Termine.</li>
 </ul>
 
