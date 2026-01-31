@@ -135,6 +135,47 @@ Sprache
 
 ---
 
+### TD Schritte Heute Trigger (Android STEP_COUNTER)
+
+Dieser Trigger liest den Android Sensor **STEP_COUNTER** aus und sagt die **heutigen Schritte** an.
+
+Trigger Token im Titel: `TD:steps:today`
+- Anzeige Deutsch: Schritte Heute
+- Anzeige Englisch: Steps today
+
+Wichtig zum Sensor
+- STEP_COUNTER ist ein Gesamtzähler seit dem letzten Geräte Neustart.
+- „Heute“ wird als Differenz berechnet: aktueller Zähler minus Tages Startwert.
+
+Baseline Logik  
+- Beim ersten Trigger am Tag merkt sich die App den aktuellen STEP_COUNTER als Startwert für das heutige Datum.
+- Beim zweiten und jedem weiteren Trigger am selben Tag wird „heute“ als Differenz angesagt.
+- Dadurch werden keine falschen Mitternacht Werte erfunden, wenn die App nachts nicht aktiv war.
+
+Reset und Sonderfälle
+- Geräte Neustart oder Sensor Reset:
+  Wenn der aktuelle STEP_COUNTER kleiner ist als der gespeicherte Startwert, setzt die App den Startwert neu.
+  Die Ansage startet dann wieder bei 0 für „ab jetzt“.
+- Erster Trigger des Tages:
+  Es wird ein Startwert gesetzt und „0 ab jetzt“ angesagt.
+  Erst ab dem nächsten Trigger am selben Tag kommt eine echte Differenz.
+
+Korrekte Einstellung in Android
+- App Berechtigung:
+  Erlaube **Körperliche Aktivität** (ACTIVITY_RECOGNITION), sonst kann der Schrittzähler nicht gelesen werden.
+  Pfad ist je nach Gerät z. B. Einstellungen → Apps → ToDay → Berechtigungen → Körperliche Aktivität → Zulassen.
+- Akku Einschränkungen:
+  Setze Akku auf „Keine Einschränkungen“, damit Sensor Events zuverlässig kommen.
+  Bei Xiaomi zusätzlich Autostart erlauben, falls vorhanden.
+
+Hinweise zur Genauigkeit beim Tragen des Handys
+- Am zuverlässigsten ist vordere Hosentasche oder eng anliegende Tasche am Körper.
+- Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.
+- Im Rucksack kann es Schritte unterschätzen, weil die Bewegung gedämpft wird.
+- Für konsistente Werte immer möglichst die gleiche Trageposition nutzen.
+
+---
+
 ## 3) Priorität
 - **Niedrig / Mittel / Hoch**
   Beeinflusst die Kennzahl **„Hohe Priorität“** auf Home und hilft dir beim Fokussieren.
@@ -202,4 +243,5 @@ Legt fest, ob und wie die Aktivität automatisch wiederkommt.
 
 ## 10) Hinweise
 - **Berechtigungen**: Erlaube Benachrichtigungen (und ggf. **Exakte Alarme**), sonst kommen Erinnerungen verspätet.
+- **Schritte**: Für `TD:steps:today` muss **Körperliche Aktivität** erlaubt sein, sonst ist der Schrittzähler nicht verfügbar.
 - **Änderbar**: Alles lässt sich später bearbeiten, Wiederholungen wirken nur für zukünftige Termine.
