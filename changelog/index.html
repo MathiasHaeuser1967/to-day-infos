@@ -1111,6 +1111,51 @@
 <td>TabBar-Bereich auf die gleiche Fluchtbreite wie Kopfbereich umgestellt, damit alle oberen Elemente konsistent ausgerichtet sind.</td>
 </tr>
 <tr>
+<td></td>
+<td>Feature</td>
+<td>Neuer TD Schritte Heute Trigger im Titel: <code>TD:steps:today</code>. Wenn eine solche Aktivit&auml;t f&auml;llig wird, wird statt des Titels die Anzahl <strong>Schritte heute</strong> per Sprachausgabe ausgegeben.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Schritte Heute Berechnung &uuml;ber Android Sensor <strong>STEP_COUNTER</strong> ohne externe Dienste. Tageswert wird als Differenz berechnet: aktueller STEP_COUNTER minus Tages Startwert Baseline.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Schritte Heute Baseline Logik (Variante A): Beim ersten Ausl&ouml;sen am Tag wird die Baseline gesetzt und klar angesagt. Ab dem zweiten Ausl&ouml;sen am selben Datum wird die Differenz angesagt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Schritte Heute Reset Fall: Wenn aktueller STEP_COUNTER kleiner als Baseline ist, wird ein Sensor Reset oder Ger&auml;te Neustart angenommen, Baseline wird neu gesetzt und es startet wieder bei 0 ab jetzt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>TD Schritte Heute Fehlerstatus statt stilles 0: Bei fehlender Berechtigung (ACTIVITY_RECOGNITION) oder fehlendem Sensorwert wird ein klarer Fehlerstatus erzeugt und angesagt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Android STEP_COUNTER Anbindung stabilisiert: Sensorwert wird im App Prozess fortlaufend aktualisiert, so dass ein zweiter Trigger Aufruf auch ohne Schritt Event genau in diesem Moment korrekte Werte liefern kann.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>Home Mini-Status Zeile eingef&uuml;hrt: Direkt oberhalb der LED-Zeile wird <strong>Schritte heute</strong> in der Schriftgr&ouml;&szlig;e der LED Warnungen angezeigt. Deutsch und Englisch werden unterst&uuml;tzt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Home Mini-Status ist erweiterbar: Die Zeile ist so aufgebaut, dass sp&auml;ter weitere kleine Statuswerte erg&auml;nzt werden k&ouml;nnen, ohne das Layout neu zu strukturieren.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Aktualisierung der Home Mini-Status Werte &uuml;ber den bestehenden Day Change Watcher im Minuten Takt, ohne neue Hintergrunddienste.</td>
+</tr>
+<tr>
 <td>1.0.7.11</td>
 <td>Feature</td>
 <td>Daily Briefing Button in Home hinzugef&uuml;gt. Sprachausgabe listet offene Aktivit&auml;ten f&uuml;r heute nach Priorit&auml;t auf.</td>
