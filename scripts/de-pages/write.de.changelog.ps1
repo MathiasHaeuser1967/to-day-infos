@@ -10,6 +10,15 @@
 || Enhancement | Kopfbereich unter dem Titel (ShadCard) optisch an Activity-Cards angepasst: Breite reduziert durch zentrales horizontales Padding, so dass Kopfbereich und Activity-Fl&auml;chen in Flucht stehen. |
 || Enhancement | Ecken des Kopfbereichs jetzt vollst&auml;ndig abgerundet: oben und unten gleicher Radius f&uuml;r ein ruhigeres Gesamtbild. |
 || Enhancement | TabBar-Bereich auf die gleiche Fluchtbreite wie Kopfbereich umgestellt, damit alle oberen Elemente konsistent ausgerichtet sind. |
+|| Feature | Neuer TD Schritte Heute Trigger im Titel: `TD:steps:today`. Wenn eine solche Aktivit&auml;t f&auml;llig wird, wird statt des Titels die Anzahl **Schritte heute** per Sprachausgabe ausgegeben. |
+|| Feature | TD Schritte Heute Berechnung &uuml;ber Android Sensor **STEP_COUNTER** ohne externe Dienste. Tageswert wird als Differenz berechnet: aktueller STEP_COUNTER minus Tages Startwert Baseline. |
+|| Feature | TD Schritte Heute Baseline Logik (Variante A): Beim ersten Ausl&ouml;sen am Tag wird die Baseline gesetzt und klar angesagt. Ab dem zweiten Ausl&ouml;sen am selben Datum wird die Differenz angesagt. |
+|| Feature | TD Schritte Heute Reset Fall: Wenn aktueller STEP_COUNTER kleiner als Baseline ist, wird ein Sensor Reset oder Ger&auml;te Neustart angenommen, Baseline wird neu gesetzt und es startet wieder bei 0 ab jetzt. |
+|| Enhancement | TD Schritte Heute Fehlerstatus statt stilles 0: Bei fehlender Berechtigung (ACTIVITY_RECOGNITION) oder fehlendem Sensorwert wird ein klarer Fehlerstatus erzeugt und angesagt. |
+|| Enhancement | Android STEP_COUNTER Anbindung stabilisiert: Sensorwert wird im App Prozess fortlaufend aktualisiert, so dass ein zweiter Trigger Aufruf auch ohne Schritt Event genau in diesem Moment korrekte Werte liefern kann. |
+|| Feature | Home Mini-Status Zeile eingef&uuml;hrt: Direkt oberhalb der LED-Zeile wird **Schritte heute** in der Schriftgr&ouml;&szlig;e der LED Warnungen angezeigt. Deutsch und Englisch werden unterst&uuml;tzt. |
+|| Enhancement | Home Mini-Status ist erweiterbar: Die Zeile ist so aufgebaut, dass sp&auml;ter weitere kleine Statuswerte erg&auml;nzt werden k&ouml;nnen, ohne das Layout neu zu strukturieren. |
+|| Enhancement | Aktualisierung der Home Mini-Status Werte &uuml;ber den bestehenden Day Change Watcher im Minuten Takt, ohne neue Hintergrunddienste. |
 | 1.0.7.11| Feature | Daily Briefing Button in Home hinzugef&uuml;gt. Sprachausgabe listet offene Aktivit&auml;ten f&uuml;r heute nach Priorit&auml;t auf. |
 || Feature | Multi-Tap am Daily Briefing Button: 1x hohe Priorit&auml;t, 2x mittlere Priorit&auml;t, 3x niedrige Priorit&auml;t. Zeitfenster f&uuml;r Mehrfachklick intern definiert. |
 || Feature | Sprachausgabe f&uuml;r Daily Briefing in Deutsch und Englisch, abh&auml;ngig von der aktuellen App-Sprache. |
