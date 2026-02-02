@@ -173,6 +173,14 @@ Korrekte Einstellung in Android
   Bei Xiaomi zus&auml;tzlich Autostart erlauben, falls vorhanden.
 
 Hinweise zur Genauigkeit beim Tragen des Handys
+- Der Android Wert ist kein roher Sensor wie Temperatur, sondern ein vom Hersteller berechneter Zähler. Intern entstehen die Schritte fast immer
+  aus Beschleunigungsdaten. Das kommt vom Accelerometer, oft zusammen mit Gyro und einer Sensor Fusion. Viele Geräte rechnen das nicht in der
+  App CPU, sondern in einem Low Power Sensor Hub DSP. Dort laufen Filter und ein Mustererkennungs Algorithmus, der typische Schritt Muster
+  erkennt und Fehltrigger wegfiltert. Das Ergebnis ist dann ein Schritt Event oder ein Zählerstand. Eine Watch Uhr sitzt fest am Körper und
+  hat eine sehr konstante Position. Das Signal ist sauberer. Ein Handy ist dagegen oft in wechselnden Situationen. In der Hand, in der
+  Hosentasche locker, in der Jacke, im Rucksack, auf dem Tisch, im Auto. Der Algorithmus muss aggressiver filtern, sonst würde er bei jeder
+  Bewegung Schritte zählen. Aggressives Filtern führt aber zu Unterzählung, besonders bei kurzen Wegen, langsamen Schritten oder gedämpfter
+  Bewegung im Rucksack.
 - Am zuverl&auml;ssigsten ist vordere Hosentasche oder eng anliegende Tasche am K&ouml;rper.
 - Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.
 - Im Rucksack kann es Schritte untersch&auml;tzen, weil die Bewegung ged&auml;mpft wird.
