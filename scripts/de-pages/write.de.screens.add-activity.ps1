@@ -180,7 +180,7 @@ Hinweise zur Genauigkeit beim Tragen des Handys
   hat eine sehr konstante Position. Das Signal ist sauberer. Ein Handy ist dagegen oft in wechselnden Situationen. In der Hand, in der
   Hosentasche locker, in der Jacke, im Rucksack, auf dem Tisch, im Auto. Der Algorithmus muss aggressiver filtern, sonst würde er bei jeder
   Bewegung Schritte zählen. Aggressives Filtern führt aber zu Unterzählung, besonders bei kurzen Wegen, langsamen Schritten oder gedämpfter
-  Bewegung im Rucksack.
+  Bewegung im Rucksack.  
 - Am zuverl&auml;ssigsten ist vordere Hosentasche oder eng anliegende Tasche am K&ouml;rper.
 - Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.
 - Im Rucksack kann es Schritte untersch&auml;tzen, weil die Bewegung ged&auml;mpft wird.
