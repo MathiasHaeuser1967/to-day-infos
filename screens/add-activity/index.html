@@ -1364,140 +1364,140 @@
 <hr />
 <h2 id="1-offnen">1) &Ouml;ffnen<a class="headerlink" href="#1-offnen" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Auf <strong>Home</strong> den <strong>+</strong>-Button tippen.</li>
-<li>Felder ausf&uuml;llen und mit <strong>Hinzuf&uuml;gen</strong> speichern.</li>
+<li>Auf <strong>Home</strong> den <strong>+</strong>-Button tippen.  </li>
+<li>Felder ausf&uuml;llen und mit <strong>Hinzuf&uuml;gen</strong> speichern.  </li>
 </ul>
 <hr />
 <h2 id="2-titel-beschreibung">2) Titel &amp; Beschreibung<a class="headerlink" href="#2-titel-beschreibung" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Titel</strong>: Pflichtfeld. Kurz und pr&auml;gnant (z. B. „Arzttermin“, „Bericht senden“).</li>
-<li><strong>Beschreibung</strong> <em>(optional)</em>: Details/Notizen.</li>
+<li><strong>Titel</strong>: Pflichtfeld. Kurz und pr&auml;gnant (z. B. „Arzttermin“, „Bericht senden“).  </li>
+<li><strong>Beschreibung</strong> <em>(optional)</em>: Details/Notizen.  </li>
 </ul>
 <hr />
 <h2 id="2a-td-trigger-im-titel-power-feature">2a) TD Trigger im Titel (Power Feature)<a class="headerlink" href="#2a-td-trigger-im-titel-power-feature" title="Permanent link">&para;</a></h2>
 <p>Du kannst bestimmte System Aktionen &uuml;ber den Aktivit&auml;tstitel ausl&ouml;sen. Daf&uuml;r beginnt der Titel mit <code>TD:</code>.</p>
 <p>Wichtig
-- Empfehlung: Der Titel sollte direkt mit <code>TD:</code> beginnen. F&uuml;hrende Leerzeichen werden zwar toleriert, sind aber nicht empfohlen.
-- Format: <code>TD:&lt;gruppe&gt;:&lt;stufe&gt;</code>
-- Case insensitive: <code>td:BRIEF:HIGH</code> ist g&uuml;ltig.
-- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.
-  Beispiele: <code>TD:brief:high:morning</code> oder <code>TD:brief:high Mein Label</code></p>
+- Empfehlung: Der Titel sollte direkt mit <code>TD:</code> beginnen. F&uuml;hrende Leerzeichen werden zwar toleriert, sind aber nicht empfohlen.<br />
+- Format: <code>TD:&lt;gruppe&gt;:&lt;stufe&gt;</code><br />
+- Case insensitive: <code>td:BRIEF:HIGH</code> ist g&uuml;ltig.<br />
+- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.<br />
+  Beispiele: <code>TD:brief:high:morning</code> oder <code>TD:brief:high Mein Label</code>  </p>
 <p>Anzeige Regeln
-- Der gespeicherte Titel bleibt unver&auml;ndert.
-- In der Aktivit&auml;tsliste wird statt des Tokens eine freundliche Anzeige gezeigt.
-- Bei Ger&auml;tesprache Englisch wird die englische Anzeige gezeigt.</p>
+- Der gespeicherte Titel bleibt unver&auml;ndert.<br />
+- In der Aktivit&auml;tsliste wird statt des Tokens eine freundliche Anzeige gezeigt.<br />
+- Bei Ger&auml;tesprache Englisch wird die englische Anzeige gezeigt.  </p>
 <h3 id="td-briefing-trigger">TD Briefing Trigger<a class="headerlink" href="#td-briefing-trigger" title="Permanent link">&para;</a></h3>
 <p>Trigger Token im Titel: <code>TD:brief:&lt;stufe&gt;</code>
 - <code>TD:brief:high</code>
   Anzeige Deutsch: Tagesbriefing Hoch
-  Anzeige Englisch: Daily Briefing High
+  Anzeige Englisch: Daily Briefing High<br />
 - <code>TD:brief:mid</code>
   Anzeige Deutsch: Tagesbriefing Mittel
   Anzeige Englisch: Daily Briefing Mid
-  Auch akzeptiert als <code>TD:brief:middle</code> und <code>TD:brief:medium</code>
+  Auch akzeptiert als <code>TD:brief:middle</code> und <code>TD:brief:medium</code><br />
 - <code>TD:brief:low</code>
   Anzeige Deutsch: Tagesbriefing Niedrig
-  Anzeige Englisch: Daily Briefing Low</p>
+  Anzeige Englisch: Daily Briefing Low  </p>
 <h3 id="eingabe-beispiele">Eingabe Beispiele<a class="headerlink" href="#eingabe-beispiele" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Ohne Label
-  Titel: <code>TD:brief:high</code></p>
+  Titel: <code>TD:brief:high</code>  </p>
 </li>
 <li>
 <p>Mit Label
   Titel: <code>TD:brief:mid:team</code>
-  Das Label ist nur Text. Verhalten bleibt <code>TD:brief:mid</code>.</p>
+  Das Label ist nur Text. Verhalten bleibt <code>TD:brief:mid</code>.  </p>
 </li>
 </ul>
 <h3 id="was-passiert-wenn-ein-briefing-fallig-wird">Was passiert, wenn ein Briefing f&auml;llig wird<a class="headerlink" href="#was-passiert-wenn-ein-briefing-fallig-wird" title="Permanent link">&para;</a></h3>
 <p>Wenn eine Briefing Trigger Aktivit&auml;t f&auml;llig wird, wird nicht der Titel vorgelesen. Stattdessen wird ein Tagesbriefing gesprochen.</p>
 <p>Briefing Scope
-- Gilt f&uuml;r den Tag der Trigger Aktivit&auml;t.</p>
+- Gilt f&uuml;r den Tag der Trigger Aktivit&auml;t.  </p>
 <p>Filter Regeln
-- Die Trigger Aktivit&auml;t selbst wird nie vorgelesen.
-- Aktivit&auml;ten deren Titel mit <code>TD:</code> beginnt werden nie vorgelesen.
-- Es werden nur normale Aufgaben vorgelesen, passend zur Stufe high mid low.</p>
+- Die Trigger Aktivit&auml;t selbst wird nie vorgelesen.<br />
+- Aktivit&auml;ten deren Titel mit <code>TD:</code> beginnt werden nie vorgelesen.<br />
+- Es werden nur normale Aufgaben vorgelesen, passend zur Stufe high mid low.  </p>
 <p>Sortierung
-- Zuerst Aufgaben mit Uhrzeit, aufsteigend nach Uhrzeit.
-- Danach Aufgaben ohne Uhrzeit.</p>
+- Zuerst Aufgaben mit Uhrzeit, aufsteigend nach Uhrzeit.<br />
+- Danach Aufgaben ohne Uhrzeit.  </p>
 <p>Mengenbegrenzung
-- Maximal 5 Aufgaben mit Uhrzeit.
-- Maximal 3 Aufgaben ohne Uhrzeit.
-- Wenn es mehr gibt, kommt am Ende kurz: „und weitere Aufgaben“.</p>
+- Maximal 5 Aufgaben mit Uhrzeit.<br />
+- Maximal 3 Aufgaben ohne Uhrzeit.<br />
+- Wenn es mehr gibt, kommt am Ende kurz: „und weitere Aufgaben“.  </p>
 <p>Sprache
-- Es werden zwei Texte vorbereitet: Deutsch und Englisch.
-- Beim Anzeigen wird anhand der Ger&auml;te Locale gew&auml;hlt.
-- Wenn kein passender Text vorhanden ist, nutzt die App den bisherigen Fallback.</p>
+- Es werden zwei Texte vorbereitet: Deutsch und Englisch.<br />
+- Beim Anzeigen wird anhand der Ger&auml;te Locale gew&auml;hlt.<br />
+- Wenn kein passender Text vorhanden ist, nutzt die App den bisherigen Fallback.  </p>
 <p>Hinweis zu Erinnerungen
-- F&uuml;r Briefing Trigger soll es keine doppelte Benachrichtigung zum Startzeitpunkt geben. Deshalb wird eine Erinnerung „Start“ f&uuml;r TD Briefing Trigger intern unterdr&uuml;ckt.</p>
+- F&uuml;r Briefing Trigger soll es keine doppelte Benachrichtigung zum Startzeitpunkt geben. Deshalb wird eine Erinnerung „Start“ f&uuml;r TD Briefing Trigger intern unterdr&uuml;ckt.  </p>
 <hr />
 <h3 id="td-finance-trigger">TD Finance Trigger<a class="headerlink" href="#td-finance-trigger" title="Permanent link">&para;</a></h3>
 <p>Finance Trigger sind System Trigger f&uuml;r Preis Ansagen. Wenn so eine Aktivit&auml;t f&auml;llig wird, liest die App nicht den Titel vor, sondern eine generierte Preis Ansage.</p>
 <p>Trigger Token im Titel: <code>TD:finance:&lt;metall&gt;</code>
 - <code>TD:finance:gold</code>
   Anzeige Deutsch: Goldpreis Ansage
-  Anzeige Englisch: Gold price announcement
+  Anzeige Englisch: Gold price announcement<br />
 - <code>TD:finance:silver</code>
   Anzeige Deutsch: Silberpreis Ansage
-  Anzeige Englisch: Silver price announcement</p>
+  Anzeige Englisch: Silver price announcement  </p>
 <p>Eingabe Beispiele
 - Ohne Label
-  Titel: <code>TD:finance:gold</code></p>
+  Titel: <code>TD:finance:gold</code>  </p>
 <ul>
 <li>Mit Label
   Titel: <code>TD:finance:silver:spot</code>
-  Das Label ist nur Text. Verhalten bleibt <code>TD:finance:silver</code>.</li>
+  Das Label ist nur Text. Verhalten bleibt <code>TD:finance:silver</code>.  </li>
 </ul>
 <p>Wichtig
-- Empfehlung: Der Titel sollte direkt mit <code>TD:</code> beginnen. F&uuml;hrende Leerzeichen werden zwar toleriert, sind aber nicht empfohlen.
-- Case insensitive: <code>TD:FINANCE:GOLD</code> ist g&uuml;ltig.
-- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.</p>
+- Empfehlung: Der Titel sollte direkt mit <code>TD:</code> beginnen. F&uuml;hrende Leerzeichen werden zwar toleriert, sind aber nicht empfohlen.<br />
+- Case insensitive: <code>TD:FINANCE:GOLD</code> ist g&uuml;ltig.<br />
+- Alles nach dem dritten Segment wird ignoriert und ist nur ein optionales Label.  </p>
 <p>Was passiert, wenn ein Finance Trigger f&auml;llig wird
-- Es wird nicht der Titel vorgelesen.
-- Stattdessen wird beim Planen der Benachrichtigung eine Preis Ansage vorbereitet.
-- Es gibt keine Netzwerk Abfragen im Benachrichtigungs Callback. Der Callback nutzt nur payload.</p>
+- Es wird nicht der Titel vorgelesen.<br />
+- Stattdessen wird beim Planen der Benachrichtigung eine Preis Ansage vorbereitet.<br />
+- Es gibt keine Netzwerk Abfragen im Benachrichtigungs Callback. Der Callback nutzt nur payload.  </p>
 <p>Datenquelle und Preis Mapping
-- Basis Endpoint: <code>https://data-asg.goldprice.org/dbXRates/USD</code>
-- Gold nimmt <code>xauClose</code> als Preis in USD.
-- Silber nimmt <code>xagClose</code> als Preis in USD.</p>
+- Basis Endpoint: <code>https://data-asg.goldprice.org/dbXRates/USD</code><br />
+- Gold nimmt <code>xauClose</code> als Preis in USD.<br />
+- Silber nimmt <code>xagClose</code> als Preis in USD.  </p>
 <p>Cache Verhalten
-- Die App cached die Preise pro Metall f&uuml;r ca. 10 bis 15 Minuten oder bis App Neustart.
-- Dadurch werden beim Rescheduling nicht dauernd neue Preise geholt.</p>
+- Die App cached die Preise pro Metall f&uuml;r ca. 10 bis 15 Minuten oder bis App Neustart.<br />
+- Dadurch werden beim Rescheduling nicht dauernd neue Preise geholt.  </p>
 <p>Offline und Fehlerfall
-- Wenn kein Netz verf&uuml;gbar ist oder ein Fehler passiert, wird trotzdem gescheduled.
-- Die App spricht dann eine klare Fallback Meldung, zum Beispiel „Goldpreis derzeit nicht verf&uuml;gbar“.</p>
+- Wenn kein Netz verf&uuml;gbar ist oder ein Fehler passiert, wird trotzdem gescheduled.<br />
+- Die App spricht dann eine klare Fallback Meldung, zum Beispiel „Goldpreis derzeit nicht verf&uuml;gbar“.  </p>
 <p>Sprache
-- Es werden zwei Texte vorbereitet: Deutsch und Englisch.
-- Beim Abspielen wird anhand der Ger&auml;te Locale gew&auml;hlt.
-- payload keys: <code>speak_de</code> und <code>speak_en</code></p>
+- Es werden zwei Texte vorbereitet: Deutsch und Englisch.<br />
+- Beim Abspielen wird anhand der Ger&auml;te Locale gew&auml;hlt.<br />
+- payload keys: <code>speak_de</code> und <code>speak_en</code>  </p>
 <hr />
 <h3 id="td-schritte-heute-trigger-android-step_counter">TD Schritte Heute Trigger (Android STEP_COUNTER)<a class="headerlink" href="#td-schritte-heute-trigger-android-step_counter" title="Permanent link">&para;</a></h3>
 <p>Dieser Trigger liest den Android Sensor <strong>STEP_COUNTER</strong> aus und sagt die <strong>heutigen Schritte</strong> an.</p>
 <p>Trigger Token im Titel: <code>TD:steps:today</code>
-- Anzeige Deutsch: Schritte Heute
-- Anzeige Englisch: Steps today</p>
+- Anzeige Deutsch: Schritte Heute<br />
+- Anzeige Englisch: Steps today  </p>
 <p>Wichtig zum Sensor
-- STEP_COUNTER ist ein Gesamtz&auml;hler seit dem letzten Ger&auml;te Neustart.
-- „Heute“ wird als Differenz berechnet: aktueller Z&auml;hler minus Tages Startwert.</p>
+- STEP_COUNTER ist ein Gesamtz&auml;hler seit dem letzten Ger&auml;te Neustart.<br />
+- „Heute“ wird als Differenz berechnet: aktueller Z&auml;hler minus Tages Startwert.  </p>
 <p>Baseline Logik
-- Beim ersten Trigger am Tag merkt sich die App den aktuellen STEP_COUNTER als Startwert f&uuml;r das heutige Datum.
-- Beim zweiten und jedem weiteren Trigger am selben Tag wird „heute“ als Differenz angesagt.
-- Dadurch werden keine falschen Mitternacht Werte erfunden, wenn die App nachts nicht aktiv war.</p>
+- Beim ersten Trigger am Tag merkt sich die App den aktuellen STEP_COUNTER als Startwert f&uuml;r das heutige Datum.<br />
+- Beim zweiten und jedem weiteren Trigger am selben Tag wird „heute“ als Differenz angesagt.<br />
+- Dadurch werden keine falschen Mitternacht Werte erfunden, wenn die App nachts nicht aktiv war.  </p>
 <p>Reset und Sonderf&auml;lle
 - Ger&auml;te Neustart oder Sensor Reset:
   Wenn der aktuelle STEP_COUNTER kleiner ist als der gespeicherte Startwert, setzt die App den Startwert neu.
-  Die Ansage startet dann wieder bei 0 f&uuml;r „ab jetzt“.
+  Die Ansage startet dann wieder bei 0 f&uuml;r „ab jetzt“.<br />
 - Erster Trigger des Tages:
   Es wird ein Startwert gesetzt und „0 ab jetzt“ angesagt.
-  Erst ab dem n&auml;chsten Trigger am selben Tag kommt eine echte Differenz.</p>
+  Erst ab dem n&auml;chsten Trigger am selben Tag kommt eine echte Differenz.  </p>
 <p>Korrekte Einstellung in Android
 - App Berechtigung:
   Erlaube <strong>K&ouml;rperliche Aktivit&auml;t</strong> (ACTIVITY_RECOGNITION), sonst kann der Schrittz&auml;hler nicht gelesen werden.
   Pfad ist je nach Ger&auml;t z. B. Einstellungen &rarr; Apps &rarr; ToDay &rarr; Berechtigungen &rarr; K&ouml;rperliche Aktivit&auml;t &rarr; Zulassen.
 - Akku Einschr&auml;nkungen:
   Setze Akku auf „Keine Einschr&auml;nkungen“, damit Sensor Events zuverl&auml;ssig kommen.
-  Bei Xiaomi zus&auml;tzlich Autostart erlauben, falls vorhanden.</p>
+  Bei Xiaomi zus&auml;tzlich Autostart erlauben, falls vorhanden.  </p>
 <p>Hinweise zur Genauigkeit beim Tragen des Handys
 - Der Android Wert ist kein roher Sensor wie Temperatur, sondern ein vom Hersteller berechneter Zähler. Intern entstehen die Schritte fast immer
   aus Beschleunigungsdaten. Das kommt vom Accelerometer, oft zusammen mit Gyro und einer Sensor Fusion. Viele Geräte rechnen das nicht in der
@@ -1507,35 +1507,35 @@
   Hosentasche locker, in der Jacke, im Rucksack, auf dem Tisch, im Auto. Der Algorithmus muss aggressiver filtern, sonst würde er bei jeder
   Bewegung Schritte zählen. Aggressives Filtern führt aber zu Unterzählung, besonders bei kurzen Wegen, langsamen Schritten oder gedämpfter
   Bewegung im Rucksack.<br />
-- Am zuverl&auml;ssigsten ist vordere Hosentasche oder eng anliegende Tasche am K&ouml;rper.
-- Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.
-- Im Rucksack kann es Schritte untersch&auml;tzen, weil die Bewegung ged&auml;mpft wird.
-- F&uuml;r konsistente Werte immer m&ouml;glichst die gleiche Trageposition nutzen.</p>
+- Am zuverl&auml;ssigsten ist vordere Hosentasche oder eng anliegende Tasche am K&ouml;rper.<br />
+- Vermeide lockere Jackentasche, Hoodie Tasche oder eine frei schwingende Handtasche.<br />
+- Im Rucksack kann es Schritte untersch&auml;tzen, weil die Bewegung ged&auml;mpft wird.<br />
+- F&uuml;r konsistente Werte immer m&ouml;glichst die gleiche Trageposition nutzen.  </p>
 <hr />
 <h2 id="3-prioritat">3) Priorit&auml;t<a class="headerlink" href="#3-prioritat" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Niedrig / Mittel / Hoch</strong>
-  Beeinflusst die Kennzahl <strong>„Hohe Priorit&auml;t“</strong> auf Home und hilft dir beim Fokussieren.</li>
+  Beeinflusst die Kennzahl <strong>„Hohe Priorit&auml;t“</strong> auf Home und hilft dir beim Fokussieren.  </li>
 </ul>
 <hr />
 <h2 id="4-datum">4) Datum<a class="headerlink" href="#4-datum" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Kalenderauswahl f&uuml;r den Tag der Aktivit&auml;t.
-  Tipp: Heute/Morgen h&auml;ufig verf&uuml;gbar, sonst Datum w&auml;hlen.</li>
+  Tipp: Heute/Morgen h&auml;ufig verf&uuml;gbar, sonst Datum w&auml;hlen.  </li>
 </ul>
 <hr />
 <h2 id="5-uhrzeit">5) Uhrzeit<a class="headerlink" href="#5-uhrzeit" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Genaue Startzeit (24 h).
-  Wird f&uuml;r die Position im Tag und f&uuml;r Erinnerungen verwendet.</li>
+  Wird f&uuml;r die Position im Tag und f&uuml;r Erinnerungen verwendet.  </li>
 </ul>
 <hr />
 <h2 id="6-erinnern">6) Erinnern<a class="headerlink" href="#6-erinnern" title="Permanent link">&para;</a></h2>
 <ul>
-<li>&Ouml;ffnet die Auswahl <strong>Start &middot; 5 Min &middot; 10 Min &middot; 15 Min &middot; 30 Min &middot; 1 Std &middot; 2 Std</strong>.</li>
-<li>Mehrfachauswahl m&ouml;glich (z. B. <em>10 Min</em> <strong>und</strong> <em>Start</em>).</li>
-<li>Schnellaktionen: <strong>Alle</strong> / <strong>Keine</strong>.</li>
-<li><strong>&Uuml;bernehmen</strong> best&auml;tigt die Auswahl.</li>
+<li>&Ouml;ffnet die Auswahl <strong>Start &middot; 5 Min &middot; 10 Min &middot; 15 Min &middot; 30 Min &middot; 1 Std &middot; 2 Std</strong>.  </li>
+<li>Mehrfachauswahl m&ouml;glich (z. B. <em>10 Min</em> <strong>und</strong> <em>Start</em>).  </li>
+<li>Schnellaktionen: <strong>Alle</strong> / <strong>Keine</strong>.  </li>
+<li><strong>&Uuml;bernehmen</strong> best&auml;tigt die Auswahl.  </li>
 </ul>
 <blockquote>
 <p>Hinweis: Erinnerungen werden zum gew&auml;hlten Zeitpunkt als Benachrichtigung oder Alarm geplant (Systemrechte erforderlich).</p>
@@ -1544,22 +1544,22 @@
 <h2 id="7-wiederholung">7) Wiederholung<a class="headerlink" href="#7-wiederholung" title="Permanent link">&para;</a></h2>
 <p>Legt fest, ob und wie die Aktivit&auml;t automatisch wiederkommt.</p>
 <ul>
-<li><strong>Keine</strong>: einmalig.</li>
-<li><strong>T&auml;glich</strong></li>
-<li>Intervall: „Alle <em>n</em> Tage“ (− / +).</li>
-<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.</li>
-<li><strong>W&ouml;chentlich</strong></li>
-<li>Intervall: „Alle <em>n</em> Wochen“ (− / +).</li>
-<li>Wochentage w&auml;hlen (Mo&hellip;So) oder Shortcuts <strong>Werktage</strong> / <strong>Wochenende</strong>.</li>
-<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.</li>
-<li><strong>Monatlich</strong></li>
-<li>Intervall: „Alle <em>n</em> Monate“.</li>
-<li>Modus: <strong>Tag des Monats</strong> (z. B. <em>23.</em>) <strong>oder</strong> <strong>Wochentag im Monat</strong> (z. B. <em>jeder 2. Dienstag</em>).</li>
-<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.</li>
-<li><strong>J&auml;hrlich</strong></li>
-<li>Intervall: „Alle <em>n</em> Jahre“.</li>
-<li>Modus: <strong>Am Datum</strong> (Monat + Tag) <strong>oder</strong> <strong>Wochentag in Monat</strong>.</li>
-<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.</li>
+<li><strong>Keine</strong>: einmalig.  </li>
+<li><strong>T&auml;glich</strong>  </li>
+<li>Intervall: „Alle <em>n</em> Tage“ (− / +).  </li>
+<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.  </li>
+<li><strong>W&ouml;chentlich</strong>  </li>
+<li>Intervall: „Alle <em>n</em> Wochen“ (− / +).  </li>
+<li>Wochentage w&auml;hlen (Mo&hellip;So) oder Shortcuts <strong>Werktage</strong> / <strong>Wochenende</strong>.  </li>
+<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.  </li>
+<li><strong>Monatlich</strong>  </li>
+<li>Intervall: „Alle <em>n</em> Monate“.  </li>
+<li>Modus: <strong>Tag des Monats</strong> (z. B. <em>23.</em>) <strong>oder</strong> <strong>Wochentag im Monat</strong> (z. B. <em>jeder 2. Dienstag</em>).  </li>
+<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.  </li>
+<li><strong>J&auml;hrlich</strong>  </li>
+<li>Intervall: „Alle <em>n</em> Jahre“.  </li>
+<li>Modus: <strong>Am Datum</strong> (Monat + Tag) <strong>oder</strong> <strong>Wochentag in Monat</strong>.  </li>
+<li><strong>Endet</strong>: <em>Endlos</em> &middot; <em>Bis Datum</em> &middot; <em>Nach Anzahl</em>.  </li>
 </ul>
 <blockquote>
 <p>Tipp: F&uuml;r „Geburtstag“, „Miete“, „Berichtswoche“ passende Wiederholung w&auml;hlen und <strong>Ende</strong> bewusst setzen.</p>
@@ -1567,22 +1567,22 @@
 <hr />
 <h2 id="8-aktionen">8) Aktionen<a class="headerlink" href="#8-aktionen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Abbrechen</strong>: Schlie&szlig;t den Dialog ohne Speichern.</li>
-<li><strong>Hinzuf&uuml;gen</strong>: Legt die Aktivit&auml;t an und kehrt zur &Uuml;bersicht zur&uuml;ck.</li>
+<li><strong>Abbrechen</strong>: Schlie&szlig;t den Dialog ohne Speichern.  </li>
+<li><strong>Hinzuf&uuml;gen</strong>: Legt die Aktivit&auml;t an und kehrt zur &Uuml;bersicht zur&uuml;ck.  </li>
 </ul>
 <hr />
 <h2 id="9-beispiele">9) Beispiele<a class="headerlink" href="#9-beispiele" title="Permanent link">&para;</a></h2>
 <ul>
-<li>„<strong>Arzttermin</strong>“, Datum <em>23.10.</em>, Uhrzeit <em>08:15</em>, Erinnern <em>10 Min + Start</em>.</li>
-<li>„<strong>Training</strong>“, Uhrzeit <em>18:00</em>, <strong>W&ouml;chentlich</strong>: <em>Do</em>, Endet <em>Endlos</em>.</li>
-<li>„<strong>Bericht</strong>“, <strong>Monatlich</strong>: <em>Wochentag im Monat &rarr; letzter Werktag</em>, Erinnern <em>1 Std</em>.</li>
+<li>„<strong>Arzttermin</strong>“, Datum <em>23.10.</em>, Uhrzeit <em>08:15</em>, Erinnern <em>10 Min + Start</em>.  </li>
+<li>„<strong>Training</strong>“, Uhrzeit <em>18:00</em>, <strong>W&ouml;chentlich</strong>: <em>Do</em>, Endet <em>Endlos</em>.  </li>
+<li>„<strong>Bericht</strong>“, <strong>Monatlich</strong>: <em>Wochentag im Monat &rarr; letzter Werktag</em>, Erinnern <em>1 Std</em>.  </li>
 </ul>
 <hr />
 <h2 id="10-hinweise">10) Hinweise<a class="headerlink" href="#10-hinweise" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Berechtigungen</strong>: Erlaube Benachrichtigungen (und ggf. <strong>Exakte Alarme</strong>), sonst kommen Erinnerungen versp&auml;tet.</li>
-<li><strong>Schritte</strong>: F&uuml;r <code>TD:steps:today</code> muss <strong>K&ouml;rperliche Aktivit&auml;t</strong> erlaubt sein, sonst ist der Schrittz&auml;hler nicht verf&uuml;gbar.</li>
-<li><strong>&Auml;nderbar</strong>: Alles l&auml;sst sich sp&auml;ter bearbeiten, Wiederholungen wirken nur f&uuml;r zuk&uuml;nftige Termine.</li>
+<li><strong>Berechtigungen</strong>: Erlaube Benachrichtigungen (und ggf. <strong>Exakte Alarme</strong>), sonst kommen Erinnerungen versp&auml;tet.  </li>
+<li><strong>Schritte</strong>: F&uuml;r <code>TD:steps:today</code> muss <strong>K&ouml;rperliche Aktivit&auml;t</strong> erlaubt sein, sonst ist der Schrittz&auml;hler nicht verf&uuml;gbar.  </li>
+<li><strong>&Auml;nderbar</strong>: Alles l&auml;sst sich sp&auml;ter bearbeiten, Wiederholungen wirken nur f&uuml;r zuk&uuml;nftige Termine.  </li>
 </ul>
 
 
