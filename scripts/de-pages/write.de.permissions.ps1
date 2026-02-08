@@ -1,4 +1,4 @@
-function Write-De-Permissions {
+﻿function Write-De-Permissions {
   $p = Join-Path $DocsDe 'permissions.md'
   $c = @'
 # Berechtigungen

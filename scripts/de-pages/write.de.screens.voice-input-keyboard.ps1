@@ -1,4 +1,4 @@
-function Write-De-Screen-VoiceInputKeyboard {
+﻿function Write-De-Screen-VoiceInputKeyboard {
   $p = Join-Path $Screens 'voice-input-keyboard.md'
   $c = @'
 # Spracheingabe über Tastatur

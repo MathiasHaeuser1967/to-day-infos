@@ -69,7 +69,7 @@ erDiagram
 
 | Field        | Type    | Required | Example            | Purpose |
 |--------------|---------|:--------:|--------------------|---------|
-| `id`         | TEXT PK | yes      | `3f1aâ€¦-uuid`       | Unique ID of the activity. |
+| `id`         | TEXT PK | yes      | `3f1a…-uuid`       | Unique ID of the activity. |
 | `title`      | TEXT    | yes      | "Doctor appointment" | Short title / name. |
 | `description`| TEXT    | &ndash;  | "Referral..."      | Details/notes. |
 | `date`       | TEXT    | yes      | `20251012`         | Date in **YYYYMMDD** format. |
@@ -191,9 +191,9 @@ flowchart LR
 | `tts.engine`    | String | `com.google.android.tts`| Engine reported by the system; shown in the app.            |
 | `tts.locale`    | String | `de-DE`                 | Language in `ll-CC` format (hyphen, normalized).            |
 | `tts.voiceName` | String | `German Germany`        | Exact display name from `getVoices`.                        |
-| `tts.rate`      | Double | `1.0`                   | Speech rate `0.20â€“1.00`.                                    |
-| `tts.pitch`     | Double | `1.0`                   | Pitch `0.50â€“1.50`.                                          |
-| `tts.volume`    | Double | `1.0`                   | Volume `0.00â€“1.00`.                                         |
+| `tts.rate`      | Double | `1.0`                   | Speech rate `0.20–1.00`.                                    |
+| `tts.pitch`     | Double | `1.0`                   | Pitch `0.50–1.50`.                                          |
+| `tts.volume`    | Double | `1.0`                   | Volume `0.00–1.00`.                                         |
 
 **Gamification &ndash; spoken sentences**
 

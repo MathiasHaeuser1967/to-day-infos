@@ -1,4 +1,4 @@
-function Write-En-Screen-VoiceMacros {
+﻿function Write-En-Screen-VoiceMacros {
   $p = Join-Path $Screens 'voice-macros.md'
   $c = @'
 # Voice macros

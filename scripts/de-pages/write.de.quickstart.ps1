@@ -1,4 +1,4 @@
-function Write-De-Quickstart {
+﻿function Write-De-Quickstart {
   $p = Join-Path $DocsDe 'quickstart.md'
   $c = @'
 # Schnellstart

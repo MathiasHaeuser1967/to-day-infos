@@ -1,4 +1,4 @@
-function Write-En-Permissions {
+﻿function Write-En-Permissions {
   $p = Join-Path $DocsEn 'permissions.md'
   $c = @'
 # Permissions

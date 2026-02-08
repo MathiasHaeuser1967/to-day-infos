@@ -1,86 +1,86 @@
-# AktivitÃ¤t anlegen / bearbeiten
+# Aktivität anlegen / bearbeiten
 
-Der Dialog zum Anlegen oder Bearbeiten einer AktivitÃ¤t enthÃ¤lt alle Felder, die eine Aufgabe in **ToDay** beschreiben.
+Der Dialog zum Anlegen oder Bearbeiten einer Aktivität enthält alle Felder, die eine Aufgabe in **ToDay** beschreiben.
 
 ---
 
 ## 1) Titel
 
-Das wichtigste Feld â€“ kurz, prÃ¤gnant, eindeutig.
+Das wichtigste Feld – kurz, prägnant, eindeutig.
 
 ### TD-Trigger (Sondertitel)
 
-Bestimmte Titel lÃ¶sen beim FÃ¤lligwerden automatisierte Aktionen aus:
+Bestimmte Titel lösen beim Fälligwerden automatisierte Aktionen aus:
 
 | Trigger | Aktion |
 |---------|--------|
-| `TD:brief:high` | Tagesbriefing nur hohe PrioritÃ¤t per TTS. |
-| `TD:brief:mid` | Tagesbriefing nur mittlere PrioritÃ¤t per TTS. |
-| `TD:brief:low` | Tagesbriefing nur niedrige PrioritÃ¤t per TTS. |
+| `TD:brief:high` | Tagesbriefing nur hohe Priorität per TTS. |
+| `TD:brief:mid` | Tagesbriefing nur mittlere Priorität per TTS. |
+| `TD:brief:low` | Tagesbriefing nur niedrige Priorität per TTS. |
 | `TD:finance:gold` | Goldpreis-Ansage (Quelle: goldprice.org). |
 | `TD:finance:silver` | Silberpreis-Ansage (Quelle: goldprice.org). |
 | `TD:steps:today` | Schritte heute per TTS (Android STEP_COUNTER). |
 
-In der AktivitÃ¤tenliste werden TD-Trigger **benutzerfreundlich** angezeigt (z. B. â€žTagesbriefing Hoch" statt `TD:brief:high`).
+In der Aktivitätenliste werden TD-Trigger **benutzerfreundlich** angezeigt (z. B. „Tagesbriefing Hoch" statt `TD:brief:high`).
 
 ---
 
 ## 2) Beschreibung (optional)
 
-Freitext fÃ¼r Details, Notizen oder Kontext. Wird in der Detailansicht angezeigt.
+Freitext für Details, Notizen oder Kontext. Wird in der Detailansicht angezeigt.
 
 ### Schritte-Trigger im Detail (`TD:steps:today`)
 
 | Eigenschaft | Beschreibung |
 |-------------|-------------|
-| **Datenquelle** | Android `TYPE_STEP_COUNTER` (kumulativer Hardware-ZÃ¤hler seit letztem Reboot). |
-| **Berechnung** | `Schritte heute = aktueller ZÃ¤hlerstand âˆ’ gespeicherter Tagesstartwert`. |
+| **Datenquelle** | Android `TYPE_STEP_COUNTER` (kumulativer Hardware-Zähler seit letztem Reboot). |
+| **Berechnung** | `Schritte heute = aktueller Zählerstand − gespeicherter Tagesstartwert`. |
 | **Tagesstartwert** | Wird beim ersten Trigger des Tages gesetzt. Erst ab dem zweiten Trigger kommt eine echte Differenz. |
-| **Reboot** | Nach Neustart beginnt der ZÃ¤hler bei 0 â†’ neuer Startwert wird automatisch gesetzt. |
+| **Reboot** | Nach Neustart beginnt der Zähler bei 0 → neuer Startwert wird automatisch gesetzt. |
 
 **Korrekte Einstellung in Android:**
 
 | Einstellung | Pfad / Aktion |
 |-------------|---------------|
-| **KÃ¶rperliche AktivitÃ¤t** | Einstellungen â†’ Apps â†’ ToDay â†’ Berechtigungen â†’ KÃ¶rperliche AktivitÃ¤t â†’ Zulassen. |
-| **Akku-EinschrÃ¤nkungen** | Auf â€žKeine EinschrÃ¤nkungen" setzen. Bei Xiaomi zusÃ¤tzlich Autostart erlauben. |
+| **Körperliche Aktivität** | Einstellungen → Apps → ToDay → Berechtigungen → Körperliche Aktivität → Zulassen. |
+| **Akku-Einschränkungen** | Auf „Keine Einschränkungen" setzen. Bei Xiaomi zusätzlich Autostart erlauben. |
 
 **Hinweise zur Genauigkeit:**
 
-- Am zuverlÃ¤ssigsten: **vordere Hosentasche** oder eng anliegende Tasche am KÃ¶rper.  
+- Am zuverlässigsten: **vordere Hosentasche** oder eng anliegende Tasche am Körper.  
 - Vermeide lockere Jackentasche, Hoodie-Tasche oder frei schwingende Handtasche.  
-- Im Rucksack kann es Schritte unterschÃ¤tzen, weil die Bewegung gedÃ¤mpft wird.  
-- FÃ¼r konsistente Werte immer mÃ¶glichst die gleiche Trageposition nutzen.
+- Im Rucksack kann es Schritte unterschätzen, weil die Bewegung gedämpft wird.  
+- Für konsistente Werte immer möglichst die gleiche Trageposition nutzen.
 
 ---
 
-## 3) PrioritÃ¤t
+## 3) Priorität
 
 | Stufe | Wirkung |
 |-------|---------|
 | **Niedrig** | Standard-Darstellung. |
 | **Mittel** | Standard-Darstellung. |
-| **Hoch** | Beeinflusst die Kennzahl â€žHohe PrioritÃ¤t" auf Home und wird visuell hervorgehoben. |
+| **Hoch** | Beeinflusst die Kennzahl „Hohe Priorität" auf Home und wird visuell hervorgehoben. |
 
 ---
 
 ## 4) Datum
 
-Kalenderauswahl fÃ¼r den Tag der AktivitÃ¤t.  
-Tipp: Heute/Morgen hÃ¤ufig verfÃ¼gbar, sonst Datum wÃ¤hlen.
+Kalenderauswahl für den Tag der Aktivität.  
+Tipp: Heute/Morgen häufig verfügbar, sonst Datum wählen.
 
 ---
 
 ## 5) Uhrzeit
 
 Genaue Startzeit (24 h).  
-Wird fÃ¼r die Position im Tag und fÃ¼r Erinnerungen verwendet.
+Wird für die Position im Tag und für Erinnerungen verwendet.
 
 ---
 
 ## 6) Erinnern
 
-Ã–ffnet die Auswahl der Erinnerungs-Offsets:
+Öffnet die Auswahl der Erinnerungs-Offsets:
 
 | Offset | Bedeutung |
 |--------|-----------|
@@ -92,54 +92,54 @@ Wird fÃ¼r die Position im Tag und fÃ¼r Erinnerungen verwendet.
 | **1 Std** | 1 Stunde vorher. |
 | **2 Std** | 2 Stunden vorher. |
 
-- **Mehrfachauswahl** mÃ¶glich (z. B. *10 Min* **und** *Start*).  
+- **Mehrfachauswahl** möglich (z. B. *10 Min* **und** *Start*).  
 - Schnellaktionen: **Alle** / **Keine**.  
-- **Ãœbernehmen** bestÃ¤tigt die Auswahl.
+- **Übernehmen** bestätigt die Auswahl.
 
-> **Hinweis:** Erinnerungen werden zum gewÃ¤hlten Zeitpunkt als Benachrichtigung oder Alarm geplant (Systemrechte erforderlich).
+> **Hinweis:** Erinnerungen werden zum gewählten Zeitpunkt als Benachrichtigung oder Alarm geplant (Systemrechte erforderlich).
 
 ---
 
 ## 7) Wiederholung
 
-Legt fest, ob und wie die AktivitÃ¤t automatisch wiederkommt.
+Legt fest, ob und wie die Aktivität automatisch wiederkommt.
 
 ### Keine
 
-Einmalige AktivitÃ¤t.
+Einmalige Aktivität.
 
-### TÃ¤glich
-
-| Option | Beschreibung |
-|--------|-------------|
-| **Intervall** | â€žAlle *n* Tage" (âˆ’ / +). |
-| **Endet** | *Endlos* Â· *Bis Datum* Â· *Nach Anzahl*. |
-
-### WÃ¶chentlich
+### Täglich
 
 | Option | Beschreibung |
 |--------|-------------|
-| **Intervall** | â€žAlle *n* Wochen" (âˆ’ / +). |
-| **Wochentage** | Moâ€“So wÃ¤hlen oder Shortcuts **Werktage** / **Wochenende**. |
-| **Endet** | *Endlos* Â· *Bis Datum* Â· *Nach Anzahl*. |
+| **Intervall** | „Alle *n* Tage" (− / +). |
+| **Endet** | *Endlos* · *Bis Datum* · *Nach Anzahl*. |
+
+### Wöchentlich
+
+| Option | Beschreibung |
+|--------|-------------|
+| **Intervall** | „Alle *n* Wochen" (− / +). |
+| **Wochentage** | Mo–So wählen oder Shortcuts **Werktage** / **Wochenende**. |
+| **Endet** | *Endlos* · *Bis Datum* · *Nach Anzahl*. |
 
 ### Monatlich
 
 | Option | Beschreibung |
 |--------|-------------|
-| **Intervall** | â€žAlle *n* Monate". |
+| **Intervall** | „Alle *n* Monate". |
 | **Modus** | **Tag des Monats** (z. B. *23.*) **oder** **Wochentag im Monat** (z. B. *jeder 2. Dienstag*). |
-| **Endet** | *Endlos* Â· *Bis Datum* Â· *Nach Anzahl*. |
+| **Endet** | *Endlos* · *Bis Datum* · *Nach Anzahl*. |
 
-### JÃ¤hrlich
+### Jährlich
 
 | Option | Beschreibung |
 |--------|-------------|
-| **Intervall** | â€žAlle *n* Jahre". |
+| **Intervall** | „Alle *n* Jahre". |
 | **Modus** | **Am Datum** (Monat + Tag) **oder** **Wochentag in Monat**. |
-| **Endet** | *Endlos* Â· *Bis Datum* Â· *Nach Anzahl*. |
+| **Endet** | *Endlos* · *Bis Datum* · *Nach Anzahl*. |
 
-> **Tipp:** FÃ¼r â€žGeburtstag", â€žMiete", â€žBerichtswoche" passende Wiederholung wÃ¤hlen und **Ende** bewusst setzen.
+> **Tipp:** Für „Geburtstag", „Miete", „Berichtswoche" passende Wiederholung wählen und **Ende** bewusst setzen.
 
 ---
 
@@ -147,8 +147,8 @@ Einmalige AktivitÃ¤t.
 
 | Button | Wirkung |
 |--------|---------|
-| **Abbrechen** | SchlieÃŸt den Dialog ohne Speichern. |
-| **HinzufÃ¼gen** | Legt die AktivitÃ¤t an und kehrt zur Ãœbersicht zurÃ¼ck. |
+| **Abbrechen** | Schließt den Dialog ohne Speichern. |
+| **Hinzufügen** | Legt die Aktivität an und kehrt zur Übersicht zurück. |
 
 ---
 
@@ -157,13 +157,13 @@ Einmalige AktivitÃ¤t.
 | Beispiel | Konfiguration |
 |----------|--------------|
 | **Arzttermin** | Datum *23.10.*, Uhrzeit *08:15*, Erinnern *10 Min + Start*. |
-| **Training** | Uhrzeit *18:00*, **WÃ¶chentlich**: *Do*, Endet *Endlos*. |
-| **Bericht** | **Monatlich**: *Wochentag im Monat â†’ letzter Werktag*, Erinnern *1 Std*. |
+| **Training** | Uhrzeit *18:00*, **Wöchentlich**: *Do*, Endet *Endlos*. |
+| **Bericht** | **Monatlich**: *Wochentag im Monat → letzter Werktag*, Erinnern *1 Std*. |
 
 ---
 
 ## 10) Hinweise
 
-- **Berechtigungen:** Erlaube Benachrichtigungen (und ggf. **Exakte Alarme**), sonst kommen Erinnerungen verspÃ¤tet.  
-- **Schritte:** FÃ¼r `TD:steps:today` muss **KÃ¶rperliche AktivitÃ¤t** erlaubt sein, sonst ist der SchrittzÃ¤hler nicht verfÃ¼gbar.  
-- **Ã„nderbar:** Alles lÃ¤sst sich spÃ¤ter bearbeiten, Wiederholungen wirken nur fÃ¼r zukÃ¼nftige Termine.
+- **Berechtigungen:** Erlaube Benachrichtigungen (und ggf. **Exakte Alarme**), sonst kommen Erinnerungen verspätet.  
+- **Schritte:** Für `TD:steps:today` muss **Körperliche Aktivität** erlaubt sein, sonst ist der Schrittzähler nicht verfügbar.  
+- **Änderbar:** Alles lässt sich später bearbeiten, Wiederholungen wirken nur für zukünftige Termine.

@@ -1,4 +1,4 @@
-function Write-De-Index {
+﻿function Write-De-Index {
   $p = Join-Path $DocsDe 'index.md'
   $c = @'
 # ToDay – Deine intelligente Tageszentrale

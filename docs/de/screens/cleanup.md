@@ -1,10 +1,10 @@
-# AufrÃ¤umen
+# Aufräumen
 
-Mit **AufrÃ¤umen** entfernst du AktivitÃ¤ten eines Tages â€“ optional inklusive der zugehÃ¶rigen **Benachrichtigungen/Alarme**. Die Wirkung gilt immer fÃ¼r das **gewÃ¤hlte Datum**.
+Mit **Aufräumen** entfernst du Aktivitäten eines Tages – optional inklusive der zugehörigen **Benachrichtigungen/Alarme**. Die Wirkung gilt immer für das **gewählte Datum**.
 
 ---
 
-## 1) Datum wÃ¤hlen
+## 1) Datum wählen
 
 | Option | Beschreibung |
 |--------|-------------|
@@ -13,45 +13,45 @@ Mit **AufrÃ¤umen** entfernst du AktivitÃ¤ten eines Tages â€“ optional i
 
 ---
 
-## 2) WÃ¤hle, was gelÃ¶scht werden soll (Quelle)
+## 2) Wähle, was gelöscht werden soll (Quelle)
 
-Du wÃ¤hlst **genau eine Quelle**. Nur EintrÃ¤ge, die an diesem Tag **aus dieser Quelle** stammen, werden gelÃ¶scht:
+Du wählst **genau eine Quelle**. Nur Einträge, die an diesem Tag **aus dieser Quelle** stammen, werden gelöscht:
 
 | Quelle | Beschreibung |
 |--------|-------------|
-| **Zyklus planen** | Automatisch aus wiederkehrenden Zyklen erzeugte AktivitÃ¤ten. |
-| **Zeitansagen** | AktivitÃ¤ten, die durch Zeitansagen entstanden sind. |
+| **Zyklus planen** | Automatisch aus wiederkehrenden Zyklen erzeugte Aktivitäten. |
+| **Zeitansagen** | Aktivitäten, die durch Zeitansagen entstanden sind. |
 
 !!! info "Sicherheit"
-    Andere Quellen bleiben unangetastet. Du verÃ¤nderst nicht versehentlich Inhalte auÃŸerhalb der gewÃ¤hlten Quelle.
+    Andere Quellen bleiben unangetastet. Du veränderst nicht versehentlich Inhalte außerhalb der gewählten Quelle.
 
 ---
 
 ## 3) Optionen
 
-### Nur offene AktivitÃ¤ten
+### Nur offene Aktivitäten
 
 | Einstellung | Wirkung |
 |-------------|---------|
-| **Ein** | LÃ¶scht **nur** EintrÃ¤ge, die **nicht** als *Erledigt* markiert sind. |
-| **Aus** | LÃ¶scht **alle** passenden EintrÃ¤ge â€“ offen **und** erledigt. |
+| **Ein** | Löscht **nur** Einträge, die **nicht** als *Erledigt* markiert sind. |
+| **Aus** | Löscht **alle** passenden Einträge – offen **und** erledigt. |
 
 ### Benachrichtigungen/Alarme stornieren
 
 | Einstellung | Wirkung |
 |-------------|---------|
-| **Ein** | Entfernt zusÃ¤tzlich **alle** zu den gelÃ¶schten AktivitÃ¤ten gehÃ¶renden Benachrichtigungen â€“ sowohl **geplante** als auch bereits **angezeigte**. |
-| **Aus** | Es werden nur AktivitÃ¤ten gelÃ¶scht; vorhandene Benachrichtigungen bleiben zunÃ¤chst sichtbar. |
+| **Ein** | Entfernt zusätzlich **alle** zu den gelöschten Aktivitäten gehörenden Benachrichtigungen – sowohl **geplante** als auch bereits **angezeigte**. |
+| **Aus** | Es werden nur Aktivitäten gelöscht; vorhandene Benachrichtigungen bleiben zunächst sichtbar. |
 
 !!! tip
-    Aktivieren, wenn du â€žliegengebliebene" Erinnerungen vollstÃ¤ndig aufrÃ¤umen mÃ¶chtest.
+    Aktivieren, wenn du „liegengebliebene" Erinnerungen vollständig aufräumen möchtest.
 
 ---
 
-## 4) LÃ¶schen ausfÃ¼hren
+## 4) Löschen ausführen
 
 | Schritt | Aktion |
 |---------|--------|
-| 1 | Datum und **Quelle** wÃ¤hlen. |
-| 2 | **Optionen** prÃ¼fen/setzen. |
-| 3 | **LÃ¶schen** tippen â†’ der Dialog schlieÃŸt, und du kehrst zu **Home** zurÃ¼ck. |
+| 1 | Datum und **Quelle** wählen. |
+| 2 | **Optionen** prüfen/setzen. |
+| 3 | **Löschen** tippen → der Dialog schließt, und du kehrst zu **Home** zurück. |

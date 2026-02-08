@@ -1,4 +1,4 @@
-function Write-En-Features {
+﻿function Write-En-Features {
   $p = Join-Path $DocsEn 'features.md'
   $c = @'
 # Features

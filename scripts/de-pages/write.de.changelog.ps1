@@ -1,4 +1,4 @@
-function Write-De-Changelog {
+﻿function Write-De-Changelog {
   $p = Join-Path $DocsDe 'changelog.md'
   $c = @'
 # Changelog

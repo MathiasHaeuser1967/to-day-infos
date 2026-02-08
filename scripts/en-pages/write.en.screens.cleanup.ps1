@@ -1,4 +1,4 @@
-function Write-En-Screen-Cleanup {
+﻿function Write-En-Screen-Cleanup {
   $p = Join-Path $Screens 'cleanup.md'
   $c = @'
 # Cleanup

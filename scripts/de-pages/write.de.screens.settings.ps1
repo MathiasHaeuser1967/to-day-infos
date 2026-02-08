@@ -1,4 +1,4 @@
-function Write-De-Screen-Settings {
+﻿function Write-De-Screen-Settings {
   $p = Join-Path $Screens 'settings.md'
   $c = @'
 # Einstellungen

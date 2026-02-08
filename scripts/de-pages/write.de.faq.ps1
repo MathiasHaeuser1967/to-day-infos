@@ -1,4 +1,4 @@
-function Write-De-FAQ {
+﻿function Write-De-FAQ {
   $p = Join-Path $DocsDe 'faq.md'
   $c = @'
 # Häufige Fragen (FAQ)

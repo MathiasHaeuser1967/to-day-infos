@@ -1,4 +1,4 @@
-function Write-En-Index {
+﻿function Write-En-Index {
   $p = Join-Path $DocsEn 'index.md'
   $c = @'
 # Home

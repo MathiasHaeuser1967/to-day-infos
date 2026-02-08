@@ -1,4 +1,4 @@
-function Write-De-Privacy {
+﻿function Write-De-Privacy {
   $p = Join-Path $DocsDe 'privacy.md'
   $c = @'
 # Datenschutz

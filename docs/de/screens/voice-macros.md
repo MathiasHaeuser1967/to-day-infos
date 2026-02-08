@@ -1,12 +1,12 @@
 # Sprach-Makros
 
-Mit Sprach-Makros sprichst du **kurze Trigger** (z. B. â€žmakro eins") und die App ersetzt sie automatisch durch einen **vollen Befehlstext** (Expansion). Dieser Text wird anschlieÃŸend wie bei der *Spracheingabe (Tastatur)* geparst â€“ also in **Titel, Beschreibung, Datum, Uhrzeit** zerlegt.
+Mit Sprach-Makros sprichst du **kurze Trigger** (z. B. „makro eins") und die App ersetzt sie automatisch durch einen **vollen Befehlstext** (Expansion). Dieser Text wird anschließend wie bei der *Spracheingabe (Tastatur)* geparst – also in **Titel, Beschreibung, Datum, Uhrzeit** zerlegt.
 
 ---
 
 ## 1) Zweck & Prinzip
 
-Die Verarbeitungskette lautet: **Trigger â†’ Expansion â†’ Parsing**.
+Die Verarbeitungskette lautet: **Trigger → Expansion → Parsing**.
 
 | Schritt | Beschreibung |
 |---------|-------------|
@@ -15,27 +15,27 @@ Die Verarbeitungskette lautet: **Trigger â†’ Expansion â†’ Parsing**.
 | 3. **Parsing** | Der Parser liest daraus Titel/Beschreibung/Datum/Uhrzeit. |
 
 **Beispiel:**  
-Trigger: `makro 1` â†’ Expansion: `Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr`.
+Trigger: `makro 1` → Expansion: `Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr`.
 
 ---
 
-## 2) Ãœbersicht (Liste)
+## 2) Übersicht (Liste)
 
 | Element | Beschreibung |
 |---------|-------------|
 | **Suche** | Filtert nach Namen/Trigger. |
-| **Filterchips** | *Alle* Â· *Aktiv* Â· *Inaktiv*. |
-| **Neues Makro** | **+** (unten rechts) oder Button â€žMakro erstellen" im Leerlauf-State. |
+| **Filterchips** | *Alle* · *Aktiv* · *Inaktiv*. |
+| **Neues Makro** | **+** (unten rechts) oder Button „Makro erstellen" im Leerlauf-State. |
 
 ### Eintrag in der Liste
 
 | Bereich | Anzeige |
 |---------|---------|
-| **Name** (links) | Interner Titel mit **Statuspunkt** (grÃ¼n = aktiv, grau = inaktiv). |
+| **Name** (links) | Interner Titel mit **Statuspunkt** (grün = aktiv, grau = inaktiv). |
 | **Trigger** | z. B. `makro 1`. |
-| **Vorschau** | Kurze Darstellung, wie der Expansion-Text geparst wÃ¼rde. |
-| **Schalter â€žAktiv"** | Zum schnellen Ein-/Ausschalten. |
-| **MenÃ¼ (â‹®)** | Bearbeiten/LÃ¶schen. |
+| **Vorschau** | Kurze Darstellung, wie der Expansion-Text geparst würde. |
+| **Schalter „Aktiv"** | Zum schnellen Ein-/Ausschalten. |
+| **Menü (⋮)** | Bearbeiten/Löschen. |
 
 ---
 
@@ -43,35 +43,35 @@ Trigger: `makro 1` â†’ Expansion: `Titel Einkauf Beschreibung Milch und Bro
 
 | Feld | Beschreibung |
 |------|-------------|
-| **Name (fÃ¼r dich)** | Interner Titel, frei wÃ¤hlbar. |
+| **Name (für dich)** | Interner Titel, frei wählbar. |
 | **Trigger (gesprochen)** | Kurze, eindeutige Worte. Vermeide leicht verwechselbare Begriffe; sprich klar. |
 | **Expansion (voller Befehl-Text)** | Schreibe hier den kompletten Sprachbefehl so, wie er diktiert werden soll (siehe unten). |
 | **Aktiv** | Makro sofort nutzbar machen. |
 | **Vorschau-Parsing** | Zeigt live, was der Parser aktuell aus der Expansion ableitet. |
 
-### UnterstÃ¼tzte SchlÃ¼sselwÃ¶rter in der Expansion
+### Unterstützte Schlüsselwörter in der Expansion
 
 Reihenfolge beliebig, Felder optional:
 
-| SchlÃ¼sselwort | Beispielwert |
+| Schlüsselwort | Beispielwert |
 |--------------|-------------|
-| **Titel â€¦** | Freitext (z. B. â€žEinkauf"). |
-| **Beschreibung â€¦** | Freitext (z. B. â€žMilch und Brot"). |
-| **Datum â€¦** | *heute*, *morgen*, *Ã¼bermorgen*, *am 22.10.*, *am Mittwoch*. |
-| **Uhrzeit â€¦** | *18 Uhr*, *07:15*. |
+| **Titel …** | Freitext (z. B. „Einkauf"). |
+| **Beschreibung …** | Freitext (z. B. „Milch und Brot"). |
+| **Datum …** | *heute*, *morgen*, *übermorgen*, *am 22.10.*, *am Mittwoch*. |
+| **Uhrzeit …** | *18 Uhr*, *07:15*. |
 
 **Beispiel-Expansion:**  
 `Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr`
 
-AbschlieÃŸend: **Speichern** oder **Abbrechen**.
+Abschließend: **Speichern** oder **Abbrechen**.
 
 ---
 
 ## 4) Verwendung
 
 1. Diktiere in der App (z. B. im Dialog *Spracheingabe (Tastatur)*).  
-2. Sprich **genau den Trigger** â†’ die App ersetzt ihn durch die **Expansion** und Ã¼bernimmt die erkannten Felder.  
-3. Danach kurz prÃ¼fen und speichern.
+2. Sprich **genau den Trigger** → die App ersetzt ihn durch die **Expansion** und übernimmt die erkannten Felder.  
+3. Danach kurz prüfen und speichern.
 
 ---
 
@@ -80,7 +80,7 @@ AbschlieÃŸend: **Speichern** oder **Abbrechen**.
 | Aktion | Weg |
 |--------|-----|
 | **Aktiv/Inaktiv** umschalten | Schalter in der Liste. |
-| **Bearbeiten/LÃ¶schen** | **â‹®**-MenÃ¼ des Eintrags. |
+| **Bearbeiten/Löschen** | **⋮**-Menü des Eintrags. |
 | **Filtern** | *Alle*, *Aktiv* oder *Inaktiv*. |
 | **Suchen** | Name/Trigger finden. |
 
@@ -88,7 +88,7 @@ AbschlieÃŸend: **Speichern** oder **Abbrechen**.
 
 ## 6) Tipps
 
-- **Eindeutige Trigger** wÃ¤hlen (z. B. â€žmakro eins", â€žmeeting vorlage") und vorher testen.  
-- **Robuste Expansion** schreiben: klare WÃ¶rter, 24-Stunden-Zeit (z. B. *14:30*), unnÃ¶tige FÃ¼llwÃ¶rter vermeiden.  
-- **Mehrere Felder** sind mÃ¶glich, nicht alle sind Pflicht (z. B. nur *Titel* + *Uhrzeit*).  
-- Wenn etwas nicht richtig erkannt wird: **Vorschau** prÃ¼fen und Expansion anpassen.
+- **Eindeutige Trigger** wählen (z. B. „makro eins", „meeting vorlage") und vorher testen.  
+- **Robuste Expansion** schreiben: klare Wörter, 24-Stunden-Zeit (z. B. *14:30*), unnötige Füllwörter vermeiden.  
+- **Mehrere Felder** sind möglich, nicht alle sind Pflicht (z. B. nur *Titel* + *Uhrzeit*).  
+- Wenn etwas nicht richtig erkannt wird: **Vorschau** prüfen und Expansion anpassen.

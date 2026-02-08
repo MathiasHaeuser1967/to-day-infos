@@ -1,4 +1,4 @@
-function Write-En-Screen-AddActivity {
+﻿function Write-En-Screen-AddActivity {
   $p = Join-Path $Screens 'add-activity.md'
   $c = @'
 # Add activity

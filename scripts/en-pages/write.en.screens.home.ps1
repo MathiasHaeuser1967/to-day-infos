@@ -1,4 +1,4 @@
-function Write-En-Screen-Home {
+﻿function Write-En-Screen-Home {
   $p = Join-Path $Screens 'home.md'
   $c = @'
 # Home

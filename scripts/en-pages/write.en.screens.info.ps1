@@ -1,4 +1,4 @@
-function Write-En-Screen-Info {
+﻿function Write-En-Screen-Info {
   $p = Join-Path $Screens 'info.md'
   $c = @'
 # Info

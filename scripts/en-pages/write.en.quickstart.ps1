@@ -1,4 +1,4 @@
-function Write-En-Quickstart {
+﻿function Write-En-Quickstart {
   $p = Join-Path $DocsEn 'quickstart.md'
   $c = @'
 # Quick start

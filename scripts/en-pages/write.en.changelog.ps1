@@ -1,4 +1,4 @@
-function Write-En-Changelog {
+﻿function Write-En-Changelog {
   $p = Join-Path $DocsEn 'changelog.md'
   $c = @'
 # Changelog

@@ -1,4 +1,4 @@
-function Write-En-Screen-CyclePlanner {
+﻿function Write-En-Screen-CyclePlanner {
   $p = Join-Path $Screens 'cycle-planner.md'
   $c = @'
 # Cycle planner

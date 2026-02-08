@@ -11,7 +11,7 @@ This dialog creates a new activity. You choose the title, date and time, reminde
 ---
 
 ## 2) Title and description
-- **Title**: Required. Short and clear (for example â€œDoctor appointmentâ€, â€œSend reportâ€).
+- **Title**: Required. Short and clear (for example “Doctor appointment”, “Send report”).
 - **Description** (optional): Details or notes.
 
 ---
@@ -73,7 +73,7 @@ Sorting
 Limits
 - Max 5 tasks with a time.
 - Max 3 tasks without a time.
-- If there are more, the app ends with a short â€œand more tasksâ€.
+- If there are more, the app ends with a short “and more tasks”.
 
 Language
 - Two texts are prepared: German and English.
@@ -81,7 +81,7 @@ Language
 - If no matching text exists, the app uses the existing fallback.
 
 Reminder note
-- For briefing triggers there should be no duplicate notification at the start time. Therefore a â€œStartâ€ reminder is internally suppressed for TD briefing triggers.
+- For briefing triggers there should be no duplicate notification at the start time. Therefore a “Start” reminder is internally suppressed for TD briefing triggers.
 
 ---
 
@@ -126,7 +126,7 @@ Cache behavior
 
 Offline and error case
 - If there is no network or an error occurs, scheduling still happens.
-- The app then speaks a clear fallback message, for example â€œGold price currently unavailableâ€.
+- The app then speaks a clear fallback message, for example “Gold price currently unavailable”.
 
 Language
 - Two texts are prepared: German and English.
@@ -154,7 +154,7 @@ Language
 ---
 
 ## 6) Reminders
-- Opens the selection **Start Â· 5 min Â· 10 min Â· 15 min Â· 30 min Â· 1 h Â· 2 h**.
+- Opens the selection **Start · 5 min · 10 min · 15 min · 30 min · 1 h · 2 h**.
 - Multiple selection is possible (for example 10 min and Start).
 - Quick actions: **All** or **None**.
 - **Apply** confirms the selection.
@@ -168,22 +168,22 @@ Defines if and how the activity repeats automatically.
 
 - **None**: one time.
 - **Daily**
-  - Interval: â€œEvery n daysâ€ (âˆ’ / +).
-  - **Ends**: Never Â· Until date Â· After count.
+  - Interval: “Every n days” (− / +).
+  - **Ends**: Never · Until date · After count.
 - **Weekly**
-  - Interval: â€œEvery n weeksâ€ (âˆ’ / +).
-  - Select weekdays (Monâ€¦Sun) or shortcuts **Weekdays** or **Weekend**.
-  - **Ends**: Never Â· Until date Â· After count.
+  - Interval: “Every n weeks” (− / +).
+  - Select weekdays (Mon…Sun) or shortcuts **Weekdays** or **Weekend**.
+  - **Ends**: Never · Until date · After count.
 - **Monthly**
-  - Interval: â€œEvery n monthsâ€.
+  - Interval: “Every n months”.
   - Mode: **Day of month** (for example 23) or **Weekday in month** (for example every 2nd Tuesday).
-  - **Ends**: Never Â· Until date Â· After count.
+  - **Ends**: Never · Until date · After count.
 - **Yearly**
-  - Interval: â€œEvery n yearsâ€.
+  - Interval: “Every n years”.
   - Mode: **On date** (month + day) or **Weekday in month**.
-  - **Ends**: Never Â· Until date Â· After count.
+  - **Ends**: Never · Until date · After count.
 
-> Tip: For â€œBirthdayâ€, â€œRentâ€, â€œReport weekâ€ choose a suitable repeat rule and set an end deliberately.
+> Tip: For “Birthday”, “Rent”, “Report week” choose a suitable repeat rule and set an end deliberately.
 
 ---
 
@@ -194,9 +194,9 @@ Defines if and how the activity repeats automatically.
 ---
 
 ## 9) Examples
-- â€œDoctor appointmentâ€, date 23 Oct, time 08:15, reminders 10 min + Start.
-- â€œWorkoutâ€, time 18:00, **Weekly**: Thu, ends Never.
-- â€œReportâ€, **Monthly**: weekday in month â†’ last weekday, reminder 1 h.
+- “Doctor appointment”, date 23 Oct, time 08:15, reminders 10 min + Start.
+- “Workout”, time 18:00, **Weekly**: Thu, ends Never.
+- “Report”, **Monthly**: weekday in month → last weekday, reminder 1 h.
 
 ---
 

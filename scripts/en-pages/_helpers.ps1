@@ -1,4 +1,4 @@
-function Ensure-Dir($Path){
+﻿function Ensure-Dir($Path){
   if(-not (Test-Path -LiteralPath $Path)){
     New-Item -ItemType Directory -Force -Path $Path | Out-Null
   }

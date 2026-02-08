@@ -1,4 +1,4 @@
-function Write-De-Screen-VoiceMacros {
+﻿function Write-De-Screen-VoiceMacros {
   $p = Join-Path $Screens 'voice-macros.md'
   $c = @'
 # Sprach-Makros

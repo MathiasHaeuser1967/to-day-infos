@@ -1,4 +1,4 @@
-function Write-En-Privacy {
+﻿function Write-En-Privacy {
   $p = Join-Path $DocsEn 'privacy.md'
   $c = @'
 # Privacy

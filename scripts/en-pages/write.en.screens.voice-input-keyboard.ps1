@@ -1,4 +1,4 @@
-function Write-En-Screen-VoiceInputKeyboard {
+﻿function Write-En-Screen-VoiceInputKeyboard {
   $p = Join-Path $Screens 'voice-input-keyboard.md'
   $c = @'
 # Voice input via keyboard

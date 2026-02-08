@@ -1,4 +1,4 @@
-function Write-En-Screen-Settings {
+﻿function Write-En-Screen-Settings {
   $p = Join-Path $Screens 'settings.md'
   $c = @'
 # Settings

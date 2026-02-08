@@ -1,4 +1,4 @@
-function Write-De-Screen-AddActivity {
+﻿function Write-De-Screen-AddActivity {
   $p = Join-Path $Screens 'add-activity.md'
   $c = @'
 # Aktivität anlegen / bearbeiten

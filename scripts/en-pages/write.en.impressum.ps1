@@ -1,4 +1,4 @@
-function Write-En-Impressum {
+﻿function Write-En-Impressum {
   $p = Join-Path $DocsEn 'impressum.md'
   $c = @'
 # Imprint

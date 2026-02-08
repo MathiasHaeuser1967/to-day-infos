@@ -1,12 +1,12 @@
 # Zyklus planen
 
-Mit **Zyklus planen** erzeugst du wiederkehrende Fokus-/Pausen-BlÃ¶cke (z. B. Pomodoro) automatisch fÃ¼r den Tag.
+Mit **Zyklus planen** erzeugst du wiederkehrende Fokus-/Pausen-Blöcke (z. B. Pomodoro) automatisch für den Tag.
 
 ---
 
 ## 1) Zweck
 
-Du definierst Startzeit, Vorlage (Fokus/Pause) und wie oft sich der Block wiederholen soll. ToDay erzeugt daraus die einzelnen AktivitÃ¤ten in deinem Tagesplan â€“ sauber getaktet, ohne Ãœberschneidungen.
+Du definierst Startzeit, Vorlage (Fokus/Pause) und wie oft sich der Block wiederholen soll. ToDay erzeugt daraus die einzelnen Aktivitäten in deinem Tagesplan – sauber getaktet, ohne Überschneidungen.
 
 ---
 
@@ -14,23 +14,23 @@ Du definierst Startzeit, Vorlage (Fokus/Pause) und wie oft sich der Block wieder
 
 | Feld | Beschreibung |
 |------|-------------|
-| **Startzeit** | Erstes Start-Datum/-Uhrzeit der Serie. Tippe auf die Zeit, um den System-Zeitpicker zu Ã¶ffnen. |
+| **Startzeit** | Erstes Start-Datum/-Uhrzeit der Serie. Tippe auf die Zeit, um den System-Zeitpicker zu öffnen. |
 | **Wiederholungen (Slider)** | Anzahl der Zyklen, die ab Startzeit nacheinander erzeugt werden. |
 
 Unter dem Slider siehst du z. B.:  
-`4 von 24 mÃ¶glichen Wiederholungen (Tag wird nicht Ã¼berschritten).`
+`4 von 24 möglichen Wiederholungen (Tag wird nicht überschritten).`
 
 **Berechnungslogik:**
 
-- Zyklusdauer = Fokus + Pause der gewÃ¤hlten Vorlage (z. B. 25 + 5 = 30 Min).  
+- Zyklusdauer = Fokus + Pause der gewählten Vorlage (z. B. 25 + 5 = 30 Min).  
 - Maximale Wiederholungen: `max = floor((24h - Startzeit) / Zyklusdauer)`.  
-- Intern wird zusÃ¤tzlich sichergestellt, dass keine AktivitÃ¤ten in den nÃ¤chsten Tag fallen.
+- Intern wird zusätzlich sichergestellt, dass keine Aktivitäten in den nächsten Tag fallen.
 
 ---
 
 ## 3) Vorlage
 
-WÃ¤hle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-Block und die zugehÃ¶rige Pause (aufeinander folgend).
+Wähle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-Block und die zugehörige Pause (aufeinander folgend).
 
 ### Klassische Vorlagen
 
@@ -51,7 +51,7 @@ WÃ¤hle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-B
 | **90/20** | 90 Min | 20 Min |
 | **75/15** | 75 Min | 15 Min |
 
-> **Hinweis:** Die gewÃ¤hlte Vorlage bestimmt die Zyklusdauer und damit die maximal mÃ¶glichen Wiederholungen fÃ¼r deinen Tag.
+> **Hinweis:** Die gewählte Vorlage bestimmt die Zyklusdauer und damit die maximal möglichen Wiederholungen für deinen Tag.
 
 ---
 
@@ -62,7 +62,7 @@ WÃ¤hle eine **Fokus/Pause**-Kombination. ToDay erzeugt je Zyklus einen Fokus-B
 | **Ein** | Der erste erzeugte Block ist **Fokus**, danach kommt die Pause, usw. |
 | **Aus** | Starte mit einer **Pause** und wechsle danach in den Fokus. |
 
-Das ist praktisch, wenn du z. B. bewusst mit einer kurzen Vorbereitungs-Pause beginnen mÃ¶chtest.
+Das ist praktisch, wenn du z. B. bewusst mit einer kurzen Vorbereitungs-Pause beginnen möchtest.
 
 ---
 
@@ -70,11 +70,11 @@ Das ist praktisch, wenn du z. B. bewusst mit einer kurzen Vorbereitungs-Pause be
 
 Tippe auf **Erzeugen**, um die Serie anzulegen:
 
-- Es werden AktivitÃ¤ten fÃ¼r das **aktuell gewÃ¤hlte Datum** (aus der Home-Ansicht) erzeugt.  
+- Es werden Aktivitäten für das **aktuell gewählte Datum** (aus der Home-Ansicht) erzeugt.  
 - Zeiten werden aus Startzeit, Vorlage und Wiederholungs-Anzahl berechnet.  
-- Bestehende EintrÃ¤ge zu exakt denselben Zeitpunkten werden nicht doppelt angelegt (KonfliktprÃ¼fung).
+- Bestehende Einträge zu exakt denselben Zeitpunkten werden nicht doppelt angelegt (Konfliktprüfung).
 
-> **Abbrechen:** Dialog schlieÃŸen ohne Ã„nderungen.
+> **Abbrechen:** Dialog schließen ohne Änderungen.
 
 ---
 
@@ -112,7 +112,7 @@ Tippe auf **Erzeugen**, um die Serie anzulegen:
 
 ## 7) Tipps
 
-- **FrÃ¼h starten:** Je spÃ¤ter die Startzeit, desto weniger Wiederholungen passen in den Tag.  
-- **Puffer einplanen:** WÃ¤hle ggf. weniger Wiederholungen, wenn du zwischen BlÃ¶cken noch Weg-/Wechselzeiten brauchst.  
-- **Kombinieren:** Erzeuge am Morgen deine Tageszyklen und arbeite sie Ã¼ber den Tab **Offen** ab.  
-- **AufrÃ¤umen:** Bei Bedarf kannst du erzeugte Zyklen Ã¼ber **AufrÃ¤umen** fÃ¼r den Tag wieder entfernen (Quelle "Zyklus planen").
+- **Früh starten:** Je später die Startzeit, desto weniger Wiederholungen passen in den Tag.  
+- **Puffer einplanen:** Wähle ggf. weniger Wiederholungen, wenn du zwischen Blöcken noch Weg-/Wechselzeiten brauchst.  
+- **Kombinieren:** Erzeuge am Morgen deine Tageszyklen und arbeite sie über den Tab **Offen** ab.  
+- **Aufräumen:** Bei Bedarf kannst du erzeugte Zyklen über **Aufräumen** für den Tag wieder entfernen (Quelle "Zyklus planen").

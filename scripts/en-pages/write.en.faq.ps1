@@ -1,4 +1,4 @@
-function Write-En-FAQ {
+﻿function Write-En-FAQ {
   $p = Join-Path $DocsEn 'faq.md'
   $c = @'
 # Frequently Asked Questions (FAQ)

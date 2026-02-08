@@ -1,4 +1,4 @@
-function Write-De-Features {
+﻿function Write-De-Features {
   $p = Join-Path $DocsDe 'features.md'
   $c = @'
 # Funktionen
