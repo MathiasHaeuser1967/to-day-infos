@@ -1245,17 +1245,25 @@
 </tbody>
 </table>
 <h3 id="datenfluss">Datenfluss<a class="headerlink" href="#datenfluss" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>block-beta
-  columns 1
-  block:ui["Benutzeroberflaeche\nHome - Einstellungen - Sprach-Makros - Info"]
+<pre class="mermaid"><code>flowchart TD
+  subgraph UI["Benutzeroberflaeche"]
+    direction LR
+    H[Home] --- E[Einstellungen] --- SM[Sprach-Makros] --- I[Info]
   end
-  block:state["State Management\nAppStore - LocaleStore - ChangeNotifier"]
+  subgraph STATE["State Management"]
+    direction LR
+    AS[AppStore] --- LS[LocaleStore] --- CN[ChangeNotifier]
   end
-  block:service["Service-Schicht\nActivityService - SchedulingService - DWD-Service\nNotificationFacade - TTS-Service - StepCounter"]
+  subgraph SERVICE["Service-Schicht"]
+    direction LR
+    AcS[ActivityService] --- ScS[SchedulingService] --- DS[DWD-Service]
+    NF[NotificationFacade] --- TS[TTS-Service] --- SC[StepCounter]
   end
-  block:data["Daten-Schicht\nSQLite - SharedPreferences - FlutterSecureStorage"]
+  subgraph DATA["Daten-Schicht"]
+    direction LR
+    SQ[SQLite] --- SP[SharedPreferences] --- FSS[FlutterSecureStorage]
   end
-  ui --&gt; state --&gt; service --&gt; data</code></pre>
+  UI --&gt; STATE --&gt; SERVICE --&gt; DATA</code></pre>
 <hr />
 <h2 id="home-screen-die-tageszentrale">Home-Screen – Die Tageszentrale<a class="headerlink" href="#home-screen-die-tageszentrale" title="Permanent link">&para;</a></h2>
 <p>Der Home-Screen ist das Herzstück der App. Er zeigt auf einen Blick:</p>
