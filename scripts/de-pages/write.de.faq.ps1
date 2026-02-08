@@ -43,9 +43,15 @@ Audio-Routen (A2DP/HFP) können beim Wechsel kurz **stumm** bleiben, bis Fokus/R
 
 **TTS-Pipeline:**
 
-```
-[Trigger] → [Berechtigungen?] → [Doze?] → [TTS-Init + Audio-Fokus] → [Audio-Route] → [Ausgabe]
-              nein → (stumm)     ja → (verzögert)
+```mermaid
+flowchart LR
+  A[Trigger] --> B{Berechtigungen?}
+  B -- nein --> X1[stumm]
+  B -- ja --> C{Doze?}
+  C -- ja --> X2[verzoegert]
+  C -- nein --> D[TTS-Init + Audio-Fokus]
+  D --> E[Audio-Route]
+  E --> F[Ausgabe]
 ```
 
 ---
@@ -78,12 +84,13 @@ Android feuert geplante Alarme weiter, auch wenn der DB-Datensatz bereits entfer
 
 **Sequenz:**
 
-```
-App:  Schedule(id, payload) → [OS-Queue]
-App:  Cancel(filter)        → (Schema passt?)
-                               ja → gelöscht
-                               nein → bleibt (Waisen-Alarm)
-Lösung: "Benachrichtigungen neu aufbauen"
+```mermaid
+flowchart LR
+  A1[Schedule id+payload] --> Q[OS-Queue]
+  A2[Cancel filter] --> S{Schema passt?}
+  S -- ja --> D[geloescht]
+  S -- nein --> W[bleibt als Waisen-Alarm]
+  W -. Loesung .-> R[Benachrichtigungen neu aufbauen]
 ```
 
 ---
@@ -113,10 +120,13 @@ Lösung: "Benachrichtigungen neu aufbauen"
 
 **Ablauf:**
 
-```
-[t] → (exakt erlaubt?) nein → (inexakt ±Min)
-       ja → (Doze?) ja → (Maintenance-Window)
-              nein → (exakt bei t)
+```mermaid
+flowchart LR
+  T[Zeitpunkt t] --> E{Exakt erlaubt?}
+  E -- nein --> I[inexakt +/- Min]
+  E -- ja --> DZ{Doze?}
+  DZ -- ja --> M[Maintenance-Window]
+  DZ -- nein --> OK[exakt bei t]
 ```
 
 ---

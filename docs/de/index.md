@@ -48,21 +48,18 @@ Die App wurde mit **Flutter/Dart** entwickelt und nutzt eine **lokale SQLite-Dat
 
 ### Datenfluss
 
-```
-┌─────────────────────────────────────────────────────┐
-│                    Benutzeroberfläche                │
-│  Home · Einstellungen · Sprach-Makros · Info        │
-├─────────────────────────────────────────────────────┤
-│                    State Management                  │
-│  AppStore · LocaleStore · ChangeNotifier            │
-├─────────────────────────────────────────────────────┤
-│                    Service-Schicht                    │
-│  ActivityService · SchedulingService · DWD-Service  │
-│  NotificationFacade · TTS-Service · StepCounter     │
-├─────────────────────────────────────────────────────┤
-│                    Daten-Schicht                      │
-│  SQLite · SharedPreferences · FlutterSecureStorage  │
-└─────────────────────────────────────────────────────┘
+```mermaid
+block-beta
+  columns 1
+  block:ui["Benutzeroberflaeche\nHome - Einstellungen - Sprach-Makros - Info"]
+  end
+  block:state["State Management\nAppStore - LocaleStore - ChangeNotifier"]
+  end
+  block:service["Service-Schicht\nActivityService - SchedulingService - DWD-Service\nNotificationFacade - TTS-Service - StepCounter"]
+  end
+  block:data["Daten-Schicht\nSQLite - SharedPreferences - FlutterSecureStorage"]
+  end
+  ui --> state --> service --> data
 ```
 
 ---
@@ -128,38 +125,25 @@ ToDay nutzt ein robustes, mehrstufiges Benachrichtigungssystem:
 
 ### Navigationsstruktur
 
+```mermaid
+graph LR
+  Home --> SD[Speed Dial]
+  SD --> Hilfe
+  SD --> DB[Daily Briefing]
+  SD --> ZP[Zyklus planen]
+  SD --> SB[Sprachbefehl]
+  SD --> AR[Aufraeumen]
+  SD --> NA[Neu anlegen]
+  Home --> AK[Aktivitaet antippen]
+  Home --> Menu
+  Menu --> Einstellungen
+  Menu --> Info
+  Menu --> SM[Sprach-Makros]
 ```
-Home
-├── Speed Dial
-│   ├── ❓ Hilfe
-│   ├── 🗣️ Daily Briefing (Multi-Tap)
-│   ├── 🔄 Zyklus planen → (Zyklus-Planer-Sheet)
-│   ├── 🎤 Sprachbefehl → (Spracherfassung-Sheet)
-│   ├── ➖ Aufräumen → (Aufräumen-Sheet)
-│   └── ➕ Neu anlegen → (Aktivität-Dialog)
-├── Aktivität antippen → (Aktivität-Dialog)
-└── ⋮ Menü
-    ├── Einstellungen → [Einstellungen]
-    ├── Info → [Info-Screen]
-    └── Sprach-Makros → [Sprach-Makros-Screen]
 
-Einstellungen
-├── Sprache
-├── Design
-├── Anzeige & Text (Schriftart, Schriftgröße, Live-Vorschau)
-├── Benachrichtigungen – Allgemein (DWD)
-├── Wetterwarnungen (DWD)
-├── Pollenflug (DWD)
-├── Stimme & Ausgabe (TTS)
-├── Zeitansagen
-├── Hintergrund-Animation
-├── Gamification
-└── Gefährlicher Bereich
+**Einstellungen-Bereiche:** Sprache, Design, Anzeige und Text (Schriftart, Schriftgroesse, Live-Vorschau), Benachrichtigungen, Wetterwarnungen (DWD), Pollenflug (DWD), Stimme und Ausgabe (TTS), Zeitansagen, Hintergrund-Animation, Gamification, Gefaehrlicher Bereich.
 
-Sprach-Makros
-├── Eintrag antippen → (Makro bearbeiten – Dialog)
-└── Langes Tippen → (Makro bearbeiten – Sheet)
-```
+**Sprach-Makros:** Eintrag antippen (Makro bearbeiten als Dialog), Langes Tippen (Makro bearbeiten als Sheet).
 
 ---
 

@@ -32,10 +32,17 @@
 - TTS only starts after engine init + audio focus. In Doze, Android shifts jobs into **maintenance windows**. Without `SCHEDULE_EXACT_ALARM`, alarms become **inexact** (+/- minutes).  
 - Audio routes (A2DP/HFP) can be briefly **silent** during handover until focus/route returns.
 
-**TTS pipeline (ASCII)**
-```
-[Trigger] -> [Permissions?] -> [Doze?] -> [TTS init + audio focus] -> [Audio route] -> [Output]
-             no -> (silent)     yes -> (delayed)
+**TTS pipeline:**
+
+```mermaid
+flowchart LR
+  A[Trigger] --> B{Permissions?}
+  B -- no --> X1[silent]
+  B -- yes --> C{Doze?}
+  C -- yes --> X2[delayed]
+  C -- no --> D[TTS init + audio focus]
+  D --> E[Audio route]
+  E --> F[Output]
 ```
 
 ---
@@ -60,13 +67,15 @@
 - Reminders are scheduled with deterministic **ID** + **payload**. After schema changes the cancel logic does not recognize older entries -> a **one-time** rebuild clears the legacy queue.  
 - Android continues to fire scheduled alarms even if the DB record has already been removed, as long as the alarm was not **explicitly** canceled.
 
-**Sequence (ASCII)**
-```
-App:  Schedule(id, payload) -> [OS queue]
-App:  Cancel(filter)        -> (schema matches?)
-                               yes -> deleted
-                               no  -> remains (orphan alarm)
-Solution: "Rebuild notifications"
+**Sequence:**
+
+```mermaid
+flowchart LR
+  A1[Schedule id+payload] --> Q[OS queue]
+  A2[Cancel filter] --> S{Schema matches?}
+  S -- yes --> D[deleted]
+  S -- no --> W[remains as orphan alarm]
+  W -. Solution .-> R[Rebuild notifications]
 ```
 
 ---
@@ -89,11 +98,15 @@ Solution: "Rebuild notifications"
 - Check **Do Not Disturb**/quiet times.  
 - Do not use **ultra power saving** modes.
 
-**Flow (ASCII)**
-```
-[t] -> (exact allowed?) no  -> (inexact +/- min)
-      yes -> (Doze?)   yes -> (maintenance window)
-                         no -> (exact at t)
+**Flow:**
+
+```mermaid
+flowchart LR
+  T[Time t] --> E{Exact allowed?}
+  E -- no --> I[inexact +/- min]
+  E -- yes --> DZ{Doze?}
+  DZ -- yes --> M[maintenance window]
+  DZ -- no --> OK[exact at t]
 ```
 
 ---
