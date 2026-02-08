@@ -1,4 +1,4 @@
-﻿function Write-De-Screen-Info {
+function Write-De-Screen-Info {
   $p = Join-Path $Screens 'info.md'
   $c = @'
 # Info
@@ -8,35 +8,35 @@ Der Dialog zeigt technische Informationen zur App, zum System, zur Datenbank und
 ---
 
 ## 1) Aufruf & Zweck
-- Aufruf über das **Menü** der App.
-- Schneller Überblick für **Support** (Kopierfunktion) und **Fehleranalyse**.
+- Aufruf über das **Menü** der App.  
+- Schneller Überblick für **Support** (Kopierfunktion) und **Fehleranalyse**.  
 
 ---
 
 ## 2) App
-- **App**: Name und **Version** (z. B. 1.0.5.1) mit **Kanal** (*Release*, *Beta*, *Debug*).
+- **App**: Name und **Version** (z. B. 1.0.5.1) mit **Kanal** (*Release*, *Beta*, *Debug*).  
 
 ---
 
 ## 3) System
-- **Betriebssystem**: Android-Build des Geräts (z. B. `android AQ3A.240912.001`).
-- **Package-ID**: Eindeutige Paketkennung der App (z. B. `de.mathiashaeuser.today`).
+- **Betriebssystem**: Android-Build des Geräts (z. B. `android AQ3A.240912.001`).  
+- **Package-ID**: Eindeutige Paketkennung der App (z. B. `de.mathiashaeuser.today`).  
 
 ---
 
 ## 4) Datenbank
-- **SQLite**: verwendete SQLite-Version.
-- **DB-Pfad**: Verzeichnis der App-Datenbank auf dem Gerät.
-- **DB-Datei**: vollständiger Pfad zur Datenbankdatei (z. B. `.../databases/to_day.db`).
-- **DB-Name**: logischer Name (z. B. `to_day.db`).
-- **Anzahl Einträge**: Summe der Datensätze (Kurzüberblick).
-- **Tabellen**: Anzahl der Tabellen in der Datenbank.
+- **SQLite**: verwendete SQLite-Version.  
+- **DB-Pfad**: Verzeichnis der App-Datenbank auf dem Gerät.  
+- **DB-Datei**: vollständiger Pfad zur Datenbankdatei (z. B. `.../databases/to_day.db`).  
+- **DB-Name**: logischer Name (z. B. `to_day.db`).  
+- **Anzahl Einträge**: Summe der Datensätze (Kurzüberblick).  
+- **Tabellen**: Anzahl der Tabellen in der Datenbank.  
 
 > Hinweis: Der Pfad ist aus Sicherheitsgründen i. d. R. nicht direkt zugänglich (ohne Root/adb). Für Analysen genügt der **Kopieren**-Button.
 
 ### 4.1 Aufbau (Überblick)
 
-```json
+```mermaid
 erDiagram
   ACTIVITIES {
     TEXT id PK "z. B. UUID"
@@ -63,8 +63,8 @@ erDiagram
     INTEGER updated_at "Epoch ms"
   }
 ```
-- **`activities`** hält alle Aufgaben/Termine inkl. Erinnerungen, Wiederholungen und Metadaten.
-- **`settings`** ist eine schlanke Key/Value-Tabelle für App-Einstellungen (z. B. Flags und Zeitstempel).
+- **`activities`** hält alle Aufgaben/Termine inkl. Erinnerungen, Wiederholungen und Metadaten.  
+- **`settings`** ist eine schlanke Key/Value-Tabelle für App-Einstellungen (z. B. Flags und Zeitstempel).  
 
 ### 4.2 Tabellen im Detail
 
@@ -90,13 +90,13 @@ erDiagram
 | `batch_id`   | TEXT    | –      | `time:20251012`    | **Batch-Kennung** zum Gruppieren. |
 
 **Hinweise & Formate**
-- **Datum/Uhrzeit** als kompakte Strings → schnelle Vergleiche & Indizes.
-- **Erinnerungen (`reminders`)**: unterstützte Offsets: `0, 5, 10, 15, 30, 60, 120`.
+- **Datum/Uhrzeit** als kompakte Strings → schnelle Vergleiche & Indizes.  
+- **Erinnerungen (`reminders`)**: unterstützte Offsets: `0, 5, 10, 15, 30, 60, 120`.  
 - **Wiederholungen (`rrule`)**: Standard-RRULE (z. B. `FREQ=WEEKLY;BYDAY=MO,WE;COUNT=8`).  
   Ausnahmen in `exdates`, erledigte Serien-Vorkommen in `done_dates`.
-- **Quellen (`source`)**: `user`, `system:cycle`, `system:time_announce`.
-- **Revision (`sched_rev`)**: erhöht sich bei Neuaufbau von Planungen.
-- **Batch (`batch_id`)**: gruppiert zusammengehörige Items.
+- **Quellen (`source`)**: `user`, `system:cycle`, `system:time_announce`.  
+- **Revision (`sched_rev`)**: erhöht sich bei Neuaufbau von Planungen.  
+- **Batch (`batch_id`)**: gruppiert zusammengehörige Items.  
 
 #### `settings` – App-Einstellungen
 
@@ -111,7 +111,7 @@ erDiagram
 
 ### 4.3 Indizes (für Tempo)
 
-```json
+```mermaid
 flowchart LR
   A[idx_activities_date] -->|"activities(date)"| DB
   B[idx_activities_priority] -->|"activities(priority)"| DB
@@ -119,8 +119,8 @@ flowchart LR
   D[idx_activities_date_source] -->|"activities(date, source)"| DB
   E[idx_activities_batch] -->|"activities(batch_id)"| DB
 ```
-- **Schnelles Listing**: nach Datum, Status, Quelle (z. B. „heute“, „überfällig“, „Zeitansagen“).
-- **Gezieltes Aufräumen**: per `batch_id` ganze Gruppen (z. B. ein Zyklus-Set) schnell finden.
+- **Schnelles Listing**: nach Datum, Status, Quelle (z. B. „heute“, „überfällig“, „Zeitansagen“).  
+- **Gezieltes Aufräumen**: per `batch_id` ganze Gruppen (z. B. ein Zyklus-Set) schnell finden.  
 
 ### 4.4 Beispiel-Datensatz (`activities`)
 
@@ -156,24 +156,24 @@ flowchart LR
 ### 4.6 Für Technik-Fans (wie wird geplant?)
 - Benachrichtigungen werden mit einer **deterministischen ID** aus `id + date + offsetMin` geplant.  
 - Jede geplante Erinnerung trägt eine **Payload** (u. a. `activity_id`, `ymd`, `source`, `sched_rev`).  
-- Beim Aufräumen kann die App so **zielsicher** alle zugehörigen Alarme finden und **abbrechen/neu planen** – auch bei Serien, Zeitansagen und Zyklus-Sets.
+- Beim Aufräumen kann die App so **zielsicher** alle zugehörigen Alarme finden und **abbrechen/neu planen** – auch bei Serien, Zeitansagen und Zyklus-Sets.  
 
 ### 4.7 Installation & Deinstallation (Android)
 
 **Wie wird die Datenbank angelegt?**  
 - Beim **ersten Start** (bzw. beim ersten Zugriff auf die Datenbank) öffnet die App die SQLite-Datei über den `DatabaseHelper`.  
 - Existiert die Datei noch nicht, wird sie **automatisch erstellt** (üblich: `.../data/data/<package>/databases/to_day.db`).  
-- Im Zuge dessen werden die **Tabellen** (`activities`, `settings`) und benötigte **Spalten**/Indizes angelegt. Spätere App-Versionen führen **Migrationen** aus (fehlende Spalten werden ergänzt), ohne bestehende Daten zu verlieren.
+- Im Zuge dessen werden die **Tabellen** (`activities`, `settings`) und benötigte **Spalten**/Indizes angelegt. Spätere App-Versionen führen **Migrationen** aus (fehlende Spalten werden ergänzt), ohne bestehende Daten zu verlieren.  
 
 **Welche Voraussetzungen braucht Android?**  
 - **Keine zusätzlichen Berechtigungen nötig.** Die Daten liegen im **app-internen Speicher** (keine „Dateizugriff“-Runtime-Permission erforderlich).  
 - Android bringt **SQLite** systemseitig mit; Pfade liefert Flutter über `path_provider`.  
-- Es muss **ausreichend freier Speicherplatz** vorhanden sein.
+- Es muss **ausreichend freier Speicherplatz** vorhanden sein.  
 
 **Was passiert bei der Deinstallation?**  
 - Android löscht den kompletten **App-Sandbox-Bereich** automatisch, inklusive der Datenbank unter `.../data/data/<package>/databases/to_day.db`.  
 - Auch geplante **Benachrichtigungen/Alarme** der App werden vom System verworfen, da das Paket nicht mehr vorhanden ist.  
-- Es bleiben **keine Reste** der App-Datenbank im System zurück – das Gerät ist diesbezüglich **sauber**.
+- Es bleiben **keine Reste** der App-Datenbank im System zurück – das Gerät ist diesbezüglich **sauber**.  
 
 ---
 
@@ -184,7 +184,7 @@ flowchart LR
 #### 4.8.1 Shared Preferences (Key/Value, Klartext)
 
 * **Ort**: App-Sandbox (`/data/data/<package>/shared_prefs/...`) – intern, ohne Root/ADB nicht direkt zugänglich.  
-* **Typ**: Kleine Einstellungen/Flags als **Key/Value** (String, Bool, Double, Int).
+* **Typ**: Kleine Einstellungen/Flags als **Key/Value** (String, Bool, Double, Int).  
 
 **TTS (vereinheitlichtes Schema)**
 
@@ -227,11 +227,13 @@ flowchart LR
 | `cleanup.cancel_schedules.default` | Bool   | `true`     | Vorauswahl für „Alarme stornieren“.        |
 | `time_announce.enabled`            | Bool   | `true`     | Zeitansagen an/aus.                        |
 | `weather.units.temp`               | String | `C`        | Temperatureinheit.                         |
+| `typography.fontFamily`            | String | `system`   | Schriftart: `system`/`inter`/`robotoSlab`/`openDyslexic`. |
+| `typography.textScaleFactor`       | Double | `1.0`      | Schriftgrößen-Faktor (0.8–1.5). |
 
 #### 4.8.2 Secure Storage (verschlüsselt)
 
 * **Ort**: App-Sandbox, über Android Keystore abgesichert (Plugin `flutter_secure_storage`).  
-* **Typ**: **Sensible** Schlüssel/Werte, verschlüsselt gespeichert.
+* **Typ**: **Sensible** Schlüssel/Werte, verschlüsselt gespeichert.  
 
 | Key               | Typ    | Beispiel | Beschreibung                  |
 |-------------------|--------|----------|-------------------------------|
@@ -244,54 +246,54 @@ flowchart LR
 
 * **Awesome Notifications**: persistiert geplante & aktive Benachrichtigungen (inkl. Payload) im App-Bereich; wird im **Aufräumen**/„Neu aufbauen“ konsistent bereinigt/neu befüllt.  
 * **Image-/Netz-Cache**: Zwischenspeicher im **Cache-Verzeichnis** der App.  
-* **Temporary Files**: Kurzlebige Dateien (z. B. Exporte) im **Temp-/Cache-Pfad**.
+* **Temporary Files**: Kurzlebige Dateien (z. B. Exporte) im **Temp-/Cache-Pfad**.  
 
 #### 4.8.4 Exporte/Backups (optional)
 
 * Exportierte Dateien liegen im **vom Nutzer gewählten Ordner** (z. B. „Downloads“) und damit **außerhalb** der App-Sandbox.  
-* Diese Dateien bleiben auch nach Deinstallation erhalten, bis sie manuell gelöscht werden.
+* Diese Dateien bleiben auch nach Deinstallation erhalten, bis sie manuell gelöscht werden.  
 
 #### 4.8.5 Lösch- & Backup-Verhalten
 
 * **App-Daten löschen** entfernt Datenbank, Shared Preferences, Secure Storage, Plugin-Daten und Cache.  
 * **Deinstallation** entspricht effektiv „Alles löschen“.  
-* **System-Backups** (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. **nicht** zwischen Geräten migriert.
+* **System-Backups** (falls aktiv) können Einstellungen/Prefs wiederherstellen; sicherheitskritische Inhalte im Secure Storage werden i. d. R. **nicht** zwischen Geräten migriert.  
 
 #### 4.8.6 Datenschutz
 
 * Keine Telemetrie standardmäßig.  
-* Alle Daten verbleiben **lokal** auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.
+* Alle Daten verbleiben **lokal** auf dem Gerät, außer du exportierst/synchronisierst sie bewusst.  
 
 ---
 
 ## 5) Benachrichtigungen
 Status-Chips zeigen, ob alle Voraussetzungen erfüllt sind:
-- **Erlaubt** – Systemberechtigung für Benachrichtigungen ist erteilt.
-- **Exakte Alarme** – erlaubt, damit Erinnerungen **pünktlich** auslösen dürfen.
-- **Akku-Optimierung ignoriert** – verhindert Drosselung im Hintergrund.
+- **Erlaubt** – Systemberechtigung für Benachrichtigungen ist erteilt.  
+- **Exakte Alarme** – erlaubt, damit Erinnerungen **pünktlich** auslösen dürfen.  
+- **Akku-Optimierung ignoriert** – verhindert Drosselung im Hintergrund.  
 
 > Wenn einer der Schalter **aus** ist, können Erinnerungen **zu spät** oder **gar nicht** kommen. Öffne die entsprechenden System-Einstellungen und erlaube die Option.
 
 ---
 
 ## 6) Aktionen
-- **Kopieren**: Kopiert alle angezeigten Informationen in die Zwischenablage (für Support/Fehlerbericht).
-- **Schließen**: Beendet den Dialog.
+- **Kopieren**: Kopiert alle angezeigten Informationen in die Zwischenablage (für Support/Fehlerbericht).  
+- **Schließen**: Beendet den Dialog.  
 
 ---
 
 ## 7) Tipps & Fehlerbehebung
-- Nach Änderungen an Rechten/Alarmen in den **Einstellungen** ggf. **„Benachrichtigungen neu aufbauen“** ausführen.
-- Prüfe zusätzlich Ruhezeiten, „Nicht stören“ und Internet-Verbindung (für DWD/Pollen).
-- Bei Support-Anfragen den kopierten **Info-Block** mit senden.
+- Nach Änderungen an Rechten/Alarmen in den **Einstellungen** ggf. **„Benachrichtigungen neu aufbauen“** ausführen.  
+- Prüfe zusätzlich Ruhezeiten, „Nicht stören“ und Internet-Verbindung (für DWD/Pollen).  
+- Bei Support-Anfragen den kopierten **Info-Block** mit senden.  
 
 ---
 
 ## 8) Android Debug Version erstellen
 
 ### 8.1 Voraussetzungen
-- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
-- USB Debugging am Gerät [Entwickleroptionen aktivieren: Einstellungen → Über das Telefon → Detaillierte Infos und Spezifikationen → auf OS Version oder MIUI Version 7 bis 10 mal tippen, bis die Meldung kommt, dass du Entwickler bist. USB Debugging einschalten: Einstellungen → Zusätzliche Einstellungen → Entwickleroptionen → USB Debugging aktivieren.]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
+- USB Debugging am Gerät [Entwickleroptionen aktivieren: Einstellungen → Über das Telefon → Detaillierte Infos und Spezifikationen → auf OS Version oder MIUI Version 7 bis 10 mal tippen, bis die Meldung kommt, dass du Entwickler bist. USB Debugging einschalten: Einstellungen → Zusätzliche Einstellungen → Entwickleroptionen → USB Debugging aktivieren.]  
 
 ### 8.2 Prüfen
 ```
@@ -321,8 +323,8 @@ flutter run
 ## 9) Android Release Version erstellen
 
 ### 9.1 Voraussetzungen
-- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
-- USB am Gerät
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
+- USB am Gerät  
 
 ### 9.2 Prüfen
 ```
@@ -352,7 +354,7 @@ flutter run --release
 ## 10) Android AppBundle für Google Play Console erstellen
 
 ### 10.1 Voraussetzungen
-- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
 - X:\apps\to-day\android\key.properties  
 - X:\apps\to-day\android\app\upload-keystore.jks  
 
@@ -391,7 +393,7 @@ flutter build appbundle --release
 ## 11) Windows Debug Version erstellen
 
 ### 11.1 Voraussetzungen
-- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
+- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
 
 ### 11.2 Prüfen
 ```
@@ -445,7 +447,7 @@ flutter run -d windows
 ## 12) Windows Release Version erstellen
 
 ### 12.1 Voraussetzungen
-- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
+- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
 
 ### 12.2 Prüfen
 ```
@@ -502,7 +504,7 @@ flutter run -d windows --release
 ## 13) Android Emulator Debug Version erstellen
 
 ### 13.1 Voraussetzungen
-- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
 
 ### 13.2 Prüfen
 ```
@@ -536,7 +538,7 @@ flutter run -d emulator-5554
 ## 14) Android Emulator Release Version erstellen
 
 ### 14.1 Voraussetzungen
-- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]
+- Android Studio mit SDK [SDK Platform: Android 16.0 "Baklava", SDK Tool: 36.0.0] und Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
 
 ### 14.2 Prüfen
 ```
@@ -571,7 +573,7 @@ flutter run --release -d emulator-5554
 
 ### 15.1 Handlungen
 - Gerät neu starten.  
-- Sauberes App Log aufnehmen, damit wir echte App Fehler sehen.
+- Sauberes App Log aufnehmen, damit wir echte App Fehler sehen.  
 
 ### 15.2 Befehle zum Aufzeichnen
 
@@ -579,8 +581,8 @@ flutter run --release -d emulator-5554
 adb logcat -c
 adb logcat -v time -b all > log.txt
 ```
-- Dann Problem auslösen. Danach Datei prüfen.
-- Nur deine App filtern
+- Dann Problem auslösen. Danach Datei prüfen.  
+- Nur deine App filtern  
 
 ```
 adb logcat -v time | Select-String -Pattern "FATAL EXCEPTION|de.mathiashaeuser.today"

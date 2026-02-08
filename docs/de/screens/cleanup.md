@@ -1,34 +1,57 @@
-# Aufr&auml;umen
+# AufrÃ¤umen
 
-Mit **Aufr&auml;umen** entfernst du Aktivit&auml;ten eines Tages &ndash; optional inklusive der zugeh&ouml;rigen **Benachrichtigungen/Alarme**. Die Wirkung gilt immer f&uuml;r das **gew&auml;hlte Datum**.
+Mit **AufrÃ¤umen** entfernst du AktivitÃ¤ten eines Tages â€“ optional inklusive der zugehÃ¶rigen **Benachrichtigungen/Alarme**. Die Wirkung gilt immer fÃ¼r das **gewÃ¤hlte Datum**.
 
-## 1) Datum w&auml;hlen
-- **Gestern / Heute / Morgen**: Schnellauswahl.
-- **Datumsanzeige**: zeigt das Ziel-Datum, auf das sich die Bereinigung bezieht.
+---
 
-## 2) W&auml;hle, was gel&ouml;scht werden soll (Quelle)
-Du w&auml;hlst **genau eine Quelle**. Nur Eintr&auml;ge, die an diesem Tag **aus dieser Quelle** stammen, werden gel&ouml;scht:
+## 1) Datum wÃ¤hlen
 
-- **Zyklus planen** &ndash; automatisch aus wiederkehrenden Zyklen erzeugte Aktivit&auml;ten.  
-- **Zeitansagen** &ndash; Aktivit&auml;ten, die durch Zeitansagen entstanden sind.  
+| Option | Beschreibung |
+|--------|-------------|
+| **Gestern / Heute / Morgen** | Schnellauswahl. |
+| **Datumsanzeige** | Zeigt das Ziel-Datum, auf das sich die Bereinigung bezieht. |
+
+---
+
+## 2) WÃ¤hle, was gelÃ¶scht werden soll (Quelle)
+
+Du wÃ¤hlst **genau eine Quelle**. Nur EintrÃ¤ge, die an diesem Tag **aus dieser Quelle** stammen, werden gelÃ¶scht:
+
+| Quelle | Beschreibung |
+|--------|-------------|
+| **Zyklus planen** | Automatisch aus wiederkehrenden Zyklen erzeugte AktivitÃ¤ten. |
+| **Zeitansagen** | AktivitÃ¤ten, die durch Zeitansagen entstanden sind. |
 
 !!! info "Sicherheit"
-    Andere Quellen bleiben unangetastet. Du ver&auml;nderst nicht versehentlich Inhalte au&szlig;erhalb der gew&auml;hlten Quelle.
+    Andere Quellen bleiben unangetastet. Du verÃ¤nderst nicht versehentlich Inhalte auÃŸerhalb der gewÃ¤hlten Quelle.
+
+---
 
 ## 3) Optionen
 
-### Nur offene Aktivit&auml;ten
-- **Ein**: l&ouml;scht **nur** Eintr&auml;ge, die **nicht** als *Erledigt* markiert sind.  
-- **Aus**: l&ouml;scht **alle** passenden Eintr&auml;ge &ndash; offen **und** erledigt.
+### Nur offene AktivitÃ¤ten
+
+| Einstellung | Wirkung |
+|-------------|---------|
+| **Ein** | LÃ¶scht **nur** EintrÃ¤ge, die **nicht** als *Erledigt* markiert sind. |
+| **Aus** | LÃ¶scht **alle** passenden EintrÃ¤ge â€“ offen **und** erledigt. |
 
 ### Benachrichtigungen/Alarme stornieren
-- **Ein**: ToDay entfernt zus&auml;tzlich **alle** zu den gel&ouml;schten Aktivit&auml;ten geh&ouml;renden Benachrichtigungen &ndash; sowohl **geplante** als auch bereits **angezeigte**.
-- **Aus**: Es werden nur Aktivit&auml;ten gel&ouml;scht; vorhandene Benachrichtigungen bleiben zun&auml;chst sichtbar.
+
+| Einstellung | Wirkung |
+|-------------|---------|
+| **Ein** | Entfernt zusÃ¤tzlich **alle** zu den gelÃ¶schten AktivitÃ¤ten gehÃ¶renden Benachrichtigungen â€“ sowohl **geplante** als auch bereits **angezeigte**. |
+| **Aus** | Es werden nur AktivitÃ¤ten gelÃ¶scht; vorhandene Benachrichtigungen bleiben zunÃ¤chst sichtbar. |
 
 !!! tip
-    Aktivieren, wenn du "liegengebliebene" Erinnerungen vollst&auml;ndig aufr&auml;umen m&ouml;chtest.
+    Aktivieren, wenn du â€žliegengebliebene" Erinnerungen vollstÃ¤ndig aufrÃ¤umen mÃ¶chtest.
 
-## 4) L&ouml;schen ausf&uuml;hren
-1. Datum und **Quelle** w&auml;hlen.  
-2. **Optionen** pr&uuml;fen/setzen.  
-3. **L&ouml;schen** tippen &rarr; der Dialog schlie&szlig;t, und du kehrst zu **Home** zur&uuml;ck.
+---
+
+## 4) LÃ¶schen ausfÃ¼hren
+
+| Schritt | Aktion |
+|---------|--------|
+| 1 | Datum und **Quelle** wÃ¤hlen. |
+| 2 | **Optionen** prÃ¼fen/setzen. |
+| 3 | **LÃ¶schen** tippen â†’ der Dialog schlieÃŸt, und du kehrst zu **Home** zurÃ¼ck. |
