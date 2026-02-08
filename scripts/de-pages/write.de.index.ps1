@@ -52,17 +52,25 @@ Die App wurde mit **Flutter/Dart** entwickelt und nutzt eine **lokale SQLite-Dat
 ### Datenfluss
 
 ```mermaid
-block-beta
-  columns 1
-  block:ui["Benutzeroberflaeche\nHome - Einstellungen - Sprach-Makros - Info"]
+flowchart TD
+  subgraph UI["Benutzeroberflaeche"]
+    direction LR
+    H[Home] --- E[Einstellungen] --- SM[Sprach-Makros] --- I[Info]
   end
-  block:state["State Management\nAppStore - LocaleStore - ChangeNotifier"]
+  subgraph STATE["State Management"]
+    direction LR
+    AS[AppStore] --- LS[LocaleStore] --- CN[ChangeNotifier]
   end
-  block:service["Service-Schicht\nActivityService - SchedulingService - DWD-Service\nNotificationFacade - TTS-Service - StepCounter"]
+  subgraph SERVICE["Service-Schicht"]
+    direction LR
+    AcS[ActivityService] --- ScS[SchedulingService] --- DS[DWD-Service]
+    NF[NotificationFacade] --- TS[TTS-Service] --- SC[StepCounter]
   end
-  block:data["Daten-Schicht\nSQLite - SharedPreferences - FlutterSecureStorage"]
+  subgraph DATA["Daten-Schicht"]
+    direction LR
+    SQ[SQLite] --- SP[SharedPreferences] --- FSS[FlutterSecureStorage]
   end
-  ui --> state --> service --> data
+  UI --> STATE --> SERVICE --> DATA
 ```
 
 ---
