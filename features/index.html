@@ -365,7 +365,7 @@
         <li class="md-nav__item">
   <a href="#1-aktivitaten-erinnerungen" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Aktivitäten &amp; Erinnerungen
+      1) AktivitÃ¤ten &amp; Erinnerungen
     </span>
   </a>
   
@@ -417,9 +417,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-home-ubersicht" class="md-nav__link">
+  <a href="#7-home-abersicht" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Home-Übersicht
+      7) Home-Ãœbersicht
     </span>
   </a>
   
@@ -1143,7 +1143,7 @@
         <li class="md-nav__item">
   <a href="#1-aktivitaten-erinnerungen" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Aktivitäten &amp; Erinnerungen
+      1) AktivitÃ¤ten &amp; Erinnerungen
     </span>
   </a>
   
@@ -1195,9 +1195,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-home-ubersicht" class="md-nav__link">
+  <a href="#7-home-abersicht" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Home-Übersicht
+      7) Home-Ãœbersicht
     </span>
   </a>
   
@@ -1256,99 +1256,350 @@
 
 
 <h1 id="funktionen">Funktionen<a class="headerlink" href="#funktionen" title="Permanent link">&para;</a></h1>
-<p>Ein Überblick über das, was <strong>ToDay</strong> kann.</p>
+<p>Ein Ãœberblick Ã¼ber das, was <strong>ToDay</strong> kann.</p>
 <hr />
-<h2 id="1-aktivitaten-erinnerungen">1) Aktivitäten &amp; Erinnerungen<a class="headerlink" href="#1-aktivitaten-erinnerungen" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Aktivitäten/To-Dos</strong> mit: <strong>Titel</strong>, <strong>Beschreibung</strong>, <strong>Datum (Y-M-D)</strong>, <strong>Uhrzeit (HH:mm)</strong>, <strong>Priorität</strong>, <strong>Erinnerungen</strong> (mehrere Offsets), <strong>Wiederholung (RRULE)</strong>, <strong>Ausnahmen (exdates)</strong>, <strong>Quelle</strong> (z. B. <code>system:cycle</code>, <code>system:time_announce</code>), <strong>schedRev</strong>, <strong>batchId</strong>.</li>
-<li><strong>Mehrfach-Erinnerungen</strong>: vordefinierte Offsets (Start, 5/10/15/30 Min, 1/2 Std) – kombinierbar.</li>
-<li><strong>Wiederholungen</strong>: täglich / wöchentlich (Tage + Intervall) / monatlich (Tag im Monat oder Wochentag im Monat) / jährlich (Datum oder Wochentag in Monat).<br />
-  Ende: <strong>Endlos</strong>, <strong>Bis Datum</strong>, <strong>Nach Anzahl</strong>.</li>
-<li><strong>Überfällig-Darstellung</strong>: Segmentierung <strong>\&lt; 1 h</strong>, <strong>1–3 h</strong>, <strong>&gt; 3 h</strong> mit Schnellaktionen und Segmentlisten.</li>
-</ul>
+<h2 id="1-aktivitaten-erinnerungen">1) AktivitÃ¤ten &amp; Erinnerungen<a class="headerlink" href="#1-aktivitaten-erinnerungen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Felder</strong></td>
+<td>Titel, Beschreibung, Datum (Y-M-D), Uhrzeit (HH:mm), PrioritÃ¤t, Erinnerungen (mehrere Offsets), Wiederholung (RRULE), Ausnahmen (exdates), Quelle (z. B. <code>system:cycle</code>, <code>system:time_announce</code>), schedRev, batchId.</td>
+</tr>
+<tr>
+<td><strong>Mehrfach-Erinnerungen</strong></td>
+<td>Vordefinierte Offsets (Start, 5/10/15/30 Min, 1/2 Std) â€“ kombinierbar.</td>
+</tr>
+<tr>
+<td><strong>Wiederholungen</strong></td>
+<td>TÃ¤glich / wÃ¶chentlich (Tage + Intervall) / monatlich (Tag im Monat oder Wochentag im Monat) / jÃ¤hrlich (Datum oder Wochentag in Monat). Ende: Endlos, Bis Datum, Nach Anzahl.</td>
+</tr>
+<tr>
+<td><strong>ÃœberfÃ¤llig-Darstellung</strong></td>
+<td>Segmentierung <strong>&lt; 1 h</strong>, <strong>1â€“3 h</strong>, <strong>&gt; 3 h</strong> mit Schnellaktionen und Segmentlisten.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="2-zyklen-planer">2) Zyklen (Planer)<a class="headerlink" href="#2-zyklen-planer" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Erzeugt automatisch <strong>Serien von Aktivitäten</strong> ab Startzeit mit Anzahl-Begrenzung (z. B. „4 von 24 möglich“).</li>
-<li><strong>Vorlagen/Presets</strong> (Pomodoro &amp; Co.): <code>25/5</code> (Pomodoro), <code>50/10</code>, <code>52/17</code>, <code>45/15</code>, <code>30/10</code>, <code>60/15</code>, sowie <strong>ultradiane Zyklen</strong> <code>90/15</code>, <code>90/20</code>, <code>75/15</code>.</li>
-<li>Optionaler <strong>Fokus-Start</strong> (z. B. zur direkten Sitzung).</li>
-</ul>
+<p>Erzeugt automatisch <strong>Serien von AktivitÃ¤ten</strong> ab Startzeit mit Anzahl-Begrenzung (z. B. â€ž4 von 24 mÃ¶glich").</p>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Arbeitsphase / Pause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pomodoro</td>
+<td>25 / 5 Min</td>
+</tr>
+<tr>
+<td>50/10</td>
+<td>50 / 10 Min</td>
+</tr>
+<tr>
+<td>52/17</td>
+<td>52 / 17 Min</td>
+</tr>
+<tr>
+<td>45/15</td>
+<td>45 / 15 Min</td>
+</tr>
+<tr>
+<td>30/10</td>
+<td>30 / 10 Min</td>
+</tr>
+<tr>
+<td>60/15</td>
+<td>60 / 15 Min</td>
+</tr>
+<tr>
+<td>Ultradian 90/15</td>
+<td>90 / 15 Min</td>
+</tr>
+<tr>
+<td>Ultradian 90/20</td>
+<td>90 / 20 Min</td>
+</tr>
+<tr>
+<td>Ultradian 75/15</td>
+<td>75 / 15 Min</td>
+</tr>
+</tbody>
+</table>
+<p>Optionaler <strong>Fokus-Start</strong> (z. B. zur direkten Sitzung).</p>
 <hr />
 <h2 id="3-zeitansagen">3) Zeitansagen<a class="headerlink" href="#3-zeitansagen" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Erzeugt <strong>Zeitpunkte zwischen Start- und Endzeit</strong> im gewählten <strong>Takt</strong>: 10/15/20/30 Min oder <strong>stündlich</strong>.</li>
-<li>Ausgabe als <strong>Benachrichtigung</strong> – <strong>TTS</strong>.</li>
-<li>Zeitansagen werden als eigene <strong>Aktivitätsquelle</strong> (<code>system:time_announce</code>) geführt.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zeitpunkte</strong></td>
+<td>Erzeugt Zeitpunkte zwischen Start- und Endzeit im gewÃ¤hlten Takt.</td>
+</tr>
+<tr>
+<td><strong>Taktung</strong></td>
+<td>10 / 15 / 20 / 30 Min oder stÃ¼ndlich.</td>
+</tr>
+<tr>
+<td><strong>Ausgabe</strong></td>
+<td>Benachrichtigung mit TTS-Sprachausgabe.</td>
+</tr>
+<tr>
+<td><strong>Quelle</strong></td>
+<td>Zeitansagen werden als eigene AktivitÃ¤tsquelle (<code>system:time_announce</code>) gefÃ¼hrt.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="4-sprache-tts-stt-sprach-makros">4) Sprache: TTS, STT &amp; Sprach-Makros<a class="headerlink" href="#4-sprache-tts-stt-sprach-makros" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Text-to-Speech (TTS)</strong>: Engine/Stimme/Locale, <strong>Sprechtempo</strong> und <strong>Tonhöhe</strong>, Probe-Ausgabe.</li>
-<li><strong>Spracheingabe über Tastatur</strong>: Diktat mit Schlüsselwörtern <strong>„Titel …“, „Beschreibung …“, „Datum …“, „Uhrzeit …“</strong> → Parser füllt Felder.</li>
-<li><strong>Sprach-Makros</strong>: <strong>Trigger → Expansion → Parsing</strong><br />
-  CRUD (anlegen/bearbeiten/löschen), Aktiv/Filter, Vorschau-Parsing, Duplikat-Prüfung.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text-to-Speech (TTS)</strong></td>
+<td>Engine/Stimme/Locale, Sprechtempo und TonhÃ¶he, Probe-Ausgabe.</td>
+</tr>
+<tr>
+<td><strong>Spracheingabe Ã¼ber Tastatur</strong></td>
+<td>Diktat mit SchlÃ¼sselwÃ¶rtern â€žTitel â€¦", â€žBeschreibung â€¦", â€žDatum â€¦", â€žUhrzeit â€¦" â†’ Parser fÃ¼llt Felder.</td>
+</tr>
+<tr>
+<td><strong>Sprach-Makros</strong></td>
+<td>Trigger â†’ Expansion â†’ Parsing. CRUD (anlegen/bearbeiten/lÃ¶schen), Aktiv/Filter, Vorschau-Parsing, Duplikat-PrÃ¼fung.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="5-wetter-pollen-dwd">5) Wetter &amp; Pollen (DWD)<a class="headerlink" href="#5-wetter-pollen-dwd" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>PLZ</strong> + optionale <strong>Warnregion</strong>, <strong>Ruhezeiten</strong> (DND für DWD).</li>
-<li><strong>Wetterwarnungen</strong> (z. B. Hagel, Gewitter, Sturm, Regen, Schnee, Wind, Frost, Nebel) – pro Typ aktivierbar.</li>
-<li><strong>Pollenflug</strong> mit <strong>Schwellwert</strong> („ab Intensität …“) und <strong>Pollenarten</strong> (Gräser, Birke, Erle, Hasel, Esche, Beifuß, Ambrosia, Roggen).</li>
-<li><strong>Sofort prüfen</strong> startet direkt eine DWD-Abfrage.<br />
-  Integration auf Home (Indikatoren, Infozeilen).</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standort</strong></td>
+<td>PLZ + optionale Warnregion, Ruhezeiten (DND fÃ¼r DWD).</td>
+</tr>
+<tr>
+<td><strong>Wetterwarnungen</strong></td>
+<td>Hagel, Gewitter, Sturm, Regen, Schnee, Wind, Frost, Nebel â€“ pro Typ aktivierbar.</td>
+</tr>
+<tr>
+<td><strong>Pollenflug</strong></td>
+<td>Schwellwert (â€žab IntensitÃ¤t â€¦") und Pollenarten (GrÃ¤ser, Birke, Erle, Hasel, Esche, BeifuÃŸ, Ambrosia, Roggen).</td>
+</tr>
+<tr>
+<td><strong>Sofort prÃ¼fen</strong></td>
+<td>Startet direkt eine DWD-Abfrage. Integration auf Home (Indikatoren, Infozeilen).</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="6-benachrichtigungen-alarme">6) Benachrichtigungen &amp; Alarme<a class="headerlink" href="#6-benachrichtigungen-alarme" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Robuste <strong>Planung/Stornierung</strong> je Aktivität/Datum (inkl. Batch/Offsets).</li>
-<li><strong>Exakte Alarme</strong> (falls vom System erlaubt) für pünktliche Auslösung.</li>
-<li><strong>Cancel-Logik</strong> für zugeordnete Benachrichtigungen beim Löschen/Aufräumen.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Planung/Stornierung</strong></td>
+<td>Robuste Logik je AktivitÃ¤t/Datum (inkl. Batch/Offsets).</td>
+</tr>
+<tr>
+<td><strong>Exakte Alarme</strong></td>
+<td>Falls vom System erlaubt, fÃ¼r pÃ¼nktliche AuslÃ¶sung.</td>
+</tr>
+<tr>
+<td><strong>Cancel-Logik</strong></td>
+<td>Zugeordnete Benachrichtigungen werden beim LÃ¶schen/AufrÃ¤umen storniert.</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>Wichtig: Für zuverlässige Zustellung sind <strong>Benachrichtigungen erlauben</strong>, <strong>Exakte Alarme</strong> (falls vorhanden) und <strong>Akku-Optimierung ignorieren</strong> erforderlich.</p>
+<p><strong>Wichtig:</strong> FÃ¼r zuverlÃ¤ssige Zustellung sind <strong>Benachrichtigungen erlauben</strong>, <strong>Exakte Alarme</strong> (falls vorhanden) und <strong>Akku-Optimierung ignorieren</strong> erforderlich.</p>
 </blockquote>
 <hr />
-<h2 id="7-home-ubersicht">7) Home-Übersicht<a class="headerlink" href="#7-home-ubersicht" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Datumsnavigation</strong> (Gestern/Heute/Morgen/Arrows), <strong>Fortschrittsbalken</strong> (Erledigt / Gesamt), <strong>Kennzahlen</strong> (Gesamt, Erledigt, Hohe Priorität).</li>
-<li><strong>Infozeile</strong>: Wetterwarnungen &amp; Pollenstatus (DWD).</li>
-<li><strong>Tabs</strong>: Offen · Überfällig · Erledigt · DWD.</li>
-<li><strong>Schnellaktionen</strong> &amp; <strong>Segmentlisten</strong> für Überfälliges.</li>
-<li><strong>FABs</strong>: Aktivität hinzufügen, Spracheingabe, Zyklus-Generator.<br />
-  Extras: <strong>Heatbar/Stats</strong> und <strong>Konfetti</strong> bei Erfolgen (geräte-/versionabhängig).</li>
-</ul>
+<h2 id="7-home-abersicht">7) Home-Ãœbersicht<a class="headerlink" href="#7-home-abersicht" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Datumsnavigation</strong></td>
+<td>Gestern / Heute / Morgen / Pfeile, Datumspicker.</td>
+</tr>
+<tr>
+<td><strong>Kennzahlen</strong></td>
+<td>Gesamt, Erledigt (Kreisdiagramm + ZÃ¤hler), Hohe PrioritÃ¤t.</td>
+</tr>
+<tr>
+<td><strong>Collapsible Header</strong></td>
+<td>Der gesamte Kopfbereich lÃ¤sst sich Ã¼ber einen Drag-Handle einklappen. Eingeklappt zeigt eine kompakte 52 px-Leiste Datum, Fortschritt und Hohe-PrioritÃ¤t-Badge â€“ fÃ¼r bis zu dreimal mehr sichtbare AktivitÃ¤ten.</td>
+</tr>
+<tr>
+<td><strong>Infozeile</strong></td>
+<td>Wetterwarnungen &amp; Pollenstatus (DWD), Mini-Status (Schritte heute).</td>
+</tr>
+<tr>
+<td><strong>Tabs</strong></td>
+<td>Offen Â· ÃœberfÃ¤llig Â· Erledigt Â· DWD.</td>
+</tr>
+<tr>
+<td><strong>Speed Dial</strong></td>
+<td>Ein zentraler FAB, der beim Antippen sechs Aktionen auffÃ¤chert: Hilfe, Daily Briefing (Multi-Tap mit Badge), Zyklus planen, Sprachbefehl, AufrÃ¤umen, Neu anlegen.</td>
+</tr>
+<tr>
+<td><strong>Extras</strong></td>
+<td>Heatbar/Stats und Konfetti bei Erfolgen (gerÃ¤te-/versionabhÃ¤ngig).</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="8-einstellungen">8) Einstellungen<a class="headerlink" href="#8-einstellungen" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Sprache</strong> (DE/EN).</li>
-<li><strong>Aussehen</strong>: Hell/Dunkel/System, <strong>dynamische Farben</strong> (Android 12+).</li>
-<li><strong>Benachrichtigungen – Allgemein</strong>: Land, <strong>PLZ</strong>, <strong>Warnregion</strong>, <strong>Ruhezeiten</strong>, globaler Schalter.</li>
-<li><strong>Wetterwarnungen (DWD)</strong> und <strong>Pollen (DWD)</strong>: fein konfigurierbar, <strong>Sofort prüfen</strong>.</li>
-<li><strong>TTS-Einstellungen</strong>: Stimme, Tempo, Tonhöhe.</li>
-<li><strong>Zeitansagen</strong>: Fenster, Taktung, TTS, <strong>Erzeugen</strong>.</li>
-<li><strong>Gefährlicher Bereich</strong>: Debug-Infos unter Aktivitäten, <strong>Benachrichtigungen neu aufbauen</strong>, <strong>Alle Aktivitäten löschen</strong>.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Sektion</th>
+<th>Optionen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprache</strong></td>
+<td>Deutsch / English.</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>Hell / Dunkel / System, dynamische Farben (Android 12+).</td>
+</tr>
+<tr>
+<td><strong>Anzeige &amp; Text</strong></td>
+<td>Schriftart (System / Inter / Roboto Slab / OpenDyslexic), SchriftgrÃ¶ÃŸe (80 %â€“150 %), Live-Vorschau.</td>
+</tr>
+<tr>
+<td><strong>Benachrichtigungen â€“ Allgemein</strong></td>
+<td>Land, PLZ, Warnregion, Ruhezeiten, globaler Schalter.</td>
+</tr>
+<tr>
+<td><strong>Wetterwarnungen (DWD)</strong></td>
+<td>Gefahrentypen fein konfigurierbar, Sofort prÃ¼fen.</td>
+</tr>
+<tr>
+<td><strong>Pollenflug (DWD)</strong></td>
+<td>Schwellwert, Pollenarten, Sofort prÃ¼fen.</td>
+</tr>
+<tr>
+<td><strong>Stimme &amp; Ausgabe (TTS)</strong></td>
+<td>Stimme, Tempo, TonhÃ¶he, LautstÃ¤rke, Vorschau.</td>
+</tr>
+<tr>
+<td><strong>Zeitansagen</strong></td>
+<td>Fenster, Taktung, TTS, Erzeugen.</td>
+</tr>
+<tr>
+<td><strong>Hintergrund-Animation</strong></td>
+<td>Lottie-Animationen pro Monat oder Standard.</td>
+</tr>
+<tr>
+<td><strong>Gamification</strong></td>
+<td>Gesprochene Lob-SÃ¤tze bei ÃœberfÃ¤llig â†’ Erledigt.</td>
+</tr>
+<tr>
+<td><strong>GefÃ¤hrlicher Bereich</strong></td>
+<td>Debug-Infos, Benachrichtigungen neu aufbauen, Alle AktivitÃ¤ten lÃ¶schen.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="9-daten-technik">9) Daten &amp; Technik<a class="headerlink" href="#9-daten-technik" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>SQLite</strong> (lokal), Repositories für Aktivitäten &amp; Settings.</li>
-<li><strong>Scheduling-Service</strong> mit <strong>RRULE-Evaluator</strong> und <strong>Cycle-Generator</strong>.</li>
-<li><strong>Notification-Facade</strong> kapselt Planung, IDs und Cancel-Pfad.</li>
-<li><strong>Info-Dialog</strong> zeigt Version/Kanal, Android-Build, Package-ID, DB-Pfad/Datei/Tabellen/Einträge und Rechte-Status (Benachrichtigungen, Exakte Alarme, Akku-Optimierung).</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQLite</strong></td>
+<td>Lokale Datenbank, Repositories fÃ¼r AktivitÃ¤ten &amp; Settings.</td>
+</tr>
+<tr>
+<td><strong>Scheduling-Service</strong></td>
+<td>RRULE-Evaluator und Cycle-Generator.</td>
+</tr>
+<tr>
+<td><strong>Notification-Facade</strong></td>
+<td>Kapselt Planung, IDs und Cancel-Pfad.</td>
+</tr>
+<tr>
+<td><strong>Info-Dialog</strong></td>
+<td>Zeigt Version/Kanal, Android-Build, Package-ID, DB-Pfad/Datei/Tabellen/EintrÃ¤ge und Rechte-Status.</td>
+</tr>
+<tr>
+<td><strong>Theme-System</strong></td>
+<td>Dynamisches TextTheme Ã¼ber <code>google_fonts</code>, globaler TextScaler Ã¼ber <code>AppStore</code>.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="10-datenschutz-offline">10) Datenschutz &amp; Offline<a class="headerlink" href="#10-datenschutz-offline" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Aktivitäten liegen <strong>lokal</strong> (keine Cloud-Pflicht).  </li>
-<li>DWD-Daten benötigen Internet; bei Offline-Betrieb Aktualisierung beim nächsten Sync.</li>
-<li>Spracheingabe erfolgt über die <strong>Tastatur-App</strong> (deren Datenschutzbestimmungen gelten).</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lokale Datenhaltung</strong></td>
+<td>AktivitÃ¤ten liegen lokal (keine Cloud-Pflicht).</td>
+</tr>
+<tr>
+<td><strong>DWD-Daten</strong></td>
+<td>BenÃ¶tigen Internet; bei Offline-Betrieb Aktualisierung beim nÃ¤chsten Sync.</td>
+</tr>
+<tr>
+<td><strong>Spracheingabe</strong></td>
+<td>Erfolgt Ã¼ber die Tastatur-App (deren Datenschutzbestimmungen gelten).</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="11-grenzen-hinweise">11) Grenzen &amp; Hinweise<a class="headerlink" href="#11-grenzen-hinweise" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Ruhezeiten</strong> wirken nur für DWD-Warnungen – nicht für Aufgaben-Alarme.</li>
-<li>Ohne Systemrechte (<strong>Exakte Alarme</strong>/Benachrichtigungen/ Akku-Optimierung) können Erinnerungen verspätet sein.</li>
-<li>Kalender-/Zeitzonen-Besonderheiten bei RRULEs werden berücksichtigt, dennoch nach Importen prüfen.</li>
+<li><strong>Ruhezeiten</strong> wirken nur fÃ¼r DWD-Warnungen â€“ nicht fÃ¼r Aufgaben-Alarme.  </li>
+<li>Ohne Systemrechte (Exakte Alarme / Benachrichtigungen / Akku-Optimierung) kÃ¶nnen Erinnerungen verspÃ¤tet sein.  </li>
+<li>Kalender-/Zeitzonen-Besonderheiten bei RRULEs werden berÃ¼cksichtigt, dennoch nach Importen prÃ¼fen.</li>
 </ul>
 
 
@@ -1406,6 +1657,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>

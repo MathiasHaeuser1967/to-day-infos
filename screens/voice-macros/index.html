@@ -653,20 +653,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ubersicht-liste" class="md-nav__link">
+  <a href="#2-abersicht-liste" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Übersicht (Liste)
+      2) Ãœbersicht (Liste)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Ãœbersicht (Liste)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eintrag-in-der-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eintrag in der Liste
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-makro-erstellenbearbeiten" class="md-nav__link">
+  <a href="#3-makro-erstellen-bearbeiten" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Makro erstellen/bearbeiten
+      3) Makro erstellen / bearbeiten
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3) Makro erstellen / bearbeiten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#untersta14tzte-schla14sselwarter-in-der-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnterstÃ¼tzte SchlÃ¼sselwÃ¶rter in der Expansion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1105,20 +1135,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ubersicht-liste" class="md-nav__link">
+  <a href="#2-abersicht-liste" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Übersicht (Liste)
+      2) Ãœbersicht (Liste)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Ãœbersicht (Liste)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eintrag-in-der-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eintrag in der Liste
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-makro-erstellenbearbeiten" class="md-nav__link">
+  <a href="#3-makro-erstellen-bearbeiten" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Makro erstellen/bearbeiten
+      3) Makro erstellen / bearbeiten
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3) Makro erstellen / bearbeiten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#untersta14tzte-schla14sselwarter-in-der-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnterstÃ¼tzte SchlÃ¼sselwÃ¶rter in der Expansion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1166,73 +1226,194 @@
 
 
 <h1 id="sprach-makros">Sprach-Makros<a class="headerlink" href="#sprach-makros" title="Permanent link">&para;</a></h1>
-<p>Mit Sprach-Makros sprichst du <strong>kurze Trigger</strong> (z. B. „makro eins“) und die App ersetzt sie automatisch durch einen <strong>vollen Befehlstext</strong> (Expansion). Dieser Text wird anschließend wie bei der <em>Spracheingabe (Tastatur)</em> geparst – also in <strong>Titel, Beschreibung, Datum, Uhrzeit</strong> zerlegt.</p>
+<p>Mit Sprach-Makros sprichst du <strong>kurze Trigger</strong> (z. B. â€žmakro eins") und die App ersetzt sie automatisch durch einen <strong>vollen Befehlstext</strong> (Expansion). Dieser Text wird anschlieÃŸend wie bei der <em>Spracheingabe (Tastatur)</em> geparst â€“ also in <strong>Titel, Beschreibung, Datum, Uhrzeit</strong> zerlegt.</p>
 <hr />
 <h2 id="1-zweck-prinzip">1) Zweck &amp; Prinzip<a class="headerlink" href="#1-zweck-prinzip" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Trigger → Expansion → Parsing</strong><br />
-  1) Du sprichst den <em>Trigger</em>.<br />
-  2) Die App ersetzt ihn durch den hinterlegten <em>Expansion</em>-Text.<br />
-  3) Der Parser liest daraus Titel/Beschreibung/Datum/Uhrzeit.</li>
-<li>Beispiel:<br />
-  Trigger: <code>makro 1</code> → Expansion: <code>Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr</code>.</li>
-</ul>
+<p>Die Verarbeitungskette lautet: <strong>Trigger â†’ Expansion â†’ Parsing</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Schritt</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Trigger</strong></td>
+<td>Du sprichst den kurzen Trigger-Begriff.</td>
+</tr>
+<tr>
+<td>2. <strong>Expansion</strong></td>
+<td>Die App ersetzt ihn durch den hinterlegten Expansion-Text.</td>
+</tr>
+<tr>
+<td>3. <strong>Parsing</strong></td>
+<td>Der Parser liest daraus Titel/Beschreibung/Datum/Uhrzeit.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong><br />
+Trigger: <code>makro 1</code> â†’ Expansion: <code>Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr</code>.</p>
 <hr />
-<h2 id="2-ubersicht-liste">2) Übersicht (Liste)<a class="headerlink" href="#2-ubersicht-liste" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Suche</strong>: filtert nach Namen/Trigger.</li>
-<li><strong>Filterchips</strong>: <em>Alle</em> · <em>Aktiv</em> · <em>Inaktiv</em>.</li>
-<li><strong>Neues Makro</strong>: <strong>+</strong> (unten rechts) oder Button „Makro erstellen“ im Leerlauf-State.</li>
-<li><strong>Eintrag</strong> zeigt:</li>
-<li><strong>Name</strong> (links) und <strong>Statuspunkt</strong> (grün = aktiv, grau = inaktiv).</li>
-<li><strong>Trigger</strong> (z. B. <code>makro 1</code>).</li>
-<li><strong>Vorschau</strong>: kurz, wie der Expansion-Text geparst würde.</li>
-<li><strong>Schalter „Aktiv“</strong> zum schnellen Ein/Aus.</li>
-<li><strong>Menü (⋮)</strong>: bearbeiten/löschen (je nach Version).</li>
-</ul>
+<h2 id="2-abersicht-liste">2) Ãœbersicht (Liste)<a class="headerlink" href="#2-abersicht-liste" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suche</strong></td>
+<td>Filtert nach Namen/Trigger.</td>
+</tr>
+<tr>
+<td><strong>Filterchips</strong></td>
+<td><em>Alle</em> Â· <em>Aktiv</em> Â· <em>Inaktiv</em>.</td>
+</tr>
+<tr>
+<td><strong>Neues Makro</strong></td>
+<td><strong>+</strong> (unten rechts) oder Button â€žMakro erstellen" im Leerlauf-State.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eintrag-in-der-liste">Eintrag in der Liste<a class="headerlink" href="#eintrag-in-der-liste" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Anzeige</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong> (links)</td>
+<td>Interner Titel mit <strong>Statuspunkt</strong> (grÃ¼n = aktiv, grau = inaktiv).</td>
+</tr>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>z. B. <code>makro 1</code>.</td>
+</tr>
+<tr>
+<td><strong>Vorschau</strong></td>
+<td>Kurze Darstellung, wie der Expansion-Text geparst wÃ¼rde.</td>
+</tr>
+<tr>
+<td><strong>Schalter â€žAktiv"</strong></td>
+<td>Zum schnellen Ein-/Ausschalten.</td>
+</tr>
+<tr>
+<td><strong>MenÃ¼ (â‹®)</strong></td>
+<td>Bearbeiten/LÃ¶schen.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="3-makro-erstellenbearbeiten">3) Makro erstellen/bearbeiten<a class="headerlink" href="#3-makro-erstellenbearbeiten" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Name (für dich)</strong><br />
-  Interner Titel, frei wählbar.</li>
-<li><strong>Trigger (gesprochen)</strong><br />
-  Kurze, eindeutige Worte. Vermeide leicht verwechselbare Begriffe; sprich klar.</li>
-<li><strong>Expansion (voller Befehl-Text)</strong><br />
-  Schreibe hier den kompletten Sprachbefehl so, wie er diktiert werden soll.<br />
-  Unterstützte Schlüsselwörter (Reihenfolge beliebig, Felder optional):</li>
-<li><strong>Titel …</strong></li>
-<li><strong>Beschreibung …</strong></li>
-<li><strong>Datum …</strong> – z. B. <em>heute</em>, <em>morgen</em>, <em>übermorgen</em>, <em>am 22.10.</em>, <em>am Mittwoch</em>.</li>
-<li><strong>Uhrzeit …</strong> – z. B. <em>18 Uhr</em>, <em>07:15</em>.<br />
-  Beispiel-Expansion:<br />
-<code>Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr</code></li>
-<li><strong>Aktiv</strong>: Makro sofort nutzbar machen.</li>
-<li><strong>Vorschau-Parsing</strong><br />
-  Zeigt live, was der Parser aktuell aus der Expansion ableitet (<strong>Titel/Beschreibung/Datum/Uhrzeit</strong>).</li>
-<li><strong>Speichern</strong> / <strong>Abbrechen</strong>.</li>
-</ul>
+<h2 id="3-makro-erstellen-bearbeiten">3) Makro erstellen / bearbeiten<a class="headerlink" href="#3-makro-erstellen-bearbeiten" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name (fÃ¼r dich)</strong></td>
+<td>Interner Titel, frei wÃ¤hlbar.</td>
+</tr>
+<tr>
+<td><strong>Trigger (gesprochen)</strong></td>
+<td>Kurze, eindeutige Worte. Vermeide leicht verwechselbare Begriffe; sprich klar.</td>
+</tr>
+<tr>
+<td><strong>Expansion (voller Befehl-Text)</strong></td>
+<td>Schreibe hier den kompletten Sprachbefehl so, wie er diktiert werden soll (siehe unten).</td>
+</tr>
+<tr>
+<td><strong>Aktiv</strong></td>
+<td>Makro sofort nutzbar machen.</td>
+</tr>
+<tr>
+<td><strong>Vorschau-Parsing</strong></td>
+<td>Zeigt live, was der Parser aktuell aus der Expansion ableitet.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="untersta14tzte-schla14sselwarter-in-der-expansion">UnterstÃ¼tzte SchlÃ¼sselwÃ¶rter in der Expansion<a class="headerlink" href="#untersta14tzte-schla14sselwarter-in-der-expansion" title="Permanent link">&para;</a></h3>
+<p>Reihenfolge beliebig, Felder optional:</p>
+<table>
+<thead>
+<tr>
+<th>SchlÃ¼sselwort</th>
+<th>Beispielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Titel â€¦</strong></td>
+<td>Freitext (z. B. â€žEinkauf").</td>
+</tr>
+<tr>
+<td><strong>Beschreibung â€¦</strong></td>
+<td>Freitext (z. B. â€žMilch und Brot").</td>
+</tr>
+<tr>
+<td><strong>Datum â€¦</strong></td>
+<td><em>heute</em>, <em>morgen</em>, <em>Ã¼bermorgen</em>, <em>am 22.10.</em>, <em>am Mittwoch</em>.</td>
+</tr>
+<tr>
+<td><strong>Uhrzeit â€¦</strong></td>
+<td><em>18 Uhr</em>, <em>07:15</em>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel-Expansion:</strong><br />
+<code>Titel Einkauf Beschreibung Milch und Brot Datum morgen Uhrzeit 18 Uhr</code></p>
+<p>AbschlieÃŸend: <strong>Speichern</strong> oder <strong>Abbrechen</strong>.</p>
 <hr />
 <h2 id="4-verwendung">4) Verwendung<a class="headerlink" href="#4-verwendung" title="Permanent link">&para;</a></h2>
-<ul>
+<ol>
 <li>Diktiere in der App (z. B. im Dialog <em>Spracheingabe (Tastatur)</em>).  </li>
-<li>Sprich <strong>genau den Trigger</strong> → die App ersetzt ihn durch die <strong>Expansion</strong> und übernimmt die erkannten Felder.  </li>
-<li>Danach kurz prüfen und speichern.</li>
-</ul>
+<li>Sprich <strong>genau den Trigger</strong> â†’ die App ersetzt ihn durch die <strong>Expansion</strong> und Ã¼bernimmt die erkannten Felder.  </li>
+<li>Danach kurz prÃ¼fen und speichern.</li>
+</ol>
 <hr />
 <h2 id="5-verwalten">5) Verwalten<a class="headerlink" href="#5-verwalten" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Aktiv/Inaktiv</strong> umschalten: über den Schalter in der Liste.</li>
-<li><strong>Bearbeiten/Löschen</strong>: über das <strong>⋮</strong>-Menü des Eintrags.</li>
-<li><strong>Filtern</strong>: <em>Alle</em>, <em>Aktiv</em> oder <em>Inaktiv</em>.</li>
-<li><strong>Suchen</strong>: Name/Trigger finden.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Weg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aktiv/Inaktiv</strong> umschalten</td>
+<td>Schalter in der Liste.</td>
+</tr>
+<tr>
+<td><strong>Bearbeiten/LÃ¶schen</strong></td>
+<td><strong>â‹®</strong>-MenÃ¼ des Eintrags.</td>
+</tr>
+<tr>
+<td><strong>Filtern</strong></td>
+<td><em>Alle</em>, <em>Aktiv</em> oder <em>Inaktiv</em>.</td>
+</tr>
+<tr>
+<td><strong>Suchen</strong></td>
+<td>Name/Trigger finden.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="6-tipps">6) Tipps<a class="headerlink" href="#6-tipps" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Eindeutige Trigger</strong> wählen (z. B. „makro eins“, „meeting vorlage“) und vorher testen.</li>
-<li><strong>Robuste Expansion</strong> schreiben: klare Wörter, 24-Stunden-Zeit (z. B. <em>14:30</em>), unnötige Füllwörter vermeiden.</li>
-<li><strong>Mehrere Felder</strong> sind möglich, nicht alle sind Pflicht (z. B. nur <em>Titel</em> + <em>Uhrzeit</em>).</li>
-<li>Wenn etwas nicht richtig erkannt wird: <strong>Vorschau</strong> prüfen und Expansion anpassen.</li>
+<li><strong>Eindeutige Trigger</strong> wÃ¤hlen (z. B. â€žmakro eins", â€žmeeting vorlage") und vorher testen.  </li>
+<li><strong>Robuste Expansion</strong> schreiben: klare WÃ¶rter, 24-Stunden-Zeit (z. B. <em>14:30</em>), unnÃ¶tige FÃ¼llwÃ¶rter vermeiden.  </li>
+<li><strong>Mehrere Felder</strong> sind mÃ¶glich, nicht alle sind Pflicht (z. B. nur <em>Titel</em> + <em>Uhrzeit</em>).  </li>
+<li>Wenn etwas nicht richtig erkannt wird: <strong>Vorschau</strong> prÃ¼fen und Expansion anpassen.</li>
 </ul>
 
 
@@ -1290,6 +1471,8 @@
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>

@@ -1211,10 +1211,10 @@
 <p><strong>Technical background</strong>
 - TTS only starts after engine init + audio focus. In Doze, Android shifts jobs into <strong>maintenance windows</strong>. Without <code>SCHEDULE_EXACT_ALARM</code>, alarms become <strong>inexact</strong> (+/- minutes).<br />
 - Audio routes (A2DP/HFP) can be briefly <strong>silent</strong> during handover until focus/route returns.</p>
-<p><strong>TTS pipeline (ASCII)</strong></p>
-<pre><code>[Trigger] -&gt; [Permissions?] -&gt; [Doze?] -&gt; [TTS init + audio focus] -&gt; [Audio route] -&gt; [Output]
-             no -&gt; (silent)     yes -&gt; (delayed)
-</code></pre>
+<p><strong>TTS pipeline (ASCII)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Trigger] -&gt; [Permissions?] -&gt; [Doze?] -&gt; [TTS init + audio focus] -&gt; [Audio route] -&gt; [Output]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>             no -&gt; (silent)     yes -&gt; (delayed)
+</code></pre></div></p>
 <hr />
 <h2 id="2-notifications-still-fire-even-though-i-deleted-activities">2) Notifications still fire even though I deleted activities<a class="headerlink" href="#2-notifications-still-fire-even-though-i-deleted-activities" title="Permanent link">&para;</a></h2>
 <p><strong>Symptoms</strong>
@@ -1231,13 +1231,13 @@
 <p><strong>Technical background</strong>
 - Reminders are scheduled with deterministic <strong>ID</strong> + <strong>payload</strong>. After schema changes the cancel logic does not recognize older entries -&gt; a <strong>one-time</strong> rebuild clears the legacy queue.<br />
 - Android continues to fire scheduled alarms even if the DB record has already been removed, as long as the alarm was not <strong>explicitly</strong> canceled.</p>
-<p><strong>Sequence (ASCII)</strong></p>
-<pre><code>App:  Schedule(id, payload) -&gt; [OS queue]
-App:  Cancel(filter)        -&gt; (schema matches?)
-                               yes -&gt; deleted
-                               no  -&gt; remains (orphan alarm)
-Solution: &quot;Rebuild notifications&quot;
-</code></pre>
+<p><strong>Sequence (ASCII)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>App:  Schedule(id, payload) -&gt; [OS queue]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>App:  Cancel(filter)        -&gt; (schema matches?)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                               yes -&gt; deleted
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                               no  -&gt; remains (orphan alarm)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Solution: &quot;Rebuild notifications&quot;
+</code></pre></div></p>
 <hr />
 <h2 id="3-reminders-do-not-fire-exactly-at-the-desired-time">3) Reminders do not fire <strong>exactly</strong> at the desired time<a class="headerlink" href="#3-reminders-do-not-fire-exactly-at-the-desired-time" title="Permanent link">&para;</a></h2>
 <p><strong>Symptoms</strong>
@@ -1253,11 +1253,11 @@ Solution: &quot;Rebuild notifications&quot;
 - <strong>Disable battery optimization</strong>, allow auto start/background execution.<br />
 - Check <strong>Do Not Disturb</strong>/quiet times.<br />
 - Do not use <strong>ultra power saving</strong> modes.</p>
-<p><strong>Flow (ASCII)</strong></p>
-<pre><code>[t] -&gt; (exact allowed?) no  -&gt; (inexact +/- min)
-      yes -&gt; (Doze?)   yes -&gt; (maintenance window)
-                         no -&gt; (exact at t)
-</code></pre>
+<p><strong>Flow (ASCII)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[t] -&gt; (exact allowed?) no  -&gt; (inexact +/- min)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>      yes -&gt; (Doze?)   yes -&gt; (maintenance window)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                         no -&gt; (exact at t)
+</code></pre></div></p>
 <hr />
 <h2 id="4-diagnostic-checklist-quick">4) Diagnostic checklist (quick)<a class="headerlink" href="#4-diagnostic-checklist-quick" title="Permanent link">&para;</a></h2>
 <p>1) <strong>Permissions</strong>
@@ -1355,6 +1355,8 @@ Solution: &quot;Rebuild notifications&quot;
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>
