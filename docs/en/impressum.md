@@ -1,57 +1,71 @@
-﻿# Imprint
-
-## 1) Service provider under Sec. 5 DDG
-**Name:** Mathias Haeuser  
-**Address:** Auenstrasse,36 &middot; 82515 Wolfratshausen &middot; Germany
-
-**Contact:**  
-Email: [app-today@gmx.de](mailto:app-today@gmx.de)  
-
-**Authorized representative:** Mathias Haeuser
+# Imprint
 
 ---
 
-## 2) VAT ID / Economic ID
-**VAT ID (Sec. 27a UStG):** "not available"  
-**Business identification number (Sec. 139c AO):** "not available"
+## 1) Service Provider according to § 5 DDG
+
+| Field | Value |
+|-------|-------|
+| **Name** | Mathias Haeuser |
+| **Address** | Auenstrasse 36 · 82515 Wolfratshausen · Germany |
+| **E-Mail** | [app-today@gmx.de](mailto:app-today@gmx.de) |
+| **Authorized Representative** | Mathias Haeuser |
 
 ---
 
-## 3) Supervisory authority / regulated professions (if applicable)
+## 2) VAT ID / Business ID
+
+| Field | Status |
+|-------|--------|
+| **VAT ID (§ 27a UStG)** | not available |
+| **Business Identification Number (§ 139c AO)** | not available |
+
+---
+
+## 3) Supervisory Authority / Regulated Professions
+
 Not applicable.
 
 ---
 
-## 4) Consumer dispute resolution / ODR
-We are **not obliged** and **not willing** to participate in dispute resolution proceedings before a consumer arbitration board (VSBG).  
-**Note:** The EU ODR platform was discontinued on **2025-07-20**.
+## 4) Consumer Dispute Resolution / ODR
+
+We are **not obligated** and **not willing** to participate in dispute resolution proceedings before a consumer arbitration board (VSBG).  
+**Note:** The EU ODR platform was discontinued on **20.07.2025**.
 
 ---
 
-## 5) Liability for content
-As a service provider we are responsible for our own content according to Sec. 7(1) TMG / Sec. 8 DDG under general laws.  
-Under Secs. 8-10 TMG / Secs. 9-11 DDG, we are **not obliged** to monitor transmitted or stored third-party information. Obligations to remove/block remain unaffected. Liability is only possible from the time of knowledge of a specific infringement. Upon becoming aware, we remove such content immediately.
+## 5) Liability for Content
+
+As service providers, we are responsible for our own content according to § 7 Abs. 1 TMG/§ 8 DDG under general laws.  
+However, according to §§ 8–10 TMG/§§ 9–11 DDG, we are **not obligated** to monitor transmitted or stored external information. Obligations to remove or block remain unaffected. Liability is only possible from the time of knowledge of a concrete infringement. Upon becoming aware, we will remove content immediately.
 
 ---
 
-## 6) Liability for links
-Our offer contains links to external third-party websites on whose content we have no influence. We therefore **assume no liability** for this external content; the respective provider is always responsible. Upon becoming aware of legal violations, we will remove such links immediately.
+## 6) Liability for Links
+
+Our offer contains links to external websites over whose content we have no influence. We **do not assume any liability** for these external contents; the respective provider is always responsible. Upon becoming aware of legal violations, we will remove such links immediately.
 
 ---
 
 ## 7) Copyright
-The content and works created by the site operators are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the **written consent** of the respective author. Downloads/copies are permitted for **private, non-commercial** use only.
+
+The content and works created by the site operators are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the **written consent** of the respective author. Downloads/copies are only permitted for **private, non-commercial** use.
 
 ---
 
-## 8) Image and source credits
-- Weather/Pollen: data from the **Deutscher Wetterdienst (DWD)**  
-- Other images/icons: app assets / system assets (Material)  
-- Favicon/app icon: own asset
+## 8) Image and Source Credits
+
+| Source | Usage |
+|--------|-------|
+| **Deutscher Wetterdienst (DWD)** | Weather/Pollen data. |
+| **Material Design Icons** | System assets and icons. |
+| **Own Asset** | Favicon/App icon. |
 
 ---
 
-## 9) Contact for legal inquiries
-Email: [app-today@gmx.de](mailto:app-today@gmx.de)
+## 9) Contact for Legal Inquiries
 
-**Last updated:** 2026-01-22
+**E-Mail:** [app-today@gmx.de](mailto:app-today@gmx.de)
+
+**Status:** 22.01.2026

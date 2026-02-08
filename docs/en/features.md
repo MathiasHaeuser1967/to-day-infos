@@ -4,92 +4,143 @@ An overview of what **ToDay** can do.
 
 ---
 
-## 1) Activities & reminders
-- **Activities/To-Dos** with: **title**, **description**, **date (Y-M-D)**, **time (HH:mm)**, **priority**, **reminders** (multiple offsets), **repeat (RRULE)**, **exceptions (exdates)**, **source** (e.g., `system:cycle`, `system:time_announce`), **schedRev**, **batchId**.
-- **Multiple reminders**: predefined offsets (start, 5/10/15/30 min, 1/2 h) &ndash; can be combined.
-- **Repeats**: daily / weekly (days + interval) / monthly (day in month or weekday in month) / yearly (date or weekday in month).  
-  End: **endless**, **until date**, **after count**.
-- **Overdue display**: segmentation **&lt; 1 h**, **1&ndash;3 h**, **&gt; 3 h** with quick actions and segmented lists.
+## 1) Activities & Reminders
+
+| Feature | Description |
+|---------|-------------|
+| **Fields** | Title, description, date (Y-M-D), time (HH:mm), priority, reminders (multiple offsets), repeat (RRULE), exceptions (exdates), source (e.g., `system:cycle`, `system:time_announce`), schedRev, batchId. |
+| **Multiple Reminders** | Predefined offsets (start, 5/10/15/30 min, 1/2 h) – combinable. |
+| **Repeats** | Daily / weekly (days + interval) / monthly (day in month or weekday in month) / yearly (date or weekday in month). End: endless, until date, after count. |
+| **Overdue Display** | Segmentation **< 1 h**, **1–3 h**, **> 3 h** with quick actions and segmented lists. |
 
 ---
 
-## 2) Cycles (planner)
-- Automatically creates **series of activities** from the start time with a count limit (e.g., "4 of 24 possible").
-- **Templates/presets** (Pomodoro & co.): `25/5` (Pomodoro), `50/10`, `52/17`, `45/15`, `30/10`, `60/15`, as well as **ultradian cycles** `90/15`, `90/20`, `75/15`.
-- Optional **focus start** (e.g., to jump directly into a session).
+## 2) Cycles (Planner)
+
+Automatically generates **series of activities** from start time with count limit (e.g., "4 of 24 possible").
+
+| Preset | Work Phase / Break |
+|--------|-------------------|
+| Pomodoro | 25 / 5 min |
+| 50/10 | 50 / 10 min |
+| 52/17 | 52 / 17 min |
+| 45/15 | 45 / 15 min |
+| 30/10 | 30 / 10 min |
+| 60/15 | 60 / 15 min |
+| Ultradian 90/15 | 90 / 15 min |
+| Ultradian 90/20 | 90 / 20 min |
+| Ultradian 75/15 | 75 / 15 min |
+
+Optional **focus start** (e.g., to jump directly into a session).
 
 ---
 
-## 3) Time announcements
-- Generates **time points between start and end time** at the selected **interval**: 10/15/20/30 min or **hourly**.
-- Output as **notification** &ndash; **TTS**.
-- Time announcements are tracked as their own **activity source** (`system:time_announce`).
+## 3) Time Announcements
+
+| Feature | Description |
+|---------|-------------|
+| **Time Points** | Generates time points between start and end time at the selected interval. |
+| **Interval** | 10 / 15 / 20 / 30 min or hourly. |
+| **Output** | Notification with TTS voice output. |
+| **Source** | Time announcements are tracked as their own activity source (`system:time_announce`). |
 
 ---
 
-## 4) Speech: TTS, STT & voice macros
-- **Text-to-Speech (TTS)**: engine/voice/locale, **speech rate** and **pitch**, test output.
-- **Speech input via keyboard**: dictate with keywords **"Title ...", "Description ...", "Date ...", "Time ..."** &rarr; parser fills fields.
-- **Voice macros**: **trigger &rarr; expansion &rarr; parsing**  
-  CRUD (create/edit/delete), active/filter, preview parsing, duplicate check.
+## 4) Speech: TTS, STT & Voice Macros
+
+| Function | Description |
+|----------|-------------|
+| **Text-to-Speech (TTS)** | Engine/voice/locale, speech rate and pitch, test output. |
+| **Speech Input via Keyboard** | Dictation with keywords "Title ...", "Description ...", "Date ...", "Time ..." → parser fills fields. |
+| **Voice Macros** | Trigger → expansion → parsing. CRUD (create/edit/delete), active/filter, preview parsing, duplicate check. |
 
 ---
 
-## 5) Weather & pollen (DWD)
-- **ZIP code** + optional **alert region**, **quiet times** (DND for DWD).
-- **Weather alerts** (e.g., hail, thunderstorm, storm, rain, snow, wind, frost, fog) &ndash; can be enabled per type.
-- **Pollen** with **threshold** ("from intensity ...") and **pollen types** (grasses, birch, alder, hazel, ash, mugwort, ragweed, rye).
-- **Check now** starts a DWD query immediately.  
-  Integration on Home (indicators, info lines).
+## 5) Weather & Pollen (DWD)
+
+| Feature | Description |
+|---------|-------------|
+| **Location** | ZIP code + optional alert region, quiet times (DND for DWD). |
+| **Weather Alerts** | Hail, thunderstorm, storm, rain, snow, wind, frost, fog – activatable per type. |
+| **Pollen** | Threshold ("from intensity ...") and pollen types (grasses, birch, alder, hazel, ash, mugwort, ragweed, rye). |
+| **Check Now** | Starts an immediate DWD query. Integration on Home (indicators, info lines). |
+
+*Note: The Weather & Pollen features (DWD) are only available in the German version.*
 
 ---
 
-## 6) Notifications & alarms
-- Robust **scheduling/cancel** per activity/date (including batch/offsets).
-- **Exact alarms** (if allowed by the system) for on-time triggering.
-- **Cancel logic** for associated notifications when deleting/cleaning up.
+## 6) Notifications & Alarms
 
-> Important: For reliable delivery, **allow notifications**, **exact alarms** (if available), and **ignore battery optimization**.
+| Feature | Description |
+|---------|-------------|
+| **Scheduling/Cancellation** | Robust logic per activity/date (including batch/offsets). |
+| **Exact Alarms** | If allowed by the system, for punctual triggering. |
+| **Cancel Logic** | Associated notifications are cancelled when deleting/cleaning up. |
+
+> **Important:** For reliable delivery, **allow notifications**, **exact alarms** (if available), and **ignore battery optimization** are required.
 
 ---
 
-## 7) Home overview
-- **Date navigation** (Yesterday/Today/Tomorrow/Arrows), **progress bar** (done / total), **key figures** (total, done, high priority).
-- **Info line**: weather alerts & pollen status (DWD).
-- **Tabs**: Open &middot; Overdue &middot; Done &middot; DWD.
-- **Quick actions** & **segmented lists** for overdue items.
-- **FABs**: add activity, speech input, cycle generator.  
-  Extras: **heatbar/stats** and **confetti** on achievements (device/version dependent).
+## 7) Home Overview
+
+| Element | Description |
+|---------|-------------|
+| **Date Navigation** | Yesterday / Today / Tomorrow / arrows, date picker. |
+| **Key Figures** | Total, done (pie chart + counter), high priority. |
+| **Collapsible Header** | The entire header area can be collapsed via a drag handle. When collapsed, a compact 52 px bar shows date, progress, and high-priority badge – allowing up to three times more visible activities. |
+| **Info Line** | Weather alerts & pollen status (DWD), mini-status (steps today). |
+| **Tabs** | Open · Overdue · Done · DWD. |
+| **Speed Dial** | A central FAB that unfolds six actions on tap: Help, Daily Briefing (multi-tap with badge), Plan Cycle, Voice Command, Cleanup, New Entry. |
+| **Extras** | Heatbar/stats and confetti on achievements (device/version dependent). |
+
+*Note: The DWD tab is only available in the German version.*
 
 ---
 
 ## 8) Settings
-- **Language** (DE/EN).
-- **Appearance**: light/dark/system, **dynamic colors** (Android 12+).
-- **Notifications &ndash; general**: country, **ZIP**, **alert region**, **quiet times**, global switch.
-- **Weather alerts (DWD)** and **pollen (DWD)**: finely configurable, **check now**.
-- **TTS settings**: voice, rate, pitch.
-- **Time announcements**: window, interval, TTS, **generate**.
-- **Dangerous area**: debug info under activities, **rebuild notifications**, **delete all activities**.
+
+| Section | Options |
+|---------|---------|
+| **Language** | German / English. |
+| **Appearance** | Light / Dark / System, dynamic colors (Android 12+). |
+| **Display & Text** | Font (System / Inter / Roboto Slab / OpenDyslexic), font size (80%–150%), live preview. |
+| **Notifications – General** | Country, ZIP, alert region, quiet times, global switch. |
+| **Weather Alerts (DWD)** | Danger types finely configurable, check now. |
+| **Pollen (DWD)** | Threshold, pollen types, check now. |
+| **Voice & Output (TTS)** | Voice, rate, pitch, volume, preview. |
+| **Time Announcements** | Window, interval, TTS, generate. |
+| **Background Animation** | Lottie animations per month or default. |
+| **Gamification** | Spoken praise sentences when overdue → done. |
+| **Danger Zone** | Debug info, rebuild notifications, delete all activities. |
+
+*Note: The Weather Alerts and Pollen sections (DWD) are only visible when the locale is set to German.*
 
 ---
 
-## 9) Data & tech
-- **SQLite** (local), repositories for activities & settings.
-- **Scheduling service** with **RRULE evaluator** and **cycle generator**.
-- **Notification facade** encapsulates scheduling, IDs and cancel path.
-- **Info dialog** shows version/channel, Android build, package ID, DB path/file/tables/entries and permission status (notifications, exact alarms, battery optimization).
+## 9) Data & Tech
+
+| Component | Description |
+|-----------|-------------|
+| **SQLite** | Local database, repositories for activities & settings. |
+| **Scheduling Service** | RRULE evaluator and cycle generator. |
+| **Notification Facade** | Encapsulates scheduling, IDs, and cancel path. |
+| **Info Dialog** | Shows version/channel, Android build, package ID, DB path/file/tables/entries, and permission status. |
+| **Theme System** | Dynamic TextTheme via `google_fonts`, global TextScaler via `AppStore`. |
 
 ---
 
-## 10) Privacy & offline
-- Activities are stored **locally** (no cloud requirement).  
-- DWD data requires internet; when offline, it updates on next sync.
-- Speech input is handled by the **keyboard app** (its privacy policy applies).
+## 10) Privacy & Offline
+
+| Aspect | Description |
+|--------|-------------|
+| **Local Data Storage** | Activities are stored locally (no cloud required). |
+| **DWD Data** | Requires internet; when offline, updates on next sync. |
+| **Speech Input** | Performed via the keyboard app (its privacy policy applies). |
 
 ---
 
-## 11) Limits & notes
-- **Quiet times** affect DWD alerts only &ndash; not task alarms.
-- Without system permissions (**exact alarms**/notifications/battery optimization) reminders may be delayed.
-- Calendar/time zone specifics for RRULEs are taken into account; nevertheless, verify after imports.
+## 11) Limits & Notes
+
+- **Quiet times** only affect DWD alerts – not task alarms.  
+- Without system permissions (exact alarms / notifications / battery optimization), reminders may be delayed.  
+- Calendar/time zone specifics for RRULEs are considered; nevertheless, verify after imports.
