@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#today-your-intelligent-daily-hub" class="md-skip">
           Skip to content
         </a>
       
@@ -998,28 +998,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#app-overview-dialogs-menus" class="md-nav__link">
+  <a href="#what-is-today" class="md-nav__link">
     <span class="md-ellipsis">
-      App overview: dialogs &amp; menus
+      What is ToDay?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="App overview: dialogs &amp; menus">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-features-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Features at a Glance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture &amp; Technology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture &amp; Technology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ascii-fallback-call-graph" class="md-nav__link">
+  <a href="#technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      ASCII fallback (call graph)
+      Technology Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#menu-structure-excerpt" class="md-nav__link">
+  <a href="#data-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Menu structure (excerpt)
+      Data Flow
     </span>
   </a>
   
@@ -1027,6 +1045,75 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-screen-the-daily-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Screen – The Daily Hub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-trigger-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD Trigger System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notification-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy &amp; Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-structure-dialogs-menus" class="md-nav__link">
+    <span class="md-ellipsis">
+      App Structure: Dialogs &amp; Menus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="App Structure: Dialogs &amp; Menus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits at a Glance
+    </span>
+  </a>
   
 </li>
       
@@ -1046,47 +1133,335 @@
 
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h1>
-<p>Welcome to the <strong>ToDay</strong> Help (English). Here you will find practical guides, explanations for all switches, and solutions to common problems.</p>
+<h1 id="today-your-intelligent-daily-hub">ToDay – Your Intelligent Daily Hub<a class="headerlink" href="#today-your-intelligent-daily-hub" title="Permanent link">&para;</a></h1>
+<p>Welcome to the <strong>ToDay</strong> documentation. This page provides you with a comprehensive overview of the app’s architecture, features, and technical details.</p>
 <hr />
-<h2 id="app-overview-dialogs-menus">App overview: dialogs &amp; menus<a class="headerlink" href="#app-overview-dialogs-menus" title="Permanent link">&para;</a></h2>
-<p>The following overview shows the most important <strong>screens</strong>, <strong>dialogs/sheets</strong>, and <strong>menu items</strong> of the app &mdash; as well as <strong>who calls whom</strong>.</p>
-<h4 id="ascii-fallback-call-graph">ASCII fallback (call graph)<a class="headerlink" href="#ascii-fallback-call-graph" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Home:
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  - + New / Edit        -&gt; (Activity dialog)
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  - ... Menu &gt; Cleanup  -&gt; (Cleanup sheet)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  - ... Menu &gt; Cycle    -&gt; (Cycle planner sheet)
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  - Voice button        -&gt; (Voice capture sheet)
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  - Microphone          -&gt; (Dictation sheet)
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  - Privacy notice      -&gt; (Privacy notice)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Menu (from Home):
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  - Settings            -&gt; [Settings]
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  - Info                -&gt; [Info]
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  - Voice macros        -&gt; [Voice macros]
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Settings:
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  - Section             -&gt; [Time announcements]
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  - Section             -&gt; [Weather &amp; pollen]
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  - Section             -&gt; [Language]
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  - Section             -&gt; [TTS]
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  - Danger zone         -&gt; (Rebuild notifications)
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Voice macros:
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  - Click entry         -&gt; (Edit macro - dialog)
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  - Long press / context-&gt; (Edit macro - sheet)
-</code></pre></div>
-<h3 id="menu-structure-excerpt">Menu structure (excerpt)<a class="headerlink" href="#menu-structure-excerpt" title="Permanent link">&para;</a></h3>
-<p><strong>App menu (from the Home screen):</strong>
-- <strong>Settings</strong> &ndash; App configuration (language, time announcements, weather/pollen, TTS, danger zone)
-- <strong>Info</strong> &ndash; System &amp; app information (copyable for support)
-- <strong>Voice macros</strong> &ndash; Manage voice shortcuts (create, edit, delete)</p>
-<p><strong>Settings &ndash; sections:</strong>
-- <strong>Time announcements</strong> &ndash; Interval, time window, optional Morse, test
-- <strong>Weather &amp; pollen</strong> &ndash; Enable alerts, sources
-- <strong>Language</strong> &ndash; German/English
-- <strong>TTS</strong> &ndash; Voice, speech rate, reading options
-- <strong>Danger zone</strong> &ndash; <em>Rebuild notifications</em> (re-schedule after system changes)</p>
+<h2 id="what-is-today">What is ToDay?<a class="headerlink" href="#what-is-today" title="Permanent link">&para;</a></h2>
+<p><strong>ToDay</strong> is a native Android app for day-based task and activity management. It combines classic task management with <strong>voice control (TTS/STT)</strong>, <strong>real-time weather data (German version only)</strong>, <strong>gamification elements</strong>, and a <strong>flexible cycle planner</strong> – all in a single, locally operating application.</p>
+<p>The app is developed with <strong>Flutter/Dart</strong> and uses a <strong>local SQLite database</strong> – no cloud requirement, no registration, and no dependency on external servers for core functionality.</p>
+<hr />
+<h2 id="core-features-at-a-glance">Core Features at a Glance<a class="headerlink" href="#core-features-at-a-glance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Day-Based Activities</strong></td>
+<td>Tasks with title, description, date, time, priority, and multiple reminders (combinable offsets).</td>
+</tr>
+<tr>
+<td><strong>Intelligent Recurrences</strong></td>
+<td>Full RRULE support: daily, weekly (with day selection), monthly (day or weekday), yearly. End: endless, until date, or after count.</td>
+</tr>
+<tr>
+<td><strong>Cycle Planner</strong></td>
+<td>Automatic series generation with scientifically based presets: Pomodoro (25/5), ultradian cycles (90/20), and more.</td>
+</tr>
+<tr>
+<td><strong>Time Announcements</strong></td>
+<td>Configurable times (10/15/20/30 min or hourly) with TTS voice output.</td>
+</tr>
+<tr>
+<td><strong>Daily Briefing</strong></td>
+<td>Daily briefing via speech output – filterable by priority (high/medium/low) via multi-tap.</td>
+</tr>
+<tr>
+<td><strong>Voice Macros</strong></td>
+<td>Trigger-based text expansion with preview parsing and duplicate checking.</td>
+</tr>
+<tr>
+<td><strong>German Weather Service Integration</strong></td>
+<td>Weather warnings (8 hazard types) and pollen forecasts (8 pollen types) from the German Weather Service, ZIP code based. <em>German version only.</em></td>
+</tr>
+<tr>
+<td><strong>TD Trigger System</strong></td>
+<td>Special activity titles (<code>TD:brief:high</code>, <code>TD:finance:gold</code>, <code>TD:steps:today</code>) trigger automated actions.</td>
+</tr>
+<tr>
+<td><strong>Gamification</strong></td>
+<td>Spoken praise phrases for completed overdue tasks, confetti animations, heatbar statistics.</td>
+</tr>
+<tr>
+<td><strong>Accessibility</strong></td>
+<td>Font selection including OpenDyslexic (dyslexia-optimized), font size 80%–150%, full TTS support.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="architecture-technology">Architecture &amp; Technology<a class="headerlink" href="#architecture-technology" title="Permanent link">&para;</a></h2>
+<h3 id="technology-stack">Technology Stack<a class="headerlink" href="#technology-stack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td>Flutter 3.x / Dart</td>
+</tr>
+<tr>
+<td><strong>UI Library</strong></td>
+<td>shadcn/ui (ShadApp) + Material Design 3</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>SQLite (local, no cloud sync)</td>
+</tr>
+<tr>
+<td><strong>State Management</strong></td>
+<td>ChangeNotifier / Provider</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>awesome_notifications (precise alarms, channels)</td>
+</tr>
+<tr>
+<td><strong>Speech Output</strong></td>
+<td>flutter_tts (engine/voice/locale configurable)</td>
+</tr>
+<tr>
+<td><strong>Weather Data</strong></td>
+<td>DWD Open Data API (German Weather Service)</td>
+</tr>
+<tr>
+<td><strong>Fonts</strong></td>
+<td>google_fonts (dynamic, 4 options)</td>
+</tr>
+<tr>
+<td><strong>Animations</strong></td>
+<td>Lottie (background), confetti, speed dial</td>
+</tr>
+<tr>
+<td><strong>Sensors</strong></td>
+<td>Android STEP_COUNTER (steps today)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+  subgraph UI["User Interface"]
+    direction LR
+    H[Home] --- E[Settings] --- SM[Voice Macros] --- I[Info]
+  end
+  subgraph STATE["State Management"]
+    direction LR
+    AS[AppStore] --- LS[LocaleStore] --- CN[ChangeNotifier]
+  end
+  subgraph SERVICE["Service Layer"]
+    direction LR
+    AcS[ActivityService] --- ScS[SchedulingService] --- DS[DWD-Service]
+    NF[NotificationFacade] --- TS[TTS-Service] --- SC[StepCounter]
+  end
+  subgraph DATA["Data Layer"]
+    direction LR
+    SQ[SQLite] --- SP[SharedPreferences] --- FSS[FlutterSecureStorage]
+  end
+  UI --&gt; STATE --&gt; SERVICE --&gt; DATA</code></pre>
+<hr />
+<h2 id="home-screen-the-daily-hub">Home Screen – The Daily Hub<a class="headerlink" href="#home-screen-the-daily-hub" title="Permanent link">&para;</a></h2>
+<p>The home screen is the heart of the app. It shows at a glance:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td>Date, date navigation, three key figure cards (total, done, high priority), LED indicators for DWD status.</td>
+</tr>
+<tr>
+<td><strong>Collapsible Header</strong></td>
+<td>The header can be collapsed – allowing up to three times more visible activities.</td>
+</tr>
+<tr>
+<td><strong>Tabs</strong></td>
+<td>Open · Overdue · Done · DWD – with counters in square brackets. <em>DWD tab only available in German version.</em></td>
+</tr>
+<tr>
+<td><strong>Activity List</strong></td>
+<td>Sorted by time, with checkbox, tap-to-edit, and long-press context actions.</td>
+</tr>
+<tr>
+<td><strong>Speed Dial</strong></td>
+<td>A central FAB with six quick actions: Help, Daily Briefing, Plan Cycle, Voice Command, Cleanup, New Entry.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="td-trigger-system">TD Trigger System<a class="headerlink" href="#td-trigger-system" title="Permanent link">&para;</a></h2>
+<p>A special feature of ToDay: <strong>TD Triggers</strong> are special activity titles that trigger automated actions when due.</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TD:brief:high</code></td>
+<td>Daily briefing for high priority via TTS.</td>
+</tr>
+<tr>
+<td><code>TD:brief:mid</code></td>
+<td>Daily briefing for medium priority via TTS.</td>
+</tr>
+<tr>
+<td><code>TD:brief:low</code></td>
+<td>Daily briefing for low priority via TTS.</td>
+</tr>
+<tr>
+<td><code>TD:finance:gold</code></td>
+<td>Gold price announcement (source: goldprice.org).</td>
+</tr>
+<tr>
+<td><code>TD:finance:silver</code></td>
+<td>Silver price announcement (source: goldprice.org).</td>
+</tr>
+<tr>
+<td><code>TD:steps:today</code></td>
+<td>Steps today via TTS (Android STEP_COUNTER).</td>
+</tr>
+</tbody>
+</table>
+<p>In the activity list, TD triggers are displayed <strong>user-friendly</strong> (e.g., “Daily Briefing High” instead of <code>TD:brief:high</code>).</p>
+<hr />
+<h2 id="notification-system">Notification System<a class="headerlink" href="#notification-system" title="Permanent link">&para;</a></h2>
+<p>ToDay uses a robust, multi-level notification system:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precise Alarms</strong></td>
+<td>Timely triggering (Android 13+ with permission).</td>
+</tr>
+<tr>
+<td><strong>Multiple Offsets</strong></td>
+<td>Start, 5/10/15/30 min, 1/2 hr – combinable per activity.</td>
+</tr>
+<tr>
+<td><strong>Batch Cancellation</strong></td>
+<td>Related alarms are automatically canceled when deleting/cleaning up.</td>
+</tr>
+<tr>
+<td><strong>Rebuild</strong></td>
+<td>“Rebuild notifications” cleans up orphan alarms after updates.</td>
+</tr>
+<tr>
+<td><strong>Quiet Times</strong></td>
+<td>DWD notifications respect configurable quiet times. <em>German version only.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="privacy-security">Privacy &amp; Security<a class="headerlink" href="#privacy-security" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local Data Storage</strong></td>
+<td>All activities are stored in a local SQLite database. No cloud required.</td>
+</tr>
+<tr>
+<td><strong>No Registration</strong></td>
+<td>The app works without account, email, or login.</td>
+</tr>
+<tr>
+<td><strong>DWD Data</strong></td>
+<td>Public API of the German Weather Service – no personal data. <em>German version only.</em></td>
+</tr>
+<tr>
+<td><strong>Voice Input</strong></td>
+<td>Done via the device’s keyboard app (subject to its privacy policy).</td>
+</tr>
+<tr>
+<td><strong>Sensors</strong></td>
+<td>STEP_COUNTER is evaluated locally only, no transmission to third parties.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="app-structure-dialogs-menus">App Structure: Dialogs &amp; Menus<a class="headerlink" href="#app-structure-dialogs-menus" title="Permanent link">&para;</a></h2>
+<h3 id="navigation-structure">Navigation Structure<a class="headerlink" href="#navigation-structure" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+  Home --&gt; SD[Speed Dial]
+  SD --&gt; Help
+  SD --&gt; DB[Daily Briefing]
+  SD --&gt; CP[Plan Cycle]
+  SD --&gt; VC[Voice Command]
+  SD --&gt; CL[Cleanup]
+  SD --&gt; NE[New Entry]
+  Home --&gt; AT[Tap Activity]
+  Home --&gt; Menu
+  Menu --&gt; Settings
+  Menu --&gt; Info
+  Menu --&gt; SM[Voice Macros]</code></pre>
+<p><strong>Settings Sections:</strong> Language, Design, Display and Text (font, font size, live preview), Notifications, Weather Warnings (German version only), Pollen Forecast (German version only), Voice and Output (TTS), Time Announcements, Background Animation, Gamification, Danger Zone.</p>
+<p><strong>Voice Macros:</strong> Tap entry (edit macro as dialog), long press (edit macro as sheet).</p>
+<hr />
+<h2 id="benefits-at-a-glance">Benefits at a Glance<a class="headerlink" href="#benefits-at-a-glance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>All-in-One App</strong></td>
+<td>Tasks, cycles, time announcements, weather, pollen, voice control – no app hopping needed.</td>
+</tr>
+<tr>
+<td><strong>100% Local</strong></td>
+<td>No cloud, no account, no dependency on external servers.</td>
+</tr>
+<tr>
+<td><strong>Voice Controlled</strong></td>
+<td>TTS output, voice input, and voice macros for hands-free operation.</td>
+</tr>
+<tr>
+<td><strong>Scientific Cycles</strong></td>
+<td>Pomodoro, ultradian rhythms, and other presets for productive work.</td>
+</tr>
+<tr>
+<td><strong>Accessibility</strong></td>
+<td>OpenDyslexic font, scalable font size, full TTS support.</td>
+</tr>
+<tr>
+<td><strong>German Weather Service Integration</strong></td>
+<td>Weather warnings and pollen forecasts directly in the daily view – ZIP code precise. <em>German version only.</em></td>
+</tr>
+<tr>
+<td><strong>Gamification</strong></td>
+<td>Praise phrases, confetti, and heatbar motivate you to keep going.</td>
+</tr>
+<tr>
+<td><strong>Flexible</strong></td>
+<td>Lottie animations per month, dynamic colors (Material You), light/dark mode.</td>
+</tr>
+</tbody>
+</table>
 
 
 

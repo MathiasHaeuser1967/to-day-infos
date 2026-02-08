@@ -1086,6 +1086,36 @@
 </thead>
 <tbody>
 <tr>
+<td>1.0.8.1</td>
+<td>Feature</td>
+<td><strong>Speed Dial FAB:</strong> The six individual Floating Action Buttons on the main page were replaced by a central Speed Dial button. When tapped, all actions fan out vertically upwards (<code>flutter_speed_dial</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Daily Briefing Badge:</strong> The briefing button in the Speed Dial shows a badge/counter with priority color: 1× ▲ red (high), 2× ■ orange (medium), 3× ▼ green (low). The Speed Dial remains open on the briefing button for multi-tap.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Collapsible Header:</strong> The header area on the main page (date, statistic cards, LEDs) can be collapsed via a drag handle. When collapsed, a compact 52 px bar shows date, progress, and high-priority badge.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Display &amp; Text:</strong> New settings section with font selection (System / Inter / Roboto Slab / OpenDyslexic), font size slider (80%–150%), and live preview of a sample activity card.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Replaced 32 hardcoded font sizes with dynamic theme references (<code>Theme.of(context).textTheme</code>). The app now fully responds to font size settings.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Integrated <code>google_fonts</code> package for font selection in settings.</td>
+</tr>
+<tr>
 <td>1.0.7.12</td>
 <td>Feature</td>
 <td>New app branding: Pony icon (Christmas bell) added as the new app logo and integrated as a PNG asset in the project.</td>
@@ -1093,147 +1123,192 @@
 <tr>
 <td></td>
 <td>Feature</td>
-<td>AppBar menu button replaced: the three-dots icon was replaced with the Pony icon. Tapping still opens the menu.</td>
+<td>AppBar menu button replaced: the three dots were replaced by the Pony icon. Tapping still opens the menu.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>Header block below the title (ShadCard) aligned to the activity cards: width reduced via a shared horizontal padding so the header and activity surfaces are flush.</td>
+<td>Header area below the title (ShadCard) visually aligned to activity cards: width reduced by central horizontal padding so header and activity surfaces are flush.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>Header block corners are now fully rounded: same radius on top and bottom for a cleaner look.</td>
+<td>Header corners now fully rounded: same radius top and bottom for a calmer overall look.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>TabBar area moved to the same flush width as the header so the top layout stays consistent.</td>
+<td>TabBar area adjusted to the same flush width as the header so all top elements are consistently aligned.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>New TD Steps Today trigger in the title: <code>TD:steps:today</code>. When such an activity is due, instead of the title, the number of <strong>steps today</strong> is spoken aloud.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Steps Today calculation via Android sensor <strong>STEP_COUNTER</strong> without external services. Daily value calculated as difference: current STEP_COUNTER minus daily start baseline.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Steps Today baseline logic (variant A): On first trigger of the day, baseline is set and clearly announced. From second trigger on the same date, the difference is spoken.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>TD Steps Today reset case: If current STEP_COUNTER is less than baseline, a sensor reset or device restart is assumed, baseline is reset, and counting restarts at 0 from then on.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>TD Steps Today error status instead of silent 0: If permission (ACTIVITY_RECOGNITION) or sensor value is missing, a clear error status is generated and spoken.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Android STEP_COUNTER connection stabilized: sensor value is continuously updated in the app process so a second trigger call without a step event can deliver correct values at that moment.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td>Home mini-status line introduced: Directly above the LED line, <strong>steps today</strong> is shown in the LED warning font size. Supports German and English.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Home mini-status is extensible: the line is designed so that further small status values can be added later without restructuring the layout.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td>Home mini-status values updated via existing day change watcher every minute, without new background services.</td>
 </tr>
 <tr>
 <td>1.0.7.11</td>
 <td>Feature</td>
-<td>Added a Daily Briefing button on Home. Voice output reads today&#39;s open activities by priority.</td>
+<td>Daily Briefing button added on Home. Voice output lists open activities for today by priority.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>Multi-tap on the Daily Briefing button: 1x high priority, 2x medium priority, 3x low priority. Uses an internal time window to detect tap count.</td>
+<td>Multi-tap on the Daily Briefing button: 1× high priority, 2× medium priority, 3× low priority. Time window for multi-click defined internally.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>Daily Briefing voice output supports German and English, based on the current app language.</td>
+<td>Voice output for Daily Briefing in German and English depending on current app language.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD title triggers: <code>TD:brief:high</code>, <code>TD:brief:mid</code>, <code>TD:brief:low</code>. When such an activity becomes due, the app speaks a generated daily briefing instead of reading the title.</td>
+<td>TD triggers in title: <code>TD:brief:high</code>, <code>TD:brief:mid</code>, <code>TD:brief:low</code>. When such an activity is due, a generated daily briefing is spoken instead of the title.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD briefing priority filter: <code>TD:brief:high</code> speaks <strong>High only</strong>, <code>TD:brief:mid</code> speaks <strong>Medium only</strong>, <code>TD:brief:low</code> speaks <strong>Low only</strong>. Other priorities are not spoken.</td>
+<td>TD briefing filter by priority: <code>TD:brief:high</code> speaks only <strong>High</strong>, <code>TD:brief:mid</code> only <strong>Medium</strong>, <code>TD:brief:low</code> only <strong>Low</strong>. Other priorities are not read aloud.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD briefing scope and rules: applies to the day of the trigger activity, sorts timed tasks first (ascending time), then untimed tasks, limits to max 5 timed and max 3 untimed, adds &quot;and more tasks&quot; if there are more. The trigger activity itself and any title starting with <code>TD:</code> are not spoken.</td>
+<td>TD briefing scope and rules: applies to the day of the trigger activity, sorts tasks with time ascending first, then without time, limits to max 5 with time and max 3 without time, adds "and more tasks" if there are more. The TD trigger activity itself and all titles starting with <code>TD:</code> are not spoken.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>Friendly display labels for TD triggers in the activity list instead of the raw token. German: Tagesbriefing High Mid Low. English: Daily Briefing High Mid Low. Stored title stays unchanged.</td>
+<td>Friendly display for TD triggers in the activity list instead of raw token. German: Tagesbriefing High, Medium, Low. English: Daily Briefing High, Mid, Low. Stored title remains unchanged.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>New TD finance title triggers: <code>TD:finance:gold</code>, <code>TD:finance:silver</code>. When such an activity becomes due, the app speaks a generated price announcement instead of reading the title.</td>
+<td>New TD Finance trigger in title: <code>TD:finance:gold</code>, <code>TD:finance:silver</code>. When such an activity is due, a generated price announcement is spoken instead of the title.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD finance data source and mapping: endpoint <code>https://data-asg.goldprice.org/dbXRates/USD</code>. Gold uses <code>xauClose</code> and silver uses <code>xagClose</code> as the USD price.</td>
+<td>TD Finance data source and mapping: endpoint <code>https://data-asg.goldprice.org/dbXRates/USD</code>. Gold uses <code>xauClose</code>, silver uses <code>xagClose</code> as price in USD.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD finance cache layer: prices are cached per metal for about 10 to 15 minutes or until app restart to avoid repeated fetches during scheduling.</td>
+<td>TD Finance cache layer: prices cached per metal for about 10 to 15 minutes or until app restart to avoid multiple fetches during scheduling.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD finance offline and error handling: no network calls inside the notification callback. On network errors scheduling continues and a clear fallback announcement is generated. No crash and no blocking of the notification system.</td>
+<td>TD Finance offline and error case: no network calls in notification callback. On network error, scheduling still occurs and a clear fallback announcement is generated. No crash, no blocking of notification system.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>TD finance notification rules: default loud channel with sound, allowWhileIdle enabled. No duplicate start time notification for trigger activities.</td>
+<td>TD Finance notification rules: default loud with sound, allowWhileIdle enabled. No duplicate notification at start time for trigger activities.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>Friendly display labels for TD finance triggers in the activity list instead of the raw token. German: Goldpreis Ansage, Silberpreis Ansage. English: Gold price announcement, Silver price announcement.</td>
+<td>Friendly display for TD Finance triggers in activity list instead of raw token. German: Gold price announcement, Silver price announcement. English: Gold price announcement, Silver price announcement.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Daily Briefing speech now consistently skips all activities whose titles start with <code>TD:</code> so trigger activities are not read as normal tasks.</td>
+<td>Daily Briefing speech now consistently filters out all activities whose title starts with <code>TD:</code> so trigger activities are not read as normal tasks.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>Home action buttons are now arranged in two rows. Original button size restored for easier tapping.</td>
+<td>Bottom action buttons on Home now two-row, original size restored for better tapping.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Fixed a release build error in the multi-tap Daily Briefing implementation (timer constant and clamp int conversion).</td>
+<td>Fixed build error in multi-tap Daily Briefing (timer constant and clamp int conversion).</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Timer is cancelled when Home is disposed to reduce side effects.</td>
+<td>Timer is correctly stopped when Home is closed to reduce side effects.</td>
 </tr>
 <tr>
 <td>1.0.7.10</td>
 <td>Feature</td>
-<td>Appearance improved. If Dynamic Color is off the app now uses a vivid orange base with matching accent colors. Shad UI uses orange. System theme stays unchanged.</td>
+<td>Appearance improved. When Dynamic Colors are off, the app now uses a vivid orange base with matching accent colors. Shad UI uses orange. System theme remains unchanged.</td>
 </tr>
 <tr>
 <td></td>
 <td>Feature</td>
-<td>Splash screen with loader and a support box to copy info and restart.</td>
+<td>Splash screen with loading indicator and support box for copying info and restarting.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>More stable app start with a short splash and a watchdog hint on delay.</td>
+<td>More stable app start with short splash and watchdog hint on delay.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>Faster cold start. Heavy init moved after the first frame via AppBootstrap. UI renders faster.</td>
+<td>Cold start accelerated. Heavy initialization moved behind first frame via AppBootstrap. UI renders faster.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>StartupMetrics logs first frame time and frame timings for diagnostics.</td>
+<td>StartupMetrics logs first-frame time and frame timings for diagnostics.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>DataWarmup uses compute and isolates for JSON parsing and prep.</td>
+<td>DataWarmup uses compute and isolate for JSON parsing and preparation.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>AssetWarmup precaches images only after the first frame.</td>
+<td>AssetWarmup loads images into cache only after first frame.</td>
 </tr>
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>BatteryHelper only on demand from Settings. Texts come from l10n in German and English.</td>
+<td>BatteryHelper only on demand from settings. Texts come from l10n German and English.</td>
 </tr>
 <tr>
 <td></td>
@@ -1243,22 +1318,22 @@
 <tr>
 <td></td>
 <td>Enhancement</td>
-<td>Lighter onCreate. runApp starts earlier. Splash navigates once bootstrap is ready.</td>
+<td>onCreate lightened. runApp starts earlier. Splash navigates only when bootstrap is ready.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Fixed &quot;ShadTheme.of()&quot; error. ShadApp is now the root wrapper.</td>
+<td>Fixed "ShadTheme.of()" error. ShadApp is now the root wrapper.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Fixed &quot;darkData&quot; build error. Switched to new ShadTheme API with theme and darkTheme fields.</td>
+<td>Fixed "darkData" build error. Switched to new ShadTheme API with theme and darkTheme fields.</td>
 </tr>
 <tr>
 <td></td>
 <td>Bugfix</td>
-<td>Removed the manually added awesome_notifications BootReceiver.</td>
+<td>Removed manually added awesome_notifications BootReceiver.</td>
 </tr>
 <tr>
 <td></td>
@@ -1268,12 +1343,12 @@
 <tr>
 <td>1.0.6.6</td>
 <td>Enhancement</td>
-<td>Default speech rate on first install changed from 1.0 to 0.5 for a more comfortable voice output.</td>
+<td>Default speech rate on first install reduced from 1.0 to 0.5 for a more pleasant voice output.</td>
 </tr>
 <tr>
 <td>1.0.6.5</td>
 <td>Feature</td>
-<td>Activities with past date or time can now be created and edited. A warning appears on save. No hard block.</td>
+<td>Activities with past date/time can now be created and edited. On save a warning appears – no hard block anymore.</td>
 </tr>
 <tr>
 <td>1.0.6.4</td>
@@ -1306,11 +1381,11 @@
 </tr>
 <tr>
 <td><strong>Refactor</strong></td>
-<td>Internal code changes without affecting functionality.</td>
+<td>Internal code restructuring without functional change.</td>
 </tr>
 <tr>
 <td><strong>Release</strong></td>
-<td>Initial version or formal version milestone.</td>
+<td>Initial release or formal version milestone.</td>
 </tr>
 <tr>
 <td><strong>Removed</strong></td>

@@ -1131,24 +1131,51 @@
 
 <h1 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h1>
 <p>ToDay requires only a few permissions. Set them up once and reminders will run reliably and on time.</p>
+<hr />
 <h2 id="1-confirm-installation">1) Confirm installation<a class="headerlink" href="#1-confirm-installation" title="Permanent link">&para;</a></h2>
 <p><img alt="Confirm installation" src="../../assets/img/de/permissions-1.png" /></p>
-<p>For sideload or USB installation, please confirm the system dialog with <strong>Install</strong>. (From the Play Store this step is skipped.)</p>
+<p>For sideload or USB installation, please confirm the system dialog with <strong>Install</strong>. (This step is skipped when installing from the Play Store.)</p>
+<hr />
 <h2 id="2-allow-notifications-android-13">2) Allow notifications (Android 13+)<a class="headerlink" href="#2-allow-notifications-android-13" title="Permanent link">&para;</a></h2>
 <p><img alt="Allow notifications" src="../../assets/img/de/permissions-2.png" /></p>
-<p>Allow notifications on first launch with <strong>Allow</strong> - otherwise Android will not show any reminders (cycles, time announcements, alarms).</p>
+<p>Allow notifications on first launch with <strong>Allow</strong> – otherwise Android will <strong>not</strong> show any reminders (cycles, time announcements, alarms).</p>
+<hr />
 <h2 id="3-power-saving-no-restrictions">3) Power saving: "No restrictions"<a class="headerlink" href="#3-power-saving-no-restrictions" title="Permanent link">&para;</a></h2>
 <p><img alt="Battery/Power saving - No restrictions" src="../../assets/img/de/permissions-3.png" /></p>
 <p>Exclude ToDay from power saving (<strong>No restrictions</strong>) so reminders are triggered <strong>on time</strong> and not delayed/batched by the system.<br />
-Labels may vary by device/Android version (e.g., <em>Battery optimization</em>, <em>Allow background activity</em>).</p>
+Labels may vary depending on device/Android version (e.g., <em>Battery optimization</em>, <em>Allow background activity</em>).</p>
 <hr />
 <h2 id="technical-details">Technical details<a class="headerlink" href="#technical-details" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Notifications</strong> - required to display reminders/alarms.  </li>
-<li><strong>Exact alarms</strong> <em>(if offered by the system)</em> - enables firing exactly at the scheduled time.  </li>
-<li><strong>Microphone</strong> <em>(only for dictation/voice macros)</em> - audio is used only for recognition, not stored.  </li>
-<li><strong>Network access</strong> - exclusively for DWD weather/pollen and reachability check.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>Required to display reminders/alarms.</td>
+</tr>
+<tr>
+<td><strong>Exact alarms</strong> <em>(if offered by the system)</em></td>
+<td>Allows firing exactly at the scheduled time.</td>
+</tr>
+<tr>
+<td><strong>Microphone</strong> <em>(only for dictation/voice macros)</em></td>
+<td>Audio is used only for recognition, not stored.</td>
+</tr>
+<tr>
+<td><strong>Physical activity</strong> <em>(only for TD:steps:today)</em></td>
+<td>Access to the Android step counter.</td>
+</tr>
+<tr>
+<td><strong>Network access</strong></td>
+<td>Exclusively for DWD weather/pollen &amp; reachability check.</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>ToDay uses <strong>no location data</strong>, <strong>no ads</strong>, <strong>no tracking</strong>.<br />
 Tasks &amp; settings stay <strong>local</strong> on your device.</p>

@@ -646,7 +646,7 @@
         <li class="md-nav__item">
   <a href="#1-purpose-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Purpose &amp; principle
+      1) Purpose &amp; Principle
     </span>
   </a>
   
@@ -655,18 +655,48 @@
         <li class="md-nav__item">
   <a href="#2-overview-list" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Overview (list)
+      2) Overview (List)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Overview (List)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entry-in-the-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entry in the List
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-createedit-macro" class="md-nav__link">
+  <a href="#3-create-edit-macro" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Create/edit macro
+      3) Create / Edit Macro
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3) Create / Edit Macro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-keywords-in-the-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Keywords in the Expansion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1098,7 +1128,7 @@
         <li class="md-nav__item">
   <a href="#1-purpose-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Purpose &amp; principle
+      1) Purpose &amp; Principle
     </span>
   </a>
   
@@ -1107,18 +1137,48 @@
         <li class="md-nav__item">
   <a href="#2-overview-list" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Overview (list)
+      2) Overview (List)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Overview (List)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entry-in-the-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entry in the List
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-createedit-macro" class="md-nav__link">
+  <a href="#3-create-edit-macro" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Create/edit macro
+      3) Create / Edit Macro
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3) Create / Edit Macro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-keywords-in-the-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Keywords in the Expansion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1165,74 +1225,195 @@
 
 
 
-<h1 id="voice-macros">Voice macros<a class="headerlink" href="#voice-macros" title="Permanent link">&para;</a></h1>
-<p>With voice macros you speak <strong>short triggers</strong> (e.g., "macro one") and the app automatically replaces them with a <strong>full command text</strong> (expansion). That text is then parsed just like <em>Voice input via keyboard</em> &mdash; i.e., into <strong>title, description, date, time</strong>.</p>
+<h1 id="voice-macros">Voice Macros<a class="headerlink" href="#voice-macros" title="Permanent link">&para;</a></h1>
+<p>With voice macros you speak <strong>short triggers</strong> (e.g., "macro one") and the app automatically replaces them with a <strong>full command text</strong> (expansion). That text is then parsed just like <em>Voice input (keyboard)</em> — i.e., into <strong>title, description, date, time</strong>.</p>
 <hr />
-<h2 id="1-purpose-principle">1) Purpose &amp; principle<a class="headerlink" href="#1-purpose-principle" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Trigger &rarr; Expansion &rarr; Parsing</strong><br />
-  1) You speak the <em>trigger</em>.<br />
-  2) The app replaces it with the stored <em>expansion</em> text.<br />
-  3) The parser extracts title/description/date/time from it.</li>
-<li>Example:<br />
-  Trigger: <code>macro 1</code> &rarr; Expansion: <code>Title Shopping Description Milk and bread Date tomorrow Time 6 pm</code>.</li>
-</ul>
+<h2 id="1-purpose-principle">1) Purpose &amp; Principle<a class="headerlink" href="#1-purpose-principle" title="Permanent link">&para;</a></h2>
+<p>The processing chain is: <strong>Trigger → Expansion → Parsing</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Trigger</strong></td>
+<td>You speak the short trigger term.</td>
+</tr>
+<tr>
+<td>2. <strong>Expansion</strong></td>
+<td>The app replaces it with the stored expansion text.</td>
+</tr>
+<tr>
+<td>3. <strong>Parsing</strong></td>
+<td>The parser extracts title/description/date/time from it.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong><br />
+Trigger: <code>macro 1</code> → Expansion: <code>Title Shopping Description Milk and bread Date tomorrow Time 6 pm</code>.</p>
 <hr />
-<h2 id="2-overview-list">2) Overview (list)<a class="headerlink" href="#2-overview-list" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Search</strong>: filters by name/trigger.</li>
-<li><strong>Filter chips</strong>: <em>All</em> &middot; <em>Active</em> &middot; <em>Inactive</em>.</li>
-<li><strong>New macro</strong>: <strong>+</strong> (bottom right) or the "Create macro" button in the empty state.</li>
-<li><strong>Entry</strong> shows:</li>
-<li><strong>Name</strong> (left) and <strong>status dot</strong> (green = active, gray = inactive).</li>
-<li><strong>Trigger</strong> (e.g., <code>macro 1</code>).</li>
-<li><strong>Preview</strong>: brief preview of how the expansion text would be parsed.</li>
-<li><strong>"Active" switch</strong> to quickly toggle on/off.</li>
-<li><strong>Menu (&#8942;)</strong>: edit/delete (depending on version).</li>
-</ul>
+<h2 id="2-overview-list">2) Overview (List)<a class="headerlink" href="#2-overview-list" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Search</strong></td>
+<td>Filters by name/trigger.</td>
+</tr>
+<tr>
+<td><strong>Filter chips</strong></td>
+<td><em>All</em> · <em>Active</em> · <em>Inactive</em>.</td>
+</tr>
+<tr>
+<td><strong>New Macro</strong></td>
+<td><strong>+</strong> (bottom right) or "Create Macro" button in empty state.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entry-in-the-list">Entry in the List<a class="headerlink" href="#entry-in-the-list" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Display</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong> (left)</td>
+<td>Internal title with <strong>status dot</strong> (green = active, gray = inactive).</td>
+</tr>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>e.g., <code>macro 1</code>.</td>
+</tr>
+<tr>
+<td><strong>Preview</strong></td>
+<td>Short display of how the expansion text would be parsed.</td>
+</tr>
+<tr>
+<td><strong>"Active" switch</strong></td>
+<td>For quick on/off toggling.</td>
+</tr>
+<tr>
+<td><strong>Menu (⋮)</strong></td>
+<td>Edit/Delete.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="3-createedit-macro">3) Create/edit macro<a class="headerlink" href="#3-createedit-macro" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Name (for you)</strong><br />
-  Internal title, freely selectable.</li>
-<li><strong>Trigger (spoken)</strong><br />
-  Short, unambiguous words. Avoid terms that are easily confused; speak clearly.</li>
-<li><strong>Expansion (full command text)</strong><br />
-  Write the complete voice command here as it should be dictated.<br />
-  Supported keywords (any order, fields optional):</li>
-<li><strong>Title ...</strong></li>
-<li><strong>Description ...</strong></li>
-<li><strong>Date ...</strong> &ndash; e.g., <em>today</em>, <em>tomorrow</em>, <em>the day after tomorrow</em>, <em>on 22 Oct</em>, <em>on Wednesday</em>.</li>
-<li><strong>Time ...</strong> &ndash; e.g., <em>6 pm</em>, <em>07:15</em>.<br />
-  Example expansion:<br />
-<code>Title Shopping Description Milk and bread Date tomorrow Time 6 pm</code></li>
-<li><strong>Active</strong>: make the macro available immediately.</li>
-<li><strong>Preview parsing</strong><br />
-  Shows live what the parser currently derives from the expansion (<strong>title/description/date/time</strong>).</li>
-<li><strong>Save</strong> / <strong>Cancel</strong>.</li>
-</ul>
+<h2 id="3-create-edit-macro">3) Create / Edit Macro<a class="headerlink" href="#3-create-edit-macro" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name (for you)</strong></td>
+<td>Internal title, freely selectable.</td>
+</tr>
+<tr>
+<td><strong>Trigger (spoken)</strong></td>
+<td>Short, unambiguous words. Avoid easily confused terms; speak clearly.</td>
+</tr>
+<tr>
+<td><strong>Expansion (full command text)</strong></td>
+<td>Write here the complete voice command as it should be dictated (see below).</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td>Make macro immediately usable.</td>
+</tr>
+<tr>
+<td><strong>Preview Parsing</strong></td>
+<td>Shows live what the parser currently derives from the expansion.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supported-keywords-in-the-expansion">Supported Keywords in the Expansion<a class="headerlink" href="#supported-keywords-in-the-expansion" title="Permanent link">&para;</a></h3>
+<p>Order arbitrary, fields optional:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title …</strong></td>
+<td>Free text (e.g., "Shopping").</td>
+</tr>
+<tr>
+<td><strong>Description …</strong></td>
+<td>Free text (e.g., "Milk and bread").</td>
+</tr>
+<tr>
+<td><strong>Date …</strong></td>
+<td><em>today</em>, <em>tomorrow</em>, <em>day after tomorrow</em>, <em>on 22 Oct</em>, <em>on Wednesday</em>.</td>
+</tr>
+<tr>
+<td><strong>Time …</strong></td>
+<td><em>6 pm</em>, <em>07:15</em>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example expansion:</strong><br />
+<code>Title Shopping Description Milk and bread Date tomorrow Time 6 pm</code></p>
+<p>Finally: <strong>Save</strong> or <strong>Cancel</strong>.</p>
 <hr />
 <h2 id="4-usage">4) Usage<a class="headerlink" href="#4-usage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Dictate in the app (e.g., in the <em>Voice input via keyboard</em> dialog).  </li>
-<li>Speak <strong>exactly the trigger</strong> &rarr; the app replaces it with the <strong>expansion</strong> and takes over the recognized fields.  </li>
+<ol>
+<li>Dictate in the app (e.g., in the <em>Voice input (keyboard)</em> dialog).  </li>
+<li>Speak <strong>exactly the trigger</strong> → the app replaces it with the <strong>expansion</strong> and applies the recognized fields.  </li>
 <li>Then quickly review and save.</li>
-</ul>
+</ol>
 <hr />
 <h2 id="5-manage">5) Manage<a class="headerlink" href="#5-manage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Toggle <strong>Active/Inactive</strong> via the switch in the list.</li>
-<li><strong>Edit/Delete</strong> via the entry's <strong>&#8942;</strong> menu.</li>
-<li><strong>Filter</strong>: <em>All</em>, <em>Active</em> or <em>Inactive</em>.</li>
-<li><strong>Search</strong>: find by name/trigger.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle <strong>Active/Inactive</strong></td>
+<td>Switch in the list.</td>
+</tr>
+<tr>
+<td><strong>Edit/Delete</strong></td>
+<td><strong>⋮</strong> menu of the entry.</td>
+</tr>
+<tr>
+<td><strong>Filter</strong></td>
+<td><em>All</em>, <em>Active</em> or <em>Inactive</em>.</td>
+</tr>
+<tr>
+<td><strong>Search</strong></td>
+<td>Find by name/trigger.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="6-tips">6) Tips<a class="headerlink" href="#6-tips" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Choose <strong>unambiguous triggers</strong> (e.g., "macro one", "meeting template") and test them first.</li>
-<li>Write a <strong>robust expansion</strong>: clear words, 24-hour time (e.g., <em>14:30</em>), avoid unnecessary filler words.</li>
-<li><strong>Multiple fields</strong> are possible; not all are mandatory (e.g., only <em>Title</em> + <em>Time</em>).</li>
-<li>If something is not recognized properly: check <strong>Preview</strong> and adjust the expansion.</li>
+<li>Choose <strong>unambiguous triggers</strong> (e.g., "macro one", "meeting template") and test them beforehand.  </li>
+<li>Write a <strong>robust expansion</strong>: clear words, 24-hour time (e.g., <em>14:30</em>), avoid unnecessary filler words.  </li>
+<li><strong>Multiple fields</strong> are possible; not all are mandatory (e.g., only <em>Title</em> + <em>Time</em>).  </li>
+<li>If something is not recognized correctly: check <strong>Preview</strong> and adjust the expansion.</li>
 </ul>
 
 

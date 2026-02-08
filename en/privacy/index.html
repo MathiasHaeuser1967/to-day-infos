@@ -897,20 +897,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6) Disclosure &amp; third parties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-hosting-of-this-website-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       7) Hosting of this website (GitHub Pages)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1198,20 +1192,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6) Disclosure &amp; third parties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-hosting-of-this-website-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       7) Hosting of this website (GitHub Pages)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1272,77 +1260,196 @@
 <hr />
 <h2 id="1-principles">1) Principles<a class="headerlink" href="#1-principles" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>No accounts. No cloud. No ads. No tracking.</strong></li>
-<li>Tasks and settings are stored <strong>only locally</strong> on your device.</li>
+<li><strong>No accounts. No cloud. No ads. No tracking.</strong>  </li>
+<li>Tasks and settings are stored <strong>only locally</strong> on your device.  </li>
 <li>Spoken input for dictation is processed <strong>ephemerally</strong> and <strong>not stored</strong>.</li>
 </ul>
 <hr />
 <h2 id="2-controller">2) Controller<a class="headerlink" href="#2-controller" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>App:</strong> ToDay (Android)  </li>
-<li><strong>Developer:</strong> Mathias Haeuser  </li>
-<li><strong>Contact:</strong> app-today@gmx.de<br />
-<em>(No data protection officer required - no server-side personal data is processed.)</em></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>App</strong></td>
+<td>ToDay (Android)</td>
+</tr>
+<tr>
+<td><strong>Developer</strong></td>
+<td>Mathias Haeuser</td>
+</tr>
+<tr>
+<td><strong>Contact</strong></td>
+<td>app-today@gmx.de</td>
+</tr>
+</tbody>
+</table>
+<p><em>(No data protection officer required – no server-side personal data is processed.)</em></p>
 <hr />
 <h2 id="3-what-data-does-the-app-process">3) What data does the app process?<a class="headerlink" href="#3-what-data-does-the-app-process" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Tasks &amp; settings</strong><br />
-  Title, description, date/time, priority, repeats, reminders, etc.<br />
-  -&gt; Stored <strong>locally</strong> in the app database (SQLite). No transfer to third parties.</li>
-<li><strong>Audio (microphone) for dictation</strong><br />
-  Spoken input is used only for recognition and is <strong>discarded immediately</strong> (not stored).</li>
-<li><strong>Network requests (DWD)</strong><br />
-  Weather/pollen alerts are retrieved via <strong>HTTPS</strong>. No personalization, no profiling.</li>
-<li><strong>Notifications/alarms</strong><br />
-  Scheduling and delivery take place <strong>locally</strong> via Android.</li>
-<li><strong>Analytics/tracking/ads</strong><br />
-<strong>Not used.</strong></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>Processing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tasks &amp; settings</strong></td>
+<td>Title, description, date/time, priority, repeats, reminders, etc. → Stored <strong>locally</strong> in the app database (SQLite). No transfer to third parties.</td>
+</tr>
+<tr>
+<td><strong>Audio (microphone) for dictation</strong></td>
+<td>Spoken input is used only for recognition and <strong>discarded immediately</strong> (not stored).</td>
+</tr>
+<tr>
+<td><strong>Network requests (DWD)</strong></td>
+<td>Weather/pollen alerts are retrieved via <strong>HTTPS</strong>. No personalization, no profiling. <em>(German version only)</em></td>
+</tr>
+<tr>
+<td><strong>Step counter</strong></td>
+<td>Android STEP_COUNTER is evaluated only locally. No transfer to third parties.</td>
+</tr>
+<tr>
+<td><strong>Notifications/alarms</strong></td>
+<td>Scheduling and delivery take place <strong>locally</strong> via Android.</td>
+</tr>
+<tr>
+<td><strong>Analytics/tracking/ads</strong></td>
+<td><strong>Not used.</strong></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="4-permissions">4) Permissions<a class="headerlink" href="#4-permissions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Microphone (RECORD_AUDIO):</strong> only for dictation (optional, runtime permission).  </li>
-<li><strong>Notifications (POST_NOTIFICATIONS, Android 13+):</strong> for reminders/alerts.  </li>
-<li><strong>Exact alarms (SCHEDULE_EXACT_ALARM, if available):</strong> on-time triggering of reminders.  </li>
-<li><strong>Internet (INTERNET/ACCESS_NETWORK_STATE):</strong> for DWD requests.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microphone (RECORD_AUDIO)</strong></td>
+<td>Only for dictation (optional, runtime permission).</td>
+</tr>
+<tr>
+<td><strong>Notifications (POST_NOTIFICATIONS, Android 13+)</strong></td>
+<td>For reminders/alerts.</td>
+</tr>
+<tr>
+<td><strong>Exact alarms (SCHEDULE_EXACT_ALARM, if available)</strong></td>
+<td>On-time triggering of reminders.</td>
+</tr>
+<tr>
+<td><strong>Physical activity (ACTIVITY_RECOGNITION)</strong></td>
+<td>For the step counter trigger (TD:steps:today).</td>
+</tr>
+<tr>
+<td><strong>Internet (INTERNET/ACCESS_NETWORK_STATE)</strong></td>
+<td>For DWD requests. <em>(German version only)</em></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="5-storage-duration-deletion">5) Storage duration &amp; deletion<a class="headerlink" href="#5-storage-duration-deletion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>Storage duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tasks/settings</strong></td>
+<td>Remain local until you delete them.</td>
+</tr>
+<tr>
+<td><strong>Audio (dictation)</strong></td>
+<td>Used only for recognition, then discarded.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to delete data:</strong></p>
 <ul>
-<li><strong>Tasks/settings:</strong> remain local until you delete them.  </li>
-<li><strong>Audio (dictation):</strong> used only for recognition, then discarded.  </li>
-<li><strong>How to delete data:</strong>  </li>
-<li>In the app: <em>Settings</em> -&gt; <em>Dangerous area</em> -&gt; <strong>Delete all activities</strong> (and maintenance functions).  </li>
-<li>Android: <em>Settings</em> -&gt; <em>Apps</em> -&gt; <em>ToDay</em> -&gt; <em>Storage &amp; cache</em> -&gt; <strong>Clear storage</strong>.</li>
+<li>In the app: <em>Settings</em> → <em>Danger Zone</em> → <strong>Delete all activities</strong> (or maintenance functions).  </li>
+<li>Android: <em>Settings</em> → <em>Apps</em> → <em>ToDay</em> → <em>Storage &amp; cache</em> → <strong>Clear storage</strong>.</li>
 </ul>
 <hr />
 <h2 id="6-disclosure-third-parties">6) Disclosure &amp; third parties<a class="headerlink" href="#6-disclosure-third-parties" title="Permanent link">&para;</a></h2>
 <ul>
 <li>There is <strong>no disclosure</strong> of your data by us to third parties.  </li>
 <li><strong>Speech recognition:</strong> Dictation uses the <strong>speech service of your keyboard/device</strong> (e.g., Google). Its processing/privacy is governed by the provider's settings/policies. We run <strong>no own servers</strong> for audio.  </li>
-<li><strong>DWD:</strong> Requests are made without a user account; ZIP code/alert region are used only for regional assignment.</li>
+<li><strong>DWD:</strong> Requests are made without a user account; ZIP code/alert region are used only for regional assignment. <em>(German version only)</em></li>
 </ul>
 <hr />
-<h3 id="7-hosting-of-this-website-github-pages">7) Hosting of this website (GitHub Pages)<a class="headerlink" href="#7-hosting-of-this-website-github-pages" title="Permanent link">&para;</a></h3>
+<h2 id="7-hosting-of-this-website-github-pages">7) Hosting of this website (GitHub Pages)<a class="headerlink" href="#7-hosting-of-this-website-github-pages" title="Permanent link">&para;</a></h2>
 <p>This help website is delivered via <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA).</p>
-<p><strong>Possible server logs:</strong> IP address, date/time, requested URL, referrer, user agent, status code.<br />
-<strong>Purpose:</strong> operation, security, abuse/error analysis.<br />
-<strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in secure, technically necessary delivery).<br />
-<strong>Third-country transfers:</strong> USA. GitHub relies, among other things, on Standard Contractual Clauses (SCC).<br />
-<strong>Notes:</strong><br />
-- GitHub Privacy Statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a><br />
-- We set <strong>no</strong> own cookies/trackers; therefore a <strong>consent banner</strong> is not required. If external services (e.g., analytics/fonts/embeds) are used in the future, <strong>prior</strong> consent under sec. 25 TTDSG/Art. 6(1)(a) GDPR will be obtained.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Possible server logs</strong></td>
+<td>IP address, date/time, requested URL, referrer, user agent, status code.</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Operation, security, abuse/error analysis.</td>
+</tr>
+<tr>
+<td><strong>Legal basis</strong></td>
+<td>Art. 6(1)(f) GDPR (legitimate interest in secure, technically necessary delivery).</td>
+</tr>
+<tr>
+<td><strong>Third-country transfers</strong></td>
+<td>USA. GitHub relies, among other things, on Standard Contractual Clauses (SCC).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>GitHub Privacy Statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>  </li>
+<li>We set <strong>no</strong> own cookies/trackers; therefore a <strong>consent banner</strong> is not required. If external services (e.g., analytics/fonts/embeds) are used in the future, <strong>prior</strong> consent under sec. 25 TTDSG/Art. 6(1)(a) GDPR will be obtained.</li>
+</ul>
 <hr />
 <h2 id="8-legal-bases-gdpr">8) Legal bases (GDPR)<a class="headerlink" href="#8-legal-bases-gdpr" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Art. 6(1)(b)</strong> - contract/performance (core app functions).  </li>
-<li><strong>Art. 6(1)(a)</strong> - consent (microphone permission for dictation; revocable at any time in Android).  </li>
-<li><strong>Art. 6(1)(f)</strong> - legitimate interests (secure delivery via HTTPS, technical caches/stability).</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Legal basis</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Art. 6(1)(b)</strong></td>
+<td>Contract/performance (core app functions).</td>
+</tr>
+<tr>
+<td><strong>Art. 6(1)(a)</strong></td>
+<td>Consent (microphone permission for dictation; revocable at any time in Android).</td>
+</tr>
+<tr>
+<td><strong>Art. 6(1)(f)</strong></td>
+<td>Legitimate interest (secure delivery via HTTPS, technical caches/stability).</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="9-your-rights">9) Your rights<a class="headerlink" href="#9-your-rights" title="Permanent link">&para;</a></h2>
-<p>You have, among other things, the rights to <strong>access</strong>, <strong>rectification</strong>, <strong>erasure</strong>, <strong>restriction</strong>, <strong>data portability</strong>, and <strong>objection</strong> (Art. 15-21 GDPR).<br />
+<p>You have, among others, the rights to <strong>access</strong>, <strong>rectification</strong>, <strong>erasure</strong>, <strong>restriction</strong>, <strong>data portability</strong>, and <strong>objection</strong> (Art. 15–21 GDPR).<br />
 As no server-side accounts are maintained, you can delete your data directly <strong>on the device</strong> (see above). For requests, contact us by email.</p>
 <hr />
 <h2 id="10-contact">10) Contact<a class="headerlink" href="#10-contact" title="Permanent link">&para;</a></h2>
