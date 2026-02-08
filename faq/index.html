@@ -1489,9 +1489,14 @@
 <p>TTS startet erst nach Engine-Init + Audio-Fokus. In Doze verschiebt Android Jobs in <strong>Maintenance-Windows</strong>. Ohne <code>SCHEDULE_EXACT_ALARM</code> werden Alarme <strong>inexakt</strong> (±Minuten).<br />
 Audio-Routen (A2DP/HFP) können beim Wechsel kurz <strong>stumm</strong> bleiben, bis Fokus/Route zurückkommt.</p>
 <p><strong>TTS-Pipeline:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Trigger] → [Berechtigungen?] → [Doze?] → [TTS-Init + Audio-Fokus] → [Audio-Route] → [Ausgabe]
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>              nein → (stumm)     ja → (verzögert)
-</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+  A[Trigger] --&gt; B{Berechtigungen?}
+  B -- nein --&gt; X1[stumm]
+  B -- ja --&gt; C{Doze?}
+  C -- ja --&gt; X2[verzoegert]
+  C -- nein --&gt; D[TTS-Init + Audio-Fokus]
+  D --&gt; E[Audio-Route]
+  E --&gt; F[Ausgabe]</code></pre>
 <hr />
 <h2 id="2-benachrichtigungen-feuern-noch-obwohl-ich-aktivitaten-geloscht-habe">2) Benachrichtigungen feuern noch, obwohl ich Aktivitäten gelöscht habe<a class="headerlink" href="#2-benachrichtigungen-feuern-noch-obwohl-ich-aktivitaten-geloscht-habe" title="Permanent link">&para;</a></h2>
 <h3 id="symptome_1">Symptome<a class="headerlink" href="#symptome_1" title="Permanent link">&para;</a></h3>
@@ -1540,12 +1545,12 @@ Audio-Routen (A2DP/HFP) können beim Wechsel kurz <strong>stumm</strong> bleiben
 <p>Erinnerungen werden mit deterministischer <strong>ID</strong> + <strong>Payload</strong> geplant. Nach Schema-Änderungen erkennt die Cancel-Logik ältere Einträge nicht → <strong>einmaliges</strong> Rebuild leert Alt-Queue.<br />
 Android feuert geplante Alarme weiter, auch wenn der DB-Datensatz bereits entfernt ist, solange der Alarm nicht <strong>explizit</strong> gecancelt wurde.</p>
 <p><strong>Sequenz:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>App:  Schedule(id, payload) → [OS-Queue]
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>App:  Cancel(filter)        → (Schema passt?)
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                               ja → gelöscht
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                               nein → bleibt (Waisen-Alarm)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Lösung: &quot;Benachrichtigungen neu aufbauen&quot;
-</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+  A1[Schedule id+payload] --&gt; Q[OS-Queue]
+  A2[Cancel filter] --&gt; S{Schema passt?}
+  S -- ja --&gt; D[geloescht]
+  S -- nein --&gt; W[bleibt als Waisen-Alarm]
+  W -. Loesung .-&gt; R[Benachrichtigungen neu aufbauen]</code></pre>
 <hr />
 <h2 id="3-erinnerungen-feuern-nicht-exakt-zum-gewunschten-zeitpunkt">3) Erinnerungen feuern nicht exakt zum gewünschten Zeitpunkt<a class="headerlink" href="#3-erinnerungen-feuern-nicht-exakt-zum-gewunschten-zeitpunkt" title="Permanent link">&para;</a></h2>
 <h3 id="symptome_2">Symptome<a class="headerlink" href="#symptome_2" title="Permanent link">&para;</a></h3>
@@ -1597,10 +1602,12 @@ Android feuert geplante Alarme weiter, auch wenn der DB-Datensatz bereits entfer
 <li>Keine <strong>Ultra-Energiesparmodi</strong> nutzen.</li>
 </ul>
 <p><strong>Ablauf:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[t] → (exakt erlaubt?) nein → (inexakt ±Min)
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>       ja → (Doze?) ja → (Maintenance-Window)
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              nein → (exakt bei t)
-</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+  T[Zeitpunkt t] --&gt; E{Exakt erlaubt?}
+  E -- nein --&gt; I[inexakt +/- Min]
+  E -- ja --&gt; DZ{Doze?}
+  DZ -- ja --&gt; M[Maintenance-Window]
+  DZ -- nein --&gt; OK[exakt bei t]</code></pre>
 <hr />
 <h2 id="4-diagnose-checkliste-schnell">4) Diagnose-Checkliste (Schnell)<a class="headerlink" href="#4-diagnose-checkliste-schnell" title="Permanent link">&para;</a></h2>
 <table>
