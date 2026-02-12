@@ -5,7 +5,7 @@
 
 | Version | Type | Description |
 |---------|------|-------------|
-| 1.0.8.1 | Feature | **Speed Dial FAB:** The six individual Floating Action Buttons on the main page were replaced by a central Speed Dial button. When tapped, all actions fan out vertically upwards (`flutter_speed_dial`). |
+| 1.0.7.14 | Feature | **Speed Dial FAB:** The six individual Floating Action Buttons on the main page were replaced by a central Speed Dial button. When tapped, all actions fan out vertically upwards (`flutter_speed_dial`). |
 || Feature | **Daily Briefing Badge:** The briefing button in the Speed Dial shows a badge/counter with priority color: 1× ▲ red (high), 2× ■ orange (medium), 3× ▼ green (low). The Speed Dial remains open on the briefing button for multi-tap. |
 || Feature | **Collapsible Header:** The header area on the main page (date, statistic cards, LEDs) can be collapsed via a drag handle. When collapsed, a compact 52 px bar shows date, progress, and high-priority badge. |
 || Feature | **Display & Text:** New settings section with font selection (System / Inter / Roboto Slab / OpenDyslexic), font size slider (80%–150%), and live preview of a sample activity card. |
