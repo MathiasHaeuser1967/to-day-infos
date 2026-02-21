@@ -585,5 +585,74 @@ adb logcat -v time -b all > log.txt
 adb logcat -v time | Select-String -Pattern "FATAL EXCEPTION|de.mathiashaeuser.today"
 ```
 
+---
 
+## 16) API-Dokumentation erzeugen (dart doc, Windows)
+
+### 16.1 Überblick
+- Die API-Dokumentation wird mit dem offiziellen Dart-Tool ``dart doc`` direkt aus den ``///``-Kommentaren im Quellcode generiert.  
+- Das Ergebnis ist eine vollständige **HTML-Dokumentation** aller öffentlichen Klassen, Methoden und Properties – inklusive der Abschnitte **„Warum diese Klasse/Methode existiert"** und **Design Patterns**.  
+
+> **Hinweis:** Es werden ausschließlich ``///``-Kommentare (Dart Doc Comments) erfasst. Reguläre ``//``-Kommentare erscheinen **nicht** in der generierten Dokumentation.
+
+### 16.2 Voraussetzungen
+- Platform Tools [Flutter 3.32.8, Dart SDK version: 3.8.1]  
+- Alle ``///``-Dokumentationskommentare im ``lib/``-Verzeichnis vorhanden  
+
+### 16.3 Prüfen
+```
+flutter --version
+dart --version
+```
+
+### 16.4 Dokumentation erzeugen
+```
+cd X:\apps\to-day
+dart doc .
+```
+
+Die Ausgabe wird im Verzeichnis ``doc\api\`` erzeugt.
+
+### 16.5 Dokumentation im Browser öffnen
+```
+start doc\api\index.html
+```
+
+### 16.6 Dokumentationsstandard (Dart Doc Comment Template)
+
+Jede öffentliche Klasse und Methode sollte nach folgendem Schema dokumentiert sein:
+
+```dart
+/// [Kurzbeschreibung der Klasse/Methode]
+///
+/// [Detailliertere Beschreibung, falls notwendig]
+///
+/// **Warum diese Klasse/Methode existiert:**
+/// [Erklärung, welches Problem gelöst wird und warum
+/// die Implementierung so gewählt wurde.]
+///
+/// **Design Pattern:**
+/// [Name des Patterns] – [Kurze Begründung]
+class MyWidget extends StatelessWidget {
+  /// [Kurzbeschreibung der Property]
+  final String title;
+
+  /// Erstellt eine neue Instanz von [MyWidget].
+  const MyWidget({super.key, required this.title});
+}
+```
+
+### 16.7 Häufige Warnungen und deren Behebung
+
+| Warnung | Ursache | Lösung |
+|---|---|---|
+| ``dangling_library_doc_comments`` | ``///`` steht vor ``import``/``part``/``library`` statt vor einer Deklaration | ``///`` in ``//`` ändern oder entfernen |
+| ``doc_directive_has_extra_arguments`` | ``{@macro name extra}`` hat zu viele Argumente | Überflüssiges Argument (z. B. Leerzeichen im Namen) entfernen |
+| ``unresolved_doc_reference`` | ``{@macro name}`` verweist auf ein nicht definiertes ``{@template name}`` | Entweder ``{@template}`` ergänzen oder ``{@macro}`` durch normalen Text ersetzen |
+
+### 16.8 Tipps
+- ``dart doc .`` muss im **Projekt-Root** ausgeführt werden (dort wo ``pubspec.yaml`` liegt).  
+- Die Generierung dauert je nach Projektgröße einige Sekunden.  
+- Bei Änderungen an den ``///``-Kommentaren einfach ``dart doc .`` erneut ausführen – das ``doc/api/``-Verzeichnis wird überschrieben.  
+- Das ``doc/``-Verzeichnis sollte in ``.gitignore`` stehen, da es jederzeit neu erzeugt werden kann.  
 
