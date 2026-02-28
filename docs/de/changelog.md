@@ -2,6 +2,14 @@
 
 | Version | Typ | Beschreibung |
 |---------|-----|-------------|
+| 1.0.7.15 | Feature | **FlexColorScheme Akzentfarbe:** Die bisherige Orange/Violet-Auswahl wurde durch 12 Material-3-Farbschemata ersetzt (`flex_color_scheme`). In den Einstellungen zeigt ein Farbkreis-Grid alle Varianten als tippbare Kreise. |
+|| Feature | **Surface-Blend-Level:** Neuer Slider in den Erscheinungsbild-Einstellungen. Regelt, wie stark die gewählte Akzentfarbe in Hintergrundflächen einfließt (0–40). FlexColorScheme berechnet alle Surface-Container-Farben automatisch. |
+|| Feature | **Überfällig-Erinnerung (Overdue Nag):** Wiederkehrende Sprachansage bei überfälligen Aktivitäten mit drei Eskalationsstufen: freundlich (0–15 Min), bestimmt (15–30 Min), nachdrücklich (> 30 Min). Bei mehreren überfälligen Aktivitäten wird eine Zusammenfassung gesprochen. |
+|| Feature | **Überfällig-Erinnerung Konfiguration:** Neue Einstellungssektion mit Aktivieren/Deaktivieren, Wiederholungsintervall (5/10/15/30/60 Minuten) und maximaler Wiederholungsanzahl (unbegrenzt/3/5/10). Standard: deaktiviert. |
+|| Enhancement | **Morse WPM-Maximum erhöht:** Die maximale Morse-Geschwindigkeit wurde von 45 auf 100 WPM angehoben, um auch HST-Wettbewerbe (High Speed Telegraphy) abzudecken. |
+|| Enhancement | **l10n-Schlüssel erweitert:** 15 neue Lokalisierungsschlüssel für Deutsch und Englisch (Farbmischung, Überfällig-Erinnerung). |
+|| Enhancement | **Theme-Erzeugung modernisiert:** Manuelle `ColorScheme.copyWith()`-Aufrufe durch `FlexThemeData.light/dark()` ersetzt. Surface-Farben und Blend-Level werden jetzt automatisch berechnet. |
+|| Enhancement | **Migration bestehender Einstellungen:** Alte Orange/Violet-Auswahl wird beim ersten Start automatisch auf das entsprechende FlexScheme migriert. |
 | 1.0.7.14 | Feature | **Speed Dial FAB:** Die sechs einzelnen Floating Action Buttons auf der Hauptseite wurden durch einen zentralen Speed Dial Button ersetzt. Beim Antippen fächern sich alle Aktionen vertikal nach oben auf (`flutter_speed_dial`). |
 || Feature | **Daily Briefing Badge:** Der Briefing-Button im Speed Dial zeigt einen Badge/Zähler mit Prioritätsfarbe: 1× ▲ rot (hoch), 2× ■ orange (mittel), 3× ▼ grün (gering). Der Speed Dial bleibt beim Briefing-Button für Multi-Tap geöffnet. |
 || Feature | **Collapsible Header:** Der Kopfbereich auf der Hauptseite (Datum, Statistik-Cards, LEDs) kann über einen Drag-Handle eingeklappt werden. Eingeklappt zeigt eine kompakte 52 px-Leiste Datum, Fortschritt und Hohe-Priorität-Badge. |

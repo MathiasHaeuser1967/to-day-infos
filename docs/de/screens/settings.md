@@ -23,6 +23,42 @@ Die Optionen sind in Karten gegliedert. Viele Karten haben einen eigenen **Speic
 | **Dunkel** | Erzwingt dunkles Thema. |
 | **Dynamische Farben (Android 12+)** | Übernimmt Akzentfarben vom System/Wallpaper (Material You). |
 
+### 2.1 Akzentfarbe (bei deaktivierten dynamischen Farben)
+
+Wenn **Dynamische Farben** ausgeschaltet sind, erscheint ein **Farbkreis-Grid** mit 12 Material-3-Farbschemata. Jedes Schema wird als tippbarer Farbkreis dargestellt; der aktive Kreis ist mit einem weißen Häkchen und einem Leuchtschatten markiert.
+
+| Schema | Vorschaufarbe |
+|--------|--------------|
+| Orange M3 | 🟠 (Standard) |
+| Amber | 🟡 |
+| Deep Orange M3 | 🔴 (dunkel) |
+| Red M3 | 🔴 |
+| Pink M3 | 🩷 |
+| Purple M3 | 🟣 |
+| Indigo M3 | 🔵 (dunkel) |
+| Blue M3 | 🔵 |
+| Cyan M3 | 🩵 |
+| Teal M3 | 🟢 (blaugrün) |
+| Green M3 | 🟢 |
+| Espresso | 🟤 |
+
+Die Farbschemata werden von **FlexColorScheme** bereitgestellt und berechnen automatisch alle Surface-Container-Farben (AppBar, Cards, Dialoge usw.).
+
+**Migration:** Beim ersten Start nach dem Update wird die alte Orange/Violet-Auswahl automatisch auf das entsprechende FlexScheme migriert.
+
+### 2.2 Farbmischung (Surface Blend Level)
+
+Unterhalb des Farbkreis-Grids befindet sich ein **Slider** (0–40), der steuert, wie stark die gewählte Akzentfarbe in die Hintergrundflächen einfließt:
+
+| Wert | Wirkung |
+|------|---------|
+| **0** | Neutrale, graue Oberflächen – kein Farbeinfluss. |
+| **10** | Leichte Tönung – dezenter Farbhauch. |
+| **20** | Mittlere Tönung – deutlich erkennbar. |
+| **30–40** | Starke Tönung – Oberflächen nehmen die Akzentfarbe deutlich auf. |
+
+Der aktuelle Wert wird rechts neben der Beschriftung als Zahl angezeigt. Änderungen wirken sofort auf die gesamte App.
+
 ---
 
 ## 3) Anzeige & Text
@@ -133,9 +169,47 @@ Erzeugt Zeitpunkte zwischen Start- und Endzeit und benachrichtigt im gewählten 
 | **Taktung** | Alle 10 / 15 / 20 / 30 Minuten oder stündlich. |
 | **Erzeugen** | Plant die Ansagen für das gewählte Fenster/Takt (Ruhezeiten aus *Allgemein* werden respektiert). |
 
+### 8.1 Morsecode
+
+| Option | Beschreibung |
+|--------|-------------|
+| **Morse verwenden** | Schalter, um Zeitansagen als Morsecode statt Sprache auszugeben. |
+| **Geschwindigkeit (WPM)** | Regler 10–100 WPM. Standard 18 WPM. Bereich deckt Anfänger bis HST-Wettbewerbe ab. |
+| **Farnsworth** | Regler 10–14. Steuert die Zeichenabstände bei niedrigen Geschwindigkeiten. |
+| **Frequenz** | Regler 600–700 Hz. Tonhöhe des Morsesignals. |
+| **Lautstärke** | Regler 0,30–1,00. |
+| **Hüllkurve (Attack/Release)** | Regler 5–8 ms. Weichheit der Tonanfänge/-enden. |
+| **Boost** | Schalter für verstärktes Signal. |
+| **Morse testen** | Spielt einen Beispieltext mit den aktuellen Einstellungen ab. |
+
 ---
 
-## 9) Hintergrund-Animation
+## 9) Überfällig-Erinnerung
+
+Wiederkehrende Sprachansage bei überfälligen Aktivitäten mit eskalierender Dringlichkeit. Gesprochen wird nur, wenn **TTS aktiviert** ist (*Stimme & Ausgabe*).
+
+| Option | Beschreibung |
+|--------|-------------|
+| **Überfällig-Ansage aktivieren** | Hauptschalter. Standard: **Aus**. |
+| **Wiederholungsintervall** | Wie oft erinnert wird: alle 5 / 10 / **15** / 30 / 60 Minuten. Standard: **15 Min**. |
+| **Maximale Wiederholungen** | Wie oft maximal erinnert wird: Unbegrenzt / 3 / **5** / 10. Standard: **5**. |
+
+### 9.1 Eskalationsstufen
+
+Die Ansage wird mit der Zeit dringlicher:
+
+| Überfällig seit | Stufe | Ansage (Deutsch) | Ansage (Englisch) |
+|----------------|-------|-----------------|-------------------|
+| 0–15 Minuten | Freundlich | „{Titel} ist jetzt überfällig." | „{Title} is now overdue." |
+| 15–30 Minuten | Bestimmt | „Erinnerung: {Titel} wartet noch auf Dich." | „Reminder: {Title} is still waiting for you." |
+| > 30 Minuten | Nachdrücklich | „{Titel} ist seit {Min} Minuten überfällig. Bitte erledigen!" | „{Title} has been overdue for {Min} minutes. Please take care of it!" |
+| Mehrere überfällig | Zusammenfassung | „Du hast {n} überfällige Aktivitäten. Bitte abhaken oder verschieben." | „You have {n} overdue activities. Please check them off or reschedule." |
+
+Die Erinnerung stoppt automatisch, wenn die Aktivität **abgehakt, verschoben oder gelöscht** wird, oder wenn die maximale Wiederholungsanzahl erreicht ist.
+
+---
+
+## 10) Hintergrund-Animation
 
 Steuert eine Lottie-Animation im Hintergrund des Tabs **„Offen"**.
 
@@ -157,7 +231,7 @@ Steuert eine Lottie-Animation im Hintergrund des Tabs **„Offen"**.
 
 ---
 
-## 10) Gamification: Gesprochene Sätze
+## 11) Gamification: Gesprochene Sätze
 
 Zufällige, kurze Lob-Sätze beim Wechsel einer Aktivität von **Überfällig** → **Erledigt**. Gesprochen wird nur, wenn **TTS aktiviert** ist (*Stimme & Ausgabe*).
 
@@ -184,7 +258,7 @@ Bei leerer Liste nutzt die App die Vorschläge aus der Übersetzung:
 
 ---
 
-## 11) Gefährlicher Bereich (Datenverwaltung)
+## 12) Gefährlicher Bereich (Datenverwaltung)
 
 | Option | Beschreibung |
 |--------|-------------|
@@ -194,9 +268,11 @@ Bei leerer Liste nutzt die App die Vorschläge aus der Übersetzung:
 
 ---
 
-## 12) Hinweise & Tipps
+## 13) Hinweise & Tipps
 
 - **Berechtigungen:** Stelle sicher, dass **Benachrichtigungen** (und ggf. **Exakte Alarme**) erlaubt sind und Akku-Optimierung die App nicht drosselt – sonst kommen Erinnerungen verspätet.  
 - **DWD offline:** Ohne Internet werden DWD-Daten erst bei Verbindung aktualisiert.  
 - **Mehrere Speichern-Buttons:** Jede Karte speichert **ihren** Bereich separat.  
 - **Anzeige & Text:** Änderungen an Schriftart und Schriftgröße wirken sich sofort auf die gesamte App aus – nutze die Live-Vorschau, um die optimale Einstellung zu finden.
+- **Akzentfarbe & Farbmischung:** Die Farbauswahl und der Blend-Level wirken sofort – kein Speichern-Button nötig. Bei aktivierten dynamischen Farben sind diese Optionen ausgeblendet.
+- **Überfällig-Erinnerung:** Die Ansage erfolgt nur, wenn TTS aktiviert ist. Die Erinnerung prüft alle 60 Sekunden auf überfällige Aktivitäten und spricht im konfigurierten Intervall.

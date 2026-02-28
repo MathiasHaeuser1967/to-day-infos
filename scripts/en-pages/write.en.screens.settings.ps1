@@ -26,6 +26,42 @@ The options are grouped into cards. Many cards have their own **Save** button �
 | **Dark** | Forces dark theme. |
 | **Dynamic colors (Android 12+)** | Adopts accent colors from the system/wallpaper (Material You). |
 
+### 2.1 Accent Color (when dynamic colors are disabled)
+
+When **Dynamic Colors** are turned off, a **color circle grid** with 12 Material 3 color schemes appears. Each scheme is displayed as a tappable color circle; the active circle is marked with a white checkmark and a glow shadow.
+
+| Scheme | Preview Color |
+|--------|--------------|
+| Orange M3 | 🟠 (default) |
+| Amber | 🟡 |
+| Deep Orange M3 | 🔴 (dark) |
+| Red M3 | 🔴 |
+| Pink M3 | 🩷 |
+| Purple M3 | 🟣 |
+| Indigo M3 | 🔵 (dark) |
+| Blue M3 | 🔵 |
+| Cyan M3 | 🩵 |
+| Teal M3 | 🟢 (blue-green) |
+| Green M3 | 🟢 |
+| Espresso | 🟤 |
+
+The color schemes are provided by **FlexColorScheme** and automatically calculate all surface container colors (AppBar, cards, dialogs, etc.).
+
+**Migration:** On the first launch after the update, the old Orange/Violet selection is automatically migrated to the corresponding FlexScheme.
+
+### 2.2 Surface Blend Level
+
+Below the color circle grid there is a **slider** (0–40) that controls how much the selected accent color blends into background surfaces:
+
+| Value | Effect |
+|-------|--------|
+| **0** | Neutral, grey surfaces – no color influence. |
+| **10** | Light tint – subtle color hint. |
+| **20** | Medium tint – clearly noticeable. |
+| **30–40** | Strong tint – surfaces take on the accent color prominently. |
+
+The current value is displayed as a number to the right of the label. Changes take effect immediately across the entire app.
+
 ---
 
 ## 3) Display & Text
@@ -142,9 +178,47 @@ Generates time points between start and end time and notifies at the selected ca
 | **Cadence** | Every 10 / 15 / 20 / 30 minutes or hourly. |
 | **Generate** | Schedules announcements for the selected window/cadence (quiet times from *General* are respected). |
 
+### 8.1 Morse Code
+
+| Option | Description |
+|--------|-------------|
+| **Use Morse** | Switch to output time announcements as Morse code instead of speech. |
+| **Speed (WPM)** | Slider 10–100 WPM. Default 18 WPM. Range covers beginners to HST competitions. |
+| **Farnsworth** | Slider 10–14. Controls character spacing at lower speeds. |
+| **Frequency** | Slider 600–700 Hz. Pitch of the Morse signal. |
+| **Volume** | Slider 0.30–1.00. |
+| **Envelope (Attack/Release)** | Slider 5–8 ms. Softness of tone onsets/offsets. |
+| **Boost** | Switch for amplified signal. |
+| **Test Morse** | Plays a sample text with the current settings. |
+
 ---
 
-## 9) Background Animation
+## 9) Overdue Reminder
+
+Recurring voice announcement for overdue activities with escalating urgency. Spoken only if **TTS is enabled** (*Voice & Output*).
+
+| Option | Description |
+|--------|-------------|
+| **Enable overdue announcement** | Master switch. Default: **Off**. |
+| **Repeat interval** | How often reminders are spoken: every 5 / 10 / **15** / 30 / 60 minutes. Default: **15 min**. |
+| **Maximum repeats** | How many times reminders are spoken at most: Unlimited / 3 / **5** / 10. Default: **5**. |
+
+### 9.1 Escalation Levels
+
+The announcement becomes more urgent over time:
+
+| Overdue since | Level | Announcement (German) | Announcement (English) |
+|--------------|-------|----------------------|----------------------|
+| 0–15 minutes | Friendly | "{Title} ist jetzt überfällig." | "{Title} is now overdue." |
+| 15–30 minutes | Firm | "Erinnerung: {Title} wartet noch auf Dich." | "Reminder: {Title} is still waiting for you." |
+| > 30 minutes | Insistent | "{Title} ist seit {Min} Minuten überfällig. Bitte erledigen!" | "{Title} has been overdue for {Min} minutes. Please take care of it!" |
+| Multiple overdue | Summary | "Du hast {n} überfällige Aktivitäten. Bitte abhaken oder verschieben." | "You have {n} overdue activities. Please check them off or reschedule." |
+
+The reminder stops automatically when the activity is **checked off, rescheduled, or deleted**, or when the maximum repeat count is reached.
+
+---
+
+## 10) Background Animation
 
 Controls a Lottie animation in the background of the **"Open"** tab.
 
@@ -166,7 +240,7 @@ Controls a Lottie animation in the background of the **"Open"** tab.
 
 ---
 
-## 10) Gamification: Spoken Sentences
+## 11) Gamification: Spoken Sentences
 
 Random short praise sentences when switching an activity from **Overdue** → **Done**. Spoken only if **TTS is enabled** (*Voice & Output*).
 
@@ -193,7 +267,7 @@ If the list is empty, the app uses the suggestions from the translation:
 
 ---
 
-## 11) Danger Zone (Data Management)
+## 12) Danger Zone (Data Management)
 
 | Option | Description |
 |--------|-------------|
@@ -203,12 +277,14 @@ If the list is empty, the app uses the suggestions from the translation:
 
 ---
 
-## 12) Notes & Tips
+## 13) Notes & Tips
 
 - **Permissions:** Make sure **notifications** (and if applicable **exact alarms**) are allowed and battery optimization does not throttle the app – otherwise reminders may be delayed.  
 - **DWD offline:** Without internet, DWD data is updated only when a connection is available.  
 - **Multiple Save buttons:** Each card saves **its** area separately.  
 - **Display & Text:** Changes to font and font size take effect immediately throughout the app – use the live preview to find the optimal setting.
+- **Accent color & surface blend:** Color selection and blend level take effect immediately – no Save button needed. When dynamic colors are enabled, these options are hidden.
+- **Overdue reminder:** Announcements are only spoken when TTS is enabled. The service checks for overdue activities every 60 seconds and speaks at the configured interval.
 '@
   Write-File $p $c
 }
