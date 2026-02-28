@@ -1086,6 +1086,46 @@
 </thead>
 <tbody>
 <tr>
+<td>1.0.7.15</td>
+<td>Feature</td>
+<td><strong>FlexColorScheme Akzentfarbe:</strong> Die bisherige Orange/Violet-Auswahl wurde durch 12 Material-3-Farbschemata ersetzt (<code>flex_color_scheme</code>). In den Einstellungen zeigt ein Farbkreis-Grid alle Varianten als tippbare Kreise.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Surface-Blend-Level:</strong> Neuer Slider in den Erscheinungsbild-Einstellungen. Regelt, wie stark die gewählte Akzentfarbe in Hintergrundflächen einfließt (0–40). FlexColorScheme berechnet alle Surface-Container-Farben automatisch.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Überfällig-Erinnerung (Overdue Nag):</strong> Wiederkehrende Sprachansage bei überfälligen Aktivitäten mit drei Eskalationsstufen: freundlich (0–15 Min), bestimmt (15–30 Min), nachdrücklich (&gt; 30 Min). Bei mehreren überfälligen Aktivitäten wird eine Zusammenfassung gesprochen.</td>
+</tr>
+<tr>
+<td></td>
+<td>Feature</td>
+<td><strong>Überfällig-Erinnerung Konfiguration:</strong> Neue Einstellungssektion mit Aktivieren/Deaktivieren, Wiederholungsintervall (5/10/15/30/60 Minuten) und maximaler Wiederholungsanzahl (unbegrenzt/3/5/10). Standard: deaktiviert.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td><strong>Morse WPM-Maximum erhöht:</strong> Die maximale Morse-Geschwindigkeit wurde von 45 auf 100 WPM angehoben, um auch HST-Wettbewerbe (High Speed Telegraphy) abzudecken.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td><strong>l10n-Schlüssel erweitert:</strong> 15 neue Lokalisierungsschlüssel für Deutsch und Englisch (Farbmischung, Überfällig-Erinnerung).</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td><strong>Theme-Erzeugung modernisiert:</strong> Manuelle <code>ColorScheme.copyWith()</code>-Aufrufe durch <code>FlexThemeData.light/dark()</code> ersetzt. Surface-Farben und Blend-Level werden jetzt automatisch berechnet.</td>
+</tr>
+<tr>
+<td></td>
+<td>Enhancement</td>
+<td><strong>Migration bestehender Einstellungen:</strong> Alte Orange/Violet-Auswahl wird beim ersten Start automatisch auf das entsprechende FlexScheme migriert.</td>
+</tr>
+<tr>
 <td>1.0.7.14</td>
 <td>Feature</td>
 <td><strong>Speed Dial FAB:</strong> Die sechs einzelnen Floating Action Buttons auf der Hauptseite wurden durch einen zentralen Speed Dial Button ersetzt. Beim Antippen fächern sich alle Aktionen vertikal nach oben auf (<code>flutter_speed_dial</code>).</td>
