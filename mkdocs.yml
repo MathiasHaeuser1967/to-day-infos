@@ -16,6 +16,7 @@ theme:
 
 extra_css:
   - assets/css/nav-sections.css
+  - assets/css/landing.css
   - assets/styles/extra.css
 
 extra_javascript:
@@ -56,6 +57,8 @@ plugins:
             "Changelog": "Changelog"
             "Rechtliches": "Legal"
             "Impressum": "Imprint"
+            "Installation": "Installation"
+            "Download & Installation": "Download & Installation"
 
 extra:
   alternate:
@@ -71,6 +74,8 @@ nav:
       - Start: index.md
       - Schnellstart: quickstart.md
       - Funktionen: features.md
+  - Download & Installation:
+      - Installation: install.md
   - Screens:
       - Home:
           - Home: screens/home.md

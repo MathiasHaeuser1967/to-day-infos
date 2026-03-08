@@ -1,20 +1,22 @@
 /* Farben pro Gruppe (hell) */
 :root{
-  --sec1:#1565c0; /* Einführung  - Blau   */
-  --sec2:#2e7d32; /* Screens     - Grün   */
-  --sec3:#ef6c00; /* Hilfe       - Orange */
-  --sec4:#8e24aa; /* System      - Lila   */
-  --sec5:#ad1457; /* Projekt     - Pink   */
-  --sec6:#ef6c00; /* Rechtliches - Orange */
+  --sec1:#1565c0; /* Einführung           - Blau   */
+  --sec2:#d84315; /* Download & Install.  - Rot    */
+  --sec3:#2e7d32; /* Screens              - Grün   */
+  --sec4:#ef6c00; /* Hilfe                - Orange */
+  --sec5:#8e24aa; /* System               - Lila   */
+  --sec6:#ad1457; /* Projekt              - Pink   */
+  --sec7:#ef6c00; /* Rechtliches          - Orange */
 }
 /* Farben pro Gruppe (dunkel) */
 [data-md-color-scheme="slate"]{
   --sec1:#90caf9;
-  --sec2:#a5d6a7;
-  --sec3:#ffcc80;
-  --sec4:#ce93d8;
-  --sec5:#f48fb1;
-  --sec6:#ffcc80;
+  --sec2:#ff8a65;
+  --sec3:#a5d6a7;
+  --sec4:#ffcc80;
+  --sec5:#ce93d8;
+  --sec6:#f48fb1;
+  --sec7:#ffcc80;
 }
 
 /* Grundstil der Gruppen-Überschriften */
@@ -43,7 +45,7 @@
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > label.md-nav__link.__bg,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(1) > .md-nav__title.__bg{}
 
-/* --- 2. Gruppe: Screens --- */
+/* --- 2. Gruppe: Download & Installation --- */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(2) > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(2) > .md-nav__title{
   --_c:var(--sec2);
@@ -52,7 +54,7 @@
   border-left-color:var(--sec2) !important;
 }
 
-/* --- 3. Gruppe: Hilfe --- */
+/* --- 3. Gruppe: Screens --- */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(3) > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(3) > .md-nav__title{
   --_c:var(--sec3);
@@ -61,7 +63,7 @@
   border-left-color:var(--sec3) !important;
 }
 
-/* --- 4. Gruppe: System --- */
+/* --- 4. Gruppe: Hilfe --- */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(4) > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(4) > .md-nav__title{
   --_c:var(--sec4);
@@ -70,7 +72,7 @@
   border-left-color:var(--sec4) !important;
 }
 
-/* --- 5. Gruppe: Projekt --- */
+/* --- 5. Gruppe: System --- */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(5) > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(5) > .md-nav__title{
   --_c:var(--sec5);
@@ -79,13 +81,22 @@
   border-left-color:var(--sec5) !important;
 }
 
-/* --- 6. Gruppe: Rechtliches --- */
+/* --- 6. Gruppe: Projekt --- */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(6) > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(6) > .md-nav__title{
   --_c:var(--sec6);
   color:var(--sec6) !important;
   opacity:1 !important;
   border-left-color:var(--sec6) !important;
+}
+
+/* --- 7. Gruppe: Rechtliches --- */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(7) > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section:nth-child(7) > .md-nav__title{
+  --_c:var(--sec7);
+  color:var(--sec7) !important;
+  opacity:1 !important;
+  border-left-color:var(--sec7) !important;
 }
 
 /* Optionale Hover-Verstärkung */
