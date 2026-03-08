@@ -36,6 +36,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/impressum/"/>
     </url>
     <url>
+        <loc>https://MathiasHaeuser1967.github.io/to-day-infos/install/</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://MathiasHaeuser1967.github.io/to-day-infos/install/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/install/"/>
+    </url>
+    <url>
         <loc>https://MathiasHaeuser1967.github.io/to-day-infos/permissions/</loc>
         <lastmod>2026-03-08</lastmod>
         <changefreq>daily</changefreq>
@@ -146,6 +153,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/impressum/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://MathiasHaeuser1967.github.io/to-day-infos/impressum/"/>
+    </url>
+    <url>
+        <loc>https://MathiasHaeuser1967.github.io/to-day-infos/en/install/</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://MathiasHaeuser1967.github.io/to-day-infos/en/install/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://MathiasHaeuser1967.github.io/to-day-infos/install/"/>
     </url>
     <url>
         <loc>https://MathiasHaeuser1967.github.io/to-day-infos/en/permissions/</loc>
