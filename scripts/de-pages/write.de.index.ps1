@@ -1,175 +1,154 @@
-﻿function Write-De-Index {
+function Write-De-Index {
   $p = Join-Path $DocsDe 'index.md'
   $c = @'
-# ToDay – Deine intelligente Tageszentrale
-
-Willkommen zur **ToDay**-Dokumentation. Diese Seite gibt dir einen umfassenden Überblick über die Architektur, die Funktionen und die technischen Besonderheiten der App.
-
+---
+template: home.html
 ---
 
-## Was ist ToDay?
+<div class="td-hero" markdown>
+<div class="td-hero__content" markdown>
 
-**ToDay** ist eine native Android-App zur tagesbasierten Aufgaben- und Aktivitätenverwaltung. Sie kombiniert klassisches Aufgabenmanagement mit **Sprachsteuerung (TTS/STT)**, **Echtzeit-Wetterdaten (DWD)**, **Gamification-Elementen** und einem **flexiblen Zyklus-Planer** – alles in einer einzigen, lokal arbeitenden Anwendung.
+<span class="td-hero__badge">Android App</span>
 
-Die App wurde mit **Flutter/Dart** entwickelt und nutzt eine **lokale SQLite-Datenbank** – es gibt keine Cloud-Pflicht, keine Registrierung und keine Abhängigkeit von externen Servern für die Kernfunktionalität.
+# <span>ToDay</span> – Deine intelligente Tageszentrale
 
----
+<p class="td-hero__subtitle">
+Aufgaben, Zeitansagen, Wetterwarnungen, Pollenflug und Sprachsteuerung –
+alles in einer einzigen, lokal arbeitenden App. Ohne Cloud. Ohne Account.
+</p>
 
-## Kernfunktionen im Überblick
+<div class="td-hero__actions">
+  <a href="mailto:app-today@gmx.de?subject=Beta-Tester%20ToDay&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20gerne%20Beta-Tester%20f%C3%BCr%20die%20ToDay-App%20werden.%0A%0AMeine%20Google-Account-E-Mail%3A%20%5Bhier%20einf%C3%BCgen%5D%0A%0AViele%20Gr%C3%BC%C3%9Fe" class="td-btn td-btn--primary">
+    <span class="material-icons">mail</span> Beta-Tester werden
+  </a>
+  <a href="/to-day-infos/quickstart/" class="td-btn td-btn--secondary">
+    <span class="material-icons">rocket_launch</span> Schnellstart
+  </a>
+</div>
 
-| Funktion | Beschreibung |
-|----------|-------------|
-| **Tagesbasierte Aktivitäten** | Aufgaben mit Titel, Beschreibung, Datum, Uhrzeit, Priorität und mehrfachen Erinnerungen (kombinierbare Offsets). |
-| **Intelligente Wiederholungen** | Vollständige RRULE-Unterstützung: täglich, wöchentlich (mit Tagesauswahl), monatlich (Tag oder Wochentag), jährlich. Ende: endlos, bis Datum oder nach Anzahl. |
-| **Zyklus-Planer** | Automatische Serienerzeugung mit wissenschaftlich fundierten Presets: Pomodoro (25/5), ultradiane Zyklen (90/20) und weitere. |
-| **Zeitansagen** | Konfigurierbare Zeitpunkte (10/15/20/30 Min oder stündlich) mit TTS-Sprachausgabe. |
-| **Daily Briefing** | Tagesbriefing per Sprachausgabe – filterbar nach Priorität (hoch/mittel/niedrig) über Multi-Tap. |
-| **Sprach-Makros** | Trigger-basierte Texterweiterung mit Vorschau-Parsing und Duplikat-Prüfung. |
-| **DWD-Integration** | Wetterwarnungen (8 Gefahrentypen) und Pollenflug (8 Pollenarten) vom Deutschen Wetterdienst, PLZ-basiert. |
-| **TD-Trigger-System** | Spezielle Aktivitätstitel (`TD:brief:high`, `TD:finance:gold`, `TD:steps:today`) lösen automatisierte Aktionen aus. |
-| **Gamification** | Gesprochene Lob-Sätze bei erledigten Überfälligen, Konfetti-Animationen, Heatbar-Statistiken. |
-| **Barrierefreiheit** | Schriftart-Auswahl inkl. OpenDyslexic (Legasthenie-optimiert), Schriftgröße 80 %–150 %, vollständige TTS-Unterstützung. |
+<div class="td-hero__visual">
+  <img src="/to-day-infos/assets/img/screenshots/home-dark.png" alt="ToDay Dark Mode" loading="lazy">
+  <img src="/to-day-infos/assets/img/screenshots/home-light-en.png" alt="ToDay Light Mode" loading="lazy">
+</div>
 
----
+</div>
+</div>
 
-## Architektur & Technologie
+<div class="td-highlights" markdown>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">100 %</span>
+<span class="td-highlight__label">Lokal</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">6+</span>
+<span class="td-highlight__label">Features</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">1x</span>
+<span class="td-highlight__label">Kostenpflichtig</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">0</span>
+<span class="td-highlight__label">Werbung</span>
+</div>
+</div>
 
-### Technologie-Stack
+<div class="td-section-header" markdown>
 
-| Schicht | Technologie |
-|---------|-------------|
-| **Framework** | Flutter 3.x / Dart |
-| **UI-Bibliothek** | shadcn/ui (ShadApp) + Material Design 3 |
-| **Datenbank** | SQLite (lokal, kein Cloud-Sync) |
-| **State Management** | ChangeNotifier / Provider |
-| **Benachrichtigungen** | awesome_notifications (exakte Alarme, Kanäle) |
-| **Sprachausgabe** | flutter_tts (Engine/Stimme/Locale konfigurierbar) |
-| **Wetterdaten** | DWD Open Data API (Deutscher Wetterdienst) |
-| **Schriften** | google_fonts (dynamisch, 4 Optionen) |
-| **Animationen** | Lottie (Hintergrund), Konfetti, Speed Dial |
-| **Sensoren** | Android STEP_COUNTER (Schritte heute) |
+## Warum ToDay?
 
-### Datenfluss
+Alles, was du fuer deinen Tag brauchst – in einer App.
 
-```mermaid
-flowchart TD
-  subgraph UI["Benutzeroberflaeche"]
-    direction LR
-    H[Home] --- E[Einstellungen] --- SM[Sprach-Makros] --- I[Info]
-  end
-  subgraph STATE["State Management"]
-    direction LR
-    AS[AppStore] --- LS[LocaleStore] --- CN[ChangeNotifier]
-  end
-  subgraph SERVICE["Service-Schicht"]
-    direction LR
-    AcS[ActivityService] --- ScS[SchedulingService] --- DS[DWD-Service]
-    NF[NotificationFacade] --- TS[TTS-Service] --- SC[StepCounter]
-  end
-  subgraph DATA["Daten-Schicht"]
-    direction LR
-    SQ[SQLite] --- SP[SharedPreferences] --- FSS[FlutterSecureStorage]
-  end
-  UI --> STATE --> SERVICE --> DATA
-```
+</div>
 
----
+<div class="td-features" markdown>
 
-## Home-Screen – Die Tageszentrale
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">dashboard</span></span>
 
-Der Home-Screen ist das Herzstück der App. Er zeigt auf einen Blick:
+### Alles in Einem
 
-| Bereich | Inhalt |
-|---------|--------|
-| **Kopfbereich** | Datum, Datumsnavigation, drei Kennzahlen-Karten (Gesamt, Erledigt, Hohe Priorität), LED-Indikatoren für DWD-Status. |
-| **Collapsible Header** | Der Kopfbereich lässt sich einklappen – für bis zu dreimal mehr sichtbare Aktivitäten. |
-| **Tabs** | Offen · Überfällig · Erledigt · DWD – mit Zähler in eckigen Klammern. |
-| **Aktivitätenliste** | Sortiert nach Uhrzeit, mit Checkbox, Tap-to-Edit und Long-Press-Kontextaktionen. |
-| **Speed Dial** | Ein zentraler FAB mit sechs Schnellaktionen: Hilfe, Daily Briefing, Zyklus planen, Sprachbefehl, Aufräumen, Neu anlegen. |
+Aufgaben, Zyklen, Zeitansagen, Wetter, Pollen und Sprachsteuerung – kein App-Hopping noetig.
+</div>
 
----
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">shield</span></span>
 
-## TD-Trigger-System
+### Privatsphaere zuerst
 
-Ein besonderes Feature von ToDay: **TD-Trigger** sind spezielle Aktivitätstitel, die beim Fälligwerden automatisierte Aktionen auslösen.
+100 % lokale Datenhaltung in SQLite. Kein Cloud-Zwang, kein Account, keine Registrierung.
+</div>
 
-| Trigger | Aktion |
-|---------|--------|
-| `TD:brief:high` | Tagesbriefing nur hohe Priorität per TTS. |
-| `TD:brief:mid` | Tagesbriefing nur mittlere Priorität per TTS. |
-| `TD:brief:low` | Tagesbriefing nur niedrige Priorität per TTS. |
-| `TD:finance:gold` | Goldpreis-Ansage (Quelle: goldprice.org). |
-| `TD:finance:silver` | Silberpreis-Ansage (Quelle: goldprice.org). |
-| `TD:steps:today` | Schritte heute per TTS (Android STEP_COUNTER). |
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">record_voice_over</span></span>
 
-In der Aktivitätenliste werden TD-Trigger **benutzerfreundlich** angezeigt (z. B. „Tagesbriefing Hoch" statt `TD:brief:high`).
+### Sprachgesteuert
 
----
+TTS-Ausgabe, Spracheingabe und Sprach-Makros fuer komplett freihaendige Bedienung.
+</div>
 
-## Benachrichtigungssystem
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">center_focus_strong</span></span>
 
-ToDay nutzt ein robustes, mehrstufiges Benachrichtigungssystem:
+### Fokus & Produktivitaet
 
-| Eigenschaft | Beschreibung |
-|-------------|-------------|
-| **Exakte Alarme** | Pünktliche Auslösung (Android 13+ mit Berechtigung). |
-| **Mehrfach-Offsets** | Start, 5/10/15/30 Min, 1/2 Std – kombinierbar pro Aktivität. |
-| **Batch-Stornierung** | Beim Löschen/Aufräumen werden zugehörige Alarme automatisch gecancelt. |
-| **Rebuild** | „Benachrichtigungen neu aufbauen" bereinigt Waisen-Alarme nach Updates. |
-| **Ruhezeiten** | DWD-Benachrichtigungen respektieren konfigurierbare Ruhezeiten. |
+Pomodoro, ultradiane Rhythmen und weitere wissenschaftliche Zyklen fuer produktives Arbeiten.
+</div>
 
----
+</div>
 
-## Datenschutz & Sicherheit
+<div class="td-section-header" markdown>
 
-| Aspekt | Umsetzung |
-|--------|-----------|
-| **Lokale Datenhaltung** | Alle Aktivitäten liegen in einer lokalen SQLite-Datenbank. Kein Cloud-Zwang. |
-| **Keine Registrierung** | Die App funktioniert ohne Account, E-Mail oder Login. |
-| **DWD-Daten** | Öffentliche API des Deutschen Wetterdienstes – keine personenbezogenen Daten. |
-| **Spracheingabe** | Erfolgt über die Tastatur-App des Geräts (deren Datenschutzbestimmungen gelten). |
-| **Sensoren** | STEP_COUNTER wird nur lokal ausgewertet, keine Übertragung an Dritte. |
+## Screenshots
 
----
+Erlebe ToDay in Aktion – Dark Mode, Light Mode und mehr.
 
-## App-Struktur: Dialoge & Menüs
+</div>
 
-### Navigationsstruktur
+<div class="td-gallery" markdown>
 
-```mermaid
-graph LR
-  Home --> SD[Speed Dial]
-  SD --> Hilfe
-  SD --> DB[Daily Briefing]
-  SD --> ZP[Zyklus planen]
-  SD --> SB[Sprachbefehl]
-  SD --> AR[Aufraeumen]
-  SD --> NA[Neu anlegen]
-  Home --> AK[Aktivitaet antippen]
-  Home --> Menu
-  Menu --> Einstellungen
-  Menu --> Info
-  Menu --> SM[Sprach-Makros]
-```
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/home-header.png" alt="Tagesuebersicht mit Header" loading="lazy">
+<figcaption>Tagesuebersicht</figcaption>
+</figure>
 
-**Einstellungen-Bereiche:** Sprache, Design, Anzeige und Text (Schriftart, Schriftgroesse, Live-Vorschau), Benachrichtigungen, Wetterwarnungen (DWD), Pollenflug (DWD), Stimme und Ausgabe (TTS), Zeitansagen, Hintergrund-Animation, Gamification, Gefaehrlicher Bereich.
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/home-speeddial.png" alt="Speed Dial Menue" loading="lazy">
+<figcaption>Speed Dial</figcaption>
+</figure>
 
-**Sprach-Makros:** Eintrag antippen (Makro bearbeiten als Dialog), Langes Tippen (Makro bearbeiten als Sheet).
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/settings-dwd.png" alt="DWD Wetterwarnungen" loading="lazy">
+<figcaption>Wetterwarnungen</figcaption>
+</figure>
 
----
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/settings-pollen-tts.png" alt="Pollenflug und TTS" loading="lazy">
+<figcaption>Pollen & TTS</figcaption>
+</figure>
 
-## Vorteile auf einen Blick
+</div>
 
-| Vorteil | Beschreibung |
-|---------|-------------|
-| **Alles in einer App** | Aufgaben, Zyklen, Zeitansagen, Wetter, Pollen, Sprachsteuerung – kein App-Hopping nötig. |
-| **100 % lokal** | Keine Cloud, kein Account, keine Abhängigkeit von externen Servern. |
-| **Sprachgesteuert** | TTS-Ausgabe, Spracheingabe und Sprach-Makros für freihändige Bedienung. |
-| **Wissenschaftliche Zyklen** | Pomodoro, ultradiane Rhythmen und weitere Presets für produktives Arbeiten. |
-| **Barrierefreiheit** | OpenDyslexic-Schrift, skalierbare Schriftgröße, vollständige TTS-Unterstützung. |
-| **DWD-Integration** | Wetterwarnungen und Pollenflug direkt in der Tagesansicht – PLZ-genau. |
-| **Gamification** | Lob-Sätze, Konfetti und Heatbar motivieren zum Dranbleiben. |
-| **Flexibel** | Lottie-Animationen pro Monat, dynamische Farben (Material You), Hell/Dunkel-Modus. |
+<div class="td-download" markdown>
+
+## Werde Beta-Tester!
+
+ToDay befindet sich aktuell in der **Closed-Beta-Phase** im Google Play Store.
+Du moechtest die App vor allen anderen testen? Dann melde dich bei uns!
+
+**So funktioniert es:** Sende uns deine **Google-Account-E-Mail-Adresse** –
+wir schalten dich als Tester frei und du erhaeltst einen persoenlichen
+Download-Link direkt im Play Store.
+
+<a href="mailto:app-today@gmx.de?subject=Beta-Tester%20ToDay&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20gerne%20Beta-Tester%20f%C3%BCr%20die%20ToDay-App%20werden.%0A%0AMeine%20Google-Account-E-Mail%3A%20%5Bhier%20einf%C3%BCgen%5D%0A%0AViele%20Gr%C3%BC%C3%9Fe" class="td-btn td-btn--primary" style="font-size:1.1rem;">
+  <span class="material-icons">mail</span> Beta-Tester werden – E-Mail senden
+</a>
+
+<p style="margin-top:1rem;font-size:.85rem;color:#8899aa;">
+  <a href="/to-day-infos/install/" style="color:#ff8c42;">Zur Installationsanleitung</a>
+</p>
+
+</div>
 '@
   Write-File $p $c
 }

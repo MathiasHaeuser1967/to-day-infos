@@ -1,175 +1,154 @@
-﻿function Write-En-Index {
+function Write-En-Index {
   $p = Join-Path $DocsEn 'index.md'
   $c = @'
-# ToDay – Your Intelligent Daily Hub
-
-Welcome to the **ToDay** documentation. This page provides you with a comprehensive overview of the app’s architecture, features, and technical details.
-
+---
+template: home.html
 ---
 
-## What is ToDay?
+<div class="td-hero" markdown>
+<div class="td-hero__content" markdown>
 
-**ToDay** is a native Android app for day-based task and activity management. It combines classic task management with **voice control (TTS/STT)**, **real-time weather data (German version only)**, **gamification elements**, and a **flexible cycle planner** – all in a single, locally operating application.
+<span class="td-hero__badge">Android App</span>
 
-The app is developed with **Flutter/Dart** and uses a **local SQLite database** – no cloud requirement, no registration, and no dependency on external servers for core functionality.
+# <span>ToDay</span> – Your Intelligent Daily Hub
 
----
+<p class="td-hero__subtitle">
+Tasks, time announcements, weather warnings, pollen forecasts and voice control –
+all in a single, locally operating app. No cloud. No account.
+</p>
 
-## Core Features at a Glance
+<div class="td-hero__actions">
+  <a href="mailto:app-today@gmx.de?subject=Beta%20Tester%20ToDay&body=Hello%2C%0A%0AI%20would%20like%20to%20become%20a%20beta%20tester%20for%20the%20ToDay%20app.%0A%0AMy%20Google%20Account%20email%3A%20%5Binsert%20here%5D%0A%0ABest%20regards" class="td-btn td-btn--primary">
+    <span class="material-icons">mail</span> Become a Beta Tester
+  </a>
+  <a href="/to-day-infos/en/quickstart/" class="td-btn td-btn--secondary">
+    <span class="material-icons">rocket_launch</span> Quick Start
+  </a>
+</div>
 
-| Feature | Description |
-|---------|-------------|
-| **Day-Based Activities** | Tasks with title, description, date, time, priority, and multiple reminders (combinable offsets). |
-| **Intelligent Recurrences** | Full RRULE support: daily, weekly (with day selection), monthly (day or weekday), yearly. End: endless, until date, or after count. |
-| **Cycle Planner** | Automatic series generation with scientifically based presets: Pomodoro (25/5), ultradian cycles (90/20), and more. |
-| **Time Announcements** | Configurable times (10/15/20/30 min or hourly) with TTS voice output. |
-| **Daily Briefing** | Daily briefing via speech output – filterable by priority (high/medium/low) via multi-tap. |
-| **Voice Macros** | Trigger-based text expansion with preview parsing and duplicate checking. |
-| **German Weather Service Integration** | Weather warnings (8 hazard types) and pollen forecasts (8 pollen types) from the German Weather Service, ZIP code based. *German version only.* |
-| **TD Trigger System** | Special activity titles (`TD:brief:high`, `TD:finance:gold`, `TD:steps:today`) trigger automated actions. |
-| **Gamification** | Spoken praise phrases for completed overdue tasks, confetti animations, heatbar statistics. |
-| **Accessibility** | Font selection including OpenDyslexic (dyslexia-optimized), font size 80%–150%, full TTS support. |
+<div class="td-hero__visual">
+  <img src="/to-day-infos/assets/img/screenshots/home-dark.png" alt="ToDay Dark Mode" loading="lazy">
+  <img src="/to-day-infos/assets/img/screenshots/home-light-en.png" alt="ToDay Light Mode" loading="lazy">
+</div>
 
----
+</div>
+</div>
 
-## Architecture & Technology
+<div class="td-highlights" markdown>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">100 %</span>
+<span class="td-highlight__label">Local</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">6+</span>
+<span class="td-highlight__label">Features</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">1x</span>
+<span class="td-highlight__label">Paid</span>
+</div>
+<div class="td-highlight" markdown>
+<span class="td-highlight__number">0</span>
+<span class="td-highlight__label">Ads</span>
+</div>
+</div>
 
-### Technology Stack
+<div class="td-section-header" markdown>
 
-| Layer | Technology |
-|-------|------------|
-| **Framework** | Flutter 3.x / Dart |
-| **UI Library** | shadcn/ui (ShadApp) + Material Design 3 |
-| **Database** | SQLite (local, no cloud sync) |
-| **State Management** | ChangeNotifier / Provider |
-| **Notifications** | awesome_notifications (precise alarms, channels) |
-| **Speech Output** | flutter_tts (engine/voice/locale configurable) |
-| **Weather Data** | DWD Open Data API (German Weather Service) |
-| **Fonts** | google_fonts (dynamic, 4 options) |
-| **Animations** | Lottie (background), confetti, speed dial |
-| **Sensors** | Android STEP_COUNTER (steps today) |
+## Why ToDay?
 
-### Data Flow
+Everything you need for your day – in one app.
 
-```mermaid
-flowchart TD
-  subgraph UI["User Interface"]
-    direction LR
-    H[Home] --- E[Settings] --- SM[Voice Macros] --- I[Info]
-  end
-  subgraph STATE["State Management"]
-    direction LR
-    AS[AppStore] --- LS[LocaleStore] --- CN[ChangeNotifier]
-  end
-  subgraph SERVICE["Service Layer"]
-    direction LR
-    AcS[ActivityService] --- ScS[SchedulingService] --- DS[DWD-Service]
-    NF[NotificationFacade] --- TS[TTS-Service] --- SC[StepCounter]
-  end
-  subgraph DATA["Data Layer"]
-    direction LR
-    SQ[SQLite] --- SP[SharedPreferences] --- FSS[FlutterSecureStorage]
-  end
-  UI --> STATE --> SERVICE --> DATA
-```
+</div>
 
----
+<div class="td-features" markdown>
 
-## Home Screen – The Daily Hub
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">dashboard</span></span>
 
-The home screen is the heart of the app. It shows at a glance:
+### All-in-One
 
-| Area | Content |
-|------|---------|
-| **Header** | Date, date navigation, three key figure cards (total, done, high priority), LED indicators for DWD status. |
-| **Collapsible Header** | The header can be collapsed – allowing up to three times more visible activities. |
-| **Tabs** | Open · Overdue · Done · DWD – with counters in square brackets. *DWD tab only available in German version.* |
-| **Activity List** | Sorted by time, with checkbox, tap-to-edit, and long-press context actions. |
-| **Speed Dial** | A central FAB with six quick actions: Help, Daily Briefing, Plan Cycle, Voice Command, Cleanup, New Entry. |
+Tasks, cycles, time announcements, weather, pollen and voice control – no app hopping needed.
+</div>
 
----
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">shield</span></span>
 
-## TD Trigger System
+### Privacy First
 
-A special feature of ToDay: **TD Triggers** are special activity titles that trigger automated actions when due.
+100 % local data storage in SQLite. No cloud requirement, no account, no registration.
+</div>
 
-| Trigger | Action |
-|---------|--------|
-| `TD:brief:high` | Daily briefing for high priority via TTS. |
-| `TD:brief:mid` | Daily briefing for medium priority via TTS. |
-| `TD:brief:low` | Daily briefing for low priority via TTS. |
-| `TD:finance:gold` | Gold price announcement (source: goldprice.org). |
-| `TD:finance:silver` | Silver price announcement (source: goldprice.org). |
-| `TD:steps:today` | Steps today via TTS (Android STEP_COUNTER). |
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">record_voice_over</span></span>
 
-In the activity list, TD triggers are displayed **user-friendly** (e.g., “Daily Briefing High” instead of `TD:brief:high`).
+### Voice Controlled
 
----
+TTS output, voice input and voice macros for completely hands-free operation.
+</div>
 
-## Notification System
+<div class="td-feature-card" markdown>
+<span class="td-feature-card__icon"><span class="material-icons">center_focus_strong</span></span>
 
-ToDay uses a robust, multi-level notification system:
+### Focus & Productivity
 
-| Feature | Description |
-|---------|-------------|
-| **Precise Alarms** | Timely triggering (Android 13+ with permission). |
-| **Multiple Offsets** | Start, 5/10/15/30 min, 1/2 hr – combinable per activity. |
-| **Batch Cancellation** | Related alarms are automatically canceled when deleting/cleaning up. |
-| **Rebuild** | “Rebuild notifications” cleans up orphan alarms after updates. |
-| **Quiet Times** | DWD notifications respect configurable quiet times. *German version only.* |
+Pomodoro, ultradian rhythms and other scientific cycles for productive work.
+</div>
 
----
+</div>
 
-## Privacy & Security
+<div class="td-section-header" markdown>
 
-| Aspect | Implementation |
-|--------|----------------|
-| **Local Data Storage** | All activities are stored in a local SQLite database. No cloud required. |
-| **No Registration** | The app works without account, email, or login. |
-| **DWD Data** | Public API of the German Weather Service – no personal data. *German version only.* |
-| **Voice Input** | Done via the device’s keyboard app (subject to its privacy policy). |
-| **Sensors** | STEP_COUNTER is evaluated locally only, no transmission to third parties. |
+## Screenshots
 
----
+Experience ToDay in action – Dark Mode, Light Mode and more.
 
-## App Structure: Dialogs & Menus
+</div>
 
-### Navigation Structure
+<div class="td-gallery" markdown>
 
-```mermaid
-graph LR
-  Home --> SD[Speed Dial]
-  SD --> Help
-  SD --> DB[Daily Briefing]
-  SD --> CP[Plan Cycle]
-  SD --> VC[Voice Command]
-  SD --> CL[Cleanup]
-  SD --> NE[New Entry]
-  Home --> AT[Tap Activity]
-  Home --> Menu
-  Menu --> Settings
-  Menu --> Info
-  Menu --> SM[Voice Macros]
-```
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/home-header.png" alt="Daily overview with header" loading="lazy">
+<figcaption>Daily Overview</figcaption>
+</figure>
 
-**Settings Sections:** Language, Design, Display and Text (font, font size, live preview), Notifications, Weather Warnings (German version only), Pollen Forecast (German version only), Voice and Output (TTS), Time Announcements, Background Animation, Gamification, Danger Zone.
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/home-speeddial.png" alt="Speed Dial menu" loading="lazy">
+<figcaption>Speed Dial</figcaption>
+</figure>
 
-**Voice Macros:** Tap entry (edit macro as dialog), long press (edit macro as sheet).
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/settings-dwd.png" alt="DWD weather warnings" loading="lazy">
+<figcaption>Weather Warnings</figcaption>
+</figure>
 
----
+<figure markdown>
+<img src="/to-day-infos/assets/img/screenshots/settings-pollen-tts.png" alt="Pollen and TTS" loading="lazy">
+<figcaption>Pollen & TTS</figcaption>
+</figure>
 
-## Benefits at a Glance
+</div>
 
-| Benefit | Description |
-|---------|-------------|
-| **All-in-One App** | Tasks, cycles, time announcements, weather, pollen, voice control – no app hopping needed. |
-| **100% Local** | No cloud, no account, no dependency on external servers. |
-| **Voice Controlled** | TTS output, voice input, and voice macros for hands-free operation. |
-| **Scientific Cycles** | Pomodoro, ultradian rhythms, and other presets for productive work. |
-| **Accessibility** | OpenDyslexic font, scalable font size, full TTS support. |
-| **German Weather Service Integration** | Weather warnings and pollen forecasts directly in the daily view – ZIP code precise. *German version only.* |
-| **Gamification** | Praise phrases, confetti, and heatbar motivate you to keep going. |
-| **Flexible** | Lottie animations per month, dynamic colors (Material You), light/dark mode. |
+<div class="td-download" markdown>
+
+## Become a Beta Tester!
+
+ToDay is currently in the **Closed Beta phase** on the Google Play Store.
+Want to test the app before everyone else? Get in touch with us!
+
+**How it works:** Send us your **Google Account email address** –
+we will add you as a tester and you will receive a personal
+download link directly in the Play Store.
+
+<a href="mailto:app-today@gmx.de?subject=Beta%20Tester%20ToDay&body=Hello%2C%0A%0AI%20would%20like%20to%20become%20a%20beta%20tester%20for%20the%20ToDay%20app.%0A%0AMy%20Google%20Account%20email%3A%20%5Binsert%20here%5D%0A%0ABest%20regards" class="td-btn td-btn--primary" style="font-size:1.1rem;">
+  <span class="material-icons">mail</span> Become a Beta Tester – Send Email
+</a>
+
+<p style="margin-top:1rem;font-size:.85rem;color:#8899aa;">
+  <a href="/to-day-infos/en/install/" style="color:#ff8c42;">Installation Guide</a>
+</p>
+
+</div>
 '@
   Write-File $p $c
 }

@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $Base    = Split-Path -Parent $MyInvocation.MyCommand.Definition
@@ -30,6 +30,7 @@ foreach ($_s in $_scripts) {
 Write-En-Index
 Write-En-Quickstart
 Write-En-Features
+Write-En-Install
 Write-En-FAQ
 Write-En-Permissions
 Write-En-Privacy

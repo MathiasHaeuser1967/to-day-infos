@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $Base    = Split-Path -Parent $MyInvocation.MyCommand.Definition
@@ -20,6 +20,7 @@ New-Item -ItemType Directory -Force -Path $Screens | Out-Null
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.index.ps1'), $_u)))
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.quickstart.ps1'), $_u)))
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.features.ps1'), $_u)))
+. ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.install.ps1'), $_u)))
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.screens.home.ps1'), $_u)))
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.screens.settings.ps1'), $_u)))
 . ([ScriptBlock]::Create([System.IO.File]::ReadAllText((Join-Path $Base 'scripts\de-pages\write.de.screens.cleanup.ps1'), $_u)))
@@ -37,6 +38,7 @@ New-Item -ItemType Directory -Force -Path $Screens | Out-Null
 Write-De-Index
 Write-De-Quickstart
 Write-De-Features
+Write-De-Install
 Write-De-Screen-Home
 Write-De-Screen-Settings
 Write-De-Screen-Cleanup
