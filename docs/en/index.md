@@ -16,7 +16,7 @@ all in a single, locally operating app. No cloud. No account.
 
 <div class="td-hero__actions">
   <a href="mailto:app-today@gmx.de?subject=Beta%20Tester%20ToDay&body=Hello%2C%0A%0AI%20would%20like%20to%20become%20a%20beta%20tester%20for%20the%20ToDay%20app.%0A%0AMy%20Google%20Account%20email%3A%20%5Binsert%20here%5D%0A%0ABest%20regards" class="td-btn td-btn--primary">
-    <span class="material-icons">mail</span> Become a Beta Tester
+    <span class="material-icons">mail</span> Become a Beta Tester – app-today@gmx.de
   </a>
   <a href="/to-day-infos/en/quickstart/" class="td-btn td-btn--secondary">
     <span class="material-icons">rocket_launch</span> Quick Start
@@ -138,7 +138,7 @@ we will add you as a tester and you will receive a personal
 download link directly in the Play Store.
 
 <a href="mailto:app-today@gmx.de?subject=Beta%20Tester%20ToDay&body=Hello%2C%0A%0AI%20would%20like%20to%20become%20a%20beta%20tester%20for%20the%20ToDay%20app.%0A%0AMy%20Google%20Account%20email%3A%20%5Binsert%20here%5D%0A%0ABest%20regards" class="td-btn td-btn--primary" style="font-size:1.1rem;">
-  <span class="material-icons">mail</span> Become a Beta Tester – Send Email
+  <span class="material-icons">mail</span> Become a Beta Tester – app-today@gmx.de
 </a>
 
 <p style="margin-top:1rem;font-size:.85rem;color:#8899aa;">

@@ -16,7 +16,7 @@ alles in einer einzigen, lokal arbeitenden App. Ohne Cloud. Ohne Account.
 
 <div class="td-hero__actions">
   <a href="mailto:app-today@gmx.de?subject=Beta-Tester%20ToDay&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20gerne%20Beta-Tester%20f%C3%BCr%20die%20ToDay-App%20werden.%0A%0AMeine%20Google-Account-E-Mail%3A%20%5Bhier%20einf%C3%BCgen%5D%0A%0AViele%20Gr%C3%BC%C3%9Fe" class="td-btn td-btn--primary">
-    <span class="material-icons">mail</span> Beta-Tester werden
+    <span class="material-icons">mail</span> Beta-Tester werden – app-today@gmx.de
   </a>
   <a href="/to-day-infos/quickstart/" class="td-btn td-btn--secondary">
     <span class="material-icons">rocket_launch</span> Schnellstart
@@ -138,7 +138,7 @@ wir schalten dich als Tester frei und du erhaeltst einen persoenlichen
 Download-Link direkt im Play Store.
 
 <a href="mailto:app-today@gmx.de?subject=Beta-Tester%20ToDay&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20gerne%20Beta-Tester%20f%C3%BCr%20die%20ToDay-App%20werden.%0A%0AMeine%20Google-Account-E-Mail%3A%20%5Bhier%20einf%C3%BCgen%5D%0A%0AViele%20Gr%C3%BC%C3%9Fe" class="td-btn td-btn--primary" style="font-size:1.1rem;">
-  <span class="material-icons">mail</span> Beta-Tester werden – E-Mail senden
+  <span class="material-icons">mail</span> Beta-Tester werden – app-today@gmx.de
 </a>
 
 <p style="margin-top:1rem;font-size:.85rem;color:#8899aa;">
